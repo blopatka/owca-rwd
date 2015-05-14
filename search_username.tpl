@@ -1,4 +1,3 @@
-
 <script language="javascript" type="text/javascript">
 <!--
 function refresh_username(selected_username)
@@ -10,21 +9,27 @@ function refresh_username(selected_username)
 //-->
 </script>
 
-<form method="post" name="search" action="{S_SEARCH_ACTION}">
-<table width="100%" border="0" cellspacing="0" cellpadding="10">
-	<tr>
-		<td><table width="100%" class="forumline" cellpadding="4" cellspacing="1" border="0">
-			<tr> 
-				<th class="thHead" height="25">{L_SEARCH_USERNAME}</th>
-			</tr>
-			<tr> 
-				<td valign="top" class="row1"><span class="genmed"><br /><input type="text" name="search_username" value="{USERNAME}" class="post" onFocus="Active(this)" onBlur="NotActive(this)" />&nbsp; <input type="submit" name="search" value="{L_SEARCH}" class="liteoption" /></span><br /><span class="gensmall">{L_SEARCH_EXPLAIN}</span><br />
-				<!-- BEGIN switch_select_name -->
-				<span class="genmed">{L_UPDATE_USERNAME}<br /><select name="username_list">{S_USERNAME_OPTIONS}</select>&nbsp; <input type="submit" class="liteoption" onClick="refresh_username(this.form.username_list.options[this.form.username_list.selectedIndex].value);return false;" name="use" value="{L_SELECT}" /></span><br />
-				<!-- END switch_select_name -->
-				<br /><span class="genmed"><a href="javascript:window.close();" class="genmed">{L_CLOSE_WINDOW}</a></span></td>
-			</tr>
-		</table></td>
-	</tr>
-</table>
+<form method="post" name="search" action="{S_SEARCH_ACTION}" class="panel panel-primary">
+	<div class="panel-heading">{L_SEARCH_USERNAME}</div>
+
+	<div class="panel-body">
+			<div class="input-group">
+				<input type="text" name="search_username" value="{USERNAME}" class="form-control" />
+				<span class="input-group-btn"><button type="submit" name="search" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span> {L_SEARCH}</button></span>
+			</div>
+
+		<span class="help-block">{L_SEARCH_EXPLAIN}</span>
+
+		<!-- BEGIN switch_select_name -->
+		<select name="username_list" class="form-control">{S_USERNAME_OPTIONS}</select>
+		<!-- END switch_select_name -->
+	</div>
+
+	<div class="panel-footer right">
+		<!-- BEGIN switch_select_name -->
+		<input type="submit" class="btn btn-primary" onClick="refresh_username(this.form.username_list.options[this.form.username_list.selectedIndex].value);return false;" name="use" value="{L_SELECT}" />
+		<!-- END switch_select_name -->
+
+		<button type="button" class="btn btn-default" onclick="window.close();">{L_CLOSE_WINDOW}</button>
+	</div>
 </form>

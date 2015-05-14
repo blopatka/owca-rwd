@@ -1,57 +1,40 @@
+<br />
 
-<table width="100%" cellpadding="3" cellspacing="1" class="forumline">
-  <tr>
-	<th class="thCornerL">{L_AUTHOR}</th>
-	<th class="thCornerR">{L_COMMENTS}</th>
-  </tr>
+<div class="row div-header">
+	<div class="col-md-2">{L_AUTHOR}</div>
+	<div class="col-md-10">{L_COMMENTS}</div>
+</div>
+
 <!-- BEGIN no_comment -->
-  <tr>
-	<td colspan="2" class="row1" align="center"><span class="gen">{L_NO_COMMENTS}</span></td>
-  </tr>
+<p class="alert alert-info">{L_NO_COMMENTS}</p>
 <!-- END no_comment -->
+
 <!-- BEGIN text -->
-  <tr>
-	<td width="150" align="left" valign="top" class="row1"><span class="name"><b>{text.POSTER}</b></span><br /><span class="postdetails">{text.POSTER_RANK}<br />{text.RANK_IMAGE}{text.POSTER_AVATAR}<br /><br />{text.POSTER_JOINED}<br />{text.POSTER_POSTS}<br />{text.POSTER_FROM}</span><br />&nbsp;</td>
-	<td class="row1" height="28" valign="top">
-		<table width="100%" border="0" cellspacing="0" cellpadding="0">
-			<tr>
-				<td width="100%" valign="middle"><span class="postdetails"><img src="{IMG_POST}" border="0" />{L_POSTED}: {text.TIME}<span class="gen">&nbsp;</span>&nbsp; &nbsp;{L_COMMENT_SUBJECT}: {text.TITLE}</span></td>
-				<td align="right">
-				<!-- BEGIN is_admin -->
-				<a href="{text.is_admin.U_COMMENT_DELETE}"><img src="{DELETE_IMG}" alt="{L_COMMENT_DELETE}" title="{L_COMMENT_DELETE}" border="0"></a>
+<div class="row postrow">
+	<div class="col-md-2">
+		<span class="name"><b>{text.POSTER}</b></span><br />
+		<span class="postdetails">
+		{text.POSTER_RANK}<br />
+		{text.RANK_IMAGE}{text.POSTER_AVATAR}<br />
+		{text.POSTER_JOINED}<br />
+		{text.POSTER_POSTS}<br />{text.POSTER_FROM}
+		</span><br />
+		<a href="#top" title="{L_BACK_TO_TOP}"><span class="glyphicon glyphicon-arrow-up"></span></a>
+	</div>
+
+	<div class="col-md-10">
+		<div class="row postdetails">
+			<div class="col-md-3"><span class="glyphicon glyphicon-file"></span>{L_POSTED}: <time>{text.TIME}</time></div>
+			<div class="col-md-8"><b>{L_COMMENT_SUBJECT}:</b> {text.TITLE}</div>
+			<!-- BEGIN is_admin -->
+			<div class="col-md-1 right"><a href="{text.is_admin.U_COMMENT_DELETE}" alt="{L_COMMENT_DELETE}" title="{L_COMMENT_DELETE}" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-trash"></span></a></div>
 				<!-- END is_admin -->
-				</td>
-			</tr>
-			<tr> 
-				<td colspan="2"><hr /></td>
-			</tr>
-			<tr>
-				<td colspan="2"valign="top"><span class="postbody">{text.TEXT}</span></td>
-			</tr>
-		</table>
-	</td>
-  </tr>
-  <tr>
-	<td class="row1" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">{L_BACK_TO_TOP}</a></span></td>
-	<td class="row1"></td>
-  </tr>
-  <tr> 
-	<td class="spaceRow" colspan="2" height="1"><img src="{SPACER}" alt="" width="1" height="1" /></td>
-  </tr>
+		</div>
+		<span class="postbody">{text.TEXT}</span>
+	</div>
+</div>
 <!-- END text -->
-  <tr>
-	<td colspan="2" class="catBottom">&nbsp;</td>
-  </tr>
-</table>
+
 <!-- BEGIN auth_post -->
-<table width="100%" cellspacing="2" cellpadding="2" border="0" align="center">
-  <tr>
-	<td><a href="{U_COMMENT_DO}">{L_COMMENT_ADD}</a></td>
-  </tr>
-</table>
-<br clear="all" />
+<a href="{U_COMMENT_DO}" class="btn btn-success">{L_COMMENT_ADD}</a>
 <!-- END auth_post -->
-
-
-
-

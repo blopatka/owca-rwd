@@ -1,24 +1,27 @@
-
 <h1>{L_WORDS_TITLE}</h1>
+<p>{L_WORDS_TEXT}</p>
 
-<P>{L_WORDS_TEXT}</p>
-
-<form method="post" action="{S_WORDS_ACTION}"><table cellspacing="1" cellpadding="4" border="0" align="center" class="forumline">
+<form method="post" action="{S_WORDS_ACTION}" class="centered">
+<table class="table table-bordered table-hover table-striped center">
+	<thead>
 	<tr>
-		<th class="thCornerL">{L_WORD}</th>
-		<th class="thTop">{L_REPLACEMENT}</th>
-		<th colspan="2" class="thCornerR">{L_ACTION}</th>
+		<th>{L_WORD}</th>
+		<th>{L_REPLACEMENT}</th>
+		<th colspan="2">{L_ACTION}</th>
 	</tr>
+	</thead>
 	<!-- BEGIN words -->
 	<tr>
-		<td class="{words.ROW_CLASS}" align="center">{words.WORD}</td>
-		<td class="{words.ROW_CLASS}" align="center">{words.REPLACEMENT}</td>
-		<td class="{words.ROW_CLASS}"><a href="{words.U_WORD_EDIT}">{L_EDIT}</a></td>
-		<td class="{words.ROW_CLASS}"><a href="{words.U_WORD_DELETE}">{L_DELETE}</a></td>
+		<td>{words.WORD}</td>
+		<td>{words.REPLACEMENT}</td>
+		<td>
+			<a href="{words.U_WORD_EDIT}" class="btn btn-xs btn-success"><span class="glyphicon glyphicon-pencil"></span> {L_EDIT}</a>
+			<a href="{words.U_WORD_DELETE}" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-trash"></span> {L_DELETE}</a>
+		</td>
 	</tr>
 	<!-- END words -->
-	<tr>
-		<td colspan="5" align="center" class="catBottom">{S_HIDDEN_FIELDS}<input type="submit" name="add" value="{L_ADD_WORD}" class="mainoption" /></td>
-	</tr>
-</table></form>
-<br />
+</table>
+
+{S_HIDDEN_FIELDS}
+<div class="center"><input type="submit" name="add" value="{L_ADD_WORD}" class="btn btn-success" /></div>
+</form>

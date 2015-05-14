@@ -1,0 +1,73 @@
+.navbar, input, button, select, .breadcrumb, .pager, form[name="post"], .btn, .nav, .form-inline, .form-search, .submit_bar, .signature, #SB_content, .pagination, #tab_contact, #tab_sigimage, #tab_sig, #tab_photo, #tab_avatar, .noprint
+{
+display: none !important;
+}
+
+.container
+{
+width: 100%;
+}
+
+table
+{
+border: 1px solid black;
+border-collapse: collapse;
+}
+
+td, th
+{
+border: 1px solid black;
+}
+
+caption
+{
+border: 1px dashed black;
+}
+
+.sitename
+{
+text-align: left;
+}
+
+.sitename a
+{
+text-decoration: none;
+color: black;
+}
+
+.sitename small
+{
+display: block;
+}
+
+.well
+{
+border: 1px dotted black;
+}
+
+.horizontal-table
+{
+width: 40% !important;
+}
+
+.postrow
+{
+page-break-inside: avoid;
+}
+
+/*From TwiterBootstrap */
+ul.inline,
+ol.inline {
+margin-left: 0;
+list-style: none;
+}
+
+ul.inline > li,
+ol.inline > li {
+display: inline-block;
+*display: inline;
+padding-right: 5px;
+padding-left: 5px;
+*zoom: 1;
+}
+/*end*/

@@ -1,71 +1,43 @@
-<script language="Javascript" type="text/javascript">
-	//
-	// Taking from the Attachment MOD of Acyd Burn
-	//
-	function select(status)
-	{
-		for (i = 0; i < document.log_list.length; i++)
-		{
-			document.log_list.elements[i].checked = status;
-		}
-	}
-</script>
-
 <h1>{L_LOG_ACTIONS_TITLE}</h1>
-
 <p>{L_LOG_ACTION_EXPLAIN}</p>
 
-<table width="100%" cellspacing="2" cellpadding="2" border="0" align="center">
-	<form method="post" action="{S_MODE_ACTION}">
-	<tr>
-		<td align="right" nowrap="nowrap" colspan="2"><span class="genmed">{L_CHOOSE_SORT} :&nbsp;{S_MODE_SELECT}&nbsp;&nbsp;{L_ORDER}&nbsp;{S_ORDER_SELECT}&nbsp;&nbsp;</span>
-		<input type="submit" name="submit" value="{L_GO}" class="liteoption" />
-		</td>
-	</tr>
-	</form>
-</table>
-
-<table width="99%" cellpadding="4" cellspacing="1" border="0" align="center" class="forumline">
-<form method="post" name="log_list" action="{S_MODE_ACTION}">
-<tr>
-		<th>{L_ID_LOG}</th>
-		<th>{L_ACTION}</th>
-		<th>{L_TOPIC}</th>
-		<th>{L_DONE_BY}</th>
-		<th>{L_USER_IP}</th>
-		<th>{L_DATE}</th>
-		<th>{L_DELETE_LOG}</th>
-</tr>
-<!-- BEGIN record_row -->
-<tr>
-		<td class="row2"><center>{record_row.ID_LOG}</center></td>
-		<td class="row1"><center><span class="nav">{record_row.ACTION}</span></center></td>
-		<td class="row2"><center>{record_row.TOPIC}&nbsp;&nbsp;&nbsp;{record_row.TOPIC_IMG}</center></td>
-		<td class="row1"><center>{record_row.USERNAME}</center></td>
-		<td class="row2"><center><a href="{record_row.U_WHOIS_IP}" target="_blank">{record_row.USER_IP}</a></center></td>
-		<td class="row1"><center>{record_row.DATE}</center></td>
-		<td class="row2" align="center" valign="middle"><input type="checkbox" name="log_list[]" value="{record_row.ID_LOG}" /></td>
-</tr>
-<!-- END record_row -->
-<tr>
- <td class="catHead" colspan="4" height="28" align="left"><span class="gensmall"><a href="{S_DELETE_ALL}">{L_DELETE_ALL}</a></span></td>
- <td class="catHead" colspan="5" height="28" align="right"> 
-		<input type="submit" name="delete" class="liteoption" value="{L_DELETE}" />
-		<input type="submit" name="{L_CANCEL}" class="liteoption" value="{L_CANCEL}" onClick="self.location.href='{S_CANCEL_ACTION}'" />
-	  </td>
-</tr>
-<tr> 
-	  <td class="catBottom" colspan="9" height="28" align="right"><b><span class="gensmall"><a href="javascript:select(true);" class="gensmall">{L_MARK_ALL}</a> :: <a href="javascript:select(false);" class="gensmall">{L_UNMARK_ALL}</a></span></b></td>
-	</tr>
-</table>
-
-<table width="100%" cellspacing="2" cellpadding="2" border="0">
-  <tr> 
-	<td><span class="nav">{PAGE_NUMBER}</span></td>
-	<td align="right"><span class="nav">{PAGINATION}</span></td>
-  </tr>
-</table>
+<form method="post" action="{S_MODE_ACTION}" class="panel-footer right">
+	{L_CHOOSE_SORT}: {S_MODE_SELECT}{L_ORDER}{S_ORDER_SELECT}
+	<input type="submit" name="submit" value="{L_GO}" class="btn btn-default" />
 </form>
 
+<form method="post" name="log_list" action="{S_MODE_ACTION}">
+	<table class="table table-bordered table-striped table-hover center">
+		<thead>
+		<tr>
+			<th>{L_ID_LOG}</th>
+			<th>{L_ACTION}</th>
+			<th>{L_TOPIC}</th>
+			<th>{L_DONE_BY}</th>
+			<th>{L_USER_IP}</th>
+			<th>{L_DATE}</th>
+			<th>{L_DELETE_LOG}</th>
+		</tr>
+		</thead>
+		<!-- BEGIN record_row -->
+		<tr>
+			<td>{record_row.ID_LOG}</td>
+			<td>{record_row.ACTION}</td>
+			<td>{record_row.TOPIC_IMG}{record_row.TOPIC}</td>
+			<td>{record_row.USERNAME}</td>
+			<td><a href="{record_row.U_WHOIS_IP}" target="_blank">{record_row.USER_IP}</a></td>
+			<td>{record_row.DATE}</td>
+			<td><input type="checkbox" name="log_list[]" value="{record_row.ID_LOG}"></td>
+		</tr>
+	<!-- END record_row -->
+	</table>
 
-<br clear="all">
+	<div class="panel-footer right">
+		<button type="button" onclick="select_all(true);" class="btn btn-default"><span class="glyphicon glyphicon-check"></span> {L_MARK_ALL}</button>
+		<button type="button" onclick="select_all(false);" class="btn btn-default"><span class="glyphicon glyphicon-unchecked"></span> {L_UNMARK_ALL}</button>
+		<input type="submit" name="delete" class="btn btn-danger" value="{L_DELETE}" />
+		<a href="{S_DELETE_ALL}" class="btn btn-warning"><span class="glyphicon glyphicon-trash"></span> {L_DELETE_ALL}</a>
+	</div>
+</form>
+
+{PAGE_NUMBER}{PAGINATION}<br clear="all" />

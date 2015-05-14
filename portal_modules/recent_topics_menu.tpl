@@ -1,11 +1,10 @@
-<table width="100%" cellpadding="2" cellspacing="1" border="0" class="forumline">
-	<tr>
-		<td class="catHead" align="{RT_ALIGN}" height="25"><span class="genmed"><b>{L_RECENT_TOPICS}</b></span></td>
-	</tr>
-	<!-- BEGIN topics -->
-	<tr>
-		<td class="row{topics.ROW}" align="{RT_ALIGN}">&raquo; <a href="{topics.TOPIC_URL}" class="mainmenu">{topics.TOPIC_TITLE}</a></td>
-	</tr>
-	<!-- END topics -->
-</table>
-<br />
+<div class="panel panel-primary" style="text-align: {RT_ALIGN}">
+	<div class="panel-heading">{L_RECENT_TOPICS}</div>
+	<div class="panel-body">
+		<ul>
+			<!-- BEGIN topics -->
+			<li><a href="{topics.TOPIC_URL}" class="mainmenu">{topics.TOPIC_TITLE}</a></li>
+			<!-- END topics -->
+		</ul>
+	</div>
+</div>

@@ -1,32 +1,21 @@
 
-<h1>{L_TITLE}</h1>
+<form action="{S_ACTION}" method="post" class="centered">
+<div class="panel panel-primary">
+	<div class="panel-heading">{L_TITLE}</div>
+	<div class="panel-body">
+	<span class="help-block">{L_EXPLAIN}</span>
 
-<p>{L_EXPLAIN}</p>
+	<label for="block">{L_BLOCK}</label><br />
+	<select name="block" id="block">{S_BLOCK_LIST}</select><br />
 
-<form action="{S_ACTION}" method="post">
-  <table width="100%" cellpadding="4" cellspacing="1" border="0" class="forumline" align="center">
-	<tr> 
-	  <th class="thHead" colspan="2">{L_TITLE}</th>
-	</tr>
-	<tr> 
-	  <td class="row1">{L_BLOCK}</td>
-	  <td class="row2"><select name="block" style="width:350px; ">{S_BLOCK_LIST}</select></td>
-	</tr>
-	<tr> 
-	  <td class="row1">{L_QUESTION}</td>
-	  <td class="row2"><input type="text" size="50" style="width:350px; " name="quest_title" value="{QUESTION}" class="post" /></td>
-	</tr>
-	<tr> 
-	  <td class="row1">{L_ANSWER}</td>
-	  <td class="row2"><textarea name="answer" class="post" style="width:350px; " rows="8">{ANSWER}</textarea></td>
-	</tr>
-	<tr> 
-	  <td class="catBottom" colspan="2" align="center">
-		{S_HIDDEN_FIELDS}
-		<input type="submit" name="submit" value="{L_SUBMIT}" class="mainoption" />
-	  </td>
-	</tr>
-  </table>
+	<label for="question">{L_QUESTION}</label><br />
+	<input type="text" size="50" name="quest_title" id="question" value="{QUESTION}" /><br />
+
+	<label for="answer">{L_ANSWER}</label><br />
+	<textarea name="answer" id="answer" cols="50" rows="8">{ANSWER}</textarea>
+	</div>
+
+	<div class="panel-footer"><input type="submit" name="submit" value="{L_SUBMIT}" class="btn btn-primary" /></div>
+</div>
+{S_HIDDEN_FIELDS}
 </form>
-		
-<br clear="all" />

@@ -2,7 +2,6 @@
 <!--
 function checkAlbumForm() {
 	formErrors = false;
-
 	if (document.upload.pic_title.value.length < 2)
 	{
 		formErrors = "{L_UPLOAD_NO_TITLE}";
@@ -26,83 +25,89 @@ function checkAlbumForm() {
 // -->
 </script>
 
-<form name="upload" action="{S_ALBUM_ACTION}" method="post" enctype="multipart/form-data" onSubmit="return checkAlbumForm()">
-<table width="100%" cellspacing="2" cellpadding="2" border="0">
-  <tr>
-	<td class="nav"><span class="nav"><a href="{U_INDEX}" class="nav">{L_INDEX}</a> -> <a class="nav" href="{U_ALBUM}">{L_ALBUM}</a> -> <a class="nav" href="{U_VIEW_CAT}">{CAT_TITLE}</a></span></td>
-  </tr>
-</table>
+<ul class="breadcrumb">
+	<li><a href="{U_INDEX}">{L_INDEX}</a></li>
+	<li><a href="{U_ALBUM}">{L_ALBUM}</a></li>
+	<li><a href="{U_VIEW_CAT}">{CAT_TITLE}</a></li>
+</ul>
 
-<table width="100%" cellpadding="3" cellspacing="1" border="0" class="forumline">
-  <tr>
-	<th class="thTop" height="25" colspan="2">{L_UPLOAD_PIC}</th>
-  </tr>
-<!-- BEGIN switch_user_logged_out -->
-  <tr>
-	<td class="row1" width="30%" height="28"><span class="gen">{L_USERNAME}:</span></td>
-	<td class="row2"><input class="post" type="text" name="pic_username" size="32" maxlength="32" /></td>
-  </tr>
-<!-- END switch_user_logged_out -->
-  <tr>
-	<td class="row1" height="28"><span class="gen">{L_PIC_TITLE}:</span></td>
-	<td class="row2"><input class="post" type="text" name="pic_title" size="60" /></td>
-  </tr>
-  <tr>
-	<td class="row1" valign="top" height="28"><span class="gen">{L_PIC_DESC}:<br />
-	</span><span class="genmed">{L_PLAIN_TEXT_ONLY}<br />{L_MAX_LENGTH}: <b>{S_PIC_DESC_MAX_LENGTH}</b></span></td>
-	<td class="row2"><textarea class="post" cols="60" rows="4" name="pic_desc" size="60"></textarea></td>
-  </tr>
-  <tr>
-	<td class="row1"><span class="gen">{L_UPLOAD_PIC_FROM_MACHINE}:</span></td>
-	<td class="row2"><input class="post" type="file" name="pic_file" size="49" /></td>
-  </tr>
-<!-- BEGIN switch_manual_thumbnail -->
-  <tr>
-	<td class="row1"><span class="gen">{L_UPLOAD_THUMBNAIL}:<br /></span><span class="gensmall">{L_UPLOAD_THUMBNAIL_EXPLAIN}</span></td>
-	<td class="row2"><input class="post" type="file" name="pic_thumbnail" size="49" /></td>
-  </tr>
-  <tr>
-	<td class="row1" height="28"><span class="gen">{L_THUMBNAIL_SIZE}:</span></td>
-	<td class="row2"><span class="gen"><b>{S_THUMBNAIL_SIZE}</b></span></td>
-  </tr>
-<!-- END switch_manual_thumbnail -->
-  <tr>
-	<td height="28" class="row1"><span class="gen">{L_UPLOAD_TO_CATEGORY}:</span></td>
-	<td class="row2">{SELECT_CAT}</td>
-  </tr>
-  <tr>
-	<td class="row1" height="28"><span class="gen">{L_MAX_FILESIZE}:</span></td>
-	<td class="row2"><span class="gen"><b>{S_MAX_FILESIZE}</b></span></td>
-  </tr>
-  <tr>
-	<td class="row1" height="28"><span class="gen">{L_MAX_WIDTH}:</span></td>
-	<td class="row2"><span class="gen"><b>{S_MAX_WIDTH}</b></span></td>
-  </tr>
-  <tr>
-	<td class="row1" height="28"><span class="gen">{L_MAX_HEIGHT}:</span></td>
-	<td class="row2"><span class="gen"><b>{S_MAX_HEIGHT}</b></span></td>
-  </tr>
-  <tr>
-	<td class="row1" height="28"><span class="gen">{L_ALLOWED_JPG}:</span></td>
-	<td class="row2"><span class="gen"><b>{S_JPG}</b></span></td>
-  </tr>
-  <tr>
-	<td class="row1" height="28"><span class="gen">{L_ALLOWED_PNG}:</span></td>
-	<td class="row2"><span class="gen"><b>{S_PNG}</b></span></td>
-  </tr>
-  <tr>
-	<td class="row1" height="28"><span class="gen">{L_ALLOWED_GIF}:</span></td>
-	<td class="row2"><span class="gen"><b>{S_GIF}</b></span></td>
-  </tr>
-  <tr>
-	<td class="catBottom" align="center" height="28" colspan="2"><input type="reset" value="{L_RESET}" class="liteoption" />&nbsp;&nbsp;&nbsp;<input type="submit" name="submit" value="{L_SUBMIT}" class="mainoption" /></td>
-  </tr>
-</table>
+<form name="upload" action="{S_ALBUM_ACTION}" method="post" enctype="multipart/form-data" onSubmit="return checkAlbumForm()">
+	<div class="panel panel-info">
+		<div class="panel-heading">{L_UPLOAD_PIC}</div>
+
+		<div class="panel-body">
+			<!-- BEGIN switch_user_logged_out -->
+			<div class="form-group">
+				<label for="pic_username" class="col-md-4">{L_USERNAME}:</label>
+				<div class="col-md-6"><input type="text" name="pic_username" id="pic_username" maxlength="32" /></div>
+			</div>
+			<!-- END switch_user_logged_out -->
+
+			<div class="form-group">
+				<label for="pic_title" class="col-md-4">{L_PIC_TITLE}:</label>
+				<div class="col-md-6"><input type="text" name="pic_title" id="pic_title" /></div>
+			</div>
+
+			<div class="form-group">
+				<div class="col-md-4"><label for="pic_desc">{L_PIC_DESC}:</label><span class="help-block">{L_PLAIN_TEXT_ONLY}<br />{L_MAX_LENGTH}: <b>{S_PIC_DESC_MAX_LENGTH}</b></span></div>
+				<div class="col-md-6"><textarea cols="60" rows="4" name="pic_desc" id="pic_desc"></textarea></div>
+			</div>
+
+			<div class="form-group">
+				<label for="pic_file" class="col-md-4">{L_UPLOAD_PIC_FROM_MACHINE}:</label>
+				<div class="col-md-6"><input type="file" name="pic_file" id="pic_file" /></div>
+			</div>
+
+			<!-- BEGIN switch_manual_thumbnail -->
+			<div class="form-group">
+				<div class="col-md-4"><label for="pic_thumbnail">{L_UPLOAD_THUMBNAIL}:</label><span class="help-block">{L_UPLOAD_THUMBNAIL_EXPLAIN}</span></div>
+				<div class="col-md-6"><input type="file" name="pic_thumbnail" id="pic_thumbnail" /></div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-md-4">{L_THUMBNAIL_SIZE}:</label>
+				<div class="col-md-6"><b>{S_THUMBNAIL_SIZE}</b></div>
+			</div>
+			<!-- END switch_manual_thumbnail -->
+
+			<div class="form-group">
+				<label class="col-md-4">{L_UPLOAD_TO_CATEGORY}:</label>
+				<div class="col-md-6">{SELECT_CAT}</div>
+			</div>
+		</div>
+
+		<div class="panel-footer right">
+			<input type="submit" name="submit" value="{L_SUBMIT}" class="btn btn-primary" />
+			<input type="reset" value="{L_RESET}" class="btn btn-default" />
+		</div>
+	</div>
 </form>
 
-<br />
+<table class="table table-bordered table-condensed" style="width: 30%; margin: 0 auto;">
+	<tr>
+		<td>{L_MAX_FILESIZE}:</td>
+		<td><b>{S_MAX_FILESIZE}</b></td>
+	</tr>
+	<tr>
+		<td>{L_MAX_WIDTH}:</td>
+		<td><b>{S_MAX_WIDTH}</b></td>
+	</tr>
+	<tr>
+		<td>{L_MAX_HEIGHT}:</td>
+		<td><b>{S_MAX_HEIGHT}</b></td>
+	</tr>
+	<tr>
+		<td>{L_ALLOWED_JPG}:</td>
+		<td><b>{S_JPG}</b></td>
+	</tr>
+	<tr>
+		<td>{L_ALLOWED_PNG}:</td>
+		<td><b>{S_PNG}</b></td>
+	</tr>
+	<tr>
+		<td>{L_ALLOWED_GIF}:</td>
+		<td><b>{S_GIF}</b></td>
+	</tr>
+</table>
 
-<!--
-You must keep my copyright notice visible with its original content
--->
-<div align="center" style="font-family: Verdana; font-size: 10px; letter-spacing: -1px">Powered by Photo Album Addon {ALBUM_VERSION} &copy; 2002-2003 <a href="http://smartor.is-root.com" target="_blank">Smartor</a></div>
+<!-- INCLUDE album_footer.tpl -->

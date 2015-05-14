@@ -1,20 +1,18 @@
 <h1>{L_SMILEY_TITLE}</h1>
+<p>{L_SMILEY_EXPLAIN}</p>
 
-<P>{L_SMILEY_EXPLAIN}</p>
-<form method="post" action="{S_SMILEY_ACTION}">
-<table align="center" cellspacing="1" cellpadding="3" class="forumline">
-				<tr> 
-					<th colspan="3">{L_SMILEY_CONFIG}</th>
-				</tr>
-	<!-- BEGIN mass_pre_add --> 
-				<tr> 
-					<td class="row2">{L_SMILEY_CODE}: <input type="text" name="smile_code[]" class="post" size="10"/></td>
-					<td class="row2"><input type="hidden" name="smile_url[]" value="{mass_pre_add.IMG}">&nbsp; <img name="smiley_image" src="{mass_pre_add.SMILEY_IMG}" border="0" alt="" /></td>
-				</tr>
-	<!-- END mass_pre_add -->
-	<tr> 
-		<td class="cat" colspan="3" align="center">{S_HIDDEN_FIELDS} <input class="mainoption" type="submit" value="{L_SUBMIT}" /></td>
+<form method="post" action="{S_SMILEY_ACTION}" class="panel panel-primary centered" style="width: 20%">
+	<div class="panel-heading">{L_SMILEY_CONFIG}</div>
+	<table class="table table-bordered">
+	<tr><th></th><th>{L_SMILEY_CODE}</th></tr>
+	<!-- BEGIN mass_pre_add -->
+	<tr>
+		<td class="center"><img name="smiley_image" src="{mass_pre_add.SMILEY_IMG}" border="0" alt="" /></td>
+		<td><input type="text" name="smile_code[]" class="form-control" size="10" /></td>
 	</tr>
-</table>
+	<input type="hidden" name="smile_url[]" value="{mass_pre_add.IMG}" />
+	<!-- END mass_pre_add -->
+	</table>
+	{S_HIDDEN_FIELDS}
+	<div class="panel-footer right"><input class="btn btn-success" type="submit" value="{L_SUBMIT}" /></div>
 </form>
-<br />

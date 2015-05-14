@@ -1,16 +1,15 @@
+<form action="{S_ORDER_CAT_ACTION}" method="post" class="panel panel-primary centered">
+	<div class="panel-heading">{L_RCATTITLE}</div>
+	<div class="panel-body help-block">{L_RCATEXPLAIN}</div>
 
-<h1>{L_RCATTITLE}</h1>
+	<table class="table table-bordered table-striped table-hover">
+		{ROW}
+	</table>
 
-<p>{L_RCATEXPLAIN}</p>
+	<input type="hidden" name="action" value="admin" />
+	<input type="hidden" name="ad" value="category" />
+	<input type="hidden" name="category" value="order" />
+	<input type="hidden" name="order" value="do" />
 
-<form action="{S_ORDER_CAT_ACTION}" method="post"><table width="100%" cellpadding="3" cellspacing="1" class="forumline">
-  <tr>
-	<th colspan="2" class="thHead">{L_RCATTITLE}</th>
-  </tr>
-	{ROW}
-  <tr>
-	<td align="center" class="catBottom" colspan="2"><input class="liteoption" type="submit" value="{L_RCATTITLE}" name="B1"><input type="hidden" name="action" value="admin"><input type="hidden" name="ad" value="category"><input type="hidden" name="category" value="order"><input type="hidden" name="order" value="do"></td>
-  </tr>
-</table>	
+	<div class="panel-footer center"><input class="btn btn-primary" type="submit" value="{L_RCATTITLE}" name="B1" /></div>
 </form>
-<br />

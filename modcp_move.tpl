@@ -1,49 +1,25 @@
+<ul class="breadcrumb" style="color: #FF6600;">
+	<li><a href="{U_INDEX}" class="nav">{L_INDEX}</a></li>{NAV_CAT_DESC}
+</ul>
 
-<form action="{S_MODCP_ACTION}" method="post">
-  <table width="100%" cellspacing="2" cellpadding="2" border="0" align="center">
-	<tr> 
-	  <td align="left"><span class="nav"><a href="{U_INDEX}" class="nav">{L_INDEX}</a>{NAV_CAT_DESC}</span></td>
-	</tr>
-  </table>
-  <table width="100%" cellpadding="4" cellspacing="1" border="0" class="forumline">
-	<tr> 
-	  <th height="25" class="thHead"><b>{MESSAGE_TITLE}</b></th>
-	</tr>
-	<tr> 
-	  <td class="row1"> 
-		<table width="100%" border="0" cellspacing="0" cellpadding="1">
-		  <tr> 
-			<td>&nbsp;</td>
-		  </tr>
-		  <tr> 
-			<td align="center"><span class="gen">{L_MOVE_TO_FORUM} &nbsp; {S_FORUM_SELECT}<br /><br />
-			  <input type="checkbox" name="move_leave_shadow" />{L_LEAVESHADOW}<br />
-			  <br />
-			  <!-- BEGIN notify -->
-			  <hr />
-			  {L_REASON}<br /><span class="gensmall">{L_REASON_E}</span><br />
-			  <!-- BEGIN no_notify -->
-			  <br />
-			  <input type="checkbox" name="no_notify" />{L_NO_NOTIFY}<br />
-			  <!-- END no_notify -->
-			  <br />
-			  <textarea name="reason" class="post2" cols="60" rows="3"></textarea>
-			  <hr />
-			  <br />
-			  <!-- END notify -->
-			  {MESSAGE_TEXT}</span><br />
-			  <br />
-			  {S_HIDDEN_FIELDS} 
-			  <input class="mainoption" type="submit" name="confirm" value="{L_YES}" />
-			  &nbsp;&nbsp; 
-			  <input class="liteoption" type="submit" name="cancel" value="{L_NO}" />
-			</td>
-		  </tr>
-		  <tr> 
-			<td>&nbsp;</td>
-		  </tr>
-		</table>
-	  </td>
-	</tr>
-  </table>
+<h4>{MESSAGE_TITLE}</h4>
+
+<form action="{S_MODCP_ACTION}" method="post" class="alert alert-info centered center">
+	<label>{L_MOVE_TO_FORUM}</label>
+	{S_FORUM_SELECT}
+	<label class="checkbox-inline"><input type="checkbox" name="move_leave_shadow" />{L_LEAVESHADOW}</label><br />
+
+	<!-- BEGIN notify -->
+	<br />
+	<label for="reason">{L_REASON}</label>
+	<span class="help-block">{L_REASON_E}</span>
+	<textarea name="reason" id="reason" cols="60" rows="3"></textarea><br />
+	<!-- BEGIN no_notify --><label class="checkbox-inline"><input type="checkbox" name="no_notify">{L_NO_NOTIFY}</label><!-- END no_notify -->
+	<br />
+	<!-- END notify -->
+
+	<b>{MESSAGE_TEXT}</b><br />
+	{S_HIDDEN_FIELDS}
+	<input class="btn btn-success" type="submit" name="confirm" value="{L_YES}" />
+	<input class="btn btn-danger" type="submit" name="cancel" value="{L_NO}" />
 </form>

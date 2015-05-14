@@ -1,16 +1,15 @@
+<form action="{S_DELETE_CUS_ACTION}" method="post" class="panel panel-danger centered">
+	<div class="panel-heading">{L_DFIELDTITLE}</div>
+	<div class="panel-body help-block">{L_FIELDEXPLAIN}</div>
 
-<h1>{L_DFIELDTITLE}</h1>
+	<table class="table table-bordered table-striped table-hover">
+		{ROW}
+	</table>
 
-<p>{L_FIELDEXPLAIN}</p>
+	<div class="panel-footer right"><input class="btn btn-danger" type="submit" value="{L_DFIELDTITLE}" name="B1" /></div>
 
-<form action="{S_DELETE_CUS_ACTION}" method="post"><table width="100%" cellpadding="3" cellspacing="1" class="forumline">
-  <tr>
-	<th colspan="2" class="thHead">{L_DFIELDTITLE}</b></th>
-  </tr>
-	{ROW}
-  <tr>
-	<td align="center" class="catBottom" colspan="2"><input class="liteoption" type="submit" value="{L_DFIELDTITLE}" name="B1"><input type="hidden" name="action" value="admin"><input type="hidden" name="ad" value="custom"><input type="hidden" name="custom" value="delete"><input type="hidden" name="delete" value="do"></td>
-  </tr>
-</table>
+	<input type="hidden" name="action" value="admin" />
+	<input type="hidden" name="ad" value="custom" />
+	<input type="hidden" name="custom" value="delete" />
+	<input type="hidden" name="delete" value="do" />
 </form>
-<br />

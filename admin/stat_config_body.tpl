@@ -1,37 +1,28 @@
+<form action="{S_ACTION}" method="post" class="centered">
+<div class="panel panel-primary">
+	<div class="panel-heading">{L_STATS_CONFIG}</div>
+	<div class="panel-body">
+	<!-- IF MESSAGE --><p class="alert alert-info">{MESSAGE}</p><!-- ENDIF -->
+	<div class="row">
+		<div class="col-md-6"><label for="limit">{L_RETURN_LIMIT}</label> <span class="help-block">{L_RETURN_LIMIT_DESC}</span></div>
+		<div class="col-md-4"><input type="text" name="return_limit_set" id="limit" value="{RETURN_LIMIT}" /></div>
+	</div>
 
-<h1>{L_STATS_CONFIG}</h1>
+	<div class="row">
+		<div class="col-md-6"><label for="clear">{L_CLEAR_CACHE}</label> <span class="help-block">{L_CLEAR_CACHE_DESC}</span></div>
+		<div class="col-md-4"><input type="checkbox" name="clear_cache_set" id="clear" /></div>
+	</div>
+	</div>
 
-<table class="forumline" align="center" width="45%">
-	<tr>
-		<th class="thHead">{L_MESSAGES}</th>
-	</tr>
-	<tr>
-		<td class="row3"><span class="gen">{MESSAGE}</td>
-	</tr>
-</table>
-
-<form action="{S_ACTION}" method="post">
-<table width="99%" cellpadding="4" cellspacing="1" border="0" align="center" class="forumline">
-	<tr>
-	  <th class="thHead" colspan="2">{L_STATS_CONFIG}</th>
-	</tr>
-	<tr>
-		<td class="row1" align="left" valign="middle" width="75%"><span class="gen">{L_RETURN_LIMIT}</span><br><span class="gensmall">{L_RETURN_LIMIT_DESC}</span></td>
-		<td class="row2"><input type="text" name="return_limit_set" value="{RETURN_LIMIT}"></td>
-	</tr>
-	<tr>
-		<td class="row1" align="left" valign="middle" width="75%"><span class="gen">{L_CLEAR_CACHE}</span><br><span class="gensmall">{L_CLEAR_CACHE_DESC}</span></td>
-		<td class="row2"><input type="checkbox" name="clear_cache_set"></td>
-	</tr>
-
-	<tr>
-		<td class="catBottom" colspan="2" align="center"><input type="hidden" name="submit_update" value="1"><input type="submit" name="submit" value="{L_SUBMIT}" class="mainoption" />&nbsp;&nbsp;<input type="reset" value="{L_RESET}" class="liteoption" /></td>
-	</tr>
-</table>
+	<div class="panel-footer right">
+		<input type="submit" name="submit" value="{L_SUBMIT}" class="btn btn-primary" />
+		<input type="reset" value="{L_RESET}" class="btn btn-default" />
+	</div>
+</div>
+<input type="hidden" name="submit_update" value="1" />
 </form>
 
 <!--
-	This copyright information must be displayed as per the liscence you agree to by using this modification!
+	This copyright information must be displayed as per the license you agree to by using this modification!
 -->
-<br><center><span class="copyright">{VERSION_INFO}<br>{INSTALL_INFO}</span></center>
-<br />
+<p class="copyright center">{VERSION_INFO}<br />{INSTALL_INFO}</p>

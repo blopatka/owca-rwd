@@ -1,22 +1,12 @@
-<table width="100%" cellpadding="2" cellspacing="1" border="0" class="forumline">
-	<tr>
-		<td class="catHead" align="{WHO_ALIGN}" height="25"><span class="genmed"><b>{L_WHOONLINE}</b></span></td>
-	</tr>
-	<tr>
-		<td class="row1" align="{WHO_ALIGN}"><span class="gensmall">{L_DAY_USERS}<br />{TODAY_USERS}</span></td>
-	</tr>
-	<tr>
-		<td class="row2" align="{WHO_ALIGN}"><span class="gensmall">{L_TODAY_REGISTER}:<br />{USERS_TODAY_LIST}</span>
-		</td>
-	</tr>
-	<tr>
-		<td class="row1" align="{WHO_ALIGN}"><span class="gensmall">{USERS_LAST_HOUR_INFO}</span></td>
-	</tr>
-	<tr>
-		<td class="row1" align="{WHO_ALIGN}"><span class="gensmall">[ <a href="{U_VIEWONLINE}" class="mainmenu" target="_blank">{L_WHOONLINE}</a> ]</span></td>
-	</tr>
-	<tr>
-		<td class="row2" align="{WHO_ALIGN}"><span class="gensmall">{TOTAL_USERS_ONLINE}<br />{LOGGED_IN_USER_LIST}<br />{WHOONLINE}</span></td>
-	</tr>
-</table>
-<br />
+<div class="panel panel-primary" style="text-align: {WHO_ALIGN}">
+	<div class="panel-heading"><a href="{U_VIEWONLINE}" class="mainmenu" target="_blank">{L_WHOONLINE}</a></div>
+
+	<div class="panel-body">
+	{WHOONLINE}<hr />
+	<b>{L_DAY_USERS}</b><br />{TODAY_USERS}<hr />
+	<b>{L_TODAY_REGISTER}:</b><br />{USERS_TODAY_LIST}<hr />
+	{USERS_LAST_HOUR_INFO}<hr />
+	{TOTAL_USERS_ONLINE}<br />
+	{LOGGED_IN_USER_LIST}
+	</div>
+</div>

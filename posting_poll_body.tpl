@@ -1,41 +1,68 @@
+<div class="tab-pane" id="tab_polls">
+<span class="help-block">{L_ADD_POLL_EXPLAIN}</span>
+<div class="row">
+	<div class="col-md-7">
+		<div class="panel panel-info">
+		<div class="panel-heading">{L_ADD_A_POLL}</div>
+		<div class="panel-body">
+		<div class="row">
+			<label for="poll_title" class="col-md-4">{L_POLL_QUESTION}</label>
+			<div class="col-md-8"><input type="text" name="poll_title" id="poll_title" style="width: 100%"maxlength="255" value="{POLL_TITLE}" /></div>
+		</div>
+		
+		<div class="row">
+			<label for="max_vote" class="col-md-4">{L_MAX_VOTE}</label>
+			<div class="col-md-8">
+				<input type="text" name="max_vote" id="max_vote" size="3" maxlength="3" value="{MAX_VOTE}" />{L_OPTIONS}
+				<br /><span class="help-block gensmall">{L_MAX_VOTE_EXPLAIN}</span>
+			</div>
+		</div>
 
-			<tr>
-				<th class="thHead" colspan="2">{L_ADD_A_POLL}</th>
-	        </tr>
-			<tr>
-				<td class="row1" colspan="2"><span class="gensmall">{L_ADD_POLL_EXPLAIN}</span></td>
-	        </tr>
-            <tr>
-				<td class="row1"><span class="gen"><b>{L_POLL_QUESTION}</b></span></td>
-				<td class="row2"><span class="genmed"><input type="text" name="poll_title" size="50" maxlength="255" class="post" onFocus="Active(this)" onBlur="NotActive(this)" value="{POLL_TITLE}" /></span></td>
-			</tr>
-			<!-- BEGIN poll_option_rows -->
-            <tr>
-				<td class="row1"><span class="gen"><b>{L_POLL_OPTION}</b></span></td>
-				<td class="row2"><span class="genmed"><input type="text" name="poll_option_text[{poll_option_rows.S_POLL_OPTION_NUM}]" size="50" class="post" onFocus="Active(this)" onBlur="NotActive(this)" maxlength="255" value="{poll_option_rows.POLL_OPTION}" /></span> &nbsp;<input type="submit" name="edit_poll_option" value="{L_UPDATE_OPTION}" class="liteoption" /> <input type="submit" name="del_poll_option[{poll_option_rows.S_POLL_OPTION_NUM}]" value="{L_DELETE_OPTION}" class="liteoption" /></td>
-	  </tr>
+		<div class="row">
+			<label for="length" class="col-md-4">{L_POLL_LENGTH}:</label>
+			<div class="col-md-8">
+				<input type="text" name="poll_length" size="3" maxlength="3" value="{POLL_LENGTH}" id="length" /> {L_DAYS}
+				<input type="text" name="poll_length_h" size="3" maxlength="3" value="{POLL_LENGTH_H}" />{L_HOURS}
+				<br /><span class="help-block gensmall">{L_POLL_LENGTH_EXPLAIN}</span>
+			</div>
+		</div>
+
+		<div class="row">
+			<label class="col-md-4">{L_VHIDE}:</label>
+			<div class="col-md-8">
+				<label class="checkbox-inline"><input type="checkbox" name="hide_vote" {HIDE_VOTE} />{L_HIDE_VOTE}</label>,
+				<label class="checkbox-inline"><input type="checkbox" name="tothide_vote" {TOTHIDE_VOTE} /> {L_TOTHIDE_VOTE}</label>
+				<br /><span class="help-block gensmall">{L_HIDE_VOTE_EXPLAIN}</span>
+			</div>
+		</div>
+
+		<!-- BEGIN switch_poll_delete_toggle -->
+		<label class="checkbox">{L_POLL_DELETE}<input type="checkbox" name="poll_delete" /></label>
+		<!-- END switch_poll_delete_toggle -->
+		</div>
+		</div>
+	</div>
+
+	<div class="col-md-5">
+		<div class="panel panel-info">
+			<div class="panel-heading">{L_OPTIONS}</div>
+			
+			<div class="panel-body">
+				<!-- BEGIN poll_option_rows -->
+				<input type="text" name="poll_option_text[{poll_option_rows.S_POLL_OPTION_NUM}]" class="input-small" maxlength="255" value="{poll_option_rows.POLL_OPTION}" />
+				<input type="submit" name="edit_poll_option" value="{L_UPDATE_OPTION}" class="btn btn-default btn-xs" />
+				<input type="submit" name="del_poll_option[{poll_option_rows.S_POLL_OPTION_NUM}]" value="{L_DELETE_OPTION}" class="btn btn-danger btn-xs" />
+				<br />
 			<!-- END poll_option_rows -->
-            <tr>
-				<td class="row1"><span class="gen"><b>{L_POLL_OPTION}</b></span></td>
-				<td class="row2"><span class="genmed"><input type="text" name="add_poll_option_text" size="50" maxlength="255" class="post" onFocus="Active(this)" onBlur="NotActive(this)" value="{ADD_POLL_OPTION}" /></span> &nbsp;<input type="submit" name="add_poll_option" value="{L_ADD_OPTION}" class="liteoption" /></td>
-	   </tr>
-            <tr>
-				<td class="row1"><span class="gen"><b>{L_MAX_VOTE}</b></span></td>
-				<td class="row2"><span class="genmed"><input type="text" name="max_vote" size="3" maxlength="3" class="post" value="{MAX_VOTE}" onFocus="Active(this)" onBlur="NotActive(this)" /></span>&nbsp;<span class="gen"><b>{L_OPTIONS}</b></span> &nbsp; <span class="gensmall">{L_MAX_VOTE_EXPLAIN}</span></td>
-	   </tr>
-            <tr>
-				<td class="row1"><span class="gen"><b>{L_POLL_LENGTH}</b></span></td>
-				<td class="row2"><span class="genmed"><input type="text" name="poll_length" size="3" maxlength="3" class="post" value="{POLL_LENGTH}" class="post" onFocus="Active(this)" onBlur="NotActive(this)" /></span>&nbsp;<span class="gen"><b>{L_DAYS}</b></span>
-				<span class="genmed"><input type="text" name="poll_length_h" size="3" maxlength="3" class="post" value="{POLL_LENGTH_H}" onFocus="Active(this)" onBlur="NotActive(this)" /></span>&nbsp;<span class="gen"><b>{L_HOURS}</b></span>&nbsp; <span class="gensmall">{L_POLL_LENGTH_EXPLAIN}</span></td>
-	   </tr>
-            <tr>
-				<td class="row1"><span class="gen"><b>{L_VHIDE}</b></span></td>
-				<td class="row2"><input type="checkbox" name="hide_vote" {HIDE_VOTE} /> <span class="gen"><b>{L_HIDE_VOTE}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>(&nbsp;&nbsp;</span><input type="checkbox" name="tothide_vote" {TOTHIDE_VOTE} /> <span class="gen"><b>{L_TOTHIDE_VOTE}</b>&nbsp;)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="gensmall">{L_HIDE_VOTE_EXPLAIN}</span></td>
-			</tr>
+			</div>
 
-			<!-- BEGIN switch_poll_delete_toggle -->
-            <tr>
-				<td class="row1"><span class="gen"><b>{L_POLL_DELETE}</b></span></td>
-				<td class="row2"><input type="checkbox" name="poll_delete" /></td>
-			</tr>
-			<!-- END switch_poll_delete_toggle -->
+			<div class="panel-footer">
+			<div class="input-group">
+				<input type="text" class="form-control" name="add_poll_option_text" maxlength="255" value="{ADD_POLL_OPTION}" />
+				<span class="input-group-btn"><button type="submit" name="add_poll_option" class="btn btn-success">{L_ADD_OPTION}</button></span>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

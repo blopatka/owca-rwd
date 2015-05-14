@@ -25,34 +25,33 @@ function checkAlbumForm() {
 // -->
 </script>
 
-<form name="editform" action="{S_ALBUM_ACTION}" method="post" onsubmit="return checkAlbumForm()">
-<table width="100%" cellspacing="2" cellpadding="2" border="0">
-  <tr>
-	<td class="nav"><span class="nav"><a href="{U_INDEX}" class="nav">{L_INDEX}</a> -> <a class="nav" href="{U_ALBUM}">{L_ALBUM}</a> -> <a class="nav" href="{U_VIEW_CAT}">{CAT_TITLE}</a></span></td>
-  </tr>
-</table>
+<ul class="breadcrumb">
+	<li><a href="{U_INDEX}">{L_INDEX}</a></li>
+	<li><a href="{U_ALBUM}">{L_ALBUM}</a></li>
+	<li><a href="{U_VIEW_CAT}">{CAT_TITLE}</a></li>
+</ul>
 
-<table width="100%" cellpadding="2" cellspacing="1" border="0" class="forumline">
-  <tr>
-	<th class="thTop" height="25" colspan="2">{L_EDIT_PIC_INFO}</th>
-  </tr>
-  <tr>
-	<td class="row1" width="30%" height="28"><span class="gen">{L_PIC_TITLE}</span></td>
-	<td class="row2"><input class="post" type="text" name="pic_title" size="60" value="{PIC_TITLE}" /></td>
-  </tr>
-  <tr>
-	<td class="row1" valign="top" width="30%" height="28"><span class="gen">{L_PIC_DESC}<br /></span><span class="genmed">{L_PLAIN_TEXT_ONLY}<br />{L_MAX_LENGTH}: <b>{S_PIC_DESC_MAX_LENGTH}</b></span></td>
-	<td class="row2"><textarea class="post" cols="60" rows="4" name="pic_desc" size="60">{PIC_DESC}</textarea></td>
-  </tr>
-  <tr>
-	<td class="catBottom" align="center" height="28" colspan="2"><input type="reset" value="{L_RESET}" class="liteoption" />&nbsp;&nbsp;&nbsp;<input type="submit" name="submit" value="{L_SUBMIT}" class="mainoption" /></td>
-  </tr>
-</table>
+<form name="editform" action="{S_ALBUM_ACTION}" method="post" onsubmit="return checkAlbumForm()">
+	<div class="panel panel-info">
+		<div class="panel-heading">{L_EDIT_PIC_INFO}</div>
+
+		<div class="panel-body">
+			<div class="form-group">
+				<label for="pic_title" class="col-md-4">{L_PIC_TITLE}:</label>
+				<div class="col-md-6"><input type="text" name="pic_title" id="pic_title" value="{PIC_TITLE}" /></div>
+			</div>
+
+			<div class="form-group">
+				<div class="col-md-4"><label for="pic_desc">{L_PIC_DESC}:</label><span class="help-block">{L_PLAIN_TEXT_ONLY}<br />{L_MAX_LENGTH}: <b>{S_PIC_DESC_MAX_LENGTH}</b></span></div>
+				<div class="col-md-6"><textarea cols="60" rows="4" name="pic_desc" id="pic_desc">{PIC_DESC}</textarea></div>
+			</div>
+		</div>
+
+		<div class="panel-footer right">
+			<input type="submit" name="submit" value="{L_SUBMIT}" class="btn btn-primary" />
+			<input type="reset" value="{L_RESET}" class="btn btn-default" />
+		</div>
+	</div>
 </form>
 
-<br />
-
-<!--
-You must keep my copyright notice visible with its original content
--->
-<div align="center" style="font-family: Verdana; font-size: 10px; letter-spacing: -1px">Powered by Photo Album Addon {ALBUM_VERSION} &copy; 2002-2003 <a href="http://smartor.is-root.com" target="_blank">Smartor</a></div>
+<!-- INCLUDE album_footer.tpl -->

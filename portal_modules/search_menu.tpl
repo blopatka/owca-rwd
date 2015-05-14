@@ -1,34 +1,36 @@
-<script language="JavaScript" type="text/javascript">
-<!--
-	function checkSearch()
-	{
-		if (document.search_block.search_engine.value == "google")
+<div class="panel panel-primary" style="text-align: {SEARCH_ALIGN}">
+	<script language="JavaScript" type="text/javascript">
+	$("#search_block").submit(function(){
+		if ($("#search_engine").val() == "google")
 		{
-			window.open("http://www.google.com/search?q=" + document.search_block.search_keywords.value, "_google", "");
-			return false;
+		window.open("http://www.google.com/search?q=" + $("#terms").val();, "_google", "");
+		return false;
 		}
 		else
 		{
-			return true;
+		return true;
 		}
-	}
-//-->
-</script>
-<form name="search_block" method="post" action="{S_SEARCH_ACTION}" onSubmit="return checkSearch()">
-<table width="100%" cellpadding="2" cellspacing="1" border="0" class="forumline">
-	<tr>
-		<td class="catHead" align="{SEARCH_ALIGN}" height="25"><span class="genmed"><b>{L_SEARCH}</b></span></td>
-	</tr>
-	<tr>
-		<td class="row1" align="{LINKS_ALIGN}"><span class="gensmall" style="line-height=150%">{L_SEARCH}:<br /><input class="post" type="text" name="search_keywords" size="15" /></span>
-	</td>
-	</tr>
-	<tr>
-		<td class="row2" align="{LINKS_ALIGN}"><span class="gensmall" style="line-height=150%">{L_SEARCH_AT}:<br /><select class="post" name="search_engine"><option value="site">Forum</option><option value="google">Google</option></select><br /><a href="{U_SEARCH}" class="mainmenu">{L_ADVANCED_SEARCH}</a></span></td>
-	</tr>
-	<tr>
-		<td class="row1" align="center"><input type="hidden" name="search_fields" value="all" /><input type="hidden" name="show_results" value="topics" /><input class="mainoption" type="submit" value="{L_SEARCH}" /></td>
-	</tr>
-</table>
-</form>
-<br />
+	});
+	</script>
+	
+	<div class="panel-heading">{L_SEARCH}</div>
+	<div class="panel-body">
+	<form id="search_block" method="post" action="{S_SEARCH_ACTION}">
+		<label>{L_SEARCH}:</label>
+		<input type="text" name="search_keywords" id="terms" size="15" style="width: 90%;" />
+		
+		<label>{L_SEARCH_AT}:</label>
+		<select class="post" id="search_engine">
+			<option value="site">Forum</option>
+			<option value="google">Google</option>
+		</select><br />
+		
+		<a href="{U_SEARCH}" class="mainmenu">{L_ADVANCED_SEARCH}</a><br />
+		
+		<input type="hidden" name="search_fields" value="all">
+		<input type="hidden" name="show_results" value="topics">
+		
+		<input class="btn btn-default" type="submit" value="{L_SEARCH}">
+	</form>
+	</div>
+</div>

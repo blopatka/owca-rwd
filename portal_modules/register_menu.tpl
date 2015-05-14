@@ -1,48 +1,36 @@
+<div class="panel panel-primary">
+<div class="panel-heading">{L_QUICK_REGISTER}</div>
 <form method="post" action="{U_REGISTER}">
-<table width="100%" cellpadding="2" cellspacing="1" border="0" class="forumline">
-	<tr>
-		<td class="catHead" align="{REGISTER_ALIGN}" height="25"><span class="genmed"><b>{L_QUICK_REGISTER}</b></span></td>
-	</tr>
-	<tr>
-		<td class="row1" align="{REGISTER_ALIGN}"><span class="gensmall">{L_USERNAME}: <input type="text" class="post" style="width:110px" name="username" size="20" maxlength="20" value="" /></span></td>
-	</tr>
-	<tr>
-		<td class="row2" align="center">
-			<table>
-				<tr>
-					<td class="row2" align="left"><span class="gensmall">{L_PASSWORD}:</span></td>
-					<td class="row2" align="left"><span class="gensmall">{L_CONFIRM_PASSWORD}:</span></td>
-				</tr>
-					<td class="row2" align="left"><input type="password" class="post" style="width: 70px" name="new_password" value="" /></td>
-					<td class="row2" align="right"><input type="password" class="post" style="width: 70px" name="password_confirm" value="" /></td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-	<tr>
-		<td class="row1" align="{REGISTER_ALIGN}"><span class="gensmall">{L_EMAIL}: <input type="text" class="post" style="width:110px" name="email" size="25" maxlength="255" value="" /></span></td>
-	</tr>
-	<tr>
-		<td class="row2" align="{REGISTER_ALIGN}">
-			<!-- BEGIN gender_box -->
-			<span class="gensmall">&nbsp;{L_GENDER}: {L_FEMALE}<input type="radio" name="gender" value="2" /> {L_MALE}<input type="radio" name="gender" value="1" /></span>
-			<!-- END gender_box -->
-		</td>
-	</tr>
-	<tr>
-		<td class="row2" align="{REGISTER_ALIGN}">{CUSTOM_FIELDS}</td>
-	</tr>
-	<tr>
-		<td class="row2" align="{REGISTER_ALIGN}">
-			<!-- BEGIN validation -->
-			<img src="{VALIDATION_IMAGE}" width="95" height="20" border="0" alt="">&nbsp;
-			<input type="text" class="post" onFocus="Active(this); this.value=''" onBlur="NotActive(this)" name="reg_key" maxlength="4" size="4" value="{L_CODE}" />&nbsp;&nbsp;&nbsp&nbsp;
-			<!-- END validation -->
-		</td>
-	</tr>
-	<tr>
-		<td class="catBottom" align="center"><span class="gensmall">{S_REGISTER_HIDDEN_FIELDS}<input type="submit" name="submit" value="{L_REGISTER}" class="liteoption" /></span></td>
-	</tr>
-</table>
-</form>
+<div class="panel-body center">
+
+<label>{L_USERNAME}</label><br />
+<input type="text" name="username" maxlength="20" /><br />
+
+<label>{L_PASSWORD}:</label><br />
+<input type="password" name="new_password" /><br />
+
+<label>{L_CONFIRM_PASSWORD}:</label><br />
+<input type="password" name="password_confirm" /><br />
+
+<label>{L_EMAIL}:</label><br />
+<input type="text" name="email1" maxlength="200" size="10" />@<input type="text" name="email2" maxlength="200" size="5" />
 <br />
+
+<!-- BEGIN gender_box -->
+<label>{L_GENDER}:</label><br />
+<label class="radio-inline">{L_FEMALE}<input type="radio" name="gender" value="2" /></label>
+<label class="radio-inline">{L_MALE}<input type="radio" name="gender" value="1" /></label><br />
+<!-- END gender_box -->
+
+{CUSTOM_FIELDS}
+
+<!-- BEGIN validation -->
+<img src="{VALIDATION_IMAGE}" width="95" height="20" border="0" alt="" />
+<input type="text" name="reg_key" maxlength="4" size="4" placeholder="{L_CODE}" /><br />
+<!-- END validation -->
+</div>
+
+{S_REGISTER_HIDDEN_FIELDS}
+<div class="panel-footer right"><input type="submit" name="submit" value="{L_REGISTER}" class="btn btn-default" /></div>
+</form>
+</div>

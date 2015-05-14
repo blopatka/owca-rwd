@@ -1,82 +1,67 @@
-<table cellspacing="1" cellpadding="4" border="0" align="center" class="forumline">
-	<tr>
-		<th class="thHead" align="center">{L_USER_SELECT}</th>
-	</tr>
-	<tr>
-		<td class="row1" align="center">
-		<form method="post" name="post" action="{S_USER_ACTION}">
-		<input type="text" class="post" name="username" maxlength="50" size="20" /> 
-		<input type="hidden" name="mode" value="edit" /><input type="hidden" name="userlist" value="1" />
-		<input type="submit" name="submituser" value="{L_LOOK_UP}" class="mainoption" />
-		<input type="submit" name="authuser" value="{L_AUTH}" class="mainoption" />
-		<!-- BEGIN is_admin -->
-		<input type="submit" name="jr" value="JR" class="mainoption" />
-		<!-- END is_admin -->
-		</form>
-		<input type="submit" name="usersubmit" value="{L_FIND_USERNAME}" class="liteoption" onClick="window.open('{U_SEARCH_USER}', '_phpbbsearch', 'HEIGHT=250,resizable=yes,WIDTH=400');return false;" /></td>
-	</tr>
-	<tr>
-		<td class="row2" align="center">{U_SEARCH_USERS}</td>
-	</tr>
-	<tr>
-		<td class="row1" align="center">{L_SORT_PER_LETTER}&nbsp;{S_LETTER_SELECT}</td>
-	</tr>
-</table>
+<form method="post" name="post" action="{S_USER_ACTION}" class="panel panel-primary centered">
+	<div class="panel-heading"><label for="username">{L_USER_SELECT}</label></div>
 
-<table width="100%" cellpadding="3" cellspacing="1" border="0" class="forumline">
+	<div class="panel-body">
+	<div class="input-group">
+		<input type="text" name="username" id="username" class="form-control" maxlength="50" />
+		<span class="input-group-btn">
+			<button name="usersubmit" type="button" class="btn btn-primary" title="{L_FIND_USERNAME}" onclick="PopUp('{U_SEARCH_USER}', 400, 250);"><span class="glyphicon glyphicon-user"></span></button>
+		</span>
+	</div>
+	</div>
+
+	<input type="hidden" name="mode" value="edit" />
+	<input type="hidden" name="userlist" value="1" />
+
+	<div class="panel-footer right">
+	<input type="submit" name="submituser" value="{L_LOOK_UP}" class="btn btn-primary" />
+	<input type="submit" name="authuser" value="{L_AUTH}" class="btn btn-info" />
+	<!-- BEGIN is_admin -->
+	<input type="submit" name="jr" value="JR" class="btn btn-danger" />
+	<!-- END is_admin -->
+	</div>
+</form>
+
+{U_SEARCH_USERS}
+
+<form action="{U_LIST_ACTION}" method="post">
+	<div class="panel-footer">
+		{L_SORT_PER_LETTER}&nbsp;{S_LETTER_SELECT}, 
+		{S_LETTER_HIDDEN}
+		{L_SELECT_SORT_METHOD} {S_USER_SELECT}{S_ORDER_SELECT}<input type="submit" value="{L_SORT}" class="btn btn-default" />
+	</div>
+</form>
+
+<table class="table table-bordered table-striped table-hover table-condensed center">
+	<thead>
 	<tr>
-		<th class="thTop" height="25" valign="middle" nowrap="nowrap">{L_ACTION}</th>
-		<th class="thTop" height="25" valign="middle" nowrap="nowrap">{L_USERNAME}</th>
-		<th class="thTop" height="25" valign="middle" nowrap="nowrap">{L_EMAIL}</th>
-		<th class="thTop" height="25" valign="middle" nowrap="nowrap">{L_POSTS}</th>
-		<th class="thTop" height="25" valign="middle" nowrap="nowrap">{L_JOINED}</th>
-		<th class="thTop" height="25" valign="middle" nowrap="nowrap">{L_LAST_VISIT}</th>
-		<th class="thCornerR" height="25" valign="middle" nowrap="nowrap">{L_ACTIVE}</th>
+		<th width="18%">{L_ACTION}</th>
+		<!-- BEGIN is_admin --><th width="1%">JR</th><!-- END is_admin -->
+		<th>{L_USERNAME}</th>
+		<th width="18%">{L_EMAIL}</th>
+		<th width="40">{L_POSTS}</th>
+		<th width="11%">{L_JOINED}</th>
+		<th width="11%">{L_LAST_VISIT}</th>
+		<th width="1%">{L_ACTIVE}</th>
 	</tr>
-	<tr>
-		<td class="row2" colspan="8" align="center">
-			<form action="{U_LIST_ACTION}" method="post">
-			{S_LETTER_HIDDEN}
-			<p>{L_SELECT_SORT_METHOD}&nbsp;{S_USER_SELECT}
-			&nbsp;{S_ORDER_SELECT}&nbsp;&nbsp;<input type="submit" value="{L_SORT}" class="liteoption">
-			</form>
-		</td>
-	</tr>
+	</thead>
 	<!-- BEGIN userrow -->
 	<tr>
-		<td class="{userrow.COLOR}" align="center" valign="middle" height="28" width="68" nowrap="nowrap">
-			<form action="{S_JR_ACTION}" method="post"><input type="hidden" name="user_id" value="{userrow.USER_ID}" />
-			<table>
-				<tr>
-					<td class="{userrow.COLOR}" align="center"><span class="gensmall"><a href="{userrow.U_ADMIN_USER}">{L_EDIT}</a><br /><a href="{userrow.U_ADMIN_USER_AUTH}">{L_PERMISSION}</a></span></td>
-					<td class="{userrow.COLOR}" align="center" valign="middle"><span class="gensmall">
-					<!-- BEGIN is_admin -->
-					<input type="submit" name="jr" value="JR" class="{userrow.JR_CLASS}" />
-					<!-- END is_admin -->
-					</span></td>
-				</tr>
-			</table>
-			</form>
+		<td>
+			<a href="{userrow.U_ADMIN_USER}" class="btn btn-link">{L_EDIT}</a>
+			<a href="{userrow.U_ADMIN_USER_AUTH}" class="btn btn-link">{L_PERMISSION}</a>
 		</td>
-		<td class="{userrow.COLOR}" align="center" valign="middle" height="28" nowrap="nowrap"><span class="genmed">{userrow.USERNAME}</span></td>
-		<td class="{userrow.COLOR}" align="center" valign="middle" height="28" nowrap="nowrap"><span class="genmed">{userrow.EMAIL}</span></td>
-		<td class="{userrow.COLOR}" align="center" valign="middle" height="28" width="40" nowrap="nowrap"><span class="genmed">{userrow.POSTS}</span></td>
-		<td class="{userrow.COLOR}" align="center" valign="middle" height="28" width="130" nowrap="nowrap"><span class="genmed">{userrow.JOINED}</span></td>
-		<td class="{userrow.COLOR}" align="center" valign="middle" height="28" width="130" nowrap="nowrap"><span class="genmed">{userrow.LAST_VISIT}</span></td>
-		<td class="{userrow.COLOR}" align="center" valign="middle" height="28" width="50" nowrap="nowrap"><span class="genmed">{userrow.ACTIVE}</span></td>
+		<!-- BEGIN is_admin -->
+		<td><a href="{S_JR_ACTION}&user_id={userrow.USER_ID}" class="btn btn-link"<!-- IF userrow.JR_CLASS == 'mainoption' --> style="font-weight: bold;"<!-- ENDIF -->>JR</a></td>
+		<!-- END is_admin -->
+		<td>{userrow.USERNAME}</td>
+		<td>{userrow.EMAIL}</td>
+		<td>{userrow.POSTS}</td>
+		<td>{userrow.JOINED}</td>
+		<td>{userrow.LAST_VISIT}</td>
+		<td>{userrow.ACTIVE}</td>
 	</tr>
 	<!-- END userrow -->
-	<tr>
-		<td class="catBottom" height="28" align="center" valign="middle" colspan="8">
-		</td>
-	</tr>
 </table>
 
-<table width="100%" cellspacing="2" cellpadding="2" border="0" align="center">
-	<tr>
-		<td align="left" valign="middle" nowrap="nowrap"><span class="nav">{PAGE_NUMBER}</span></td>
-		<td align="right" valign="middle"><span class="nav">{PAGINATION}</span></td>
-	</tr>
-</table>
-
-<br />
+{PAGE_NUMBER}{PAGINATION}

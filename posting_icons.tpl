@@ -1,4 +1,3 @@
-
 <script language="javascript" type="text/javascript">
 <!--
 function icon(text) {
@@ -16,20 +15,7 @@ function icon(text) {
 //-->
 </script>
 
-<table width="100%" border="0" cellspacing="0" cellpadding="10">
-	<tr>
-		<td><table width="100%" border="0" cellspacing="1" cellpadding="4" class="forumline">
-			<tr>
-				<th class="thHead"  width="100%" height="25">{L_ICONS}</th>
-			</tr>
-			<tr>
-				<td height="100%">
-					<!-- BEGIN icons -->
-					<a href="javascript:icon('{icons.ICON_CODE}')"><img src="{icons.URL}" border="0" /></a>&nbsp; &nbsp;
-					<!-- END icons -->
-				</td>
-			</tr>
-	
-		</table></td>
-	</tr>
-</table>
+<h6>{L_ICONS}</h6>
+<!-- BEGIN icons -->
+<a href="javascript:icon('{icons.ICON_CODE}')"><img src="{icons.URL}" border="0" /></a>&nbsp;
+<!-- END icons -->

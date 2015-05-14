@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE HTML>
 <html dir="{S_CONTENT_DIRECTION}">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset={S_CONTENT_ENCODING}">
@@ -85,44 +85,32 @@ border-left-width:	1px; border-top-width: 1px; border-right-width: 1px; border-b
 a.copyright		{ text-decoration: none; color : ##000000; }
 a.copyright:hover	{ text-decoration: underline; color : ##000000; }
 
+.details
+{
+border-bottom: 1px solid silver;
+}
 -->
 </style>
 <title>{PAGE_TITLE}</title>
 </head>
 <body bgcolor="#FFFFFF">
-<table width="100%" bgcolor="#FFFFFF">
-	<tr>
-		<td>
-			<table width="607" border="0" align="center" cellpadding="0" cellspacing="0">
-				<tr>
-					<td>
-						<table width="100%" border="0">
-							<tr>
-								<td align="right" width="40">&nbsp;</td>
-								<td align="left"><center><b><font size="3">{SITENAME}</font></b><br />{SITE_DESCRIPTION}</center></td>
-								<td align="right" width="40"><img src="images/print.gif" border="0" onClick="window.print();" style="cursor: pointer;"></td>
-							</tr>
-						</table>
-						<hr />
-						<center>
-						<b>{FORUM_NAME} - {TOPIC_TITLE}</b><br />
-						</center>
 
-						<!-- BEGIN postrow -->
-						<hr /><b>{postrow.POSTER_NAME}</b> - {postrow.POST_DATE}<br />{postrow.POST_SUBJECT}<hr /><span class="postbody">{postrow.MESSAGE}</span>
-						<!-- END postrow -->
-						<hr />
-					</td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-</table>
-<br />
-<table width="100%">
-	<tr>
-		<td align="center"><span class="gensmall">Powered by <a href="http://www.phpbb.com" target="_blank" class="copyright">phpBB</a> modified by <a href="http://www.przemo.org/phpBB2/" class="copyright" target="_blank">Przemo</a> &copy; 2003 phpBB Group</span></td>
-	</tr>
-</table>
+<div style="text-align: center">
+	<!-- BEGIN forum_row -->{forum_row.TOPIC_ID}<br /><!-- END forum_row -->
+	<img src="images/print.gif" border="0" onClick="window.print();" style="cursor: pointer;">
+	<b><font size="3">{SITENAME}</font></b><br>{SITE_DESCRIPTION}<br /><hr />
+	<b>{FORUM_NAME} - {TOPIC_TITLE}</b><br>
+</div>
+
+<!-- BEGIN postrow -->
+<hr />
+<p class="details"><b>{postrow.POSTER_NAME}</b> - <time>{postrow.POST_DATE}</time> {postrow.POST_SUBJECT}</p>
+<p class="postbody">{postrow.MESSAGE}</p>
+<!-- END postrow -->
+
+
+<hr />
+<br />{PAGINATION}<br />
+<center><span class="gensmall">Powered by <a href="http://www.phpbb.com" target="_blank" class="copyright">phpBB</a> modified by <a href="http://www.przemo.org/phpBB2/" class="copyright" target="_blank">Przemo</a> &copy; 2003 phpBB Group</span></center>
 </body>
 </html>

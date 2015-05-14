@@ -1,45 +1,25 @@
-<tr>
-	<td class="row2" colspan="2">
-		<br clear="all" />
-		<table cellspacing="0" cellpadding="4" border="0" align="center">
-			<tr>
-				<td colspan="4" align="center"><span class="gen"><b>{POLL_QUESTION}</b></span></td>
-			</tr>
-			<tr>
-				<td align="center">
-					<table cellspacing="0" cellpadding="2" border="0">
-						<!-- BEGIN poll_option -->
-						<tr>
-							<td><span class="gen">{poll_option.POLL_OPTION_CAPTION}</span></td>
-							<td>
-								<table cellspacing="0" cellpadding="0" border="0">
-									<tr>
-										<td><img src="templates/pentaskin/images/vote_lcap.gif" width="4" alt="" height="12" /></td>
-										<td><img src="{poll_option.POLL_OPTION_IMG}" width="{poll_option.POLL_OPTION_IMG_WIDTH}" height="12" alt="{poll_option.POLL_OPTION_PERCENT}" /></td>
-										<td><img src="templates/pentaskin/images/vote_rcap.gif" width="4" alt="" height="12" /></td>
-									</tr>
-								</table>
-							</td>
-							<td align="center"><b><span class="gen">&nbsp;{poll_option.POLL_OPTION_PERCENT}&nbsp;</span></b></td>
-							<td align="center"><span class="gen">[ {poll_option.POLL_OPTION_RESULT} ]</span></td>
-						</tr>
-						<!-- END poll_option -->
-					</table>
-				</td>
-			</tr>
-			  <tr> 
-				<td colspan="4" align="center"><span class="gen"><b>{VOTED_SHOW}{voted_vote}</b></span></td>
-			  </tr>
-			  <tr> 
-				<td colspan="4" align="center"><span class="gen"><b>{L_TOTAL_VOTES}{TOTAL_VOTES}</b></span></td>
-			  </tr>
-			  <tr> 
-				<td colspan="4" align="center"><span class="gensmall">{L_RESULTS_AFTER}</span></td>
-			  </tr>
-			  <tr> 
-				<td colspan="4" align="center"><span class="gensmall">{L_POLL_EXPIRES}{POLL_EXPIRES}</span></td>
-			  </tr>
-		</table>
-		<br clear="all" />
-	</td>
-</tr>
+<div class="panel panel-info centered">
+	<div class="panel-heading">{POLL_QUESTION}</div>
+
+	<div class="panel-body">
+		<!-- BEGIN poll_option -->
+		<div class="row">
+			<div class="col-md-3"><b>{poll_option.POLL_OPTION_CAPTION}</b></div>
+			<div class="col-md-5">
+				<div class="progress" style="width: 200px">
+					<div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: {poll_option.POLL_OPTION_IMG_WIDTH}px;">
+						<span class="sr-only">{poll_option.POLL_OPTION_IMG_WIDTH}% Complete</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2">{poll_option.POLL_OPTION_RESULT} ({poll_option.POLL_OPTION_PERCENT})</div>
+		</div>
+		<!-- END poll_option -->
+	</div>
+
+	<div class="panel-footer">
+		<b>{VOTED_SHOW}</b> {voted_vote},
+		<b>{L_TOTAL_VOTES}</b> {TOTAL_VOTES}
+		<span class="gensmall">{L_RESULTS_AFTER}<br />{L_POLL_EXPIRES}{POLL_EXPIRES}</span>
+	</div>
+</div>

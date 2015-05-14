@@ -1,4 +1,4 @@
-<SCRIPT LANGUAGE="JavaScript">
+<script language="JavaScript">
 <!--
 function disableForm(theform)
 {
@@ -16,7 +16,7 @@ function disableForm(theform)
 	}
 	else
 	{
-		alert("The form has been submitted.  Please do NOT resubmit. ");
+		alert("The form has been submitted.	Please do NOT resubmit.");
 		return false;
 	}
 }
@@ -41,88 +41,97 @@ function chval(val)
 	val.value = email;
 }
 
-//  End -->
-</script> 
+//	End -->
+</script>
 
 <h1>{L_EMAIL_TITLE}</h1>
-
 <p>{L_EMAIL_EXPLAIN}</p>
-
-<form method="post" action="{S_USER_ACTION}" onSubmit="return disableForm(this);">
 
 {ERROR_BOX}
 
-<table cellspacing="1" cellpadding="4" border="0" align="center" width="700px" class="forumline">
-	<tr> 
-	  <th class="thHead" colspan="2">{L_COMPOSE}</th>
-	</tr>
+<form method="post" action="{S_USER_ACTION}" onSubmit="return disableForm(this);" class="centered">
+	<div class="panel panel-primary">
+		<div class="panel-heading">{L_COMPOSE}</div>
 	<!-- BEGIN form -->
-	<tr> 
-	  <td class="row1" align="right"><b>{L_RECIPIENTS}</b></td>
-	  <td class="row2" align="left">{S_GROUP_SELECT}</td>
-	</tr>
-	<tr> 
-	  <td class="row1" align="right"><b>{L_USERS_LANGUAGE}</b></td>
-	  <td class="row2" align="left">{LANGUAGE_SELECT} <span class="gensmall">{L_USERS_LANGUAGE_E}</span></td>
-	</tr>
-	<tr> 
-	  <td class="row1" align="right"><b>{L_PLAIN_HTML}</b></td>
-	  <td class="row2"><span class="gen"><input type="radio" name="html" value="0"{HTML_NO} /> text &nbsp;<input type="radio" name="html" value="1"{HTML_YES} /> html</span></td>
-	</tr>
-	<tr> 
-	  <td class="row1" align="right"><b>{L_EMAIL_SUBJECT}</b></td>
-	  <td class="row2"><span class="gen"><input type="text" name="subject" style="width:550px;" maxlength="100" tabindex="2" class="post" value="{SUBJECT}" /></span></td>
-	</tr>
-	<tr> 
-	  <td class="row1" align="right" valign="top"> <span class="gen"><b>{L_EMAIL_MSG}</b></span> 
-	  <td class="row2"><span class="gen"> <textarea name="message" rows="15" cols="35" style="width:550px; height: 260px;" tabindex="3" class="post">{MESSAGE}</textarea></span></td>
-	</tr>
-	<tr> 
-	  <td class="catBottom" align="center" colspan="2"><input type="submit" value="{L_EMAIL}" name="submit" class="mainoption" /></td>
-	</tr>
+
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-md-3"><b>{L_RECIPIENTS}</b></div>
+				<div class="col-md-8">{S_GROUP_SELECT}</div>
+			</div>
+
+			<div class="row">
+				<label class="col-md-3">{L_USERS_LANGUAGE}</label>
+				<div class="col-md-6">{LANGUAGE_SELECT}<span class="help-block">{L_USERS_LANGUAGE_E}</span></div>
+			</div>
+
+			<div class="row">
+				<label class="col-md-3">{L_PLAIN_HTML}</label>
+				<div class="col-md-6">
+					<label class="radio-inline"><input type="radio" name="html" value="0"{HTML_NO}/>text</label>
+					<label class="radio-inline"><input type="radio" name="html" value="1"{HTML_YES}/>html</label>
+				</div>
+			</div>
+
+			<div class="row">
+				<label for="subject" class="col-md-3">{L_EMAIL_SUBJECT}</label>
+				<div class="col-md-6"><input type="text" name="subject" id="subject" maxlength="100" tabindex="2" value="{SUBJECT}" /></div>
+			</div>
+
+			<div class="row">
+				<label for="message" class="col-md-3">{L_EMAIL_MSG}</label>
+				<div class="col-md-6"><textarea name="message" id="message" rows="15" cols="55" tabindex="3" style="width: 100%">{MESSAGE}</textarea></div>
+			</div>
+		</div>
+
+		<div class="panel-footer right"><input type="submit" value="{L_EMAIL}" name="submit" class="btn btn-primary" /></div>
 	<!-- END form -->
 	<!-- BEGIN preview -->
-	<tr> 
-	  <td class="row1" align="right" width="50%">{L_RECIPIENTS}</td>
-	  <td class="row2" align="left" width="50%"><b>{PREVIEW_GROUPS}</b></td>
-	</tr>
-	<tr> 
-	  <td class="row1" align="right">{L_USERS_LANGUAGE}</td>
-	  <td class="row2" align="left"><b>{PREVIEW_LANGUAGE}</b></td>
-	</tr>
-	<tr> 
-	  <td class="row1" align="right">{L_PLAIN_HTML}</td>
-	  <td class="row2"><b>{PREVIEW_HTML}</b></td>
-	</tr>
-	<tr> 
-	  <td class="row1" align="right">{L_EMAIL_SUBJECT}</td>
-	  <td class="row2"><b>{SUBJECT}</b></td>
-	</tr>
-	</tr>
-	<tr> 
-	  <td class="row1" align="right">{L_EMAIL_TO}</td>
-	  <td class="row2"><input type="text" name="to" class="post" size="25" value="Undisclosed-recipients:;" onClick="chval(this)" /></td>
-	</tr>
-	<!-- BEGIN emails -->
-	<tr> 
-	  <td class="row1" align="center" colspan="2">{preview.emails.EMAILS}</td>
-	</tr>
-	<!-- END emails -->
-	<!-- BEGIN message -->
-	<tr> 
-	  <td class="row3" align="center" colspan="2">{L_EMAIL_MSG}</span></td>
-	</tr>
-	<tr>
-	  <td class="row1" align="left" colspan="2">{MESSAGE_PREVIEW}</td>
-	</tr>
-	<!-- END message -->
-	<tr> 
-	  <td class="catBottom" align="center" colspan="2"><input type="hidden" name="send" value="1" />
-	  {S_PREVIEW_FIELDS}
-	  <input type="submit" value="{L_IMPROVE}" name="improve" class="liteoption" /> 
-	  <input type="submit" value="{L_SEND}" name="submit" class="mainoption" /></td>
-	</tr>
+		<div class="panel-body">
+			<!-- BEGIN emails -->
+			{preview.emails.EMAILS}
+			<!-- END emails -->
+		</div>
+
+		<table class="table table-bordered table-striped table-hover">
+			<colgroup>
+				<col style="width: 10%">
+				<col>
+			</colgroup>
+			<tr>
+				<th>{L_RECIPIENTS}</th>
+				<td>{PREVIEW_GROUPS}</td>
+			</tr>
+			<tr>
+				<th>{L_USERS_LANGUAGE}</td>
+				<td>{PREVIEW_LANGUAGE}</td>
+			</tr>
+			<tr>
+				<th>{L_PLAIN_HTML}</td>
+				<td>{PREVIEW_HTML}</td>
+			</tr>
+			<tr>
+				<th>{L_EMAIL_SUBJECT}</td>
+				<td>{SUBJECT}</td>
+			</tr>
+			<tr>
+				<th>{L_EMAIL_TO}</th>
+				<td><input type="text" name="to" size="25" value="Undisclosed-recipients:;" onClick="chval(this)" /></td>
+			</tr>
+		</table>
+
+		<!-- BEGIN message -->
+		<div class="panel-heading">{L_EMAIL_MSG}</div>
+		<div class="panel-body">{MESSAGE_PREVIEW}</div>
+		<!-- END message -->
+
+		<input type="hidden" name="send" value="1" />
+
+		<div class="panel-footer right">
+			<input type="submit" value="{L_IMPROVE}" name="improve" class="btn btn-info" />
+			<input type="submit" value="{L_SEND}" name="submit" class="btn btn-primary" />
+		</div>
+	{S_PREVIEW_FIELDS}
 	<!-- END preview -->
-</table>
+	</div>
 </form>
-<br />

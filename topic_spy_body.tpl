@@ -1,37 +1,35 @@
-<form method="post" action="{S_MODE_ACTION}">
-<table width="100%" cellspacing="2" cellpadding="2" border="0" align="center">
-	<tr>
-		<td align="left"><span class="nav"><a href="{U_INDEX}" class="nav">{L_INDEX}</a></span></td>
-		<td align="right">{L_USERNAME}: <b>{SEARCHED_USERNAME}</b> {L_SEARCH_MATCHES}</td>
-	</tr>
-</table>
+<a href="{U_INDEX}">{L_INDEX}</a>
 
-<table width="100%" cellpadding="3" cellspacing="1" border="0" class="forumline">
+<div class="row well">
+	<div class="col-md-6">{L_USERNAME}: <b>{SEARCHED_USERNAME}</b> <br /> {L_SEARCH_MATCHES}</div>
+	<div class="col-md-6 right">
+		<form method="post" action="{S_MODE_ACTION}">
+			<div class="input-group">
+			<input type="text" class="form-control" name="username" value="{SEARCHED_USERNAME}" />
+			<span class="input-group-btn"><button type="submit" name="submit" class="btn btn-primary">{L_SEARCH}</button></span>
+			</div>
+		</form>
+	</div>
+</div>
+<table class="table table-bordered table-striped table-hover">
+	<thead>
 	<tr>
-		<th class="thTop" nowrap="nowrap">{L_FORUM}</th>
-		<th class="thTop" nowrap="nowrap">{L_TOPIC_TITLE}</th>
-		<th class="thTop" nowrap="nowrap">{L_TOPIC_COUNT}</th>
-		<th class="thTop" nowrap="nowrap">{L_TOPIC_LAST}</th>
-		<th class="thTop" nowrap="nowrap">{L_AUTHOR}</th>
+		<th width="20%">{L_FORUM}</th>
+		<th width="30%">{L_TOPIC_TITLE}</th>
+		<th width="7%">{L_TOPIC_COUNT}</th>
+		<th width="11%">{L_TOPIC_LAST}</th>
+		<th width="11%">{L_AUTHOR}</th>
 	</tr>
+	</thead>
 	<!-- BEGIN spy_row -->
 	<tr>
-		<td class="{spy_row.ROW_CLASS}" width="20%" nowrap="nowrap"><span class="gen"><a href="{spy_row.U_VIEW_FORUM}" class="forumlink">{spy_row.FORUM_NAME}</a></span></td>
-		<td class="{spy_row.ROW_CLASS}" width="30%" nowrap="nowrap"><span class="gen"><a href="{spy_row.U_VIEW_TOPIC}" class="topictitle">{spy_row.TOPIC_TITLE}</a></span></td>
-		<td class="{spy_row.ROW_CLASS}" width="7%" nowrap="nowrap" align="center"><span class="gen">{spy_row.VIEW_COUNT}</span></td>
-		<td class="{spy_row.ROW_CLASS}" width="11%" nowrap="nowrap" align="center"><span class="postdetails">{spy_row.LAST_VIEW}</span></td>
-		<td class="{spy_row.ROW_CLASS}" width="11%" nowrap="nowrap" align="center"><span class="gen">{spy_row.TOPIC_AUTHOR}</span></td>
+		<td><a href="{spy_row.U_VIEW_FORUM}" class="forumlink">{spy_row.FORUM_NAME}</a></td>
+		<td><a href="{spy_row.U_VIEW_TOPIC}" class="topictitle">{spy_row.TOPIC_TITLE}</a></td>
+		<td align="center">{spy_row.VIEW_COUNT}</td>
+		<td align="center"><span class="postdetails"><time>{spy_row.LAST_VIEW}</time></span></td>
+		<td align="center">{spy_row.TOPIC_AUTHOR}</td>
 	</tr>
 	<!-- END spy_row -->
-	<tr>
-		<td class="catHead" colspan="2" align="left"><span class="genmed"><input type="text" name="username" value="{SEARCHED_USERNAME}" class="post" size="12" style="font-weight: bold;" /> <input type="submit" name="submit" value="{L_SEARCH}" class="mainoption" /></span></td>
-		<td class="catHead" colspan="3" align="right"><span class="nav"><a href="{U_INDEX}" class="nav">{L_INDEX}</a></span></td>
-	</tr>
 </table>
-<table width="100%" cellspacing="2" cellpadding="2" border="0">
-	<tr>
-		<td><span class="nav">{PAGE_NUMBER}</span></td>
-		<td align="right"><span class="nav">{PAGINATION}</span></td>
-	</tr>
-</table>
-</form>
+
+{PAGE_NUMBER}{PAGINATION}

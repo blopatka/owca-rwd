@@ -1,18 +1,46 @@
-<br />
-<form name="post" action="{SHOUTBOX_URL}" method="POST" target="shout_iframe">
-<table width="{SHOUTBOX_WIDTH}" align="center" cellpadding="0" cellspacing="0" border="0" class="forumline" style="border-width: 1px;">
-	<tr>
-		<td class="catHead" align="center" height="25"><span class="cattitle"><a href="{SHOUTBOX_URL}" class="mainmenu" title="{L_ALL_MESSAGES}">ShoutBox</a></span></td>
-	</tr>
-	<tr>
-		<td class="row1" align="center" valign="middle"><iframe style="border-width: 1px;" name="shout_iframe" src="{SHOUTBOX_URL}" width="{SHOUTBOX_WIDTH}" height="{SHOUTBOX_HEIGHT}"></iframe></td>
-	</tr>
-	<tr>
-		<td class="row1" align="center" valign="bottom" nowrap="nowrap"><span class="gensmall">
-		{L_GG_MES}: <input type="text" name="message" style="height:17px;font-size:9px;width:360px;" size="60" maxlength="{MAXLENGHT}" value="" class="post" onFocus="Active(this)" onBlur="NotActive(this)">
-		&nbsp;<input type="submit" name="submit_button" value="{L_SEND}" class="button" style="font-size:9px; height:17px;" onclick="this.form.submit(); post.message.value=''; return false;">
-		&nbsp;<input type="submit" name="refresh" value="R" style="font-size:9px; height:17px; cursor: pointer" title="{L_REFRESH}" class="button" onclick="post.message.value=''; this.form.submit();" />
-		<input type="hidden" name="mode" value="submit"></span></td>
-	</tr>
-</table>
-</form>
+<script type="text/javascript" src="images/shoutbox.js"></script>
+<script type="text/javascript"><!--
+onload = requestNewMessages;
+var updateInterval = {REFRESH_SB};
+-->
+</script>
+<div class="panel panel-primary">
+	<div class="panel-heading" id="SB_content">{L_SHOUTBOX} <img src="templates/{STYLE_NAME}/images/act_indicator.gif" id="act_indicator" alt="indicator" /></div>
+	<div class="panel-body">
+		<div id="SB_box" style="width: 100%; height:{SHOUTBOX_HEIGHT}px; overflow:auto;">
+			<div id="SB_inner" style="text-align:left;">
+			</div>
+		</div>
+	</div>
+
+	<div class="panel-footer form-inline">
+		<span id="message12">{L_GG_MES}:</span>
+
+		<span class="form-inline">
+			<input type="text" class="post" id="messageBox" value="" maxlength="{MAXLENGHT}" size="60" onkeydown="handleKey(event);" />
+			<input type="button" class="btn btn-primary" id="wyslij" value="{L_SEND}" onclick="sendMessage();" style="margin-right:2px;" />
+		</span>
+
+		<!-- BEGIN smilies_emotki -->
+		<input type="button" class="btn btn-default" id="emotki" value="{L_EMOTKI}" onclick="emotki();" />
+		<!-- END smilies_emotki -->
+
+		<input type="button" class="btn btn-primary" style="display: none;" id="zmien" value="{L_EDIT_SB}" onclick="sendEditShout();" />
+		<input type="button" class="btn btn-danger" style="display: none;" id="anuluj1" value="{L_CANCEL_SB}" onclick="anuluj1();" />
+		<input type="button" class="btn btn-default" style="display: none; width: 560px;" id="refresh12" value="{L_REFRESH_SB}" onclick="refreshSB12();" />
+		<input type="hidden" id="userName" value="{USER_ID}" disabled="disabled" />
+		<input type="hidden" id="userId" value="" disabled="disabled" />
+
+	<!-- BEGIN smilies_emotki -->
+	<div id="ramka" style="display: none;">
+	<!-- END smilies_emotki -->
+		<!-- BEGIN smilies_row -->
+			<!-- BEGIN smilies_col -->
+			<img src="{smilies_row.smilies_col.SMILEY_IMG}" style="cursor:pointer;margin:2px;border:0;" onclick="wstawianieSB('{smilies_row.smilies_col.SMILEY_CODE}',1);" title="{smilies_row.smilies_col.SMILEY_CODE}" />
+			<!-- END smilies_col -->
+		<!-- END smilies_row -->
+	<!-- BEGIN smilies_emotki -->
+	</div>
+	<!-- END smilies_emotki -->
+	</div>
+</div>

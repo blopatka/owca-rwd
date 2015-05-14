@@ -1,98 +1,56 @@
-<table cellspacing="2" cellpadding="2" border="0" align="center">
-   <tr> 
-      <td valign="middle">{INBOX_IMG}</td>
-      <td valign="middle"><span class="cattitle">{INBOX} &nbsp;</span></td>
-      <td valign="middle">{SENTBOX_IMG}</td>
-      <td valign="middle"><span class="cattitle">{SENTBOX} &nbsp;</span></td>
-      <td valign="middle">{OUTBOX_IMG}</td>
-      <td valign="middle"><span class="cattitle">{OUTBOX} &nbsp;</span></td>
-      <td valign="middle">{SAVEBOX_IMG}</td>
-      <td valign="middle"><span class="cattitle">{SAVEBOX}</span></td>
-   </tr>
+<div class="center noprint">
+	<span class="btn btn-default"><span class="glyphicon glyphicon-inbox"></span> {INBOX}</span>
+	<span class="btn btn-default"><span class="glyphicon glyphicon-share"></span> {SENTBOX}</span>
+	<span class="btn btn-default"><span class="glyphicon glyphicon-send"></span> {OUTBOX}</span>
+	<span class="btn btn-default"><span class="glyphicon glyphicon-save"></span> {SAVEBOX}</span>
+</div>
+
+{REPLY_PM_IMG}
+<a href="{U_INDEX}">{L_INDEX}</a>
+
+<table class="table table-bordered table-condensed">
+	<caption>{BOX_NAME} :: {L_MESSAGE}</caption>
+	<colgroup>
+		<col>
+		<col style="width:100%">
+	</colgroup>
+	<tr>
+		<th>{L_FROM}:</td>
+		<td><a href="{MESSAGE_FROM_URL}" class="name"{MESSAGE_FROM_STYLE}>{MESSAGE_FROM}</a></td>
+	</tr>
+	<tr>
+		<th>{L_TO}:</td>
+		<td><a href="{MESSAGE_TO_URL}" class="name"{MESSAGE_TO_STYLE}>{MESSAGE_TO}</a></td>
+	</tr>
+	<tr>
+		<th>{L_POSTED}:</td>
+		<td><time>{POST_DATE}</time></td>
+	</tr>
+	<tr>
+		<th>{L_SUBJECT}:</td>
+		<td>{POST_SUBJECT}<span class="pull-right">{QUOTE_PM_IMG} {EDIT_PM_IMG}</span></td>
+	</tr>
 </table>
 
-<br clear="all" />
+<div class="well">
+	<span class="postbody">{MESSAGE}</span>
+	<!-- BEGIN postrow -->{ATTACHMENTS}<!-- END postrow -->
+</div>
+{PROFILE_IMG} {PM_IMG} {EMAIL_IMG} {WWW_IMG}{YIM_IMG} {MSN_IMG}
+<!-- IF CGG_OFF1 --><div style="position:relative">{AIM_IMG}<div style="position:absolute;left:3px;top:-1px">{AIM_STATUS_IMG}</div></div><!-- ENDIF -->
+<!-- IF CICQ_OFF1 --><div style="position:relative">{ICQ_IMG}<div style="position:absolute;left:3px;top:-1px">{ICQ_STATUS_IMG}</div></div><!-- ENDIF -->
 
-<table width="100%" cellspacing="2" cellpadding="2" border="0">
-   <form method="post" action="{S_PRIVMSGS_ACTION}">
-   <tr>
-      <td valign="middle">{REPLY_PM_IMG}</td>
-      <td width="100%"><span class="nav">&nbsp;<a href="{U_INDEX}" class="nav">{L_INDEX}</a></span></td>
-   </tr>
-</table>
+<form method="post" action="{S_PRIVMSGS_ACTION}">
+	{S_HIDDEN_FIELDS}
 
-<table border="0" cellpadding="4" cellspacing="1" width="100%" class="forumline">
-   <tr> 
-      <th colspan="3" class="thHead" nowrap="nowrap">{BOX_NAME} :: {L_MESSAGE}</th>
-   </tr>
-   <tr> 
-      <td class="row2"><span class="genmed">{L_FROM}:</span></td>
-      <td width="100%" class="row2" colspan="2"><span class="genmed">{MESSAGE_FROM}</span></td>
-   </tr>
-   <tr> 
-      <td class="row2"><span class="genmed">{L_TO}:</span></td>
-      <td width="100%" class="row2" colspan="2"><span class="genmed">{MESSAGE_TO}</span></td>
-   </tr>
-   <tr> 
-      <td class="row2"><span class="genmed">{L_POSTED}:</span></td>
-      <td width="100%" class="row2" colspan="2"><span class="genmed">{POST_DATE}</span></td>
-   </tr>
-   <tr> 
-      <td class="row2"><span class="genmed">{L_SUBJECT}:</span></td>
-      <td width="100%" class="row2"><span class="genmed">{POST_SUBJECT}</span></td>
-      <td nowrap="nowrap" class="row2" align="right"> {QUOTE_PM_IMG} {EDIT_PM_IMG}</td>
-   </tr>
-   <tr> 
-      <td valign="top" colspan="3" class="row1">
-         <span class="postbody">{MESSAGE}
-         </span>
-         <!-- BEGIN postrow -->
-         {ATTACHMENTS}
-         <!-- END postrow -->
-      </td>
-   </tr>
-   <tr> 
-      <td width="78%" height="28" valign="bottom" colspan="3" class="row1"> 
-         <table cellspacing="0" cellpadding="0" border="0" height="18">
-            <tr> 
-               <td valign="middle" nowrap="nowrap">
-                  {PROFILE_IMG} {PM_IMG} {EMAIL_IMG} {WWW_IMG}{YIM_IMG} {MSN_IMG}
-               </td>
-               <td valign="middle" width=177>
-                  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" id="AutoNumber1" height="19">
-                     <tr>
-                        {CGG_OFF1}
-                        <td>&nbsp;</td><td width="59" height="19"><div style="position:relative">{AIM_IMG}<div style="position:absolute;left:3px;top:-1px">{AIM_STATUS_IMG}</div></div></td>
-                        {CGG_OFF2}
-                        {CICQ_OFF1}
-                        <td>&nbsp;</td><td width="59" height="19"><div style="position:relative">{ICQ_IMG}<div style="position:absolute;left:3px;top:-1px">{ICQ_STATUS_IMG}</div></div></td>
-                        {CICQ_OFF2}
-                     </tr>
-                  </table>
-               </td>
-               <td colspan="3" height="28" align="right">
-                  {S_HIDDEN_FIELDS}
-                  <input type="submit" name="save" value="{L_SAVE_MSG}" class="liteoption" />&nbsp; 
-                  <input type="submit" name="delete" value="{L_DELETE_MSG}" class="liteoption" />
-                  <!-- BEGIN switch_attachments -->
-                  &nbsp;<input type="submit" name="pm_delete_attach" value="{L_DELETE_ATTACHMENTS}" class="liteoption" />
-                  <!-- END switch_attachments -->
-               </td>
-            </tr>
-         </table>
-         <table width="100%" cellspacing="2" border="0" align="center" cellpadding="2">
-            <tr> 
-               <td>{REPLY_PM_IMG}</td>
-               <td align="right" valign="top"><span class="gensmall">{S_TIMEZONE}</span></td>
-            </tr>
-            </form>
-         </table>
+	<div class="panel-footer right">
+		{REPLY_PM_IMG}
+		<input type="submit" name="save" value="{L_SAVE_MSG}" class="btn btn-success" />
+		<input type="submit" name="delete" value="{L_DELETE_MSG}" class="btn btn-danger" />
+		<!-- BEGIN switch_attachments -->
+		<input type="submit" name="pm_delete_attach" value="{L_DELETE_ATTACHMENTS}" class="btn-danger" />
+		<!-- END switch_attachments -->
+	</div>
+</form>
 
-         <table width="100%" cellspacing="2" border="0" align="center" cellpadding="2">
-            <tr> 
-               <td valign="top" align="right"><span class="gensmall">{JUMPBOX}</span></td>
-            </tr>
-         </table>
-      </td>
-   </tr>
-</table>
+{JUMPBOX}<br clear="all" />

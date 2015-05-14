@@ -1,5 +1,4 @@
-
-<!-- 
+<!--
 
 	Please note that the following copyright notice
 	MUST be displayed on each and every page output
@@ -16,28 +15,12 @@
 
 //-->
 
-<table width="100%">
-	<tr>
-		<td align="center">
-			<span class="copyright">Powered by <a href="http://www.phpbb.com" target="_blank" class="copyright">phpBB</a> modified v{PHPBB_VERSION} by <a href="http://www.przemo.org/phpBB2/" class="copyright" target="_blank">Przemo</a> &copy; 2003 phpBB Group<br />{TRANSLATION_INFO}</span>
-		</td>
-	</tr>
-</table>
+<br />
+<p class="copyright center">Powered by <a href="http://www.phpbb.com" target="_blank" class="copyright">phpBB</a> modified v{PHPBB_VERSION} by <a href="http://www.przemo.org/phpBB2/" class="copyright" target="_blank">Przemo</a> &copy; 2003 phpBB Group<br />{TRANSLATION_INFO}</p>
 <!-- BEGIN pagina_pages -->
-<div id="s_pagina" style="display: none; background: {T_TR_COLOR1}; border: solid {T_TR_COLOR3} 1px; width: 50px; height: 37px; position: absolute; filter: alpha(opacity=90); -moz-opacity: 0.90;" >
-	<table align="center" cellspacing="0">
-		<tr>
-			<td align="right" valign="top">
-				<div style="display: inline; font-size: 8px; width: 10px; height: 6px; cursor: pointer; margin: 0px;" align="right" onclick="document.getElementById('s_pagina').style.display='none';"><b>X</b></div>
-			</td>
-		</tr>
-		<tr>
-			<td align="center">
-				<form action="{BASE_URL}" method="post"><select name="start" onchange="this.form.submit();">{pagina_pages.OPTIONS}</select></form>
-			</td>
-		</tr>
-	</table>
-</div>
+	<form action="{BASE_URL}" method="post" id="s_pagina" style="display: none; background: {T_TR_COLOR1}; border: solid {T_TR_COLOR3} 1px; width: 50px; position: absolute; filter: alpha(opacity=90); -moz-opacity: 0.90;">
+	<button type="button" class="close" onclick="document.getElementById('s_pagina').style.display='none';">&times;</button>
+	<select name="start" onchange="this.form.submit();" style="width:100%;">{pagina_pages.OPTIONS}</select></form>
 <!-- END pagina_pages -->
 </body>
 </html>

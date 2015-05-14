@@ -1,31 +1,26 @@
-<br />
-<table width="100%" cellspacing="2" cellpadding="2" border="0">
-	<tr> 
-		<td align="left" valign="middle" class="nav" width="100%"><span class="nav"><a href="{U_INDEX}" class="nav">{L_INDEX}</a>{NAV_CAT_DESC}</span></td>
-	</tr>
-</table>
+<ul class="breadcrumb">
+	<li><a href="{U_INDEX}">{L_INDEX}</a></li>{NAV_CAT_DESC}
+</ul>
 
-<table class="forumline" width="100%" cellspacing="1" cellpadding="3" border="0">
+<table class="table table-bordered table-striped center">
+	<caption>{L_POST_HISTORY_TITLE}</caption>
 	<tr>
-		<th class="thTop" align="center" colspan="6">{L_POST_HISTORY_TITLE}</th>
-	<tr>
-		<td class="catHead" align="center" width="25%"><span class="nav">{L_TOPIC}: <a href="{U_TOPIC_URL}">{TOPIC_TITLE}</a></span></td>
-		<td class="catHead" align="center" width="15%" nowrap="nowrap"><span class="nav">{L_AUTHOR}: {POST_POSTER}</span></td>
-		<td class="catHead" align="center" width="25%"><span class="genmed"> {L_POST_TIME}: {POST_TIME}</span></td>
-		<td class="catHead" align="center" width="3%" nowrap="nowrap"><span class="nav">ID: {POST_ID}</span></td>
-		<td class="catHead" align="center" width="10%" nowrap="nowrap"><span class="nav">{L_EDITED_BY}</span></td>
-		<td class="catHead" align="center" width="10%" nowrap="nowrap"><span class="nav">{L_EDITED_TIME}</span></td>
+		<th width="25%">{L_TOPIC}: <a href="{U_TOPIC_URL}">{TOPIC_TITLE}</a></th>
+		<th width="15%">{L_AUTHOR}: {POST_POSTER}</th>
+		<th width="25%"><span class="genmed">{L_POST_TIME}: <time>{POST_TIME}</time></span></th>
+		<th width="3%">ID: {POST_ID}</th>
+		<th width="10%">{L_EDITED_BY}</th>
+		<th width="10%">{L_EDITED_TIME}</th>
 	</tr>
 
 	<!-- BEGIN postrow -->
 	<tr>
-		<td class="{postrow.ROW_CLASS}" colspan="4">{postrow.MESSAGE}</td>
-		<td class="{postrow.ROW_CLASS}" align="center" valign="top"><a href="{postrow.EDITED_BY_URL}">{postrow.EDITED_BY_USERNAME}</a></td>
-		<td class="{postrow.ROW_CLASS}" align="center" valign="top"><span class="gensmall">{postrow.EDITED_TIME}</span></td>
+		<td colspan="4" class="left">{postrow.MESSAGE}</td>
+		<td><a href="{postrow.EDITED_BY_URL}">{postrow.EDITED_BY_USERNAME}</a></td>
+		<td><span class="gensmall"><time>{postrow.EDITED_TIME}</time></span></td>
 	</tr>
 	<!-- END postrow -->
-	<tr>
-		<td class="catHead" colspan="4" align="left"><span class="nav"><a href="{U_BACK_TO_POST}">{L_BACK_TO_POST}</a></span></td>
-		<td class="catHead" colspan="2" align="right">{DELETE_IMG}</td>
-	<tr>
 </table>
+
+<a href="{U_BACK_TO_POST}"><span class="glyphicon glyphicon-arrow-left"></span> {L_BACK_TO_POST}</a>
+<span class="pull-right">{DELETE_IMG}</span><br clear="all" />

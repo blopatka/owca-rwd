@@ -1,40 +1,44 @@
 {LOCBAR}
 <!-- BEGIN email -->
-<table width="100%" cellpadding="3" cellspacing="1" class="forumline">
-  <tr> 
-	<th class="thHead" colspan="2">{L_EMAIL}</th>
-  </tr>
-  <tr> 
-	<td class="row2" colspan="2"><span class="genmed">{L_EMAILINFO}</span></td>
-  </tr>
-  <form action="{S_EMAIL_ACTION}" method="post">
-  <tr> 
-	<td class="row1" width="30%"><span class="genmed">{L_YNAME}:&nbsp;</span></td>
-	<td class="row2" width="70%"><input class="post" type="text" size="50" name="sname"></td>
-  </tr>
-  <tr> 
-	<td class="row1"><span class="genmed">{L_YEMAIL}:&nbsp;</span></td>
-	<td class="row2"><input class="post" type="text" size="50" name="semail"> </td>
-  </tr>
-  <tr> 
-	<td class="row1"><span class="genmed">{L_FNAME}:&nbsp;</span></td>
-	<td class="row2"><input class="post" type="text" size="50" name="fname"></td>
-  </tr>
-  <tr> 
-	<td class="row1"><span class="genmed">{L_FEMAIL}: *&nbsp;</span></td>
-	<td class="row2"><input class="post" type="text" size="50" name="femail"></td>
-  </tr>
-  <tr> 
-	<td class="row1"><span class="genmed">{L_ESUB}:&nbsp;</span></td>
-	<td class="row2"><input class="post" type="text" size="50" name="subject" value="{FILE_NAME}"></td>
-  </tr>
-  <tr> 
-	<td class="row1"><span class="genmed">{L_ETEXT}:&nbsp;</span></td>
-	<td class="row2"><textarea class="post" cols="38" rows="10" name="message">{L_DEFAULTMAIL} {URL}?action=file&amp;id={ID}</textarea></td>
-  </tr>
-  <tr> 
-	<td class="catBottom" align="center" colspan="2"><input type="hidden" name="action" value="email"><input type="hidden" name="act" value="send"><input type="hidden" name="id" value="{ID}"><input class="liteoption" type="submit" value="{L_SEMAIL}"></td>
-  </tr>
-  </form>
-</table>
+<form action="{S_EMAIL_ACTION}" method="post">
+<div class="panel panel-info centered">
+<div class="panel-heading">{L_EMAIL}</div>
+<div class="panel-body">
+<p class="genmed">{L_EMAILINFO}</p>
+	<div class="form-group">
+		<label for="sname" class="col-md-4">{L_YNAME}:</label>
+		<div class="col-md-8"><input type="text" size="50" name="sname" id="sname" /></div>
+	</div>
+
+	<div class="form-group">
+		<label for="semail" class="col-md-4">{L_YEMAIL}:</label>
+		<div class="col-md-8"><input type="text" size="50" name="semail" id="semail" /></div>
+	</div>
+
+	<div class="form-group">
+		<label for="fname" class="col-md-4">{L_FNAME}:</label>
+		<div class="col-md-8"><input type="text" size="50" name="fname" id="fname" /></div>
+	</div>
+
+	<div class="form-group">
+		<label for="femail" class="col-md-4">{L_FEMAIL}: *</label>
+		<div class="col-md-8"><input type="text" size="50" name="femail" id="femail" /></div>
+	</div>
+
+	<div class="form-group">
+		<label for="subject" class="col-md-4">{L_ESUB}:</label>
+		<div class="col-md-8"><input type="text" size="50" name="subject" id="subject" value="{FILE_NAME}" /></div>
+	</div>
+
+	<div class="form-group">
+		<label for="message" class="col-md-4">{L_ETEXT}:</label>
+		<div class="col-md-8"><textarea cols="38" rows="10" name="message" id="message" style="width: 100%">{L_DEFAULTMAIL} {URL}?action=file&amp;id={ID}</textarea></div>
+	</div>
+</div>
+	<div class="panel-footer right"><input class="btn btn-primary" type="submit" value="{L_SEMAIL}" /></div>
+</div>
+	<input type="hidden" name="action" value="email" />
+	<input type="hidden" name="act" value="send" />
+	<input type="hidden" name="id" value="{ID}" />
+</form>
 <!-- END email -->

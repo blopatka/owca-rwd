@@ -1,77 +1,63 @@
-<form method="post" action="{S_MODE_ACTION}">
-<table width="100%" cellspacing="2" cellpadding="2" border="0" align="center">
-	<tr>
-		<td align="left"><span class="gensmall">
-			<!-- BEGIN staff_explain -->
-			<a href="{staff_explain.U_GROUP_URL}" class="gensmall" style="color: #{staff_explain.GROUP_COLOR}{staff_explain.GROUP_STYLE}">{staff_explain.GROUP_PREFIX}{staff_explain.GROUP_NAME}</a>
-			<!-- BEGIN se_separator -->
-			&bull;
-			<!-- END se_separator -->
-			<!-- END staff_explain -->
-		</span></td>
-		<td align="right" nowrap="nowrap"><span class="genmed">{L_SELECT_SORT_METHOD}:&nbsp;{S_MODE_SELECT}&nbsp;{S_ORDER_SELECT}&nbsp;&nbsp; 
-		<input type="submit" name="submit" value="{L_SUBMIT}" class="liteoption" /></span></td>
-	</tr>
-	<tr>
-	<td align="left"><span class="nav"><a href="{U_INDEX}" class="nav">{L_INDEX}</a></span></td>
-	<td colspan="2" align="right" nowrap="nowrap"><span class="genmed">{L_SORT_PER_LETTER}&nbsp;{S_LETTER_SELECT}{S_LETTER_HIDDEN}</span></td>
-	</tr>
-</table>
+<div class="row">
+	<div class="col-md-3"><a href="{U_INDEX}" class="nav">{L_INDEX}</a></div>
 
-<table width="100%" cellpadding="1" cellspacing="1" border="0" class="forumline">
+	<div class="col-md-9 right">
+		<form method="post" action="{S_MODE_ACTION}">
+			{L_SELECT_SORT_METHOD}: {S_MODE_SELECT} {S_ORDER_SELECT}
+			<input type="submit" name="submit" value="{L_SUBMIT}" class="btn btn-default" />
+		</form>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6 genmed">
+		<!-- BEGIN staff_explain -->
+		<a href="{staff_explain.U_GROUP_URL}" style="color: #{staff_explain.GROUP_COLOR}{staff_explain.GROUP_STYLE}">{staff_explain.GROUP_PREFIX}{staff_explain.GROUP_NAME}</a>
+		<!-- BEGIN se_separator -->&bull;<!-- END se_separator -->
+		<!-- END staff_explain -->
+	</div>
+
+	<div class="col-md-6 right genmed">{L_SORT_PER_LETTER}&nbsp;{S_LETTER_SELECT}{S_LETTER_HIDDEN}</div>
+</div>
+
+<table class="table table-bordered table-striped table-hover center">
+	<thead>
 	<tr>
-		<th class="thTop" nowrap="nowrap">{L_USERNAME}</th>
-		<th class="thTop" nowrap="nowrap">{L_EMAIL}</th>
-		<th class="thTop" nowrap="nowrap">PM</th>
-		<th class="thTop" nowrap="nowrap">{L_FROM}</th>
-		<th class="thTop" nowrap="nowrap">{L_JOINED}</th>
+		<th width="15%">{L_USERNAME}</th>
+		<th width="5%">{L_EMAIL}</th>
+		<th width="5%">PM</th>
+		<th width="15%">{L_FROM}</th>
+		<th width="15%">{L_JOINED}</th>
 		<!-- BEGIN llogin -->
-		<th class="thTop" nowrap="nowrap">{L_LAST_VISIT}</th>
+		<th width="15%">{L_LAST_VISIT}</th>
 		<!-- END llogin -->
-		<th class="thTop" nowrap="nowrap">{L_POSTS}</th>
+		<th width="3%">{L_POSTS}</th>
 		<!-- BEGIN aim -->
-		<th class="thTop" nowrap="nowrap">GG</th>
+		<th width="3%">GG</th>
 		<!-- END aim -->
-		<th class="thCornerR" nowrap="nowrap">{L_WEBSITE}</th>
+		<th width="5%">{L_WEBSITE}</th>
 	</tr>
+	</thead>
 	<!-- BEGIN memberrow -->
 	<tr>
-		<td class="{memberrow.ROW_CLASS}" width="15%" nowrap="nowrap" align="center"><span class="name"><a href="{memberrow.U_VIEWPROFILE}" class="name"{memberrow.USERNAME_COLOR}>{memberrow.USERNAME}</a></span></td>
-		<td class="{memberrow.ROW_CLASS}" width="5%" align="center" valign="middle">&nbsp;{memberrow.EMAIL_IMG}&nbsp;</td>
-		<td class="{memberrow.ROW_CLASS}" width="5%" align="center">&nbsp;{memberrow.PM_IMG}&nbsp;</td>
-		<td class="{memberrow.ROW_CLASS}" width="15%" align="center" valign="middle"><span class="gen">{memberrow.FROM}</span></td>
-		<td class="{memberrow.ROW_CLASS}" width="15%" nowrap="nowrap" align="center" valign="middle"><span class="gensmall">{memberrow.JOINED}</span></td>
+		<td><a href="{memberrow.U_VIEWPROFILE}" class="name"{memberrow.USERNAME_COLOR}>{memberrow.USERNAME}</a></td>
+		<td>{memberrow.EMAIL_IMG}</td>
+		<td>{memberrow.PM_IMG}</td>
+		<td>{memberrow.FROM}</td>
+		<td><span class="gensmall"><time>{memberrow.JOINED}</time></span></td>
 		<!-- BEGIN llogin_row -->
-		<td class="{memberrow.ROW_CLASS}" width="15%" align="center" nowrap="nowrap" valign="middle"><span class="gensmall">{memberrow.LAST_VISIT}</span></td>
+		<td><span class="gensmall"><time>{memberrow.LAST_VISIT}</time></span></td>
 		<!-- END llogin_row -->
-		<td class="{memberrow.ROW_CLASS}" width="3%" align="center" valign="middle"><span class="gen">{memberrow.POSTS}</span></td>
+		<td>{memberrow.POSTS}</td>
 		<!-- BEGIN aim_row -->
-		<td class="{memberrow.ROW_CLASS}" width="3%" align="center" valign="middle"><span class="gen">{memberrow.AIM_STATUS_IMG}</span></td>
+		<td>{memberrow.AIM_STATUS_IMG}</td>
 		<!-- END aim_row -->
-		<td class="{memberrow.ROW_CLASS}" width="5%" align="center">&nbsp;{memberrow.WWW_IMG}&nbsp;</td>
+		<td>{memberrow.WWW_IMG}</td>
 	</tr>
 	<!-- END memberrow -->
-	<tr>
-		<td class="catbottom" colspan="4" height="28" align="left">{U_STAFF}</td><td class="catbottom" colspan="{COLSPAN}" height="28" align="right">{U_SEARCH_USERS}</td>
-	</tr>
 </table>
 
-<table width="100%" cellspacing="2" border="0" align="center" cellpadding="2">
-	<tr>
-		<td align="right" valign="top"></td>
-	</tr>
-</table>
+{U_STAFF}{U_SEARCH_USERS}<br />
+{PAGE_NUMBER}{PAGINATION}
 
-<table width="100%" cellspacing="2" cellpadding="2" border="0">
-	<tr>
-		<td><span class="nav">{PAGE_NUMBER}</span></td>
-		<td align="right"><span class="nav">{PAGINATION}</span></td>
-	</tr>
-</table>
-</form>
-
-<table width="100%" cellspacing="2" border="0" align="center">
-	<tr>
-		<td valign="top" align="right">{JUMPBOX}</td>
-	</tr>
-</table>
+{JUMPBOX}<br clear="all" />

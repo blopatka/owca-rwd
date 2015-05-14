@@ -1,12 +1,11 @@
-
 <SCRIPT LANGUAGE='JAVASCRIPT' TYPE='TEXT/JAVASCRIPT'>
  <!--
 /****************************************************
-     AUTHOR: WWW.CGISCRIPT.NET, LLC
-     URL: http://www.cgiscript.net
-     Use the code for FREE but leave this message intact.
-     Download your FREE CGI/Perl Scripts today!
-     ( http://www.cgiscript.net/scripts.htm )
+		 AUTHOR: WWW.CGISCRIPT.NET, LLC
+		 URL: http://www.cgiscript.net
+		 Use the code for FREE but leave this message intact.
+		 Download your FREE CGI/Perl Scripts today!
+		 ( http://www.cgiscript.net/scripts.htm )
 ****************************************************/
 var win=null;
 function NewWindow(mypage,myname,w,h,pos,infocus){
@@ -17,110 +16,98 @@ settings="width=" + w + ",height=" + h + ",top=" + mytop + ",left=" + myleft + "
 win.focus();}
 // -->
 </script>
-<form action="{S_EDIT_FILE_ACTION}" method="post" name="form">
-<h1>{L_EFILETITLE}</h1>
 
+<h1>{L_EFILETITLE}</h1>
 <p>{L_FILEEXPLAIN}</p>
 
+<form action="{S_EDIT_FILE_ACTION}" method="post" name="form">
 <!-- BEGIN file_form -->
-<table width="100%" cellpadding="3" cellspacing="1" class="forumline">
-  <tr>
-	<th colspan="2" class="thHead">{L_EFILETITLE}</th>
-  </tr>
-  <tr>
-	<td width="50%" class="row1">{L_FILENAME}<br><span class="gensmall">{L_FILENAMEINFO}</span></td>
-	<td class="row2"><input type="text" class="post" size="50" name="form[name]" value="{FFILE_NAME}" /></td>
-  </tr>
-  <tr>
-	<td class="row1">{L_FILESD}<br><span class="gensmall">{L_FILESDINFO}</span></td>
-	<td class="row2"><input type="text" class="post" size="50" name="form[shortdesc]" value="{FFILE_DESC}" /></td>
-  </tr>
-  <tr>
-	<td class="row1">{L_FILELD}<br><span class="gensmall">{L_FILELDINFO}</span></td>
-	<td class="row2"><textarea rows="6" name="form[longdesc]" cols="32">{FFILE_LONGDESC}</textarea></td>
-  </tr>
-  <tr>
-	<td class="row1">{L_FILECREATOR}<br><span class="gensmall">{L_FILECREATORINFO}</span></td>
-	<td class="row2"><input type="text" class="post" size="50" name="form[creator]" value="{FFILE_CREATOR}" /></td>
-  </tr>
-  <tr>
-	<td class="row1">{L_FILEVERSION}<br><span class="gensmall">{L_FILEVERSIONINFO}</span></td>
-	<td class="row2"><input type="text" class="post" size="50" name="form[version]" value="{FFILE_VERSION}" /></td>
-  </tr>
-  <tr>
-	<td class="row1">{L_FILESS}<br><span class="gensmall">{L_FILESSINFO}<a href="{U_UPLOAD_SS}">{L_FILESSUPLOAD}</a></span></td>
-	<td class="row2"><input type="text" class="post" size="50" name="ssurl" value="{FFILE_SSURL}" /></td>
-  </tr>
-  <tr>
-	<td class="row1">{L_FILEDOCS}<br><span class="gensmall">{L_FILEDOCSINFO}</span></td>
-	<td class="row2"><input type="text" class="post" size="50" name="form[docs]" value="{FFILE_DOCSURL}" /></td>
-  </tr>
-  <tr>
-	<td class="row1">{L_FILEURL}<br><span class="gensmall">{L_FILEURLINFO}<a href="{U_UPLOAD_FILE}">{L_FILEURLUPLOAD}</a></span></td>
-	<td class="row2"><input type="text" class="post" size="50" name="dlurl" value="{FFILE_DLURL}" /></td>
-  </tr>
-  <tr>
-	<td class="row1">{L_FILEPI}<br><span class="gensmall">{L_FILEPIINFO}</span></td>
-	<td class="row2">{POSTICONS}</td>
-  </tr>
-  <tr>
-	<td class="row1">{L_FILECAT}<br><span class="gensmall">{L_FILECATINFO}</span></td>
-	<td class="row2">
-		<select name="form[category]" class="forminput">
-		{DROPMENU}
-		</select>
-	</td>
-  </tr>
-  <tr>
-	<td class="row1">{L_FILELICENSE}<br><span class="gensmall">{L_FILELICENSEINFO}</span></td>
-	<td class="row2">
-		<select name="form[license]" class="forminput">
-		<option value="0">{L_NONE}</option>
-		{LDROPMENU}
-		</select>
-	</td>
-  </tr>
-  <tr>
-	<td class="row1">{L_FILEPIN}<br><span class="gensmall">{L_FILEPININFO}</span></td>
-	<td class="row2">
-		<select name="form[pin]" class="forminput">
-		{PDROPMENU}
-		</select>
-	</td>
-  </tr>
-  <tr>
-	<td class="row1">{L_FILEDLS}</td>
-	<td class="row2"><input type="text" class="post" size="10" name="form[dls]" value="{FFILE_DLS}" /></td>
-  </tr>
+<div class="panel panel-default">
+	<div class="panel-heading">{L_EFILETITLE}</div>
+<table class="table table-bordered">
+	<colgroup><col style="width: 40%;"><col></colgroup>
+	<tr>
+		<td>{L_FILENAME}<span class="help-block">{L_FILENAMEINFO}</span></td>
+		<td><input type="text" size="50" name="form[name]" value="{FFILE_NAME}" /></td>
+	</tr>
+	<tr>
+		<td>{L_FILESD}<span class="help-block">{L_FILESDINFO}</span></td>
+		<td><input type="text" size="50" name="form[shortdesc]" value="{FFILE_DESC}" /></td>
+	</tr>
+	<tr>
+		<td>{L_FILELD}<span class="help-block">{L_FILELDINFO}</span></td>
+		<td><textarea rows="6" name="form[longdesc]" cols="32">{FFILE_LONGDESC}</textarea></td>
+	</tr>
+	<tr>
+		<td>{L_FILECREATOR}<span class="help-block">{L_FILECREATORINFO}</span></td>
+		<td><input type="text" size="50" name="form[creator]" value="{FFILE_CREATOR}" /></td>
+	</tr>
+	<tr>
+		<td>{L_FILEVERSION}<span class="help-block">{L_FILEVERSIONINFO}</span></td>
+		<td><input type="text" size="50" name="form[version]" value="{FFILE_VERSION}" /></td>
+	</tr>
+	<tr>
+		<td>{L_FILESS}<span class="help-block">{L_FILESSINFO}<a href="{U_UPLOAD_SS}">{L_FILESSUPLOAD}</a></span></td>
+		<td><input type="text" size="50" name="ssurl" value="{FFILE_SSURL}" /></td>
+	</tr>
+	<tr>
+		<td>{L_FILEDOCS}<span class="help-block">{L_FILEDOCSINFO}</span></td>
+		<td><input type="text" size="50" name="form[docs]" value="{FFILE_DOCSURL}" /></td>
+	</tr>
+	<tr>
+		<td>{L_FILEURL}<span class="help-block">{L_FILEURLINFO}<a href="{U_UPLOAD_FILE}">{L_FILEURLUPLOAD}</a></span></td>
+		<td><input type="text" size="50" name="dlurl" value="{FFILE_DLURL}" /></td>
+	</tr>
+	<tr>
+		<td>{L_FILEPI}<span class="help-block">{L_FILEPIINFO}</span></td>
+		<td>{POSTICONS}</td>
+	</tr>
+	<tr>
+		<td>{L_FILECAT}<span class="help-block">{L_FILECATINFO}</span></td>
+		<td><select name="form[category]">{DROPMENU}</select></td>
+	</tr>
+	<tr>
+		<td>{L_FILELICENSE}<span class="help-block">{L_FILELICENSEINFO}</span></td>
+		<td>
+			<select name="form[license]">
+				<option value="0">{L_NONE}</option>
+				{LDROPMENU}
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>{L_FILEPIN}<span class="help-block">{L_FILEPININFO}</span></td>
+		<td>
+			<select name="form[pin]">
+				<option value="0" selected>{L_NO}</option>
+				<option value="1">{L_YES}</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>{L_FILEDLS}</td>
+		<td><input type="text" size="10" name="form[dls]" value="{FFILE_DLS}" /></td>
+	</tr>
 <!-- BEGIN custom_field -->
-  <tr>
-	<td class="row1">{file_form.custom_field.CUSTOM_NAME}<br><span class="gensmall">{file_form.custom_field.CUSTOM_DESCRIPTION}</span></td>
-	<td class="row2">
-		<input type="text" size="50" name="custom[{file_form.custom_field.CUSTOM_ID}]" 
-		<!-- BEGIN custom_field_data --> 
-		value="{file_form.custom_field.custom_field_data.CUSTOM_NAME_DATA}" class="post">
-		<!-- END custom_field_data -->
-	</td>
-  </tr>
+	<tr>
+		<td>{custom_field.CUSTOM_NAME}<span class="help-block">{custom_field.CUSTOM_DESCRIPTION}</span></td>
+		<td><input type="text" size="50" name="custom[{custom_field.CUSTOM_ID}]"<!-- BEGIN custom_field_data -->  value="{file_form.custom_field.custom_field_data.CUSTOM_NAME_DATA}"<!-- END custom_field_data --> /></div>
+	</div>
 <!-- END custom_field -->
-  <tr>
-	<td align="center" class="catBottom" colspan="2"><input class="mainoption" type="submit" value="{L_EFILETITLE}" name="B1"><input type="hidden" name="file" value="edit"><input type="hidden" name="edit" value="do"><input type="hidden" name="id" value="{SELECT}"></td>
-  </tr>
 </table>
-</form>
+
+	<div class="panel-footer right"><input class="btn btn-primary" type="submit" value="{L_EFILETITLE}" name="B1" /></div>
+
+	<input type="hidden" name="file" value="edit" />
+	<input type="hidden" name="edit" value="do" />
+	<input type="hidden" name="id" value="{SELECT}" />
 <!-- END file_form -->
 
 <!-- BEGIN file_edit -->
-<form action="{S_EDIT_FILE_ACTION}" method="post"><table width="100%" cellpadding="3" cellspacing="1" class="forumline">
-  <tr>
-	<th colspan="2" class="thHead">{L_EFILETITLE}</th>
-  </tr>
-	{ROW}
-  <tr>
-	<td align="center" class="catBottom" colspan="2"><input class="liteoption" type="submit" value="{L_EFILETITLE}" name="B1">
-	<input type="hidden" name="file" value="edit"><input type="hidden" name="edit" value="form"></td>
-  </tr>
-</table>
-</form>
+	<div class="centered"><table class="table table-bordered table-striped table-hover">{ROW}</table></div>
+	<div class="center"><input class="btn btn-primary" type="submit" value="{L_EFILETITLE}" name="B1" /></div>
+
+	<input type="hidden" name="file" value="edit" />
+	<input type="hidden" name="edit" value="form" />
 <!-- END file_edit -->
-<br />
+</form>

@@ -1,29 +1,19 @@
+<form action="{S_FORUM_ACTION}" method="post" class="panel panel-primary centered">
+	<div class="panel-heading">{L_EDIT_CATEGORY}</div>
+	
+	<div class="panel-body">
+		<span class="help-block">{L_EDIT_CATEGORY_EXPLAIN}</span>
 
-<h1>{L_EDIT_CATEGORY}</h1>
+		<label for="cat_title">{L_CATEGORY}</label><br />
+		<input type="text" size="25" name="cat_title" id="cat_title" value="{CAT_TITLE}" /><br />
 
-<p>{L_EDIT_CATEGORY_EXPLAIN}</p>
+		<label for="cat_desc">{L_CAT_DESCRIPTION}</label><br />
+		<textarea rows="5" cols="45" name="cat_desc" id="cat_desc">{CAT_DESCRIPTION}</textarea><br />
 
-<form action="{S_FORUM_ACTION}" method="post">
-  <table cellpadding="4" cellspacing="1" border="0" class="forumline" align="center">
-	<tr> 
-	  <th class="thHead" colspan="2">{L_EDIT_CATEGORY}</th>
-	</tr>
-	<tr> 
-	  <td class="row1">{L_CATEGORY}</td>
-	  <td class="row2"><input type="text" size="25" name="cat_title" value="{CAT_TITLE}" /></td>
-	</tr>
-	<tr>
-	  <td class="row1">{L_CAT_DESCRIPTION}</td>
-	  <td class="row2"><textarea rows="5" cols="45" name="cat_desc" class="post">{CAT_DESCRIPTION}</textarea></td>
-	</tr>
-	<tr>
-	  <td class="row1">{L_CATEGORY_ATTACHMENT}</td>
-	  <td class="row2"><select name="cat_main">{S_CAT_LIST}</select></td>
-	</tr>
-	<tr> 
-	  <td class="catBottom" colspan="2" align="center">{S_HIDDEN_FIELDS}<input type="submit" name="submit" value="{S_SUBMIT_VALUE}" class="mainoption" /></td>
-	</tr>
-  </table>
+		<label for="cat_main">{L_CATEGORY_ATTACHMENT}</label><br />
+		<select name="cat_main" id="cat_main">{S_CAT_LIST}</select>
+	</div>
+
+	{S_HIDDEN_FIELDS}
+	<div class="panel-footer right"><input type="submit" name="submit" value="{S_SUBMIT_VALUE}" class="btn btn-primary" /></div>
 </form>
-		
-<br clear="all" />

@@ -1,89 +1,65 @@
-<form action="{U_PERSONAL_GALLERY}" method="post">
-<table width="100%" cellspacing="2" cellpadding="2" border="0">
-  <tr>
-	<td width="100%"><a class="maintitle" href="{U_PERSONAL_GALLERY}">{L_PERSONAL_GALLERY_OF_USER}</a><br />
-		<span class="genmed">{L_PERSONAL_GALLERY_EXPLAIN}</span></td>
-	<td align="right" valign="bottom" nowrap="nowrap"><span class="gensmall">{PAGINATION}</span></td>
-  </tr>
-</table>
+<ul class="breadcrumb">
+	<li><a href="{U_INDEX}">{L_INDEX}</a></li>
+	<li><a href="{U_ALBUM}">{L_ALBUM}</a></li>
+	<li><a href="{U_PERSONAL_GALLERY}">{L_PERSONAL_GALLERY_OF_USER}</a></li>
+</ul>
 
-<table width="100%" cellspacing="2" cellpadding="2" border="0">
-  <tr>
-	<!-- BEGIN your_personal_gallery -->
-	<td><a href="{U_UPLOAD_PIC}"><b>{L_UPLOAD_PIC}</b></a></td></tr>
-	<!-- END your_personal_gallery -->
+<h3><a href="{U_PERSONAL_GALLERY}">{L_PERSONAL_GALLERY_OF_USER}</a></h3>
+<p class="genmed">{L_PERSONAL_GALLERY_EXPLAIN}</p>
+{PAGINATION}
+
+<!-- BEGIN your_personal_gallery --><a href="{U_UPLOAD_PIC}" class="btn btn-success">{L_UPLOAD_PIC}</a><!-- END your_personal_gallery -->
+
+<table class="table table-bordered table-striped table-hover">
+	<caption>{L_PERSONAL_GALLERY_OF_USER}</caption>
+	<!-- BEGIN no_pics --><tr class="error"><td>{L_PERSONAL_GALLERY_NOT_CREATED}</td></tr><!-- END no_pics -->
+	<!-- BEGIN picrow -->
 	<tr>
-	<td class="nav" width="100%"><span class="nav"><a href="{U_INDEX}" class="nav">{L_INDEX}</a> -> <a class="nav" href="{U_ALBUM}">{L_ALBUM}</a> -> <a class="nav" href="{U_PERSONAL_GALLERY}">{L_PERSONAL_GALLERY_OF_USER}</a></span></td>
-  </tr>
-</table>
-
-<table width="100%" cellpadding="2" cellspacing="1" border="0" class="forumline">
-  <tr>
-	<th class="thTop" height="25" colspan="{S_COLS}">{L_PERSONAL_GALLERY_OF_USER}</th>
-  </tr>
-  <!-- BEGIN no_pics -->
-  <tr>
-	<td class="row1" align="center" height="50"><span class="gen">{L_PERSONAL_GALLERY_NOT_CREATED}</span></td>
-  </tr>
-  <!-- END no_pics -->
-  <!-- BEGIN picrow -->
-  <tr>
-  <!-- BEGIN piccol -->
-	<td align="center" width="{S_COL_WIDTH}" class="row1"><span class="genmed"><a href="{picrow.piccol.U_PIC}" {TARGET_BLANK}><img src="{picrow.piccol.THUMBNAIL}" border="0" alt="{picrow.piccol.DESC}" title="{picrow.piccol.DESC}" vspace="10" /></a></span></td>
-  <!-- END piccol -->
-  </tr>
-  <tr>
-  <!-- BEGIN pic_detail -->
-	<td class="row2"><span class="gensmall">
-	{L_PIC_TITLE}: {picrow.pic_detail.TITLE}<br />
-	{L_POSTED}: {picrow.pic_detail.TIME}<br />
-	{L_VIEW}: {picrow.pic_detail.VIEW}<br />
-	{picrow.pic_detail.RATING}
-	{picrow.pic_detail.COMMENTS}
-	{picrow.pic_detail.EDIT}  {picrow.pic_detail.DELETE}  {picrow.pic_detail.LOCK}</span>
-	</td>
-  <!-- END pic_detail -->
-  </tr>
-  <!-- END picrow -->
-  <tr>
-	<td class="catBottom" colspan="{S_COLS}" align="center" height="28">
-		<span class="gensmall">{L_SELECT_SORT_METHOD}:
-		<select name="sort_method">
-			<option {SORT_TIME} value='pic_time'>{L_TIME}</option>
-			<option {SORT_PIC_TITLE} value='pic_title'>{L_PIC_TITLE}</option>
-			<option {SORT_VIEW} value='pic_view_count'>{L_VIEW}</option>
-			{SORT_RATING_OPTION}
-			{SORT_COMMENTS_OPTION}
-			{SORT_NEW_COMMENT_OPTION}
-		</select>
-		<select name="sort_order">
-			<option {SORT_ASC} value='ASC'>{L_ASC}</option>
-			<option {SORT_DESC} value='DESC'>{L_DESC}</option>
-		</select>
-		&nbsp;<input type="submit" name="submit" value="{L_SORT}" class="liteoption" /></span>
-	</td>
-  </tr>
-</table>
-
-<table width="100%" cellspacing="2" border="0" cellpadding="2">
-  <tr>
-	<!-- BEGIN your_personal_gallery -->
-	<td><a href="{U_UPLOAD_PIC}"><b>{L_UPLOAD_PIC}</b></a></td></tr>
-	<!-- END your_personal_gallery -->
+		<!-- BEGIN piccol -->
+		<td align="center" width="{S_COL_WIDTH}"><span class="genmed"><a href="{picrow.piccol.U_PIC}" {TARGET_BLANK}><img src="{picrow.piccol.THUMBNAIL}" border="0" alt="{picrow.piccol.DESC}" title="{picrow.piccol.DESC}" vspace="10" /></a></span></td>
+	<!-- END piccol -->
+	</tr>
 	<tr>
-	<td width="100%"><span class="nav"><a href="{U_INDEX}" class="nav">{L_INDEX}</a> -> <a class="nav" href="{U_ALBUM}">{L_ALBUM}</a> -> <a class="nav" href="{U_PERSONAL_GALLERY}">{L_PERSONAL_GALLERY_OF_USER}</a></span></td>
-	<td align="right" nowrap="nowrap"><span class="gensmall">{S_TIMEZONE}</span><br />
-		<span class="nav">{PAGINATION}</span></td>
-  </tr>
-  <tr>
-	<td colspan="3"><span class="nav">{PAGE_NUMBER}</span></td>
-  </tr>
+	<!-- BEGIN pic_detail -->
+		<td class="gensmall">
+			{L_PIC_TITLE}: {picrow.pic_detail.TITLE}<br />
+			{L_POSTED}: {picrow.pic_detail.TIME}<br />
+			{L_VIEW}: {picrow.pic_detail.VIEW}<br />
+			{picrow.pic_detail.RATING}
+			{picrow.pic_detail.COMMENTS}
+			{picrow.pic_detail.IP}
+			{picrow.pic_detail.EDIT}	{picrow.pic_detail.DELETE}	{picrow.pic_detail.LOCK}
+		</td>
+	<!-- END pic_detail -->
+	</tr>
+	<!-- END picrow -->
 </table>
+
+<!-- BEGIN your_personal_gallery --><a href="{U_UPLOAD_PIC}" class="btn btn-success">{L_UPLOAD_PIC}</a><!-- END your_personal_gallery -->
+
+<form action="{U_PERSONAL_GALLERY}" method="post" class="panel-footer right">
+	{L_SELECT_SORT_METHOD}:
+	<select name="sort_method">
+		<option {SORT_TIME} value='pic_time'>{L_TIME}</option>
+		<option {SORT_PIC_TITLE} value='pic_title'>{L_PIC_TITLE}</option>
+		<option {SORT_VIEW} value='pic_view_count'>{L_VIEW}</option>
+		{SORT_RATING_OPTION}
+		{SORT_COMMENTS_OPTION}
+		{SORT_NEW_COMMENT_OPTION}
+	</select>
+	<select name="sort_order">
+		<option {SORT_ASC} value='ASC'>{L_ASC}</option>
+		<option {SORT_DESC} value='DESC'>{L_DESC}</option>
+	</select>
+	<input type="submit" name="submit" value="{L_SORT}" class="btn btn-default" />
 </form>
 
-<br />
+<ul class="breadcrumb">
+	<li><a href="{U_INDEX}">{L_INDEX}</a></li> <span class="divider">&raquo;</span>
+	<li><a href="{U_ALBUM}">{L_ALBUM}</a></li> <span class="divider">&raquo;</span>
+	<li><a href="{U_PERSONAL_GALLERY}">{L_PERSONAL_GALLERY_OF_USER}</a></li>
+</ul>
 
-<!--
-You must keep my copyright notice visible with its original content
--->
-<div align="center" style="font-family: Verdana; font-size: 10px; letter-spacing: -1px">Powered by Photo Album Addon {ALBUM_VERSION} &copy; 2002-2003 <a href="http://smartor.is-root.com" target="_blank">Smartor</a></div>
+{PAGE_NUMBER}
+
+<!-- INCLUDE album_footer.tpl -->

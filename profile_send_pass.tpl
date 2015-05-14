@@ -1,27 +1,26 @@
+<a href="{U_INDEX}">{L_INDEX}</a>
 
 <form action="{S_PROFILE_ACTION}" method="post">
-<table width="100%" cellspacing="2" cellpadding="2" border="0" align="center">
-  <tr> 
-	<td align="left"><span class="nav"><a href="{U_INDEX}" class="nav">{L_INDEX}</a></span></td>
-  </tr>
-</table>
-  <table border="0" cellpadding="3" cellspacing="1" width="100%" class="forumline">
-	<tr> 
-	  <th class="thHead" colspan="2" height="25" valign="middle">{L_SEND_PASSWORD}</th>
-	</tr>
-	<tr> 
-	  <td class="row2" colspan="2"><span class="gensmall">{L_ITEMS_REQUIRED}</span></td>
-	</tr>
-	<tr> 
-	  <td class="row1" width="38%"><span class="gen">{L_USERNAME}: *</span></td>
-	  <td class="row2"> <input type="text" class="post" onFocus="Active(this)" onBlur="NotActive(this)" style="width: 200px" name="username" size="25" maxlength="40" value="{USERNAME}" /></td>
-	</tr>
-	<tr> 
-	  <td class="row1"><span class="gen">{L_EMAIL_ADDRESS}: *</span></td>
-	  <td class="row2"> <input type="text" class="post" onFocus="Active(this)" onBlur="NotActive(this)" style="width: 200px" name="email" size="25" maxlength="255" value="{EMAIL}" /></td>
-	</tr>
-	<tr> 
-	  <td class="catBottom" colspan="2" align="center" height="28">{S_HIDDEN_FIELDS} <input type="submit" name="submit" value="{L_SUBMIT}" class="mainoption" />&nbsp;&nbsp; <input type="reset" value="{L_RESET}" name="reset" class="liteoption" /></td>
-	</tr>
-  </table>
+	<div class="panel panel-info centered">
+		<div class="panel-heading">{L_SEND_PASSWORD}</div>
+		<div class="panel-body">
+			<span class="help-block">{L_ITEMS_REQUIRED}</span>
+
+			<div class="form-group">
+				<label for="username" class="col-md-3">{L_USERNAME}: *</label>
+				<div class="col-md-8"><input type="text" name="username" id="username" size="25" maxlength="40" value="{USERNAME}" /></div>
+			</div>
+
+			<div class="form-group">
+				<label for="email" class="col-md-3">{L_EMAIL_ADDRESS}: *</label>
+				<div class="col-md-8"><input type="text" name="email" id="email" size="25" maxlength="255" value="{EMAIL}" /></div>
+			</div>
+		</div>
+
+		<div class="panel-footer right">
+			<input type="submit" name="submit" value="{L_SUBMIT}" class="btn btn-primary" />
+			<input type="reset" value="{L_RESET}" name="reset" class="btn btn-default" />
+		</div>
+	</div>
+	{S_HIDDEN_FIELDS}
 </form>

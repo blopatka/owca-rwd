@@ -1,30 +1,30 @@
-
 {LOCBAR}
 
-<table width="100%" cellpadding="3" cellspacing="1" class="forumline">
-  <tr> 
-	<th class="thHead" colspan="2">{L_SEARCH}</th>
-  </tr>
+<h5>{L_SEARCH}</h5>
+
 <!-- BEGIN search_nothing -->
-  <tr>
-	<td class="row1" align="center" width="5%"><img src="pafiledb/styles/{STYLE}/images/error.gif" border="0"></td>
-	<td class="row1" width="95%"><span class="genmed">{L_NO_MATCHES} <b>{SVALUE}</b></span></td>
-  </tr>
+<p class="alert alert-danger">{L_NO_MATCHES} <b>{SVALUE}</b></p>
 <!-- END search_nothing -->
 
 <!-- BEGIN search_done -->
-  <tr>
-	<td class="row2" colspan="2" align="center"><span class="genmed">{HITS} {L_MATCHES} <b> {SVALUE}</b></span></td>
-  </tr>
+<p class="alert alert-success">{HITS} {L_MATCHES} <b> {SVALUE}</b></p>
+<!-- END search_done -->
+
+<!-- BEGIN search_done -->
+<table class="table table-bordered table-striped table-hover">
+	<colgroup>
+		<col style="width: 1%;">
+		<col style="width: 99%;">
+	</colgroup>
 <!-- END search_done -->
 
 <!-- BEGIN search_result -->
-  <tr>
-	<td class="row1" align="center" width="5%">{search_result.ICON}</td>
-	<td class="row1" width="95%"><span class="cattitle"><a href="dload.php?action=file&amp;id={search_result.ID}" class="cattitle">{search_result.NAME}</a></span></td>
-  </tr>
+	<tr>
+	<td class="center">{search_result.ICON}</td>
+	<td><a href="dload.php?action=file&amp;id={search_result.ID}" class="cattitle">{search_result.NAME}</a></td>
+	</tr>
 <!-- END search_result -->
-  <tr> 
-	<td class="catBottom" colspan="2">&nbsp;</td>
-  </tr>
+
+<!-- BEGIN search_done -->
 </table>
+<!-- END search_done -->

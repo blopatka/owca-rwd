@@ -27,30 +27,22 @@ win.focus();}
 <!-- BEGIN upload -->
 
 <h1>{L_UPLOAD}</h1>
-
 <p>{L_FILEEXPLAIN}</p>
 
-<table width="100%" cellpadding="3" cellspacing="1" class="forumline">
-  <tr>
-	<th colspan="2" class="thHead">{L_UPLOAD}</th>
-  </tr>
-  <tr>
-	<td class="row1">{L_UPLOADINFO}:</td>
-	<td class="row2"><FORM ENCTYPE="multipart/form-data" ACTION="{S_UPLOAD_FILE_ACTION}" METHOD=POST><INPUT TYPE="hidden" name="MAX_FILE_SIZE" value=""><INPUT NAME="userfile" TYPE="file" class="post"></td>
-  <tr>
-	<td colspan="2" align="center" class="catBottom"><input class="liteoption" type="submit" value="{L_UPLOAD}"><input type="hidden" name="field" value="{FIELD}"><input type="hidden" name="file" value="upload"><input type="hidden" name="upload" value="do"></td>
-  </tr>
-</table>
+<form enctype="multipart/form-data" action="{S_UPLOAD_FILE_ACTION}" method="POST" class="well center">
+<label for="userfile">{L_UPLOADINFO}:</label>
+<input name="userfile" id="userfile" type="file" />
+<input type="hidden" name="MAX_FILE_SIZE" value="" />
+<input class="btn btn-primary" type="submit" value="{L_UPLOAD}" />
+<input type="hidden" name="field" value="{FIELD}" />
+<input type="hidden" name="file" value="upload" />
+<input type="hidden" name="upload" value="do" />
 </form>
 <!-- END upload -->
+
 <!-- BEGIN upload_do -->
-<table class="forumline" width="100%" cellspacing="1" cellpadding="3">
-	<tr>
-		<th class="thHead">{L_UPLOAD_DO}</th>
-	</tr>
-	<tr> 
-		<td class="row1" align="center" height="30"<span class="genmed">{L_UPLOAD_MESSAGE}</span></td>
-	</tr>
-</table> 
+<div class="alert alert-info">
+	<b>{L_UPLOAD_DO}</b><br />
+	{L_UPLOAD_MESSAGE}
+</div>
 <!-- END upload_do -->
-<br />
