@@ -42,7 +42,7 @@
 	</script>
 	<script language="JavaScript" type="text/javascript" src="images/jsscripts.js"></script>
 	<script language="JavaScript" type="text/javascript" src="images/rmw_jslib.js"></script>
-	<script type="text/javascript" src="images/jQuery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script type="text/javascript" src="templates/{STYLE_NAME}/bootstrap.js"></script>
 	<script type="text/javascript" src="templates/{STYLE_NAME}/scripts.js"></script>
 		<!-- END overlib -->
@@ -85,19 +85,35 @@
 		<li><a href="{U_PROFILE}"><span class="glyphicon glyphicon-user"></span> {L_PROFILE}</a></li>
 		<li><a href="{U_PRIVATEMSGS}"><span class="glyphicon glyphicon-inbox"></span> {PRIVATE_MESSAGE_INFO}</a></li>
 		<li><a href="{U_LOGIN_LOGOUT}"><span class="glyphicon glyphicon-log-out"></span> {L_LOGIN_LOGOUT}</a></li>
-		<!-- BEGIN statistics --><li><a href="{U_STAT}"><span class="glyphicon glyphicon-align-left"></span> {L_STATISTICS}</a></li><!-- END statistics -->
-		<!-- BEGIN album --><li><a href="{U_ALBUM}"><span class="glyphicon glyphicon-picture"></span> {L_ALBUM}</a></li><!-- END album -->
-		<!-- BEGIN download --><li><a href="{U_DOWNLOADS}"><span class="glyphicon glyphicon-download"></span> {L_DOWNLOADS}</a></li><!-- END download -->
-		<!-- BEGIN chat --><li><a href="{S_JOIN_CHAT}" target="_blank"><span class="glyphicon glyphicon-comment"></span> Chat</a></li><!-- END chat -->
+		<!-- BEGIN statistics -->
+        <!-- <li><a href="{U_STAT}"><span class="glyphicon glyphicon-align-left"></span> {L_STATISTICS}</a></li>-->
+        <!-- END statistics -->
+		<!-- BEGIN album -->
+        <!--<li><a href="{U_ALBUM}"><span class="glyphicon glyphicon-picture"></span> {L_ALBUM}</a></li>-->
+        <!-- END album -->
+		<!-- BEGIN download -->
+<!--        <li><a href="{U_DOWNLOADS}"><span class="glyphicon glyphicon-download"></span> {L_DOWNLOADS}</a></li>-->
+        <!-- END download -->
+		<!-- BEGIN chat -->
+<!--        <li><a href="{S_JOIN_CHAT}" target="_blank"><span class="glyphicon glyphicon-comment"></span> Chat</a></li>-->
+        <!-- END chat -->
 		<!-- END switch_user_logged_in -->
 
 		<!-- BEGIN switch_user_logged_out -->
 		<li><a href="{U_REGISTER}"><span class="glyphicon glyphicon-user"></span> {L_REGISTER}</a></li>
 		<li><a href="{U_LOGIN_LOGOUT}"><span class="glyphicon glyphicon-log-in"></span> {L_LOGIN_LOGOUT}</a></li>
-		<!-- BEGIN statistics --><li><a href="{U_STAT}"><span class="glyphicon glyphicon-align-left"></span> {L_STATISTICS}</a></li><!-- END statistics -->
-		<!-- BEGIN album --><li><a href="{U_ALBUM}"><span class="glyphicon glyphicon-picture"></span> {L_ALBUM}</a></li><!-- END album -->
-		<!-- BEGIN download --><li><a href="{U_DOWNLOADS}"><span class="glyphicon glyphicon-download"></span> {L_DOWNLOADS}</a></li><!-- END download -->
-		<!-- BEGIN chat --><li><a href="{S_JOIN_CHAT}" target="_blank"><span class="glyphicon glyphicon-comment"></span> Chat</a></li><!-- END chat -->
+		<!-- BEGIN statistics -->
+<!--        <li><a href="{U_STAT}"><span class="glyphicon glyphicon-align-left"></span> {L_STATISTICS}</a></li>-->
+        <!-- END statistics -->
+		<!-- BEGIN album -->
+<!--        <li><a href="{U_ALBUM}"><span class="glyphicon glyphicon-picture"></span> {L_ALBUM}</a></li>-->
+        <!-- END album -->
+		<!-- BEGIN download -->
+<!--        <li><a href="{U_DOWNLOADS}"><span class="glyphicon glyphicon-download"></span> {L_DOWNLOADS}</a></li>-->
+        <!-- END download -->
+		<!-- BEGIN chat -->
+<!--        <li><a href="{S_JOIN_CHAT}" target="_blank"><span class="glyphicon glyphicon-comment"></span> Chat</a></li>-->
+        <!-- END chat -->
 		<!-- END switch_user_logged_out -->
 		<!-- BEGIN switch_report_list -->
 		<li><a href="{switch_report_list.U_REPORT_LIST}"><span class="glyphicon glyphicon-warning"></span> {switch_report_list.L_REPORT_LIST}</a></li>

@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="../templates/TwitterBootStrap/{T_HEAD_STYLESHEET}" type="text/css" />
 <link rel="stylesheet" href="../templates/TwitterBootStrap/print.css" type="text/css" media="print" />
 <link rel="stylesheet" href="../templates/TwitterBootStrap/admin/admin.css" type="text/css" />
-<script type="text/javascript" src="../images/jQuery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript" src="../templates/TwitterBootStrap/scripts.js"></script>
 <script type="text/javascript" src="../templates/TwitterBootStrap/bootstrap.js"></script>
 
