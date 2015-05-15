@@ -1,4 +1,4 @@
-<div class="panel panel-primary">
+<div class="row panel panel-primary">
     <div class="panel-body">
         <form id="SB_box" name="post" action="{SHOUTBOX_URL}" method="POST" target="shout_iframe">
             <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" class="forumline" style="border-width: 1px; font-size:12px;" id="SB_inner">

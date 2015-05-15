@@ -235,3 +235,43 @@ textarea
 {
 width: 100%;
 }
+
+/*added by opiszon*/
+
+#private-message-count {
+    display: none;
+}
+
+#private-message-count:not(:empty) {
+    display: inline;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    position: absolute;
+    min-width: 20px;
+    top: -5px;
+    left: 20px;
+    padding: 2px 2px;
+    height: 20px;
+}
+
+.main-row {
+    background-color: #900;
+    color: white;
+}
+
+
+.pentax-table {
+    background-color: #FEFEF9;
+    border: 1px solid lightgray;
+    border-bottom: none;
+}
+
+.pentax-table > div > .row {
+    border-bottom: 1px solid lightgray;
+}
+
+.main-row-subtitle {
+    background-color: #c7d0c7;
+}

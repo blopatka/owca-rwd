@@ -1,5 +1,5 @@
 <!-- BEGIN switch_enable_board_msg_index -->
-<div class="well noprint">
+<div class="row well noprint">
 	<p onclick="HideTable('board_msg');" style="cursor: pointer; border-bottom: 1px solid silver;" title="{L_VHIDE}" class="center">{L_BOARD_MSG}</p>
 	<div id="board_msg">{BOARD_MSG}</div>
 </div>
@@ -10,11 +10,11 @@
 <!-- END custom_registration -->
 
 <div class="row noprint">
-	<div class="col-md-6 gensmall">
+	<div class="col-sm-6 hidden-xs gensmall">
 		<!-- BEGIN switch_user_logged_in -->{LAST_VISIT_DATE}<br /><!-- END switch_user_logged_in -->
 		{CURRENT_TIME}
 	</div>
-	<div class="col-md-6 right">
+	<div class="col-sm-6 right">
 		<!-- BEGIN switch_unread -->
 		<a href="{U_SEARCH_NEW}" class="pull-right">{L_SEARCH_NEW} <span class="label label-primary">{COUNT_NEW_POSTS}</span></a>
 		<br clear="all" /><br />
@@ -22,9 +22,11 @@
 	</div>
 </div>
 
-<ul class="breadcrumb"><li><a href="{U_INDEX}">{L_INDEX}</a></li>{NAV_CAT_DESC}</ul>
+<div class="row">
+    <ul class="breadcrumb"><li><a href="{U_INDEX}">{L_INDEX}</a></li>{NAV_CAT_DESC}</ul>
+</div>
 
-<div class="right noprint">
+<div class="row right noprint">
 	<!-- BEGIN switch_user_logged_out -->
 	<form method="post" action="{S_LOGIN_ACTION}">
 		<input class="input-small" type="text" name="username" size="8" placeholder="nick"/>
@@ -37,23 +39,25 @@
 
 {BOARD_INDEX}
 
-<ul class="nav nav-pills noprint">
-	<li><a href="{U_SEARCH_UNANSWERED}">{L_SEARCH_UNANSWERED}</a></li>
-	<!-- BEGIN switch_user_logged_in -->
-	<li><a href="{U_SEARCH_SELF}">{L_SEARCH_SELF}</a></li>
-	<li><a href="{U_SEARCH_LASTVISIT}">{L_SEARCH_LASTVISIT}</a></li>
-	<li><a href="{U_MARK_READ}">{L_MARK_FORUMS_READ}</a></li>
-	<!-- END switch_user_logged_in -->
-	
-	<li><a href="javascript:void(null)" OnClick="PopUp('{U_PREFERENCES}', 580, 600);">{L_PREFERENCES}</a></li>
-</ul>
+<div class="row">
+    <ul class="nav nav-pills noprint">
+        <li><a href="{U_SEARCH_UNANSWERED}">{L_SEARCH_UNANSWERED}</a></li>
+        <!-- BEGIN switch_user_logged_in -->
+        <li><a href="{U_SEARCH_SELF}">{L_SEARCH_SELF}</a></li>
+        <li><a href="{U_SEARCH_LASTVISIT}">{L_SEARCH_LASTVISIT}</a></li>
+        <li><a href="{U_MARK_READ}">{L_MARK_FORUMS_READ}</a></li>
+        <!-- END switch_user_logged_in -->
+
+        <li><a href="javascript:void(null)" OnClick="PopUp('{U_PREFERENCES}', 580, 600);">{L_PREFERENCES}</a></li>
+    </ul>
+</div>
 
 <!-- BEGIN custom_registration_bottom -->
 <!-- INCLUDE quick_register.tpl -->
 <!-- END custom_registration_bottom -->
 
 <!-- BEGIN disable_viewonline -->
-<div class="panel panel-primary">
+<div class="row panel panel-primary">
 	<div class="panel-heading"><a href="{U_VIEWONLINE}" title="{L_VIEW_DETAILED}">{L_WHO_IS_ONLINE}</a></div>
 	<div class="panel-body genmed">
 		<p>{TOTAL_POSTS}, {TOTAL_USERS}, {NEWEST_USER}{COUNTER}</p>

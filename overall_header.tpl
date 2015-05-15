@@ -8,7 +8,6 @@
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<link rel="stylesheet" href="templates/{STYLE_NAME}/<!-- PHP -->echo $theme['style_name']<!-- ENDPHP -->.css" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" type="text/css"/>
     <link rel="stylesheet" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}" type="text/css" />
 	<link href="templates/{STYLE_NAME}/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
@@ -68,6 +67,7 @@
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+                <div id="private-message-count"></div>
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -85,7 +85,7 @@
 
                 <!-- BEGIN switch_user_logged_in -->
                 <li><a href="{U_PROFILE}"><span class="glyphicon glyphicon-user"></span> {L_PROFILE}</a></li>
-                <li><a href="{U_PRIVATEMSGS}"><span class="glyphicon glyphicon-inbox"></span> {PRIVATE_MESSAGE_INFO}</a></li>
+                <li><a href="{U_PRIVATEMSGS}"><span class="glyphicon glyphicon-inbox"></span> <span id="private-message-info">{PRIVATE_MESSAGE_INFO}</span></a></li>
                 <li><a href="{U_LOGIN_LOGOUT}"><span class="glyphicon glyphicon-log-out"></span> {L_LOGIN_LOGOUT}</a></li>
                 <!-- BEGIN statistics -->
                 <!-- <li><a href="{U_STAT}"><span class="glyphicon glyphicon-align-left"></span> {L_STATISTICS}</a></li>-->
@@ -150,7 +150,7 @@
 <!-- END switch_page_avatar -->
 {ROTATE_BANNER_3}
 <!-- BEGIN switch_enable_board_msg -->
-<div class="well">
+<div class="well hidden-xs">
 	<p onclick="HideTable('board_msg');" style="cursor: pointer; border-bottom: 1px solid silver;" title="{L_VHIDE}" class="center">{L_BOARD_MSG}</p>
 	<div id="board_msg">{BOARD_MSG}</div>
 </div>

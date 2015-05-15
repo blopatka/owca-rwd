@@ -2,6 +2,10 @@ $(document).ready(function(){
 	$(".breadcrumb .nav").wrap("<li></li>");
 	$(".breadcrumb .nav").removeClass("nav");
 //	$("[data-toggle=collapse]").collapse();
+    var msgCount = $("#private-message-info").text().match(/\d+/);
+    if(msgCount !== null) {
+        $("#private-message-count").text($("#private-message-info").text().match(/\d+/));
+    }
 
 	if(GetCookie('hide'))
 	{
