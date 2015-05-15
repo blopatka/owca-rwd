@@ -1,7 +1,7 @@
 <div class="panel panel-primary">
     <div class="panel-body">
         <form id="SB_box" name="post" action="{SHOUTBOX_URL}" method="POST" target="shout_iframe">
-            <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" class="forumline" style="border-width: 1px;" id="SB_inner">
+            <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" class="forumline" style="border-width: 1px; font-size:12px;" id="SB_inner">
                 <tr>
                     <td class="catHead" align="center" height="25"><span class="cattitle"><a href="{SHOUTBOX_URL}" class="mainmenu" title="{L_ALL_MESSAGES}">ShoutBox</a></span></td>
                 </tr>

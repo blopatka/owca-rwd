@@ -29,13 +29,13 @@
 		<span class="genmed">{catrow.forumrow.FORUM_DESC}</span>
 
 		<span class="gensmall">
-		{catrow.forumrow.L_MODERATOR} {catrow.forumrow.MODERATORS}
+<!--		{catrow.forumrow.L_MODERATOR} {catrow.forumrow.MODERATORS}-->
 		<!-- BEGIN links -->{catrow.forumrow.links.L_LINKS} {catrow.forumrow.links.LINKS}<!-- END links -->
 		</span>
 	</td>
 	<!-- BEGIN forum_link_no -->
 	<td colspan="2"><b>{L_POSTS}:</b> {catrow.forumrow.POSTS}<br /><b>{L_TOPICS}:</b> {catrow.forumrow.TOPICS}</td>
-	<td>{catrow.forumrow.LAST_POST}<br /><span class="gensmall">{catrow.forumrow.LAST_POSTMSG}</span><br />{catrow.forumrow.NUM_NEW_TOPICS}{catrow.forumrow.NUM_NEW_POSTS}</td>
+	<td>{catrow.forumrow.LAST_POST}<br /><span class="gensmall">{catrow.forumrow.LAST_POSTMSG}</span>{catrow.forumrow.NUM_NEW_TOPICS}{catrow.forumrow.NUM_NEW_POSTS}</td>
 	<!-- END forum_link_no -->
 	<!-- BEGIN forum_link -->
 	<td colspan="3">{catrow.forumrow.forum_link.HIT_COUNT}</td>

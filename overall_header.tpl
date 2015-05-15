@@ -9,8 +9,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<link rel="stylesheet" href="templates/{STYLE_NAME}/<!-- PHP -->echo $theme['style_name']<!-- ENDPHP -->.css" type="text/css" />
-	<link rel="stylesheet" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}" type="text/css" />
-	<link href="templates/{STYLE_NAME}/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="templates/{STYLE_NAME}/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}" type="text/css" />
+	<link href="templates/{STYLE_NAME}/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="templates/{STYLE_NAME}/print.css" type="text/css" media="print" />
 
 	<script language="Javascript" type="text/javascript">
