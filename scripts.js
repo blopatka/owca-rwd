@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$(".breadcrumb .nav").wrap("<li></li>");
 	$(".breadcrumb .nav").removeClass("nav");
-	$("[data-toggle=collapse]").collapse();
+//	$("[data-toggle=collapse]").collapse();
 
 	if(GetCookie('hide'))
 	{

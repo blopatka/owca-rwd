@@ -9,9 +9,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<link rel="stylesheet" href="templates/{STYLE_NAME}/<!-- PHP -->echo $theme['style_name']<!-- ENDPHP -->.css" type="text/css" />
-    <link rel="stylesheet" href="templates/{STYLE_NAME}/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" type="text/css"/>
     <link rel="stylesheet" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}" type="text/css" />
-	<link href="templates/{STYLE_NAME}/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+	<link href="templates/{STYLE_NAME}/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="templates/{STYLE_NAME}/print.css" type="text/css" media="print" />
 
 	<script language="Javascript" type="text/javascript">
@@ -21,7 +21,7 @@
 	var cpath = '{COOKIE_PATH}';
 	var cdomain = '{COOKIE_DOMAIN}';
 	var csecure = '{COOKIE_SECURE}';
-	var rmw_max_width = 400;
+	var rmw_max_width = 700;
 	var rmw_border_1 = '0px solid {T_BODY_LINK}';
 	var rmw_border_2 = '0px dotted {T_BODY_LINK}';
 	var rmw_image_title = '';
@@ -44,7 +44,7 @@
 	<script language="JavaScript" type="text/javascript" src="images/jsscripts.js"></script>
 	<script language="JavaScript" type="text/javascript" src="images/rmw_jslib.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script type="text/javascript" src="templates/{STYLE_NAME}/bootstrap.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript"></script>
 	<script type="text/javascript" src="templates/{STYLE_NAME}/scripts.js"></script>
 		<!-- END overlib -->
 	<!-- stat -->
@@ -64,63 +64,65 @@
 
 <body>
 <!-- BEGIN header -->
-<nav class="navbar navbar-default navbar-static-top" role="navigation">
-	<div class="navbar-header">
-		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		</button>
-		<a href="{U_INDEX_PORTAL}" class="navbar-brand" title="{L_INDEX_PORTAL}">{SITENAME_COLOR}</a>
-	</div>
+<nav class="navbar navbar-default ">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="{U_INDEX_PORTAL}" class="navbar-brand" title="{L_INDEX_PORTAL}">{SITENAME_COLOR}</a>
+        </div>
 
-	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	<ul class="nav navbar-nav">
-		<li><a href="{U_FAQ}"><span class="glyphicon glyphicon-question-sign"></span> {L_FAQ}</a></li>
-		<li><a href="{U_SEARCH}"><span class="glyphicon glyphicon-search"></span> {L_SEARCH}</a></li>
-		<li><a href="{U_MEMBERLIST}"><span class="glyphicon glyphicon-list"></span> {L_MEMBERLIST}</a></li>
-		<li><a href="{U_GROUP_CP}"><span class="glyphicon glyphicon-th-list"></span> {L_USERGROUPS}</a></li>
+        <div class="collapse navbar-collapse" id="main-navbar">
+            <ul class="nav navbar-nav">
+                <li><a href="{U_FAQ}"><span class="glyphicon glyphicon-question-sign"></span> {L_FAQ}</a></li>
+                <li><a href="{U_SEARCH}"><span class="glyphicon glyphicon-search"></span> {L_SEARCH}</a></li>
+                <li><a href="{U_MEMBERLIST}"><span class="glyphicon glyphicon-list"></span> {L_MEMBERLIST}</a></li>
+                <li><a href="{U_GROUP_CP}"><span class="glyphicon glyphicon-th-list"></span> {L_USERGROUPS}</a></li>
 
-		<!-- BEGIN switch_user_logged_in -->
-		<li><a href="{U_PROFILE}"><span class="glyphicon glyphicon-user"></span> {L_PROFILE}</a></li>
-		<li><a href="{U_PRIVATEMSGS}"><span class="glyphicon glyphicon-inbox"></span> {PRIVATE_MESSAGE_INFO}</a></li>
-		<li><a href="{U_LOGIN_LOGOUT}"><span class="glyphicon glyphicon-log-out"></span> {L_LOGIN_LOGOUT}</a></li>
-		<!-- BEGIN statistics -->
-        <!-- <li><a href="{U_STAT}"><span class="glyphicon glyphicon-align-left"></span> {L_STATISTICS}</a></li>-->
-        <!-- END statistics -->
-		<!-- BEGIN album -->
-        <!--<li><a href="{U_ALBUM}"><span class="glyphicon glyphicon-picture"></span> {L_ALBUM}</a></li>-->
-        <!-- END album -->
-		<!-- BEGIN download -->
-<!--        <li><a href="{U_DOWNLOADS}"><span class="glyphicon glyphicon-download"></span> {L_DOWNLOADS}</a></li>-->
-        <!-- END download -->
-		<!-- BEGIN chat -->
-<!--        <li><a href="{S_JOIN_CHAT}" target="_blank"><span class="glyphicon glyphicon-comment"></span> Chat</a></li>-->
-        <!-- END chat -->
-		<!-- END switch_user_logged_in -->
+                <!-- BEGIN switch_user_logged_in -->
+                <li><a href="{U_PROFILE}"><span class="glyphicon glyphicon-user"></span> {L_PROFILE}</a></li>
+                <li><a href="{U_PRIVATEMSGS}"><span class="glyphicon glyphicon-inbox"></span> {PRIVATE_MESSAGE_INFO}</a></li>
+                <li><a href="{U_LOGIN_LOGOUT}"><span class="glyphicon glyphicon-log-out"></span> {L_LOGIN_LOGOUT}</a></li>
+                <!-- BEGIN statistics -->
+                <!-- <li><a href="{U_STAT}"><span class="glyphicon glyphicon-align-left"></span> {L_STATISTICS}</a></li>-->
+                <!-- END statistics -->
+                <!-- BEGIN album -->
+                <!--<li><a href="{U_ALBUM}"><span class="glyphicon glyphicon-picture"></span> {L_ALBUM}</a></li>-->
+                <!-- END album -->
+                <!-- BEGIN download -->
+        <!--        <li><a href="{U_DOWNLOADS}"><span class="glyphicon glyphicon-download"></span> {L_DOWNLOADS}</a></li>-->
+                <!-- END download -->
+                <!-- BEGIN chat -->
+        <!--        <li><a href="{S_JOIN_CHAT}" target="_blank"><span class="glyphicon glyphicon-comment"></span> Chat</a></li>-->
+                <!-- END chat -->
+                <!-- END switch_user_logged_in -->
 
-		<!-- BEGIN switch_user_logged_out -->
-		<li><a href="{U_REGISTER}"><span class="glyphicon glyphicon-user"></span> {L_REGISTER}</a></li>
-		<li><a href="{U_LOGIN_LOGOUT}"><span class="glyphicon glyphicon-log-in"></span> {L_LOGIN_LOGOUT}</a></li>
-		<!-- BEGIN statistics -->
-<!--        <li><a href="{U_STAT}"><span class="glyphicon glyphicon-align-left"></span> {L_STATISTICS}</a></li>-->
-        <!-- END statistics -->
-		<!-- BEGIN album -->
-<!--        <li><a href="{U_ALBUM}"><span class="glyphicon glyphicon-picture"></span> {L_ALBUM}</a></li>-->
-        <!-- END album -->
-		<!-- BEGIN download -->
-<!--        <li><a href="{U_DOWNLOADS}"><span class="glyphicon glyphicon-download"></span> {L_DOWNLOADS}</a></li>-->
-        <!-- END download -->
-		<!-- BEGIN chat -->
-<!--        <li><a href="{S_JOIN_CHAT}" target="_blank"><span class="glyphicon glyphicon-comment"></span> Chat</a></li>-->
-        <!-- END chat -->
-		<!-- END switch_user_logged_out -->
-		<!-- BEGIN switch_report_list -->
-		<li><a href="{switch_report_list.U_REPORT_LIST}"><span class="glyphicon glyphicon-warning"></span> {switch_report_list.L_REPORT_LIST}</a></li>
-		<!-- END switch_report_list -->
-	</ul>
-	</div>
+                <!-- BEGIN switch_user_logged_out -->
+                <li><a href="{U_REGISTER}"><span class="glyphicon glyphicon-user"></span> {L_REGISTER}</a></li>
+                <li><a href="{U_LOGIN_LOGOUT}"><span class="glyphicon glyphicon-log-in"></span> {L_LOGIN_LOGOUT}</a></li>
+                <!-- BEGIN statistics -->
+        <!--        <li><a href="{U_STAT}"><span class="glyphicon glyphicon-align-left"></span> {L_STATISTICS}</a></li>-->
+                <!-- END statistics -->
+                <!-- BEGIN album -->
+        <!--        <li><a href="{U_ALBUM}"><span class="glyphicon glyphicon-picture"></span> {L_ALBUM}</a></li>-->
+                <!-- END album -->
+                <!-- BEGIN download -->
+        <!--        <li><a href="{U_DOWNLOADS}"><span class="glyphicon glyphicon-download"></span> {L_DOWNLOADS}</a></li>-->
+                <!-- END download -->
+                <!-- BEGIN chat -->
+        <!--        <li><a href="{S_JOIN_CHAT}" target="_blank"><span class="glyphicon glyphicon-comment"></span> Chat</a></li>-->
+                <!-- END chat -->
+                <!-- END switch_user_logged_out -->
+                <!-- BEGIN switch_report_list -->
+                <li><a href="{switch_report_list.U_REPORT_LIST}"><span class="glyphicon glyphicon-warning"></span> {switch_report_list.L_REPORT_LIST}</a></li>
+                <!-- END switch_report_list -->
+            </ul>
+        </div>
+    </div>
 </nav>
 <!-- END header -->
 
