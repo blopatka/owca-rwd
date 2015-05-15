@@ -150,7 +150,7 @@
 <!-- END switch_page_avatar -->
 {ROTATE_BANNER_3}
 <!-- BEGIN switch_enable_board_msg -->
-<div class="well hidden-xs">
+<div class="row well hidden-xs">
 	<p onclick="HideTable('board_msg');" style="cursor: pointer; border-bottom: 1px solid silver;" title="{L_VHIDE}" class="center">{L_BOARD_MSG}</p>
 	<div id="board_msg">{BOARD_MSG}</div>
 </div>

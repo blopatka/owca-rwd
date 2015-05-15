@@ -20,8 +20,8 @@
         <div  class="row">
             <div class="col-md-7 col-xs-6">
                 <div class="row">
-                    <div class="col-md-2 hidden-xs hidden-sm"><img src="{catrow.forumrow.FORUM_FOLDER_IMG}" alt="" title="{catrow.forumrow.L_FORUM_FOLDER_ALT}"></div>
-                    <div class="col-md-10 col-sm-12">
+                    <div class="col-md-1 hidden-xs hidden-sm col-no-gutter text-center"><img src="{catrow.forumrow.FORUM_FOLDER_IMG}" alt="" title="{catrow.forumrow.L_FORUM_FOLDER_ALT}"></div>
+                    <div class="col-md-11 col-sm-12">
                         <a href="{catrow.forumrow.U_VIEWFORUM}" class="forumlink"{catrow.forumrow.FORUM_COLOR}>{catrow.forumrow.FORUM_NAME}</a><br />
                         <span class="genmed">{catrow.forumrow.FORUM_DESC}</span>
 
