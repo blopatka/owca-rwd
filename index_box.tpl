@@ -1,10 +1,8 @@
 <!-- BEGIN catrow -->
 <!-- BEGIN tablehead -->
-<div class="row main-row">
-    <div class="col-md-7 col-xs-6">
-        <div onclick="HideTable('hc_{catrow.tablehead.CAT_ID}');" style="cursor: pointer" title="{L_VHIDE}">{catrow.tablehead.L_FORUM}</div>
-    </div>
-    <div class="col-md-2 col-xs-3">{L_TOPICS}/{L_POSTS}</div>
+<div class="row main-row" onclick="HideTable('hc_{catrow.tablehead.CAT_ID}');" style="cursor: pointer" title="{L_VHIDE}">
+    <div class="col-md-7 col-xs-6">{catrow.tablehead.L_FORUM}</div>
+    <div class="col-md-2 col-xs-3">{L_TOPICS}/ {L_POSTS}</div>
     <div class="col-md-3 col-xs-3">{L_LASTPOST}</div>
 </div>
 
