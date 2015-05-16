@@ -8,10 +8,11 @@
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" type="text/css"/>
-    <link rel="stylesheet" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}" type="text/css" />
-	<link href="templates/{STYLE_NAME}/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="templates/{STYLE_NAME}/print.css" type="text/css" media="print" />
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" type="text/css"/>-->
+    <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}" />
+	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap-theme.min.css" />
+	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/print.css"  media="print" />
 
 	<script language="Javascript" type="text/javascript">
 	var l_empty_message = '{L_EMPTY_MESSAGE}';
@@ -42,9 +43,9 @@
 	</script>
 	<script language="JavaScript" type="text/javascript" src="images/jsscripts.js"></script>
 	<script language="JavaScript" type="text/javascript" src="images/rmw_jslib.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript"></script>
-	<script type="text/javascript" src="templates/{STYLE_NAME}/scripts.js"></script>
+    <script type="text/javascript" src="templates/{STYLE_NAME}/js//jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="templates/{STYLE_NAME}/js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="templates/{STYLE_NAME}/js/scripts.js"></script>
 		<!-- END overlib -->
 	<!-- stat -->
 	<script type="text/javascript">
