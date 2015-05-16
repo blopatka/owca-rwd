@@ -18,83 +18,95 @@
 <form method="post" action="{ignore_form.U_IGNORE_TOPICS}" name="ignoreform">
 <!-- END ignore_form -->
 
-<div class="row main-row" <!-- BEGIN switch_show_hide --> onclick="HideTable('imp_topics_{FORUM_ID}');" style="cursor: pointer" title="{L_VHIDE}"<!-- END switch_show_hide -->>
-    <div class="col-sm-6 col-xs-12" >{L_TOPICS}</div>
-    <div class="col-sm-2 hidden-xs">{L_REPLIES}/ {L_VIEWS}</div>
-    <div class="col-sm-2 hidden-xs">{L_AUTHOR}</div>
-    <div class="col-sm-2 hidden-xs">{L_LASTPOST}</div>
-</div>
-
-<div class="row pentax-table" id="imp_topics_{FORUM_ID}">
-    <!-- BEGIN important_topics -->
-    <div class="row">
-        <div class="catHead col-md-12"><span class="nav">&bull; {L_IMPORTANT_TOPICS}</span></div>
-    </div>
-    <!-- END important_topics -->
-
-    <div class="col-md-12">
-    <!-- BEGIN topicrow -->
-    <!-- BEGIN normal_topics_row -->
-    <div class="row">
-        <div class="catHead col-md-12" ><span class="nav">&bull; {L_TOPICS}</span></div>
-    </div>
-    <!-- END normal_topics_row -->
-    <!-- BEGIN normal_topics -->
-    </div>
-</div>
-
-
-
-
-<div class="row main-row">
-    <div class="col-sm-6 col-xs-12" >{L_NORMAL_TOPICS}</div>
-    <div class="col-sm-2 hidden-xs">{L_REPLIES}/ {L_VIEWS}</div>
-    <div class="col-sm-2 hidden-xs">{L_AUTHOR}</div>
-    <div class="col-sm-2 hidden-xs">{L_LASTPOST}</div>
-</div>
-<div class="row pentax-table">
-<div class="col-md-12">
-<!-- END normal_topics -->
-
-
-
-	<div class="row">
-    <div class="col-sm-6 col-xs-12">
-        <div class="row">
-            <div class="col-md-2 col-xs-2 col-no-gutter text-center"><img src="{topicrow.TOPIC_FOLDER_IMG}" alt=""></div>
-            <!-- BEGIN icons -->
-            <div class="col-md-1 hidden-xs hidden-sm">{topicrow.ICON}</div>
-            <!-- END icons -->
-            <div class="col-md-8 col-xs-10">
-                {topicrow.NEWEST_POST_IMG}{topicrow.TOPIC_ATTACHMENT_IMG}{topicrow.TOPIC_TYPE}
-
-                <a href="{topicrow.U_VIEW_TOPIC}" {topicrow.TOPIC_COLOR}<!-- BEGIN title_overlib --> data-toggle="popover" data-html="true" title="{topicrow.title_overlib.O_TITLE}" data-content="{topicrow.title_overlib.UNREAD_POSTS}<br /><b>{topicrow.title_overlib.L_FIRST_POST}</b><br />{topicrow.title_overlib.O_TEXT1}<!-- BEGIN last --><br /><b>{topicrow.title_overlib.L_LAST_POST}</b><br />{topicrow.title_overlib.last.O_TEXT2}<!-- END last -->"<!-- END title_overlib -->>{topicrow.TOPIC_TITLE}</a>
-                <span class="gensmall">{topicrow.TOPIC_TITLE_E}{topicrow.TOPIC_EXPIRE}<br />{topicrow.GOTO_PAGE}</span>
-            </div>
-            <!-- BEGIN ignore_checkbox -->
-            <div class="col-md-1 hidden-xs hidden-sm"><input type="checkbox" name="list_ignore[]" value="{topicrow.TOPIC_ID}"></div>
-            <!-- END ignore_checkbox -->
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <div class="row" <!-- BEGIN switch_show_hide --> onclick="HideTable('imp_topics_{FORUM_ID}');" style="cursor: pointer" title="{L_VHIDE}"<!-- END switch_show_hide -->>
+            <div class="col-sm-6 col-xs-12" >{L_TOPICS}</div>
+            <div class="col-sm-2 hidden-xs">{L_REPLIES}/ {L_VIEWS}</div>
+            <div class="col-sm-2 hidden-xs">{L_AUTHOR}</div>
+            <div class="col-sm-2 hidden-xs">{L_LASTPOST}</div>
         </div>
     </div>
-    <div class="col-sm-2 hidden-xs">{topicrow.REPLIES}/ {topicrow.VIEWS}</div>
-    <div class="col-sm-2 hidden-xs"><span class="name">{topicrow.TOPIC_AUTHOR}</span></div>
-    <div class="col-sm-2 hidden-xs"><span class="postdetails"><time>{topicrow.LAST_POST_TIME}</time><br />{topicrow.LAST_POST_AUTHOR} {topicrow.LAST_POST_IMG}</span></div>
+
+    <div class="panel-body" id="imp_topics_{FORUM_ID}">
+        <div class="row">
+            <!-- BEGIN important_topics -->
+            <div class="row">
+                <div class="catHead col-md-12"><span class="nav">&bull; {L_IMPORTANT_TOPICS}</span></div>
+            </div>
+            <!-- END important_topics -->
+
+            <div class="col-md-12">
+            <!-- BEGIN topicrow -->
+            <!-- BEGIN normal_topics_row -->
+            <div class="row">
+                <div class="catHead col-md-12" ><span class="nav">&bull; {L_TOPICS}</span></div>
+            </div>
+            <!-- END normal_topics_row -->
+            <!-- BEGIN normal_topics -->
+            </div>
+        </div>
     </div>
-
-	<!-- BEGIN switch_no_topics -->
-    <div class="col-sm-12"><div class="info">{L_NO_TOPICS}</div></div>
-	<!-- END switch_no_topics -->
-
-<!-- END topicrow -->
-</div>
 </div>
 
-<div class="row">
-	<div class="col-xs-2">{PAGE_NUMBER}</div>
-	<!-- BEGIN ignore_form -->
-	<div class="col-md-10">{PAGINATION}</div>
 
+<div class="panel panel-primary">
+    <div class="panel-heading">
+            <div class="row ">
+                <div class="col-sm-6 col-xs-12" >{L_NORMAL_TOPICS}</div>
+                <div class="col-sm-2 hidden-xs">{L_REPLIES}/ {L_VIEWS}</div>
+                <div class="col-sm-2 hidden-xs">{L_AUTHOR}</div>
+                <div class="col-sm-2 hidden-xs">{L_LASTPOST}</div>
+            </div>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-12">
+            <!-- END normal_topics -->
+
+
+
+                <div class="row panel-row panel-primary">
+                    <div class="col-sm-6 col-xs-12">
+                        <div class="row">
+                            <div class="col-md-2 col-xs-2 col-no-gutter text-center"><img src="{topicrow.TOPIC_FOLDER_IMG}" alt=""></div>
+                            <!-- BEGIN icons -->
+                            <div class="col-md-1 hidden-xs hidden-sm">{topicrow.ICON}</div>
+                            <!-- END icons -->
+                            <div class="col-md-8 col-xs-10">
+                                {topicrow.NEWEST_POST_IMG}{topicrow.TOPIC_ATTACHMENT_IMG}{topicrow.TOPIC_TYPE}
+
+                                <a href="{topicrow.U_VIEW_TOPIC}" {topicrow.TOPIC_COLOR}<!-- BEGIN title_overlib --> data-toggle="popover" data-html="true" title="{topicrow.title_overlib.O_TITLE}" data-content="{topicrow.title_overlib.UNREAD_POSTS}<br /><b>{topicrow.title_overlib.L_FIRST_POST}</b><br />{topicrow.title_overlib.O_TEXT1}<!-- BEGIN last --><br /><b>{topicrow.title_overlib.L_LAST_POST}</b><br />{topicrow.title_overlib.last.O_TEXT2}<!-- END last -->"<!-- END title_overlib -->>{topicrow.TOPIC_TITLE}</a>
+                                <span class="gensmall">{topicrow.TOPIC_TITLE_E}{topicrow.TOPIC_EXPIRE}<br />{topicrow.GOTO_PAGE}</span>
+                            </div>
+                            <!-- BEGIN ignore_checkbox -->
+                            <div class="col-md-1 hidden-xs hidden-sm"><input type="checkbox" name="list_ignore[]" value="{topicrow.TOPIC_ID}"></div>
+                            <!-- END ignore_checkbox -->
+                        </div>
+                    </div>
+                    <div class="col-sm-2 hidden-xs">{topicrow.REPLIES}/ {topicrow.VIEWS}</div>
+                    <div class="col-sm-2 hidden-xs"><span class="name">{topicrow.TOPIC_AUTHOR}</span></div>
+                    <div class="col-sm-2 hidden-xs"><span class="postdetails"><time>{topicrow.LAST_POST_TIME}</time><br />{topicrow.LAST_POST_AUTHOR} {topicrow.LAST_POST_IMG}</span></div>
+                </div>
+
+                <!-- BEGIN switch_no_topics -->
+                <div class="col-sm-12"><div class="info">{L_NO_TOPICS}</div></div>
+                <!-- END switch_no_topics -->
+
+            <!-- END topicrow -->
+            </div>
+        </div>
+    </div>
+    <div class="panel-footer">
+        <div class="row">
+            <div class="col-xs-2">{PAGE_NUMBER}</div>
+            <!-- BEGIN ignore_form -->
+            <div class="col-md-10">{PAGINATION}</div>
+        </div>
+    </div>
 </div>
+
+
 
 
 <div class="row">

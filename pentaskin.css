@@ -241,11 +241,6 @@ td.row1, td.row2 {
     border-bottom: 1px solid lightgrey;
 }
 
-body {
-    font-size: 12px;
-    background-color: #656565;
-}
-
 .container {
     background-color: white;
     border: 10px solid white;
@@ -275,30 +270,11 @@ body {
     height: 20px;
 }
 
-.main-row {
-    background-color: #900;
-    color: white;
-    padding: 5px 0;
-    font-weight: bold;
-    border-radius: 5px 5px 0 0;
-    margin-top: 15px;
+.panel-row {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
 }
 
-
-.pentax-table {
-    background-color: #FEFEF9;
-    border: 1px solid lightgray;
-    border-radius: 0 0 5px 5px;
-}
-
-.pentax-table > div > .row {
-    border-bottom: 1px solid lightgray;
-}
-
-.pentax-table > div > .row:last-of-type {
+.panel-row:last-of-type {
     border-bottom: none;
-}
-
-.main-row-subtitle {
-    background-color: #c7d0c7;
 }

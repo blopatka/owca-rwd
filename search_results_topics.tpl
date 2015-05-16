@@ -16,55 +16,65 @@
 <!-- BEGIN ignore_topics -->
 <form method="post" action="{ignore_topics.U_IGNORE_TOPICS}" name="ignoreform">
 <!-- END ignore_topics -->
-<div class="row main-row">
-    <div class="col-sm-2 col-xs-4">{L_FORUM}</div>
-    <div class="col-sm-4 col-xs-8">{L_TOPICS}</div>
-    <div class="col-sm-2 hidden-xs">{L_AUTHOR}</div>
-    <div class="col-sm-2 hidden-xs">{L_REPLIES} / {L_VIEWS}</div>
-    <div class="col-sm-2 hidden-xs">{L_LASTPOST}</div>
-</div>
-<div class="row pentax-table">
-	<div class="col-md-12">
-        <!-- BEGIN searchresults -->
+<div class="panel panel-primary">
+    <div class="panel-heading">
         <div class="row">
-            <div class="col-sm-2 col-xs-4"><span class="forumlink"><a href="{searchresults.U_VIEW_FORUM}" class="forumlink"{searchresults.FORUM_COLOR}>{searchresults.FORUM_NAME}</a></span></div>
-            <div class="col-sm-4 col-xs-8">
-				<div class="row">
-                    <div class="col-sm-10">
-                        <span class="topictitle">
-                            {searchresults.NEWEST_POST_IMG}{searchresults.TOPIC_TYPE}
-                            <a href="{searchresults.U_VIEW_TOPIC}" class="topictitle"{searchresults.TOPIC_COLOR}
-                            <!-- BEGIN title_overlib -->
-                            data-toggle="popover" data-html="true" title="{searchresults.title_overlib.O_TITLE}"
-                            data-content="{searchresults.title_overlib.UNREAD_POSTS}<b><u>{searchresults.title_overlib.L_FIRST_POST}</u></b><br />{searchresults.title_overlib.O_TEXT1}<!-- BEGIN last --><br /><b><u>{searchresults.title_overlib.L_LAST_POST}</u></b><br />{searchresults.title_overlib.last.O_TEXT2}<!-- END last -->"
-                            <!-- END title_overlib -->
-                            {searchresults.TOPIC_COLOR}>{searchresults.TOPIC_TITLE}</a>
-                            <span class="gensmall hidden-xs">{searchresults.TOPIC_TITLE_E}<br />
-			                <span class="gensmall hidden-xs">{searchresults.GOTO_PAGE}</span>
-			             </span>
-                    </div>
-                    <div class="col-sm-2 hidden-xs">
-                        <!-- BEGIN it -->
-		                <input type="checkbox" name="list_ignore[]" value="{searchresults.it.TOPIC_ID}" />
-                        <!-- END it -->
-                    </div>
-                </div>
-			</div>
-            <div class="col-sm-2 hidden-xs"><span class="name">{searchresults.TOPIC_AUTHOR}</span></div>
-            <div class="col-sm-2 hidden-xs"><span class="postdetails">{searchresults.REPLIES}</span> / <span class="postdetails">{searchresults.VIEWS}</span></div>
-            <div class="col-sm-2 hidden-xs"><span class="postdetails">{searchresults.LAST_POST_TIME}<br />{searchresults.LAST_POST_AUTHOR} {searchresults.LAST_POST_IMG}</span></div>
+            <div class="col-sm-2 col-xs-4">{L_FORUM}</div>
+            <div class="col-sm-4 col-xs-8">{L_TOPICS}</div>
+            <div class="col-sm-2 hidden-xs">{L_AUTHOR}</div>
+            <div class="col-sm-2 hidden-xs">{L_REPLIES} / {L_VIEWS}</div>
+            <div class="col-sm-2 hidden-xs">{L_LASTPOST}</div>
         </div>
-        <!-- END searchresults -->
     </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- BEGIN searchresults -->
+                <div class="row panel-primary panel-row">
+                    <div class="col-sm-2 col-xs-4"><span class="forumlink"><a href="{searchresults.U_VIEW_FORUM}" class="forumlink"{searchresults.FORUM_COLOR}>{searchresults.FORUM_NAME}</a></span></div>
+                    <div class="col-sm-4 col-xs-8">
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <span class="topictitle">
+                                    {searchresults.NEWEST_POST_IMG}{searchresults.TOPIC_TYPE}
+                                    <a href="{searchresults.U_VIEW_TOPIC}" class="topictitle"{searchresults.TOPIC_COLOR}
+                                    <!-- BEGIN title_overlib -->
+                                    data-toggle="popover" data-html="true" title="{searchresults.title_overlib.O_TITLE}"
+                                    data-content="{searchresults.title_overlib.UNREAD_POSTS}<b><u>{searchresults.title_overlib.L_FIRST_POST}</u></b><br />{searchresults.title_overlib.O_TEXT1}<!-- BEGIN last --><br /><b><u>{searchresults.title_overlib.L_LAST_POST}</u></b><br />{searchresults.title_overlib.last.O_TEXT2}<!-- END last -->"
+                                    <!-- END title_overlib -->
+                                    {searchresults.TOPIC_COLOR}>{searchresults.TOPIC_TITLE}</a>
+                                    <span class="gensmall hidden-xs">{searchresults.TOPIC_TITLE_E}<br />
+                                    <span class="gensmall hidden-xs">{searchresults.GOTO_PAGE}</span>
+                                 </span>
+                            </div>
+                            <div class="col-sm-2 hidden-xs">
+                                <!-- BEGIN it -->
+                                <input type="checkbox" name="list_ignore[]" value="{searchresults.it.TOPIC_ID}" />
+                                <!-- END it -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 hidden-xs"><span class="name">{searchresults.TOPIC_AUTHOR}</span></div>
+                    <div class="col-sm-2 hidden-xs"><span class="postdetails">{searchresults.REPLIES}</span> / <span class="postdetails">{searchresults.VIEWS}</span></div>
+                    <div class="col-sm-2 hidden-xs"><span class="postdetails">{searchresults.LAST_POST_TIME}<br />{searchresults.LAST_POST_AUTHOR} {searchresults.LAST_POST_IMG}</span></div>
+                </div>
+                <!-- END searchresults -->
+            </div>
 	<!-- END searchresults -->
+        </div>
+    </div>
+    <div class="panel-footer">
+        <div class="row">
+            <div class="col-xs-2">{PAGE_NUMBER}</div>
+            <div class="col-xs-10">{PAGINATION}</div>
+        </div>
+    </div>
 </div>
+
 
 <a href="{U_MARK_READ}" class="gensmall pull-right">{L_MARK_FORUMS_READ}</a><br clear="all" />
 
-<div class="row">
-    <div class="col-xs-2">{PAGE_NUMBER}</div>
-    <div class="col-xs-10">{PAGINATION}</div>
-</div>
+
 
 
 <!-- BEGIN ignore_topics -->
