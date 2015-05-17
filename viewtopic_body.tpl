@@ -43,9 +43,11 @@ var img_addr = '{IMG_ADDR}';
 			</button>
 
 			<div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                <a class="btn btn-default btn-xs" href="{postrow.PROFILE_URL}">profil</a>
+                <!-- IF postrow.PROFILE_REAL_URL -->
+                <a class="btn btn-default btn-xs" href="{postrow.PROFILE_REAL_URL}">profil</a>
+                <!-- ENDIF -->
                 <!-- IF postrow.PM_URL -->
-                <a class="btn btn-default btn-xs" href="{postrow.PM_URL}">pm</a>
+                <a class="btn btn-default btn-xs" href="{postrow.PM_URL}">pw</a>
                 <!-- ENDIF -->
                 <!-- IF postrow.EMAIL_URL -->
                 <a class="btn btn-default btn-xs" href="{postrow.EMAIL_URL}">@mail</a>
