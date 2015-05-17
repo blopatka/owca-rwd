@@ -4,7 +4,7 @@
 {BOARD_INDEX}
 
 <div class="row">
-    <div class="col-xs-2 col-no-gutter text-center"><a href="{U_POST_NEW_TOPIC}" alt="{L_POST_NEW_TOPIC}" class="btn btn-info"><span class="glyphicon glyphicon-edit"></span></a></div>
+    <div class="col-xs-2 col-no-gutter left"><a href="{U_POST_NEW_TOPIC}" title="{L_POST_NEW_TOPIC}" class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span><span class="hidden-xs"> {L_POST_NEW_TOPIC}</span></a></div>
     <div class="col-xs-10">{PAGINATION}</div>
 </div>
 
@@ -110,7 +110,7 @@
 
 
 <div class="row">
-	<div class="col-md-6"><a href="{U_POST_NEW_TOPIC}"><img src="{POST_IMG}" border="0" alt="{L_POST_NEW_TOPIC}" /></a></div>
+    <div class="col-md-6"><a class="btn btn-primary" href="{U_POST_NEW_TOPIC}" title="{L_POST_NEW_TOPIC}"><span class="glyphicon glyphicon-edit"></span> {L_POST_NEW_TOPIC}</a></div>
 	<div class="col-md-6 hidden-sm hidden-xs right">
         <input type="submit" name="ignore" class="btn btn-link" value="{ignore_form.L_IGNORE_MARK}"<!-- BEGIN overlib --> data-toggle="popover" title="{ignore_form.L_IGNORE_MARK}" data-content="{ignore_form.overlib.L_IGNORE_EXPLAIN}"<!-- END overlib --> />
 		<button class="btn btn-link" onclick="select_switch(); return false;">{ignore_form.L_MARK_ALL}</button></div>

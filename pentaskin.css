@@ -208,11 +208,6 @@ text-align: left;
 width: 10%;
 }
 
-a .glyphicon
-{
-color: black;
-}
-
 .panel-primary .panel-heading a
 {
 color: white;
@@ -253,21 +248,10 @@ td.row1, td.row2 {
 }
 
 #private-message-count {
-    display: none;
-}
-
-#private-message-count:not(:empty) {
-    display: inline;
-    background-color: red;
-    color: white;
-    font-weight: bold;
-    border-radius: 50%;
     position: absolute;
-    min-width: 20px;
     top: -5px;
-    left: 20px;
-    padding: 2px 2px;
-    height: 20px;
+    right: -5px;
+    background-color: #990000;
 }
 
 .panel-row {

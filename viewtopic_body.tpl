@@ -8,15 +8,15 @@ var img_addr = '{IMG_ADDR}';
 //-->
 </script>
 
-<ul class="pager well well-sm">
-	<li class="previous"><a href="{U_VIEW_OLDER_TOPIC}">&larr; {L_VIEW_PREVIOUS_TOPIC}</a></li>
-	<li class="hidden-phone"><a href="{U_VIEW_TOPIC}"{TOPIC_COLOR}>{TOPIC_TITLE}</a></li>
-	<li class="next"><a href="{U_VIEW_NEWER_TOPIC}">{L_VIEW_NEXT_TOPIC} &rarr;</a></li>
+<ul class="pager well well-sm hidden-xs">
+    <li class="previous"><a href="{U_VIEW_OLDER_TOPIC}">&larr; <span class="hidden-sm">{L_VIEW_PREVIOUS_TOPIC}</span></a></li>
+	<li class="hidden-sm"><a href="{U_VIEW_TOPIC}"{TOPIC_COLOR}>{TOPIC_TITLE}</a></li>
+    <li class="next"><a href="{U_VIEW_NEWER_TOPIC}"><span class="hidden-sm">{L_VIEW_NEXT_TOPIC}</span> &rarr;</a></li>
 </ul>
 <ul class="breadcrumb"><li><a href="{U_INDEX}">{L_INDEX}</a></li>{NAV_CAT_DESC}</ul>
 
-<div class="row noprint hidden-phone">
-	<div class="col-md-3 gensmall">
+<div class="row noprint hidden-xs">
+	<div class="col-md-3 gensmall hidden-xs">
 	<!-- BEGIN topic_action -->
 {topic_action.TOPIC_ACTION} {topic_action.L_WHO}: <a href="{topic_action.PROFILE_URL}"><b>{topic_action.USERNAME}</b></a><br />{topic_action.DATE}
 	<!-- BEGIN topic_action_delete -->	
@@ -43,9 +43,17 @@ var img_addr = '{IMG_ADDR}';
 			</button>
 
 			<div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-				{postrow.HELPED_ME}{postrow.PROFILE_IMG} {postrow.PM_IMG} {postrow.EMAIL_IMG} {postrow.WWW_IMG} {postrow.YIM_IMG}{postrow.MSN_IMG}
-				<!-- BEGIN aim -->{postrow.AIM_IMG}{postrow.AIM_STATUS_IMG}<!-- END aim -->
-				<!-- BEGIN icq -->{postrow.ICQ_IMG}{postrow.ICQ_STATUS_IMG}<!-- END icq -->
+                <a class="btn btn-default btn-xs" href="{postrow.PROFILE_URL}">profil</a>
+                <!-- IF postrow.PM_URL -->
+                <a class="btn btn-default btn-xs" href="{postrow.PM_URL}">pm</a>
+                <!-- ENDIF -->
+                <!-- IF postrow.EMAIL_URL -->
+                <a class="btn btn-default btn-xs" href="{postrow.EMAIL_URL}">@mail</a>
+                <!-- ENDIF -->
+                <!-- IF postrow.WWW_URL -->
+                <a class="btn btn-default btn-xs" href="{postrow.WWW_URL}" target="_blank">www</a>
+                <!-- ENDIF -->
+                <!-- BEGIN aim --><a class="btn btn-default btn-xs" href="{postrow.AIM_URL}">gg <!-- IF postrow.AIM_STATUS_IMG_URL --><img src="{postrow.AIM_STATUS_IMG_URL}"><!-- ENDIF --></a><!-- END aim -->
 			</div>
 		</div>
 
