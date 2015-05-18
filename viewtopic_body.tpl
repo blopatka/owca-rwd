@@ -1,9 +1,5 @@
 <script type="text/javascript">
 <!--
-var rmw_max_width = 900;
-var rmw_border_1 = '0px solid {T_BODY_LINK}';
-var rmw_border_2 = '0px dotted {T_BODY_LINK}';
-var rmw_image_title = '';
 var img_addr = '{IMG_ADDR}';
 //-->
 </script>
@@ -196,8 +192,6 @@ var img_addr = '{IMG_ADDR}';
 </div>
 
 <ul class="breadcrumb"><li><a href="{U_INDEX}">{L_INDEX}</a></li>{NAV_CAT_DESC}</ul>
-
-<div style="display:none" id="resizemod"></div>
 
 <script language="Javascript" type="text/javascript">
 <!--

@@ -21,10 +21,6 @@
 	var cpath = '{COOKIE_PATH}';
 	var cdomain = '{COOKIE_DOMAIN}';
 	var csecure = '{COOKIE_SECURE}';
-	var rmw_max_width = 900;
-	var rmw_border_1 = '0px solid {T_BODY_LINK}';
-	var rmw_border_2 = '0px dotted {T_BODY_LINK}';
-	var rmw_image_title = '';
 	var img_addr = '{IMG_ADDR}';
 	var popover_enable = false;
 	<!-- BEGIN overlib -->var popover_enable = true;<!-- END overlib -->
@@ -42,7 +38,6 @@
 	<!-- END switch_enable_greeting_popup -->
 	</script>
 	<script language="JavaScript" type="text/javascript" src="images/jsscripts.js"></script>
-	<script language="JavaScript" type="text/javascript" src="images/rmw_jslib.js"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js//jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/bootstrap.min.js" ></script>
 	<script type="text/javascript" src="templates/{STYLE_NAME}/js/scripts.js"></script>
