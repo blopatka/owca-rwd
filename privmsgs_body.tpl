@@ -1,7 +1,7 @@
 <a href="{U_INDEX}">{L_INDEX}</a>
 
 <div class="row noprint">
-	<div class="col-md-6">
+	<div class="col-sm-6">
 	<span class="btn btn-default"><span class="glyphicon glyphicon-inbox"></span> {INBOX}</span>
 	<span class="btn btn-default"><span class="glyphicon glyphicon-share"></span> {SENTBOX}</span>
 	<span class="btn btn-default"><span class="glyphicon glyphicon-send"></span> {OUTBOX}</span>
@@ -9,18 +9,18 @@
 	</div>
 
 	<!-- BEGIN switch_box_size_notice -->
-	<div class="col-md-3">
+	<div class="col-sm-3">
 	<span class="gensmall">{BOX_SIZE_STATUS}</span><br />
-	<div class="progress" style="width: 176px">
-		<div class="progress-bar" role="progressbar" aria-valuenow="{INBOX_LIMIT_PERCENT}" aria-valuemin="0" aria-valuemax="100" style="width: {INBOX_LIMIT_IMG_WIDTH}px;">
+	<div class="progress" style="width: 100%">
+		<div class="progress-bar" role="progressbar" aria-valuenow="{INBOX_LIMIT_PERCENT}" aria-valuemin="0" aria-valuemax="100" style="width: {INBOX_LIMIT_PERCENT}%;">
 		</div>
 	</div>
 	</div>
 
-	<div class="col-md-3">
+	<div class="col-sm-3">
 	<span class="gensmall">{ATTACH_BOX_SIZE_STATUS}</span><br />
-	<div class="progress" style="width: 176px">
-		<div class="progress-bar" role="progressbar" aria-valuenow="{ATTACHBOX_LIMIT_PERCENT}" aria-valuemin="0" aria-valuemax="100" style="width: {ATTACHBOX_LIMIT_IMG_WIDTH}px;">
+	<div class="progress" style="width: 100%">
+		<div class="progress-bar" role="progressbar" aria-valuenow="{ATTACHBOX_LIMIT_PERCENT}" aria-valuemin="0" aria-valuemax="100" style="width: {ATTACHBOX_LIMIT_PERCENT}%;">
 		</div>
 	</div>
 	</div>

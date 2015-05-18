@@ -126,13 +126,6 @@ text-align: center;
 text-align: center !important;
 }
 
-.centered
-{
-margin: 0 auto;
-display: block;
-width: 50%;
-}
-
 .popover
 {
 font-weight: normal;

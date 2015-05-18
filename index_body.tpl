@@ -91,7 +91,7 @@
 {SHOUTBOX_DISPLAY}
 
 <div class="row">
-	<div class="col-md-9">
+	<div class="col-md-9 hidden-sm hidden-xs">
 		<ul class="list-inline">
 			<li><img src="{FOLDER_NEW_IMG}" alt="{L_NEW_POSTS}" />{L_NEW_POSTS}</li>
 			<li><img src="{FOLDER_IMG}" alt="{L_NO_NEW_POSTS}" />{L_NO_NEW_POSTS}</li>

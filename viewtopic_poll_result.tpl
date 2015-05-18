@@ -6,9 +6,9 @@
 		<div class="row">
 			<div class="col-md-3"><b>{poll_option.POLL_OPTION_CAPTION}</b></div>
 			<div class="col-md-5">
-				<div class="progress" style="width: 200px">
-					<div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: {poll_option.POLL_OPTION_IMG_WIDTH}px;">
-						<span class="sr-only">{poll_option.POLL_OPTION_IMG_WIDTH}% Complete</span>
+				<div class="progress" style="width: 100%">
+					<div class="progress-bar" role="progressbar" aria-valuenow="{poll_option.POLL_OPTION_PERCENT}" aria-valuemin="0" aria-valuemax="100" style="width: {poll_option.POLL_OPTION_PERCENT}%;">
+						<span class="sr-only">{poll_option.POLL_OPTION_PERCENT}% Complete</span>
 					</div>
 				</div>
 			</div>

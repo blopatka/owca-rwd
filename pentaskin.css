@@ -90,20 +90,6 @@ text-decoration: underline;
 color: grey;
 }
 
-.name
-{
-font-size: 11px;
-color: #000000;
-text-decoration: none;
-}
-
-.postdetails		{ font-size : 10px; color : #000000; }
-
-.postbody		{  }
-a.postlink:link	{ text-decoration: none; }
-a.postlink:visited	{ text-decoration: none; }
-a.postlink:hover	{ text-decoration: underline; }
-
 .copyright		{ font-size : 10px; color: #444444; font-family: Verdana, Arial, Helvetica, sans-serif; }
 a.copyright		{ text-decoration: none; color : #006699; }
 a.copyright:hover	{ text-decoration: underline; color : #DD6900; }
@@ -123,13 +109,6 @@ text-align: center;
 .center
 {
 text-align: center !important;
-}
-
-.centered
-{
-margin: 0 auto;
-display: block;
-width: 50%;
 }
 
 .popover
@@ -173,18 +152,6 @@ min-height: 1px !important;
 margin: 0px;
 }
 
-.postrow
-{
-margin-bottom: 2px;
-padding: 5px;
-border: 1px solid #DDDDDD;
-}
-
-.postrow .col-md-2
-{
-border-right: 1px solid #DDDDDD;
-}
-
 #loading
 {
 position: absolute;
@@ -199,7 +166,7 @@ border: 3px double gray;
 
 .signature
 {
-color: gray;
+    color: gray;
 }
 
 .horizontal-table th
@@ -254,6 +221,10 @@ td.row1, td.row2 {
     background-color: #990000;
 }
 
+.post-panel .panel-heading {
+    padding: 5px;
+}
+
 .panel-row {
     border-bottom-width: 1px;
     border-bottom-style: solid;
@@ -261,4 +232,13 @@ td.row1, td.row2 {
 
 .panel-row:last-of-type {
     border-bottom: none;
+}
+
+blockquote {
+    background-color: #F2F2E7;
+}
+
+.poster-name a, .poster-name {
+    font-size: 12px;
+    text-decoration: none;
 }

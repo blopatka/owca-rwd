@@ -1,7 +1,7 @@
 <!-- BEGIN show --> 
 </span>
 <div class="well">
-<b>Ukryta Wiadomo¶æ:</b><br />
+<b>Ukryta WiadomoÂ¶Ä‡:</b><br />
 {HTEXTE}
 </div>
 <span class="postbody">
@@ -9,8 +9,8 @@
 <!-- BEGIN hide --> 
 </span>
 <div class="well center">
-<b>Ukryta Wiadomo¶æ:</b><br />
-Je¶li jeste¶ *zarejestrowanym u¿ytkownikiem* musisz odpowiedzieæ w tym temacie ¿eby zobaczyæ t± wiadomo¶æ<br />
+<b>Ukryta WiadomoÅ›Ä‡:</b><br />
+JeÅ›li jesteÅ› *zarejestrowanym uÅ¼ytkownikiem* musisz odpowiedzieÄ‡ w tym temacie Å¼eby zobaczyÄ‡ tÄ… wiadomoÅ›Ä‡<br />
 --- If you are a *registered user* : you need to post in this topic to see the message ---
 </div>
 <span class="postbody">
@@ -73,7 +73,7 @@ Je¶li jeste¶ *zarejestrowanym u¿ytkownikiem* musisz odpowiedzieæ w tym temacie ¿
 <!-- BEGIN size_open --><span style="font-size: {SIZE}px; line-height: normal"><!-- END size_open -->
 <!-- BEGIN size_close --></span><!-- END size_close -->
 
-<!-- BEGIN img --><img src="{URL}" resizemod="on" onload="rmw_img_loaded(this)" border="0" alt="" /><!-- END img -->
+<!-- BEGIN img --><img class="img-responsive" src="{URL}" resizemod="on" onload="rmw_img_loaded(this)" border="0" alt="" /><!-- END img -->
 
 <!-- BEGIN url --><a href="{URL}" rel="nofollow" target="_blank" class="postlink">{DESCRIPTION}</a><!-- END url -->
 
