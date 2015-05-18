@@ -9,7 +9,7 @@
                 </div>
                 <div class="col-sm-2 col-xs-2 gensmal">
                     <input type="submit" name="submit_button" value="{L_SEND}" title="{L_SEND}" class="btn btn-primary" onclick="this.form.submit(); post.message.value=''; return false;">
-                    <input type="submit" name="refresh" value="R" title="{L_REFRESH}" class="btn btn-default" onclick="post.message.value=''; this.form.submit();" >
+                    <input type="submit" name="refresh" value="R" title="{L_REFRESH}" class="btn btn-default" onclick="post.message.value=''; this.form.submit();">
                     <input type="hidden" name="mode" value="submit">
                 </div>
             </div>
