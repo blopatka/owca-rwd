@@ -73,7 +73,7 @@ Jeśli jesteś *zarejestrowanym użytkownikiem* musisz odpowiedzieć w tym temac
 <!-- BEGIN size_open --><span style="font-size: {SIZE}px; line-height: normal"><!-- END size_open -->
 <!-- BEGIN size_close --></span><!-- END size_close -->
 
-<!-- BEGIN img --><span onclick="handlePostImageLink(event, '{URL}')"><img class="img-responsive postimg" src="{URL}" border="0" alt="" /></span><!-- END img -->
+<!-- BEGIN img --><img class="img-responsive postimg" src="{URL}" onclick="handlePostImageLink(event, '{URL}');" onmouseover="handlePostImageMouseOver(event);" border="0" alt="" /><!-- END img -->
 
 <!-- BEGIN url --><a href="{URL}" rel="nofollow" target="_blank" class="postlink">{DESCRIPTION}</a><!-- END url -->
 

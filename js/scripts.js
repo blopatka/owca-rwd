@@ -42,16 +42,52 @@ function PopUp(url, width, height) {
 	window.open(url,"displayWindow",'width=' + width + ',height=' + height + ',resizable=1,scrollbars=yes,menubar=no' );
 }
 
+function getTargetIESafe(event) {
+    var ev = event || window.event;
+    var target = ev.target || ev.srcElement;
+    return target;
+}
+
+function checkIfImageToOpenInNewWindow(el) {
+    var imgElement = el.get(0);
+    var naturalWidth = 0;
+    if (typeof imgElement.naturalWidth == "undefined") {
+        // IE 6/7/8
+	    var i = new Image();
+	    i.src = imgElement.src;
+	    var naturalWidth = i.width;
+    } else {
+	   // HTML5 browsers
+	   var naturalWidth = imgElement.naturalWidth;
+    }
+    if(naturalWidth > img_size_to_open ) {
+        return true;
+    }
+    return false;
+}
+
 function handlePostImageLink(event, url) {
-    var urlElement = $(event.target);
-   if(urlElement.closest(".postlink").length == 1) {
-        //img jest w a - nie otwieraj linku
+    var urlElement = $(getTargetIESafe(event));
+    if(urlElement.parent(".postlink").length == 1) {
+        //img jest w anchorze - nie otwieraj linku - zostanie wywolana nadrzedna akcja
         return;
     } else {
         //img nie jest w a - otworz okno z obrazkiem jezeli img wiekszy niz img_size_to_open
-        if(urlElement.width() > img_size_to_open ) {
+        if(checkIfImageToOpenInNewWindow(urlElement)) {
             window.open(url);
         }
         return;
     }
 }
+
+function handlePostImageMouseOver(event) {
+    var el = $(getTargetIESafe(event));
+    if(el.css("cursor") != "pointer") {
+        if(checkIfImageToOpenInNewWindow(el)) {
+            el.css("cursor", "pointer");
+        }
+    }
+    el.removeAttr("onmouseover");
+    return;
+}
+
