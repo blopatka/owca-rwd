@@ -1,6 +1,6 @@
 <script type="text/javascript">
 <!--
-var rmw_max_width = 400;
+var rmw_max_width = 900;
 var rmw_border_1 = '0px solid {T_BODY_LINK}';
 var rmw_border_2 = '0px dotted {T_BODY_LINK}';
 var rmw_image_title = '';

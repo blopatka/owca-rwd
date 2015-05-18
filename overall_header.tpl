@@ -21,7 +21,7 @@
 	var cpath = '{COOKIE_PATH}';
 	var cdomain = '{COOKIE_DOMAIN}';
 	var csecure = '{COOKIE_SECURE}';
-	var rmw_max_width = 700;
+	var rmw_max_width = 900;
 	var rmw_border_1 = '0px solid {T_BODY_LINK}';
 	var rmw_border_2 = '0px dotted {T_BODY_LINK}';
 	var rmw_image_title = '';
