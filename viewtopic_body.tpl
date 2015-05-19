@@ -98,6 +98,13 @@ var img_addr = '{IMG_ADDR}';
                 {postrow.custom_fields_upost.DESC}{postrow.custom_fields_upost.FIELD}
                 <!-- END custom_fields_upost -->
                 <span class="pull-right text-success">{postrow.NEW_POST} {postrow.POST_REPLY_IMG}{postrow.VIEW_USER_AGENT}</span>
+
+                <!-- BEGIN signature -->
+                <div class="hidden-xs">
+                    <p class="postbody signature breadcrumb">{postrow.SIGNATURE}{postrow.SIG_IMAGE}</p>
+                </div>
+                <!-- END signature -->
+
                 <!-- BEGIN levelmodd -->
                 <br clear="all"/>
                 {L_LEVEL}: <b>{postrow.levelmodd.POSTER_LEVEL}</b>
@@ -117,27 +124,22 @@ var img_addr = '{IMG_ADDR}';
 
     <div class="panel-footer">
         <div class="row">
-            <div class="col-sm-2">
-                    <!-- BEGIN top --><a href="#top" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-arrow-up"></span></a><!-- END top -->
+            <div class="btn-group">
+                    <!-- BEGIN top --><a href="#top" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-arrow-up"></span></a><!-- END top -->
                     <!-- IF postrow.PROFILE_REAL_URL -->
-                    <a class="btn btn-default btn-xs" href="{postrow.PROFILE_REAL_URL}">profil</a>
+                    <a class="btn btn-default btn-sm" href="{postrow.PROFILE_REAL_URL}">profil</a>
                     <!-- ENDIF -->
                     <!-- IF postrow.PM_URL -->
-                    <a class="btn btn-default btn-xs" href="{postrow.PM_URL}">pw</a>
+                    <a class="btn btn-default btn-sm" href="{postrow.PM_URL}">pw</a>
                     <!-- ENDIF -->
                     <!-- IF postrow.EMAIL_URL -->
-                    <a class="btn btn-default btn-xs" href="{postrow.EMAIL_URL}">@mail</a>
+                    <a class="btn btn-default btn-sm" href="{postrow.EMAIL_URL}">@</a>
                     <!-- ENDIF -->
                     <!-- IF postrow.WWW_URL -->
-                    <a class="btn btn-default btn-xs" href="{postrow.WWW_URL}" target="_blank">www</a>
+                    <a class="btn btn-default btn-sm" href="{postrow.WWW_URL}" target="_blank">www</a>
                     <!-- ENDIF -->
-                    <!-- BEGIN aim --><a class="btn btn-default btn-xs" href="{postrow.AIM_URL}">gg <!-- IF postrow.AIM_STATUS_IMG_URL --><img src="{postrow.AIM_STATUS_IMG_URL}"><!-- ENDIF --></a><!-- END aim -->
+                    <!-- BEGIN aim --><a class="btn btn-default btn-sm" href="{postrow.AIM_URL}">gg <!-- IF postrow.AIM_STATUS_IMG_URL --><img src="{postrow.AIM_STATUS_IMG_URL}" style="max-height: 10px;"><!-- ENDIF --></a><!-- END aim -->
                 </div>
-            <!-- BEGIN signature -->
-            <div class="col-sm-8 hidden-xs">
-                <p class="postbody signature">{postrow.SIGNATURE}{postrow.SIG_IMAGE}</p>
-            </div>
-            <!-- END signature -->
         </div>
     </div>
 
