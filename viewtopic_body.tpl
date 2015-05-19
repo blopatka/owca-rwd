@@ -44,8 +44,27 @@ var img_addr = '{IMG_ADDR}';
                 <span class="hidden-xs">{L_POSTED}: </span><time>{postrow.POST_DATE}</time> <b>{postrow.POST_SUBJECT}</b>
                 <!-- BEGIN custom_fields_post --><br />{postrow.custom_fields_post.DESC}{postrow.custom_fields_post.FIELD}<!-- END custom_fields_post -->
 
-                <span class="pull-right">
-                    {postrow.IGNORE}{postrow.QUOTE_IMG} {postrow.EDIT_IMG} {postrow.DELETE_IMG} {postrow.IP_IMG} {postrow.REPORT_IMG}
+                <span class="pull-right btn-group">
+                    {postrow.IGNORE}
+                    <!-- IF postrow.QUOTE_Q_URL -->
+                    <a class="btn btn-default btn-sm" href="{postrow.QUOTE_Q_URL}" onclick="qc();" onmouseover="qo();" title="Cytowanie selektywne">Q</a>
+                    <!-- ENDIF -->
+                    <!-- IF postrow.QUOTE_URL -->
+                    <a class="btn btn-default btn-sm" href="{postrow.QUOTE_URL}" title="Odpowiedz z cytatem">Cytuj</a>
+                    <!-- ENDIF -->
+                    <!-- IF postrow.EDIT_URL -->
+                    <a class="btn btn-default btn-sm" href="{postrow.EDIT_URL}" title="Edytuj ten post">Edytuj</a>
+                    <!-- ENDIF -->
+                    <!-- IF postrow.DELETE_URL -->
+                    <a class="btn btn-default btn-sm" href="{postrow.DELETE_URL}" title="Usun ten post">X</a>
+                    <!-- ENDIF -->
+                    <!-- IF postrow.IP_URL -->
+                    <a class="btn btn-default btn-sm" href="{postrow.IP_URL}" title="IP autora postu">IP</a>
+                    <!-- ENDIF -->
+                    <!-- IF postrow.REPORT_URL -->
+                    <a class="btn btn-default btn-sm" href="{postrow.REPORT_URL}" title="Zgłos do moderacji">!</a>
+                    <!-- ENDIF -->
+
                     <!-- IF postrow.POST_EXPIRE --><br />{postrow.POST_EXPIRE}<!-- ENDIF -->
                 </span>
             </p>
