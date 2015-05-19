@@ -199,7 +199,9 @@ width: 100%;
 td.row1, td.row2 {
     background-color: #FEFEF9;
     border-bottom: 1px solid lightgrey;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
 }
+
 
 .container {
     background-color: white;
