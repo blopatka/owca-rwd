@@ -3,11 +3,6 @@ hr
 margin: 0;
 }
 
-font,th,td,p
-{
-font-family: Verdana, Arial, Helvetica, sans-serif;
-}
-
 a:hover
 {
 text-decoration: underline;
@@ -90,7 +85,7 @@ text-decoration: underline;
 color: grey;
 }
 
-.copyright		{ font-size : 10px; color: #444444; font-family: Verdana, Arial, Helvetica, sans-serif; }
+.copyright		{ font-size : 10px; color: #444444;}
 a.copyright		{ text-decoration: none; color : #006699; }
 a.copyright:hover	{ text-decoration: underline; color : #DD6900; }
 

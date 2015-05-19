@@ -38,6 +38,7 @@ var img_addr = '{IMG_ADDR}';
                 {postrow.ICON}
                 <!-- BEGIN icon_comment --><a href="{postrow.icon_comment.U_COMMENT_POST}"><span class="glyphicon glyphicon-comment"></span></a><!-- END icon_comment -->
                 <a href="{postrow.U_MINI_POST}"><span class="glyphicon glyphicon-file"></span></a>
+                <a name="{postrow.U_POST_ID}"></a>
 
                 <span class="hidden-xs">{L_POSTED}: </span><time>{postrow.POST_DATE}</time> <b>{postrow.POST_SUBJECT}</b>
                 <!-- BEGIN custom_fields_post --><br />{postrow.custom_fields_post.DESC}{postrow.custom_fields_post.FIELD}<!-- END custom_fields_post -->
@@ -52,8 +53,6 @@ var img_addr = '{IMG_ADDR}';
     <div class="panel-body">
         <div class="row">
             <div class="col-sm-2 hidden-xs">
-                <a name="{postrow.U_POST_ID}"></a>
-
                 {postrow.POSTER_RANK}{postrow.RANK_IMAGE}{postrow.CUSTOM_RANK}{postrow.POSTER_AVATAR}<br />
 
                 <!-- BEGIN custom_fields_avatar -->
@@ -88,7 +87,6 @@ var img_addr = '{IMG_ADDR}';
                 <label class="checkbox-inline"><input type="checkbox" name="accept_post[]" value="{postrow.U_POST_ID}" />{L_ACCEPT}</label>
                 <label class="checkbox-inline"><input type="checkbox" name="reject_post[]" value="{postrow.U_POST_ID}" />{L_REJECT}</label>
                 <!-- END post_moderate -->
-                <span class="pull-right">{postrow.NEW_POST} {postrow.POST_REPLY_IMG}{postrow.VIEW_USER_AGENT}</span>
                 </span>
             </div>
             <div class="col-sm-10">
@@ -99,7 +97,7 @@ var img_addr = '{IMG_ADDR}';
                 <!-- BEGIN custom_fields_upost -->
                 {postrow.custom_fields_upost.DESC}{postrow.custom_fields_upost.FIELD}
                 <!-- END custom_fields_upost -->
-
+                <span class="pull-right text-success">{postrow.NEW_POST} {postrow.POST_REPLY_IMG}{postrow.VIEW_USER_AGENT}</span>
                 <!-- BEGIN levelmodd -->
                 <br clear="all"/>
                 {L_LEVEL}: <b>{postrow.levelmodd.POSTER_LEVEL}</b>
@@ -116,7 +114,7 @@ var img_addr = '{IMG_ADDR}';
             </div>
         </div>
     </div>
-    <!-- BEGIN signature -->
+
     <div class="panel-footer">
         <div class="row">
             <div class="col-sm-2">
@@ -135,12 +133,14 @@ var img_addr = '{IMG_ADDR}';
                     <!-- ENDIF -->
                     <!-- BEGIN aim --><a class="btn btn-default btn-xs" href="{postrow.AIM_URL}">gg <!-- IF postrow.AIM_STATUS_IMG_URL --><img src="{postrow.AIM_STATUS_IMG_URL}"><!-- ENDIF --></a><!-- END aim -->
                 </div>
+            <!-- BEGIN signature -->
             <div class="col-sm-8 hidden-xs">
                 <p class="postbody signature">{postrow.SIGNATURE}{postrow.SIG_IMAGE}</p>
             </div>
+            <!-- END signature -->
         </div>
     </div>
-            <!-- END signature -->
+
 </div>
 <!-- END postrow -->
 
