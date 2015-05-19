@@ -33,6 +33,7 @@ var img_addr = '{IMG_ADDR}';
         <div class="row">
             <div class="col-sm-2 text-center">
                 <span class="poster-name"><b>{postrow.POSTER_NAME}</b><!-- BEGIN gender -->&nbsp;<img src="{postrow.gender.GENDER}" alt="" border="0"><!-- END gender --></span>
+                <span class="visible-xs-inline">{postrow.POSTER_JOINED}</span>
             </div>
             <p class="postdetails col-sm-10">
                 {postrow.ICON}
