@@ -237,3 +237,7 @@ blockquote {
     font-size: 12px;
     text-decoration: none;
 }
+
+blockquote footer:before, blockquote small:before, blockquote .small:before {
+  content: '';
+}
