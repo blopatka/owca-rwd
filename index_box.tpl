@@ -35,7 +35,8 @@
 
                     <div class="col-md-2 col-xs-3">
                         <!-- BEGIN forum_link_no -->
-                        <b>{L_POSTS}:</b> {catrow.forumrow.POSTS}<br /><b>{L_TOPICS}:</b> {catrow.forumrow.TOPICS}
+                        <b>{L_TOPICS}:</b> {catrow.forumrow.TOPICS}<br />
+                        <b>{L_POSTS}:</b> {catrow.forumrow.POSTS}
                         <!-- END forum_link_no -->
                     </div>
                     <div class="col-md-3 col-xs-3">

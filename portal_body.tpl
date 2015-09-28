@@ -35,7 +35,7 @@
 		<span style="margin:5px">{fetchpost_row.image.IMAGE}</span>
 		<!-- END image -->
 
-		<div class="postbody">{fetchpost_row.TEXT}</div>
+		<div>{fetchpost_row.TEXT}</div>
 	</div>
 	<!-- END fetch_post_row -->
 	{END_NEWS}

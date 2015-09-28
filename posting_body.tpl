@@ -219,21 +219,21 @@
 				</p>
 
 				<div class="btn-group">
-					<button accesskey="b" name="addbbcode0" onClick="bbstyle(0);return false;" title="{L_BBCODE_B_HELP}"><span class="glyphicon glyphicon-bold"></span></button>
-					<button accesskey="i" name="addbbcode2" onClick="bbstyle(2);return false;" title="{L_BBCODE_I_HELP}"><span class="glyphicon glyphicon-italic"></span></button>
-					<button accesskey="u" name="addbbcode4" onClick="bbstyle(4);return false;" title="{L_BBCODE_U_HELP}"><span class="glyphicon glyphicon-magnet"></span></button>
-					<button accesskey="q" name="addbbcode6" onClick="bbstyle(6);return false;" title="{L_BBCODE_Q_HELP}">&bdquo;&rdquo;</button>
-					<button accesskey="c" name="addbbcode8" onClick="bbstyle(8);return false;" title="{L_BBCODE_C_HELP}">Code</button>
-					<button accesskey="l" name="addbbcode10" onClick="bbstyle(10);return false;" title="{L_BBCODE_L_HELP}"><span class="glyphicon glyphicon-list"></span></button>
-					<button accesskey="p" name="addbbcode14" onclick="imgcode(this.form,\'img\',\'http://\');return false;" title="{L_BBCODE_P_HELP}"><span class="glyphicon glyphicon-picture"></span></button>
+					<button type="button" accesskey="b" name="addbbcode0" onClick="bbstyle(0);" title="{L_BBCODE_B_HELP}" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-bold"></span></button>
+					<button type="button" accesskey="i" name="addbbcode2" onClick="bbstyle(2);" title="{L_BBCODE_I_HELP}" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-italic"></span></button>
+					<button type="button" accesskey="u" name="addbbcode4" onClick="bbstyle(4);" title="{L_BBCODE_U_HELP}" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-magnet"></span></button>
+					<button type="button" accesskey="q" name="addbbcode6" onClick="bbstyle(6);" title="{L_BBCODE_Q_HELP}" class="btn btn-default btn-xs">&bdquo;&rdquo;</button>
+					<button type="button" accesskey="c" name="addbbcode8" onClick="bbstyle(8);" title="{L_BBCODE_C_HELP}" class="btn btn-default btn-xs">Code</button>
+					<button type="button" accesskey="l" name="addbbcode10" onClick="bbstyle(10);" title="{L_BBCODE_L_HELP}" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-list"></span></button>
+					<button type="button" accesskey="p" name="addbbcode14" onclick="imgcode(this.form,'img','http://');" title="{L_BBCODE_P_HELP}" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-picture"></span></button>
 					<!-- BEGIN button_ur -->
-					<button accesskey="w" name="addbbcode18" onclick="namedlink(this.form,'URL'); return false;" title="{L_BBCODE_W_HELP}"><span class="glyphicon glyphicon-globe"></span></button>
+					<button type="button" accesskey="w" name="addbbcode18" onclick="namedlink(this.form,'URL');" title="{L_BBCODE_W_HELP}" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-globe"></span></button>
 					<!-- END button_ur -->
-					<button accesskey="y" name="addbbcode26" onClick="bbstyle(26);return false;" title="{L_BBCODE_Y_HELP}"><span class="glyphicon glyphicon-align-center"></span></button>
-					<button accesskey="h" name="addbbcode28" onClick="bbstyle(28);return false;" title="{L_BBCODE_H_HELP}">Hide</button>
-					<button accesskey="e" name="addbbcode20" onClick="bbstyle(20);return false;" title="{L_BBCODE_E_HELP}">Fade</button>
-					<button accesskey="k" name="addbbcode22" onClick="bbstyle(22);return false;" title="{L_BBCODE_K_HELP}">Scroll</button>
-					<button name="addbbcode-1" onClick="bbstyle(-1);return false;" title="{L_BBCODE_A_HELP}">[/BBCode]</button>
+					<button type="button" accesskey="y" name="addbbcode26" onClick="bbstyle(26);" title="{L_BBCODE_Y_HELP}" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-align-center"></span></button>
+					<button type="button" accesskey="h" name="addbbcode28" onClick="bbstyle(28);" title="{L_BBCODE_H_HELP}" class="btn btn-default btn-xs">Hide</button>
+					<button type="button" accesskey="e" name="addbbcode20" onClick="bbstyle(20);" title="{L_BBCODE_E_HELP}" class="btn btn-default btn-xs">Fade</button>
+					<button type="button" accesskey="k" name="addbbcode22" onClick="bbstyle(22);" title="{L_BBCODE_K_HELP}" class="btn btn-default btn-xs">Scroll</button>
+					<button type="button" name="addbbcode-1" onClick="bbstyle(-1);" title="{L_BBCODE_A_HELP}" class="btn btn-default btn-xs">[/BBCode]</button>
 
 					<a class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-th"></span><span class="caret"></span></a>
 					<ul class="dropdown-menu">
@@ -268,39 +268,39 @@
 		<div class="row">
 			<div class="col-md-4">
 				<!-- BEGIN switch_html_checkbox -->
-				<label class="checkbox"><input type="checkbox" name="disable_html" {S_HTML_CHECKED} />{L_DISABLE_HTML}</label>
+				<div class="checkbox"><label><input type="checkbox" name="disable_html" {S_HTML_CHECKED} />{L_DISABLE_HTML}</label></div>
 				<!-- END switch_html_checkbox -->
 
 				<!-- BEGIN switch_bbcode_checkbox -->
-				<label class="checkbox"><input type="checkbox" name="disable_bbcode" {S_BBCODE_CHECKED} />{L_DISABLE_BBCODE}</label>
+				<div class="checkbox"><label><input type="checkbox" name="disable_bbcode" {S_BBCODE_CHECKED} />{L_DISABLE_BBCODE}</label></div>
 				<!-- END switch_bbcode_checkbox -->
 
 				<!-- BEGIN switch_smilies_checkbox -->
-				<label class="checkbox"><input type="checkbox" name="disable_smilies" {S_SMILIES_CHECKED} />{L_DISABLE_SMILIES}</label>
+				<div class="checkbox"><label><input type="checkbox" name="disable_smilies" {S_SMILIES_CHECKED} />{L_DISABLE_SMILIES}</label></div>
 				<!-- END switch_smilies_checkbox -->
 
 				<!-- BEGIN switch_signature_checkbox -->
-				<label class="checkbox"><input type="checkbox" name="attach_sig" {S_SIGNATURE_CHECKED} />{L_ATTACH_SIGNATURE}</label>
+				<div class="checkbox"><label><input type="checkbox" name="attach_sig" {S_SIGNATURE_CHECKED} />{L_ATTACH_SIGNATURE}</label></div>
 				<!-- END switch_signature_checkbox -->
 
 				<!-- BEGIN switch_notify_checkbox -->
-				<label class="checkbox"><input type="checkbox" name="notify" {S_NOTIFY_CHECKED}>{L_NOTIFY_ON_REPLY}</label>
+				<div class="checkbox"><label><input type="checkbox" name="notify" {S_NOTIFY_CHECKED}>{L_NOTIFY_ON_REPLY}</label></div>
 				<!-- END switch_notify_checkbox -->
 
 				<!-- BEGIN switch_delete_checkbox -->
-				<label class="checkbox"><input type="checkbox" name="delete">{L_DELETE_POST}</label>
+				<div class="checkbox"><label><input type="checkbox" name="delete">{L_DELETE_POST}</label></div>
 				<!-- END switch_delete_checkbox -->
 
 				<!-- BEGIN switch_lock_topic -->
-				<label class="checkbox"><input type="checkbox" name="lock" {S_LOCK_CHECKED}>{L_LOCK_TOPIC}</label>
+				<div class="checkbox"><label><input type="checkbox" name="lock" {S_LOCK_CHECKED}>{L_LOCK_TOPIC}</label></div>
 				<!-- END switch_lock_topic -->
 
 				<!-- BEGIN switch_unlock_topic -->
-				<label class="checkbox"><input type="checkbox" name="unlock" {S_UNLOCK_CHECKED}>{L_UNLOCK_TOPIC}</label>
+				<div class="checkbox"><label><input type="checkbox" name="unlock" {S_UNLOCK_CHECKED}>{L_UNLOCK_TOPIC}</label></div>
 				<!-- END switch_unlock_topic -->
 
 				<!-- BEGIN switch_no_split_post -->
-				<label class="checkbox"><input type="checkbox" name="nosplit" {S_SPLIT_CHECKED}>{L_NO_SPLIT_POST}</label>
+				<div class="checkbox"><label><input type="checkbox" name="nosplit" {S_SPLIT_CHECKED}>{L_NO_SPLIT_POST}</label></div>
 				<!-- END switch_no_split_post -->
 				<p class="gensmall">{HTML_STATUS}, {BBCODE_STATUS}, {SMILIES_STATUS}</p>
 			</div>
@@ -314,8 +314,8 @@
 				<hr />
 				<span class="form-inline">
 				<label>Freak & Letter styles:</label>
-				<button name="freak" onClick="filter_freak(); return false;" class="btn btn-default btn-xs">FrEaK</button>
-				<button name="freak" onClick="filter_l33t();return false;" class="btn btn-default btn-xs">l33t</button>
+				<button type="button" name="freak" onClick="filter_freak();" class="btn btn-default btn-xs">FrEaK</button>
+				<button type="button" name="freak" onClick="filter_l33t();" class="btn btn-default btn-xs">l33t</button>
 				<span class="gensmall">({freak.L_FREAK_UNDO})</span>
 				</span>
 				<!-- END freak -->

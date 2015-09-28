@@ -21,4 +21,4 @@
 		<td>{SUBJECT}</td>
 	</tr>
 </table>
-<p class="well postbody">{MESSAGE}</p>
+<p class="well">{MESSAGE}</p>

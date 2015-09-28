@@ -26,7 +26,7 @@
 		<td><a href="{spy_row.U_VIEW_FORUM}" class="forumlink">{spy_row.FORUM_NAME}</a></td>
 		<td><a href="{spy_row.U_VIEW_TOPIC}" class="topictitle">{spy_row.TOPIC_TITLE}</a></td>
 		<td align="center">{spy_row.VIEW_COUNT}</td>
-		<td align="center"><span class="postdetails"><time>{spy_row.LAST_VIEW}</time></span></td>
+		<td align="center"><span><time>{spy_row.LAST_VIEW}</time></span></td>
 		<td align="center">{spy_row.TOPIC_AUTHOR}</td>
 	</tr>
 	<!-- END spy_row -->

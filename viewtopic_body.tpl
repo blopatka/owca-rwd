@@ -28,6 +28,7 @@ var img_addr = '{IMG_ADDR}';
 <!-- BEGIN moderate --><form action="{moderate.S_MODERATE_ACTION}" method="post"><!-- END moderate -->
 <!-- BEGIN post_tree -->{postrow.post_tree.TREE_WIDTH}<!-- END post_tree -->
 <!-- BEGIN postrow -->
+<a name="{postrow.U_POST_ID}"></a>
 <div class="panel panel-default post-panel">
 	<div class="panel-heading">
         <div class="row">
@@ -35,11 +36,10 @@ var img_addr = '{IMG_ADDR}';
                 <span class="poster-name"><b>{postrow.POSTER_NAME}</b><!-- BEGIN gender -->&nbsp;<img src="{postrow.gender.GENDER}" alt="" border="0"><!-- END gender --></span>
                 <span class="visible-xs-inline">{postrow.POSTER_JOINED}</span>
             </div>
-            <p class="postdetails col-sm-10">
+            <p class="col-sm-10">
                 {postrow.ICON}
                 <!-- BEGIN icon_comment --><a href="{postrow.icon_comment.U_COMMENT_POST}"><span class="glyphicon glyphicon-comment"></span></a><!-- END icon_comment -->
                 <a href="{postrow.U_MINI_POST}"><span class="glyphicon glyphicon-file"></span></a>
-                <a name="{postrow.U_POST_ID}"></a>
 
                 <span class="hidden-xs">{L_POSTED}: </span><time>{postrow.POST_DATE}</time> <b>{postrow.POST_SUBJECT}</b>
                 <!-- BEGIN custom_fields_post --><br />{postrow.custom_fields_post.DESC}{postrow.custom_fields_post.FIELD}<!-- END custom_fields_post -->
@@ -56,13 +56,17 @@ var img_addr = '{IMG_ADDR}';
                     <a class="btn btn-default btn-sm" href="{postrow.EDIT_URL}" title="Edytuj ten post">Edytuj</a>
                     <!-- ENDIF -->
                     <!-- IF postrow.DELETE_URL -->
-                    <a class="btn btn-default btn-sm" href="{postrow.DELETE_URL}" title="Usun ten post">X</a>
+                    <a class="btn btn-default btn-sm" href="{postrow.DELETE_URL}" title="Usun ten post">del</a>
                     <!-- ENDIF -->
                     <!-- IF postrow.IP_URL -->
                     <a class="btn btn-default btn-sm" href="{postrow.IP_URL}" title="IP autora postu">IP</a>
                     <!-- ENDIF -->
                     <!-- IF postrow.REPORT_URL -->
-                    <a class="btn btn-default btn-sm" href="{postrow.REPORT_URL}" title="Zgłos do moderacji">!</a>
+                        <!-- IF postrow.IS_REPORT_DELETE == 0 -->
+                    <a class="btn btn-default btn-sm" href="{postrow.REPORT_URL}" title="Zglos do moderacji">!</a>
+                        <!-- ELSE -->
+                    <a class="btn btn-default btn-sm" href="{postrow.REPORT_URL}" title="Usun zgloszenie">X</a>
+                        <!-- ENDIF -->
                     <!-- ENDIF -->
 
                     <!-- IF postrow.POST_EXPIRE --><br />{postrow.POST_EXPIRE}<!-- ENDIF -->
@@ -70,9 +74,9 @@ var img_addr = '{IMG_ADDR}';
             </p>
         </div>
     </div>
-    <div class="panel-body">
+    <div class="panel-body" {postrow.QUOTE_USERNAME}>
         <div class="row">
-            <div class="col-sm-2 hidden-xs">
+            <div class="col-sm-2 hidden-xs panel-default small postdetails">
                 {postrow.POSTER_RANK}{postrow.RANK_IMAGE}{postrow.CUSTOM_RANK}{postrow.POSTER_AVATAR}<br />
 
                 <!-- BEGIN custom_fields_avatar -->
@@ -82,7 +86,7 @@ var img_addr = '{IMG_ADDR}';
                 {postrow.SPECIAL_RANK}{postrow.POSTER_AGE}{postrow.POSTER_JOINED}{postrow.POSTER_POSTS}{postrow.POSTER_FROM}{postrow.POSTER_ONLINE}
 
                 <!-- BEGIN levelmodl -->
-                <div class="postdetails">
+                <div>
                         {L_LEVEL}: <b>{postrow.levelmodl.POSTER_LEVEL}</b><br />
 
                         HP: <b>{postrow.levelmodl.POSTER_HP}</b><br />
@@ -97,7 +101,7 @@ var img_addr = '{IMG_ADDR}';
                 <!-- END levelmodl -->
 
                 <!-- BEGIN warnings -->
-                <div class="postdetails">{postrow.warnings.WARNINGS}:<br />
+                <div>{postrow.warnings.WARNINGS}:<br />
                     <progress value="<!-- PHP -->echo ceil($warnings_item['POSTER_W_WIDTH']) * 1;<!-- ENDPHP -->" max="100"></progress>
                     {postrow.warnings.HOW}/{postrow.warnings.WRITE}/{postrow.warnings.MAX}
                 </div>
@@ -109,19 +113,19 @@ var img_addr = '{IMG_ADDR}';
                 <!-- END post_moderate -->
                 </span>
             </div>
-            <div class="col-sm-10">
-                <p class="postbody" {postrow.QUOTE_USERNAME}>{postrow.MESSAGE}{postrow.ATTACHMENTS}</p>
+            <div class="col-sm-10 panel-default postbody">
+                <span class="col-xs-12"><strong class="pull-right text-default small">{postrow.NEW_POST} {postrow.POST_REPLY_IMG}{postrow.VIEW_USER_AGENT}</strong></span>
+                <div class="col-xs-12" {postrow.QUOTE_USERNAME}>{postrow.MESSAGE}{postrow.ATTACHMENTS}</div>
 
                 <!-- BEGIN post_edited --><p class="gensmall right">{postrow.EDITED_MESSAGE} {postrow.post_edited.VIEW_POST_HISTORY}</p><!-- END post_edited -->
 
                 <!-- BEGIN custom_fields_upost -->
                 {postrow.custom_fields_upost.DESC}{postrow.custom_fields_upost.FIELD}
                 <!-- END custom_fields_upost -->
-                <span class="pull-right text-success">{postrow.NEW_POST} {postrow.POST_REPLY_IMG}{postrow.VIEW_USER_AGENT}</span>
 
                 <!-- BEGIN signature -->
-                <div class="hidden-xs">
-                    <p class="postbody signature breadcrumb">{postrow.SIGNATURE}{postrow.SIG_IMAGE}</p>
+                <div class="hidden-xs col-sm-12">
+                    <p class="signature breadcrumb">{postrow.SIGNATURE}{postrow.SIG_IMAGE}</p>
                 </div>
                 <!-- END signature -->
 

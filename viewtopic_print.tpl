@@ -58,11 +58,7 @@ a.topictitle:hover	{ text-decoration: underline; color : ##000000; }
 /* Name of poster in viewmsg.php and viewtopic.php and other places */
 .name { font-size : 11px; color : #000000; text-decoration: none}
 
-/* Location, number of posts, post date etc */
-.postdetails		{ font-size : 10px; color : #000000; }
-
 /* The content of the posts (body of text) */
-.postbody		{ font-size : 11px; line-height: 18px }
 a.postlink:link	{ text-decoration: none; color : ##000000 }
 a.postlink:visited	{ text-decoration: none; color : ##000000; }
 a.postlink:hover	{ text-decoration: underline; color : ##000000 }
@@ -105,7 +101,7 @@ border-bottom: 1px solid silver;
 <!-- BEGIN postrow -->
 <hr />
 <p class="details"><b>{postrow.POSTER_NAME}</b> - <time>{postrow.POST_DATE}</time> {postrow.POST_SUBJECT}</p>
-<p class="postbody">{postrow.MESSAGE}</p>
+<p>{postrow.MESSAGE}</p>
 <!-- END postrow -->
 
 

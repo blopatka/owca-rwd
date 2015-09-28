@@ -39,7 +39,7 @@
 	<a name="#{commentrow.ID}"></a>
 	<span class="gensmall"><b>{L_POSTER}: {commentrow.POSTER} @ {commentrow.TIME} <span class="pull-right">{commentrow.EDIT}&nbsp;{commentrow.DELETE}</b></span><br />
 	
-	<p class="postbody">
+	<p>
 	{commentrow.TEXT}
 	<span class="pull-right gensmall">{commentrow.EDIT_INFO}</span>
 	<span class="gensmall"><br />{commentrow.IP}</span>

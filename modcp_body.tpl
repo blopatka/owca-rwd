@@ -17,8 +17,8 @@
 	<tr>
 		<td><img src="{topicrow.TOPIC_FOLDER_IMG}" alt="{topicrow.L_TOPIC_FOLDER_ALT}" title="{topicrow.L_TOPIC_FOLDER_ALT}"></td>
 		<td align="left"><span class="topictitle">{topicrow.TOPIC_TYPE}{topicrow.TOPIC_ATTACHMENT_IMG}<a href="{topicrow.U_VIEW_TOPIC}" title="{topicrow.L_TOPIC_STARTED}: {topicrow.FIRST_POST_TIME}" class="topictitle">{topicrow.TOPIC_TITLE}</a></span></td>
-		<td><span class="postdetails">{topicrow.REPLIES}</span></td>
-		<td><span class="postdetails"><time>{topicrow.LAST_POST_TIME}</time></span></td>
+		<td><span>{topicrow.REPLIES}</span></td>
+		<td><span><time>{topicrow.LAST_POST_TIME}</time></span></td>
 		<td><input type="checkbox" name="topic_id_list[]" value="{topicrow.TOPIC_ID}" /></td>
 	</tr>
 	<!-- END topicrow -->

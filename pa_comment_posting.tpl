@@ -37,7 +37,7 @@ function checkForm() {
 <!-- BEGIN preview -->
 <div class="panel panel-info">
 	<div class="panel-heading">{L_PREVIEW}</div>
-	<div class="panel-body postbody">{PRE_COMMENT}</div>
+	<div class="panel-body">{PRE_COMMENT}</div>
 </div>
 <!-- END preview -->
 

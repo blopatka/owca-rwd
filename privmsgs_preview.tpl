@@ -24,7 +24,7 @@
 </table>
 
 <div class="panel-body well">
-	<span class="postbody">{MESSAGE}</span>
+	<span>{MESSAGE}</span>
 	<!-- BEGIN postrow -->{ATTACHMENTS}<!-- END postrow -->
 </div>
 </div>

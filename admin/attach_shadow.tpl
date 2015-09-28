@@ -17,8 +17,8 @@
 		</tr>
 		<!-- BEGIN file_shadow_row -->
 		<tr>
-			<td><span class="postdetails"><a class="postdetails" href="{file_shadow_row.U_ATTACHMENT}" target="_blank">{file_shadow_row.ATTACH_FILENAME}</a></span></td>
-			<td><span class="postdetails">{file_shadow_row.ATTACH_COMMENT}</span></td>
+			<td><span><a href="{file_shadow_row.U_ATTACHMENT}" target="_blank">{file_shadow_row.ATTACH_FILENAME}</a></span></td>
+			<td><span>{file_shadow_row.ATTACH_COMMENT}</span></td>
 			<td><input type="checkbox" name="attach_file_list[]" value="{file_shadow_row.ATTACH_ID}" /></td>
 		</tr>
 		<!-- END file_shadow_row -->
@@ -32,8 +32,8 @@
 		</tr>
 		<!-- BEGIN table_shadow_row -->
 		<tr>
-			<td><span class="postdetails">{table_shadow_row.ATTACH_FILENAME}</span></td>
-			<td><span class="postdetails">{table_shadow_row.ATTACH_COMMENT}</span></td>
+			<td><span>{table_shadow_row.ATTACH_FILENAME}</span></td>
+			<td><span>{table_shadow_row.ATTACH_COMMENT}</span></td>
 			<td><input type="checkbox" name="attach_id_list[]" value="{table_shadow_row.ATTACH_ID}" /></td>
 		</tr>
 	<!-- END table_shadow_row -->

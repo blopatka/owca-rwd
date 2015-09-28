@@ -43,7 +43,7 @@
 	<td class="row3" colspan="2" height="25"><a name="#{commentrow.ID}"></a><span class="genmed"><b>{L_POSTER}: {commentrow.POSTER} @ {commentrow.TIME}</b></span></td>
   </tr>
   <tr>
-	<td class="row1" colspan="2"><span class="postbody">{commentrow.TEXT}</span><br />
+	<td class="row1" colspan="2"><span>{commentrow.TEXT}</span><br />
 		<span class="gensmall">{commentrow.EDIT_INFO}</span><br />
 		<span class="genmed">{commentrow.IP}<br /><b>{commentrow.EDIT}&nbsp;{commentrow.DELETE}</b></span></td>
   </tr>

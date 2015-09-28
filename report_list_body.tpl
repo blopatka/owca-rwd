@@ -15,7 +15,7 @@ function open_popup()
 //-->
 </script>
 
-<p class="postbody">{TEXT}</p>
+<p>{TEXT}</p>
 <table class="table table-bordered table-hover table-striped center">
 	<thead>
 	<tr>

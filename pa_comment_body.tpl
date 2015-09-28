@@ -13,7 +13,7 @@
 <div class="row postrow">
 	<div class="col-md-2">
 		<span class="name"><b>{text.POSTER}</b></span><br />
-		<span class="postdetails">
+		<span>
 		{text.POSTER_RANK}<br />
 		{text.RANK_IMAGE}{text.POSTER_AVATAR}<br />
 		{text.POSTER_JOINED}<br />
@@ -23,14 +23,14 @@
 	</div>
 
 	<div class="col-md-10">
-		<div class="row postdetails">
+		<div class="row">
 			<div class="col-md-3"><span class="glyphicon glyphicon-file"></span>{L_POSTED}: <time>{text.TIME}</time></div>
 			<div class="col-md-8"><b>{L_COMMENT_SUBJECT}:</b> {text.TITLE}</div>
 			<!-- BEGIN is_admin -->
 			<div class="col-md-1 right"><a href="{text.is_admin.U_COMMENT_DELETE}" alt="{L_COMMENT_DELETE}" title="{L_COMMENT_DELETE}" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-trash"></span></a></div>
 				<!-- END is_admin -->
 		</div>
-		<span class="postbody">{text.TEXT}</span>
+		<span>{text.TEXT}</span>
 	</div>
 </div>
 <!-- END text -->

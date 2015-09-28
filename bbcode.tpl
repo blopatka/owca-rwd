@@ -4,7 +4,7 @@
 <b>Ukryta Wiadomo¶ć:</b><br />
 {HTEXTE}
 </div>
-<span class="postbody">
+<span>
 <!-- END show --> 
 <!-- BEGIN hide --> 
 </span>
@@ -13,7 +13,7 @@
 Jeśli jesteś *zarejestrowanym użytkownikiem* musisz odpowiedzieć w tym temacie żeby zobaczyć tą wiadomość<br />
 --- If you are a *registered user* : you need to post in this topic to see the message ---
 </div>
-<span class="postbody">
+<span>
 <!-- END hide -->
 
 <!-- BEGIN ulist_open --><ul><!-- END ulist_open -->
@@ -34,7 +34,7 @@ Jeśli jesteś *zarejestrowanym użytkownikiem* musisz odpowiedzieć w tym temac
 <!-- END quote_open -->
 <!-- BEGIN quote_close -->
 </blockquote>
-<span class="postbody">
+<span>
 <!-- END quote_close -->
 
 <!-- BEGIN code_open -->

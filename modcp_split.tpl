@@ -28,13 +28,13 @@
 			<!-- BEGIN postrow -->
 			<div class="well">
 				<a name="{postrow.U_POST_ID}"></a>
-				<p class="postdetails">
+				<p>
 				{L_AUTHOR}: <span class="name"><b>{postrow.POSTER_NAME}</b></span> &bull;
 				{L_POSTED}: {postrow.POST_DATE} &bull;
 				{L_POST_SUBJECT}: {postrow.POST_SUBJECT}
 				<span class="pull-right">{postrow.S_SPLIT_CHECKBOX}</span>
 				</p>
-				<p class="postbody">{postrow.MESSAGE}</p>
+				<p>{postrow.MESSAGE}</p>
 			</div>
 			<!-- END postrow -->
 		</div>

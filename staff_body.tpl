@@ -15,7 +15,7 @@
 	</tr>
 <!-- BEGIN staff -->
 	<tr>
-		<td><a href="{staff.U_NAME}" class="genmed"{staff.USERNAME_COLOR}><b>{staff.NAME}</b></a><span class="postdetails">{staff.LEVEL}{staff.RANK}{staff.RANK_IMAGE}{staff.AVATAR}</span></td>
+		<td><a href="{staff.U_NAME}" class="genmed"{staff.USERNAME_COLOR}><b>{staff.NAME}</b></a><span>{staff.LEVEL}{staff.RANK}{staff.RANK_IMAGE}{staff.AVATAR}</span></td>
 		<td><span class="genmed">{staff.FORUMS}</span></td>
 		<td><span class="gensmall"><b>{staff.POSTS}</b><br />{staff.POST_PERCENT}<br />{staff.POST_DAY}</span></td>
 		<td><span class="gensmall">{staff.JOINED}<br />[{staff.PERIOD}]</span></td>

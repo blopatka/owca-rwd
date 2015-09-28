@@ -86,7 +86,7 @@
                     </div>
                     <div class="col-sm-2 hidden-xs">{topicrow.REPLIES}/ {topicrow.VIEWS}</div>
                     <div class="col-sm-2 hidden-xs"><span class="name">{topicrow.TOPIC_AUTHOR}</span></div>
-                    <div class="col-sm-2 hidden-xs"><span class="postdetails"><time>{topicrow.LAST_POST_TIME}</time><br />{topicrow.LAST_POST_AUTHOR} {topicrow.LAST_POST_IMG}</span></div>
+                    <div class="col-sm-2 hidden-xs"><span><time>{topicrow.LAST_POST_TIME}</time><br />{topicrow.LAST_POST_AUTHOR} {topicrow.LAST_POST_IMG}</span></div>
                 </div>
 
                 <!-- BEGIN switch_no_topics -->

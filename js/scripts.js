@@ -20,7 +20,7 @@ $(document).ready(function() {
 	}
 
 	$("#loading").hide();
-	if(popover_enable) {$("[data-toggle=popover]").popover({trigger:'hover'});}
+	if(popover_enable) {$("[data-toggle=popover]").popover({trigger:'hover', container: 'body', placement: 'auto'});}
 });
 
 function select_all(status) {

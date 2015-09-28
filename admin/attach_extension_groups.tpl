@@ -62,8 +62,8 @@
 	<!-- BEGIN extensionrow -->
 
 	<tr>
-		<td><span class="postdetails">{grouprow.extensionrow.EXTENSION}</span></td>
-		<td colspan="7"><span class="postdetails">{grouprow.extensionrow.EXPLANATION}</span></td>
+		<td><span>{grouprow.extensionrow.EXTENSION}</span></td>
+		<td colspan="7"><span>{grouprow.extensionrow.EXPLANATION}</span></td>
 	</tr>
 
 	<!-- END extensionrow -->

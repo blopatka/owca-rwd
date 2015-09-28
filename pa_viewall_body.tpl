@@ -14,9 +14,9 @@
 	<tr>
 		<td><a href="dload.php?action=file&amp;id={pin_file.FILE_ID}" class="topictitle">!</a></td>
 		<td class="left"><a href="dload.php?action=file&amp;id={pin_file.FILE_ID}" class="topictitle">{pin_file.FILE_NAME}</a> {pin_file.NEW}<br /><span class="genmed">{pin_file.FILE_DESC}</span></td>
-		<td><span class="postdetails"><time>{pin_file.DATE}</time></td>
-		<td><span class="postdetails">{pin_file.FILE_DLS}</td>
-		<td><span class="postdetails">{pin_file.RATING}/10</td>
+		<td><span><time>{pin_file.DATE}</time></td>
+		<td><span>{pin_file.FILE_DLS}</td>
+		<td><span>{pin_file.RATING}/10</td>
 	</tr>
 <!-- END pin_file -->
 
@@ -24,9 +24,9 @@
 	<tr>
 		<td><a href="dload.php?action=file&amp;id={no_pin_file.FILE_ID}" class="topictitle">{no_pin_file.POST_ICON}</a></td>
 		<td class="left"><a href="dload.php?action=file&amp;id={no_pin_file.FILE_ID}" class="topictitle">{no_pin_file.FILE_NAME}</a>  {no_pin_file.NEW}<br /><span class="genmed">{no_pin_file.FILE_DESC}</span></td>
-		<td><span class="postdetails"><time>{no_pin_file.DATE}</time></span></td>
-		<td><span class="postdetails">{no_pin_file.FILE_DLS}</span></td>
-		<td><span class="postdetails">{no_pin_file.RATING}/10</span></td>
+		<td><span><time>{no_pin_file.DATE}</time></span></td>
+		<td><span>{no_pin_file.FILE_DLS}</span></td>
+		<td><span>{no_pin_file.RATING}/10</span></td>
 	</tr>
 <!-- END no_pin_file -->
 </table>

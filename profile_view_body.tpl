@@ -201,7 +201,7 @@
 		<!-- END icq -->
 	</div>
 	
-	<div class="tab-pane" id="tab_avatar">{AVATAR_IMG}<br /><span class="postdetails">{POSTER_RANK}{CUSTOM_RANK}{RANK_IMAGE}</span></div>
+	<div class="tab-pane" id="tab_avatar">{AVATAR_IMG}<br /><span>{POSTER_RANK}{CUSTOM_RANK}{RANK_IMAGE}</span></div>
 	<!-- BEGIN signature --><div class="tab-pane" id="tab_sig">{signature.SIGNATURE}</div><!-- END signature -->
 	<!-- BEGIN signature_image --><div class="tab-pane" id="tab_sigimage">{signature_image.SIGNATURE}{signature_image.SIG_IMAGE}</div><!-- END signature_image -->
 	<!-- BEGIN photo --><div class="tab-pane" id="tab_photo">{photo.PHOTO_IMG}</div><!-- END photo -->

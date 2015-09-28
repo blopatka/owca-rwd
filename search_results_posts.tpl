@@ -13,11 +13,11 @@
 	<tr>
 	<td valign="top">
 		<span class="name"><b>{searchresults.POSTER_NAME}</b></span><br />
-		<span class="postdetails">{L_REPLIES}: <b>{searchresults.TOPIC_REPLIES}</b><br />
+		<span>{L_REPLIES}: <b>{searchresults.TOPIC_REPLIES}</b><br />
 		{L_VIEWS}: <b>{searchresults.TOPIC_VIEWS}</b></span>
 	</td>
 	<td>
-		<p class="postdetails">
+		<p>
 			<img src="{searchresults.MINI_POST_IMG}" alt="{searchresults.L_MINI_POST_ALT}" title="{searchresults.L_MINI_POST_ALT}" border="0" />
 			<span class="topictitle">{L_TOPIC}:
 			 <a href="{searchresults.U_TOPIC}" class="topictitle"{searchresults.TOPIC_COLOR}>{searchresults.TOPIC_TITLE}</a>
@@ -27,7 +27,7 @@
 			{L_POSTED}: {searchresults.POST_DATE}
 			{L_SUBJECT}: <b><a href="{searchresults.U_POST}">{searchresults.POST_SUBJECT}</a></b>
 		</p><br />
-		<span class="postbody">{searchresults.MESSAGE}</span>
+		<span>{searchresults.MESSAGE}</span>
 	</td>
 	</tr>
 	<!-- END searchresults -->

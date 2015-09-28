@@ -55,8 +55,8 @@
                         </div>
                     </div>
                     <div class="col-sm-2 hidden-xs"><span class="name">{searchresults.TOPIC_AUTHOR}</span></div>
-                    <div class="col-sm-2 hidden-xs"><span class="postdetails">{searchresults.REPLIES}</span> / <span class="postdetails">{searchresults.VIEWS}</span></div>
-                    <div class="col-sm-2 hidden-xs"><span class="postdetails">{searchresults.LAST_POST_TIME}<br />{searchresults.LAST_POST_AUTHOR} {searchresults.LAST_POST_IMG}</span></div>
+                    <div class="col-sm-2 hidden-xs"><span>{searchresults.REPLIES}</span> / <span>{searchresults.VIEWS}</span></div>
+                    <div class="col-sm-2 hidden-xs"><span>{searchresults.LAST_POST_TIME}<br />{searchresults.LAST_POST_AUTHOR} {searchresults.LAST_POST_IMG}</span></div>
                 </div>
                 <!-- END searchresults -->
             </div>

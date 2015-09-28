@@ -7,7 +7,7 @@ function bbcode(strFore, strAft)
 </script>
 
 <form action="{quick_reply.POST_ACTION}" method="post" name="post" onsubmit="return checkForm(this)">
-<div class="panel panel-info">
+<div class="panel panel-primary">
 	<div class="panel-heading">{L_QUICK_REPLY}</div>
 	<div class="panel-body">
 		<div class="row">
@@ -63,13 +63,13 @@ function bbcode(strFore, strAft)
 			<div class="col-md-6">
 				<fieldset><legend>{L_OPTIONS}</legend>
 					<!-- BEGIN user_logged_in -->
-					<label class="checkbox"><input type="checkbox" name="attach_sig" {quick_reply.user_logged_in.ATTACH_SIGNATURE} />{L_ATTACH_SIGNATURE}</label>
-					<label class="checkbox"><input type="checkbox" name="notify" {quick_reply.user_logged_in.NOTIFY_ON_REPLY} />{L_NOTIFY_ON_REPLY}</label>
+                    <div class="checkbox"><label><input type="checkbox" name="attach_sig" {quick_reply.user_logged_in.ATTACH_SIGNATURE} />{L_ATTACH_SIGNATURE}</label></div>
+                    <div class="checkbox"><label><input type="checkbox" name="notify" {quick_reply.user_logged_in.NOTIFY_ON_REPLY} />{L_NOTIFY_ON_REPLY}</label></div>
 					<!-- END user_logged_in -->
 
-					<!-- BEGIN switch_lock_topic --><label class="checkbox"><input type="checkbox" name="lock" />{L_LOCK_TOPIC}</label><!-- END switch_lock_topic -->
-					<!-- BEGIN switch_unlock_topic --><label class="checkbox"><input type="checkbox" name="unlock" />{L_UNLOCK_TOPIC}</label><!-- END switch_unlock_topic -->
-					<!-- BEGIN switch_no_split_post --><label class="checkbox"><input type="checkbox" name="nosplit" />{L_NO_SPLIT_POST}</label><!-- END switch_no_split_post -->
+                    <!-- BEGIN switch_lock_topic --><div class="checkbox"><label><input type="checkbox" name="lock" />{L_LOCK_TOPIC}</label></div><!-- END switch_lock_topic -->
+                    <!-- BEGIN switch_unlock_topic --><div class="checkbox"><label><input type="checkbox" name="unlock" />{L_UNLOCK_TOPIC}</label></div><!-- END switch_unlock_topic -->
+                    <!-- BEGIN switch_no_split_post --><div class="checkbox"><label><input type="checkbox" name="nosplit" />{L_NO_SPLIT_POST}</label></div><!-- END switch_no_split_post -->
 
 					<!-- BEGIN expire_box -->
 					<!--

@@ -1,9 +1,9 @@
 {ROTATE_BANNER_4}
 
 <p class="copyright center">{CLICK_HERE_TO_VIEW}{PAGE_LOAD_PLEASE_WAIT}</p>
-<p class="copyright center">Theme created by <a href="http://przemo.org/phpBB2/forum/profile.php?mode=viewprofile&u=19643" target="_BLANK" class="copyright">Wargo</a>, based on <a href="http://getbootstrap.com" target="_BLANK" class="copyright">TwitterBootstrap 3.0.3</a> modified by <a href="http://pentax.org.pl/profile.php?mode=viewprofile&u=5078" target="_blank" class="copyright">opiszon</a></p>
+<p class="copyright center">Theme created by <a href="http://pentax.org.pl/profile.php?mode=viewprofile&u=5078" target="_blank" class="copyright">opiszon</a> based on <a href="http://getbootstrap.com" target="_BLANK" class="copyright">TwitterBootstrap 3.3.5</a></p>
 
-{BANNER_BOTTOM}
+<p class="copyright center">{BANNER_BOTTOM}</p>
 
 {LOADING_FOOTER}
 
