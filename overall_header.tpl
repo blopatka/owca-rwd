@@ -8,11 +8,16 @@
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" type="text/css"/>-->
     <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}" />
 	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap-theme.min.css" />
 	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/print.css"  media="print" />
+
+    <script language="JavaScript" type="text/javascript" src="images/jsscripts.js"></script>
+    <script type="text/javascript" src="templates/{STYLE_NAME}/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="templates/{STYLE_NAME}/js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="templates/{STYLE_NAME}/js/scripts.js"></script>
+    <!-- END overlib -->
 
 	<script language="Javascript" type="text/javascript">
 	var l_empty_message = '{L_EMPTY_MESSAGE}';
@@ -37,11 +42,7 @@
 	<!-- IF GREETING_FLAG -->PopUp('{U_GREETING_POPUP}', 400, 225);<!-- ENDIF -->
 	<!-- END switch_enable_greeting_popup -->
 	</script>
-	<script language="JavaScript" type="text/javascript" src="images/jsscripts.js"></script>
-    <script type="text/javascript" src="templates/{STYLE_NAME}/js//jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="templates/{STYLE_NAME}/js/bootstrap.min.js" ></script>
-	<script type="text/javascript" src="templates/{STYLE_NAME}/js/scripts.js"></script>
-		<!-- END overlib -->
+
 	<!-- stat -->
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
