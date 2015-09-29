@@ -1,7 +1,19 @@
 <a href="{U_INDEX}">{L_INDEX}</a>
-<div>
+<div id="gcse-search">
 	<p>Wyszukiwarka Google zintegrowana z naszym forum. Przeszukuje wszystkie tematy, nie spowalnia forum - skorzystaj z niej.</p>
-	<script src="http://www.gmodules.com/ig/ifr?url=http://www.google.com/cse/api/004677357431869064361/cse/i1p2km9tn3m/gadget&amp;synd=open&amp;w=265&amp;h=50&amp;title=&amp;output=js"></script>
+    <script>
+      (function() {
+        var cx = '016255875663367655199:fy4rc-hzunk&sort=date-sdate';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+            '//cse.google.com/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+      })();
+    </script>
+    <gcse:search></gcse:search>
 </div>
 
 
