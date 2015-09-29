@@ -1,7 +1,7 @@
 {ROTATE_BANNER_4}
 
 <p class="copyright center">{CLICK_HERE_TO_VIEW}{PAGE_LOAD_PLEASE_WAIT}</p>
-<p class="copyright center">Theme created by <a href="http://pentax.org.pl/profile.php?mode=viewprofile&u=5078" target="_blank" class="copyright">opiszon</a> based on <a href="http://getbootstrap.com" target="_BLANK" class="copyright">TwitterBootstrap 3.3.5</a></p>
+<p class="copyright center">Theme created by <a href="http://pentax.org.pl/profile.php?mode=viewprofile&u=5078" target="_blank" class="copyright">opiszon</a>, powered with <a href="http://getbootstrap.com" target="_BLANK" class="copyright">Bootstrap</a> and <a href="http://vanilla-js.com" target="_blank" class="copyright">VanillaJS</a>.</p>
 
 <p class="copyright center">{BANNER_BOTTOM}</p>
 
