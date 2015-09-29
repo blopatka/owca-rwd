@@ -8,11 +8,12 @@
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic&subset=latin,latin-ext'>
     <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}" />
 	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap-theme.min.css" />
 	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/print.css"  media="print" />
-
+	
     <script language="JavaScript" type="text/javascript" src="images/jsscripts.js"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/bootstrap.min.js" ></script>
