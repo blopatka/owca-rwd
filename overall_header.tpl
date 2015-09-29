@@ -61,7 +61,7 @@
 
 <body>
 <!-- BEGIN header -->
-<nav class="navbar navbar-default ">
+<nav id="menu-nav" class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
