@@ -159,7 +159,7 @@ border: 3px double gray;
 }
 
 .signature.breadcrumb {
-    margin: 0;
+    margin: 5px 0 0 0;
 }
 
 .horizontal-table th
