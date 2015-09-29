@@ -230,6 +230,7 @@ td.row1, td.row2 {
 
 blockquote {
     background-color: #F2F2E7;
+    margin-bottom: 0;
 }
 
 blockquote footer:before, blockquote small:before, blockquote .small:before {
