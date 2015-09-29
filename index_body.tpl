@@ -17,8 +17,11 @@
 	<div class="col-sm-6 right">
 		<!-- BEGIN switch_unread -->
 		<a href="{U_SEARCH_NEW}" class="pull-right">{L_SEARCH_NEW} <span class="label label-primary">{COUNT_NEW_POSTS}</span></a>
-		<br clear="all" /><br />
+		<br clear="all" />
 		<!-- END switch_unread -->
+         <!-- BEGIN switch_user_logged_in -->
+        <a href="{U_SEARCH_LASTVISIT}">{L_SEARCH_LASTVISIT}</a>
+        <!-- END switch_user_logged_in -->
 	</div>
 </div>
 
