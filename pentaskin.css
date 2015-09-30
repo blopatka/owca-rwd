@@ -1,5 +1,5 @@
 body {
-	padding-top: 50px;
+    padding-top: 50px;
 }
 
 #menu-nav {
@@ -264,4 +264,9 @@ blockquote footer:before, blockquote small:before, blockquote .small:before {
 
 #gcse-search * {
     box-sizing: content-box;
+}
+
+.postid {
+    position: relative;
+    top: -50px;
 }

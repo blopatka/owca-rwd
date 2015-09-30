@@ -28,7 +28,7 @@ var img_addr = '{IMG_ADDR}';
 <!-- BEGIN moderate --><form action="{moderate.S_MODERATE_ACTION}" method="post"><!-- END moderate -->
 <!-- BEGIN post_tree -->{postrow.post_tree.TREE_WIDTH}<!-- END post_tree -->
 <!-- BEGIN postrow -->
-<a name="{postrow.U_POST_ID}"></a>
+<a class="postid" name="{postrow.U_POST_ID}">&nbsp;</a>
 <div class="panel panel-default post-panel">
 	<div class="panel-heading">
         <div class="row">
