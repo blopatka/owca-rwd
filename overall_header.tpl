@@ -8,7 +8,7 @@
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic&subset=latin,latin-ext'>
+	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Titillium Web:400,400italic,700,700italic&subset=latin,latin-ext'>
     <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap.min.css?v=1" />
     <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}?v=1" />
 	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap-theme.min.css?v=1" />
@@ -71,7 +71,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="{U_INDEX_PORTAL}" class="navbar-brand" title="{L_INDEX_PORTAL}">{SITENAME_COLOR}</a>
+            <!--<a href="{U_INDEX_PORTAL}" class="navbar-brand" title="{L_INDEX_PORTAL}">{SITENAME_COLOR}</a>-->
+            <a href="{U_INDEX_PORTAL}" class="pull-left navLogo" title="{L_INDEX_PORTAL}"><img src="templates/{STYLE_NAME}/images/logo.png"></a>
         </div>
 
         <div class="collapse navbar-collapse" id="main-navbar">

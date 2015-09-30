@@ -6,6 +6,15 @@ body {
 	border-radius: 0px 0px 4px 4px;
 }
 
+#menu-nav .navLogo {
+    margin-top: 3px;
+}
+
+#menu-nav .navLogo img {
+    height: 36px;
+    width: auto;
+}
+
 hr
 {
 margin: 0;
