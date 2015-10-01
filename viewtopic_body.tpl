@@ -125,7 +125,7 @@ var img_addr = '{IMG_ADDR}';
 
                 <!-- BEGIN signature -->
                 <div class="hidden-xs col-sm-12">
-                    <p class="signature breadcrumb">{postrow.SIGNATURE}{postrow.SIG_IMAGE}</p>
+                    <p class="signature breadcrumb nocontent">{postrow.SIGNATURE}{postrow.SIG_IMAGE}</p> <!-- nocontent hides it from Google CSE results - as in https://support.google.com/customsearch/answer/2364585?hl=en -->
                 </div>
                 <!-- END signature -->
 
