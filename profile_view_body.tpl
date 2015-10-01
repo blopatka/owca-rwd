@@ -65,7 +65,11 @@
 			<tr>
 				<th>{warnings.WARNINGS}:</th>
 				<td>
-					<progress value="<!-- PHP -->echo ceil($warnings_item['POSTER_W_WIDTH']) * 1;<!-- ENDPHP -->" max="100"></progress>
+					<div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="<!-- PHP -->echo ceil($warnings_item['POSTER_W_WIDTH']) * 1;<!-- ENDPHP -->" aria-valuemin="0" aria-valuemax="100" style="width: <!-- PHP -->echo ceil($warnings_item['POSTER_W_WIDTH']) * 1;<!-- ENDPHP -->%;">
+                            <span class="sr-only"><!-- PHP -->echo ceil($warnings_item['POSTER_W_WIDTH']) * 1;<!-- ENDPHP -->%</span>
+                        </div>
+                    </div>
 					{postrow.warnings.HOW}/{postrow.warnings.WRITE}/{postrow.warnings.MAX}
 				</td>
 			</tr>
@@ -75,7 +79,11 @@
 			<tr>
 				<th>{L_UPLOAD_QUOTA}:</th>
 				<td>
-					<progress value="{UPLOAD_LIMIT_IMG_WIDTH}" max="100"></progress><br /><!--UPLOAD_LIMIT_PERCENT-->
+					<div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="{UPLOAD_LIMIT_IMG_WIDTH}" aria-valuemin="0" aria-valuemax="100" style="width: {UPLOAD_LIMIT_IMG_WIDTH}%;">
+                            <span class="sr-only">{UPLOAD_LIMIT_IMG_WIDTH}%</span>
+                        </div>
+                    </div><!--UPLOAD_LIMIT_PERCENT-->
 					<b><span class="genmed">[{UPLOADED} / {QUOTA} / {PERCENT_FULL}]</span></b><br />
 					<a href="{U_UACP}" class="genmed">{L_UACP}</a>
 				</td>
@@ -210,14 +218,26 @@
 	<div class="tab-pane" id="tab_level">
 		{L_LEVEL}: <b>{LEVEL}</b><br />
 
-		HP: <b>{HP}</b>
-		<progress value="{HP_WIDTH}" max="100"></progress>{HP_WIDTH}%
+        HP: <b>{HP}</b>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="{HP_WIDTH}" aria-valuemin="0" aria-valuemax="100" style="width: {HP_WIDTH}%;">
+                <span class="sr-only">{HP_WIDTH}%</span>
+            </div>
+        </div>
 
-		MP: <b>{MP}</b>
-		<progress value="{MP_WIDTH}" max="100"></progress>{MP_WIDTH}%
+        MP: <b>{MP}</b>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="{MP_WIDTH}" aria-valuemin="0" aria-valuemax="100" style="width: {MP_WIDTH}%;">
+                <span class="sr-only">{MP_WIDTH}%</span>
+            </div>
+        </div>
 
-		EXP: <b>{EXP}</b>
-		<progress value="{EXP_WIDTH}" max="100"></progress>{EXP_WIDTH}%
+        EXP: <b>{EXP}</b>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="{EXP_WIDTH}" aria-valuemin="0" aria-valuemax="100" style="width: {EXP_WIDTH}%;">
+                <span class="sr-only">{EXP_WIDTH}%</span>
+            </div>
+        </div>
 	</div>
 	<!-- END level -->
 </div>

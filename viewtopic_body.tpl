@@ -88,21 +88,36 @@ var img_addr = '{IMG_ADDR}';
                 <!-- BEGIN levelmodl -->
                 <div>
                         {L_LEVEL}: <b>{postrow.levelmodl.POSTER_LEVEL}</b><br />
-
                         HP: <b>{postrow.levelmodl.POSTER_HP}</b><br />
-                        <progress value="{postrow.levelmodl.POSTER_HP_WIDTH}" max="100"></progress>{postrow.levelmodl.POSTER_HP_WIDTH}%<br />
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="{postrow.levelmodl.POSTER_HP_WIDTH}" aria-valuemin="0" aria-valuemax="100" style="width: {postrow.levelmodl.POSTER_HP_WIDTH}%;">
+                                <span class="sr-only">{postrow.levelmodl.POSTER_HP_WIDTH}%</span>
+                            </div>
+                        </div>
 
                         MP: <b>{postrow.levelmodl.POSTER_MP}</b><br />
-                        <progress value="{postrow.levelmodl.POSTER_MP_WIDTH}" max="100"></progress>{postrow.levelmodl.POSTER_MP_WIDTH}%<br />
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="{postrow.levelmodl.POSTER_MP_WIDTH}" aria-valuemin="0" aria-valuemax="100" style="width: {postrow.levelmodl.POSTER_MP_WIDTH}%;">
+                                <span class="sr-only">{postrow.levelmodl.POSTER_MP_WIDTH}%</span>
+                            </div>
+                        </div>
 
                         EXP: <b>{postrow.levelmodl.POSTER_EXP}</b><br />
-                        <progress value="{postrow.levelmodl.POSTER_EXP_WIDTH}" max="100"></progress>{postrow.levelmodl.POSTER_EXP_WIDTH}%
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="{postrow.levelmodl.POSTER_EXP_WIDTH}" aria-valuemin="0" aria-valuemax="100" style="width: {postrow.levelmodl.POSTER_EXP_WIDTH}%;">
+                                <span class="sr-only">{postrow.levelmodl.POSTER_EXP_WIDTH}%</span>
+                            </div>
+                        </div>
                 </div>
                 <!-- END levelmodl -->
 
                 <!-- BEGIN warnings -->
                 <div>{postrow.warnings.WARNINGS}:<br />
-                    <progress value="<!-- PHP -->echo ceil($warnings_item['POSTER_W_WIDTH']) * 1;<!-- ENDPHP -->" max="100"></progress>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="<!-- PHP -->echo ceil($warnings_item['POSTER_W_WIDTH']) * 1;<!-- ENDPHP -->" aria-valuemin="0" aria-valuemax="100" style="width: <!-- PHP -->echo ceil($warnings_item['POSTER_W_WIDTH']) * 1;<!-- ENDPHP -->%;">
+                            <span class="sr-only"><!-- PHP -->echo ceil($warnings_item['POSTER_W_WIDTH']) * 1;<!-- ENDPHP -->%</span>
+                        </div>
+                    </div>
                     {postrow.warnings.HOW}/{postrow.warnings.WRITE}/{postrow.warnings.MAX}
                 </div>
                 <!-- END warnings -->
@@ -134,13 +149,25 @@ var img_addr = '{IMG_ADDR}';
                 {L_LEVEL}: <b>{postrow.levelmodd.POSTER_LEVEL}</b>
 
                 HP: <b>{postrow.levelmodd.POSTER_HP}</b>
-                <progress value="{postrow.levelmodd.POSTER_HP_WIDTH}" max="100"></progress>{postrow.levelmodd.POSTER_HP_WIDTH}%
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="{postrow.levelmodd.POSTER_HP_WIDTH}" aria-valuemin="0" aria-valuemax="100" style="width: {postrow.levelmodd.POSTER_HP_WIDTH}%;">
+                        <span class="sr-only">{postrow.levelmodd.POSTER_HP_WIDTH}%</span>
+                    </div>
+                </div>
 
                 MP: <b>{postrow.levelmodd.POSTER_MP}</b>
-                <progress value="{postrow.levelmodd.POSTER_MP_WIDTH}" max="100"></progress>{postrow.levelmodd.POSTER_MP_WIDTH}%
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="{postrow.levelmodd.POSTER_MP_WIDTH}" aria-valuemin="0" aria-valuemax="100" style="width: {postrow.levelmodd.POSTER_MP_WIDTH}%;">
+                        <span class="sr-only">{postrow.levelmodd.POSTER_MP_WIDTH}%</span>
+                    </div>
+                </div>
 
                 EXP: <b>{postrow.levelmodd.POSTER_EXP}</b>
-                <progress value="{postrow.levelmodd.POSTER_EXP_WIDTH}" max="100"></progress>{postrow.levelmodd.POSTER_EXP_WIDTH}%
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="{postrow.levelmodd.POSTER_EXP_WIDTH}" aria-valuemin="0" aria-valuemax="100" style="width: {postrow.levelmodd.POSTER_EXP_WIDTH}%;">
+                        <span class="sr-only">{postrow.levelmodd.POSTER_EXP_WIDTH}%</span>
+                    </div>
+                </div>
                 <!-- END levelmodd -->
             </div>
         </div>
