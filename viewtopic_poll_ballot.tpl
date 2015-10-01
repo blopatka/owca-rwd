@@ -6,10 +6,11 @@
 			<span class="help-block">{MAX_VOTING_1_EXPLAIN}{max_vote}{MAX_VOTING_2_EXPLAIN}<br />{MAX_VOTING_3_EXPLAIN}</span>
 
 			<!-- BEGIN poll_option -->
-			<label class="{poll_option.POLL_VOTE_BOX}">
-			<input type="{poll_option.POLL_VOTE_BOX}" name="vote_id[]" value="{poll_option.POLL_OPTION_ID}" />
-			{poll_option.POLL_OPTION_CAPTION}
-			</label>
+            <div class="{poll_option.POLL_VOTE_BOX}">
+                <label>
+                    <input type="{poll_option.POLL_VOTE_BOX}" name="vote_id[]" value="{poll_option.POLL_OPTION_ID}"> {poll_option.POLL_OPTION_CAPTION}
+                </label>
+            </div>
 			<!-- END poll_option -->
 		</div>
 		<div class="panel-footer">

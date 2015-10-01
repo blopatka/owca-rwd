@@ -315,7 +315,11 @@
 		<tr>
 			<td>
 				{L_CURRENT_IMAGE}
-				<label class="checkbox"><input type="checkbox" name="avatardel" />{L_DELETE_AVATAR}</label>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="avatardel"> {L_DELETE_AVATAR}
+                    </label>
+                </div>
 			</td>
 			<td>{AVATAR}</td>
 		</tr>

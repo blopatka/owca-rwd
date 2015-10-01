@@ -8,7 +8,11 @@
 	<tr>
 		<td>
 			{L_CURRENT_IMAGE}
-			<label class="checkbox"><input type="checkbox" name="photodel" />{L_DELETE_PHOTO}</label>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="photodel"> {L_DELETE_PHOTO}
+                </label>
+            </div>
 		</td>
 		<td>{PHOTO}</td>
 	</tr>
