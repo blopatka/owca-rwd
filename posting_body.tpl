@@ -253,104 +253,94 @@
 			<textarea name="message" id="message" rows="10" cols="35" style="width: 100%;height:100%;" tabindex="3" onselect="storeCaret(this);" onclick="storeCaret(this);" onkeyup="storeCaret(this);">{MESSAGE}</textarea>
 		</div>
 	</div>
+    </div>
+    <div class="panel-heading">
+        <label for="options">{L_OPTIONS}</label>
+    </div>
+    <div class="panel-body" id="tab_options">
+        <div class="row">
+            <div class="col-md-4">
+                <!-- BEGIN switch_html_checkbox -->
+                <div class="checkbox"><label><input type="checkbox" name="disable_html" {S_HTML_CHECKED} />{L_DISABLE_HTML}</label></div>
+                <!-- END switch_html_checkbox -->
 
-	<div class="row">
-<div class="col-md-2">
-	<ul class="nav nav-pills nav-stacked">
-		<li class="active"><a href="#tab_options" data-toggle="tab">{L_OPTIONS}</a></li>
-		<li><a href="#tab_polls" data-toggle="tab">{L_ADD_A_POLL}</a></li>
-		<li><a href="#tab_attachments" data-toggle="tab">{L_ADD_ATTACH_TITLE}</a></li>
-	</ul>
-	</div>
-	<div class="col-md-10">
-	<div class="tab-content">
-	<div class="tab-pane active" id="tab_options">
-		<div class="row">
-			<div class="col-md-4">
-				<!-- BEGIN switch_html_checkbox -->
-				<div class="checkbox"><label><input type="checkbox" name="disable_html" {S_HTML_CHECKED} />{L_DISABLE_HTML}</label></div>
-				<!-- END switch_html_checkbox -->
+                <!-- BEGIN switch_bbcode_checkbox -->
+                <div class="checkbox"><label><input type="checkbox" name="disable_bbcode" {S_BBCODE_CHECKED} />{L_DISABLE_BBCODE}</label></div>
+                <!-- END switch_bbcode_checkbox -->
 
-				<!-- BEGIN switch_bbcode_checkbox -->
-				<div class="checkbox"><label><input type="checkbox" name="disable_bbcode" {S_BBCODE_CHECKED} />{L_DISABLE_BBCODE}</label></div>
-				<!-- END switch_bbcode_checkbox -->
+                <!-- BEGIN switch_smilies_checkbox -->
+                <div class="checkbox"><label><input type="checkbox" name="disable_smilies" {S_SMILIES_CHECKED} />{L_DISABLE_SMILIES}</label></div>
+                <!-- END switch_smilies_checkbox -->
 
-				<!-- BEGIN switch_smilies_checkbox -->
-				<div class="checkbox"><label><input type="checkbox" name="disable_smilies" {S_SMILIES_CHECKED} />{L_DISABLE_SMILIES}</label></div>
-				<!-- END switch_smilies_checkbox -->
+                <!-- BEGIN switch_signature_checkbox -->
+                <div class="checkbox"><label><input type="checkbox" name="attach_sig" {S_SIGNATURE_CHECKED} />{L_ATTACH_SIGNATURE}</label></div>
+                <!-- END switch_signature_checkbox -->
 
-				<!-- BEGIN switch_signature_checkbox -->
-				<div class="checkbox"><label><input type="checkbox" name="attach_sig" {S_SIGNATURE_CHECKED} />{L_ATTACH_SIGNATURE}</label></div>
-				<!-- END switch_signature_checkbox -->
+                <!-- BEGIN switch_notify_checkbox -->
+                <div class="checkbox"><label><input type="checkbox" name="notify" {S_NOTIFY_CHECKED}>{L_NOTIFY_ON_REPLY}</label></div>
+                <!-- END switch_notify_checkbox -->
 
-				<!-- BEGIN switch_notify_checkbox -->
-				<div class="checkbox"><label><input type="checkbox" name="notify" {S_NOTIFY_CHECKED}>{L_NOTIFY_ON_REPLY}</label></div>
-				<!-- END switch_notify_checkbox -->
+                <!-- BEGIN switch_delete_checkbox -->
+                <div class="checkbox"><label><input type="checkbox" name="delete">{L_DELETE_POST}</label></div>
+                <!-- END switch_delete_checkbox -->
 
-				<!-- BEGIN switch_delete_checkbox -->
-				<div class="checkbox"><label><input type="checkbox" name="delete">{L_DELETE_POST}</label></div>
-				<!-- END switch_delete_checkbox -->
+                <!-- BEGIN switch_lock_topic -->
+                <div class="checkbox"><label><input type="checkbox" name="lock" {S_LOCK_CHECKED}>{L_LOCK_TOPIC}</label></div>
+                <!-- END switch_lock_topic -->
 
-				<!-- BEGIN switch_lock_topic -->
-				<div class="checkbox"><label><input type="checkbox" name="lock" {S_LOCK_CHECKED}>{L_LOCK_TOPIC}</label></div>
-				<!-- END switch_lock_topic -->
+                <!-- BEGIN switch_unlock_topic -->
+                <div class="checkbox"><label><input type="checkbox" name="unlock" {S_UNLOCK_CHECKED}>{L_UNLOCK_TOPIC}</label></div>
+                <!-- END switch_unlock_topic -->
 
-				<!-- BEGIN switch_unlock_topic -->
-				<div class="checkbox"><label><input type="checkbox" name="unlock" {S_UNLOCK_CHECKED}>{L_UNLOCK_TOPIC}</label></div>
-				<!-- END switch_unlock_topic -->
+                <!-- BEGIN switch_no_split_post -->
+                <div class="checkbox"><label><input type="checkbox" name="nosplit" {S_SPLIT_CHECKED}>{L_NO_SPLIT_POST}</label></div>
+                <!-- END switch_no_split_post -->
+                <p class="gensmall">{HTML_STATUS}, {BBCODE_STATUS}, {SMILIES_STATUS}</p>
+            </div>
+            <div class="col-md-8">
+                <!-- BEGIN tree_width -->
+                <label for="tree_width">{tree_width.L_TREE_WIDTH}</label>
+                <input type="text" name="tree_width" id="tree_width" value="{tree_width.TREE_WIDTH}" size="2" maxlength="2" class="input-mini" />
+                <!-- END tree_width -->
 
-				<!-- BEGIN switch_no_split_post -->
-				<div class="checkbox"><label><input type="checkbox" name="nosplit" {S_SPLIT_CHECKED}>{L_NO_SPLIT_POST}</label></div>
-				<!-- END switch_no_split_post -->
-				<p class="gensmall">{HTML_STATUS}, {BBCODE_STATUS}, {SMILIES_STATUS}</p>
-			</div>
-			<div class="col-md-8">
-				<!-- BEGIN tree_width -->
-				<label for="tree_width">{tree_width.L_TREE_WIDTH}</label>
-				<input type="text" name="tree_width" id="tree_width" value="{tree_width.TREE_WIDTH}" size="2" maxlength="2" class="input-mini" />
-				<!-- END tree_width -->
+                <!-- BEGIN freak -->
+                <hr />
+                <span class="form-inline">
+                <label>Freak & Letter styles:</label>
+                <button type="button" name="freak" onClick="filter_freak();" class="btn btn-default btn-xs">FrEaK</button>
+                <button type="button" name="freak" onClick="filter_l33t();" class="btn btn-default btn-xs">l33t</button>
+                <span class="gensmall">({freak.L_FREAK_UNDO})</span>
+                </span>
+                <!-- END freak -->
 
-				<!-- BEGIN freak -->
-				<hr />
-				<span class="form-inline">
-				<label>Freak & Letter styles:</label>
-				<button type="button" name="freak" onClick="filter_freak();" class="btn btn-default btn-xs">FrEaK</button>
-				<button type="button" name="freak" onClick="filter_l33t();" class="btn btn-default btn-xs">l33t</button>
-				<span class="gensmall">({freak.L_FREAK_UNDO})</span>
-				</span>
-				<!-- END freak -->
+                <!-- BEGIN expire_box -->
+                <hr />
+                <label for="msg_expire">{expire_box.L_EXPIRE_P}:</label>
+                <select name="msg_expire" id="msg_expire">
+                    <option value="0" {expire_box.CHECK_0}>{expire_box.L_EXPIRE_UNLIMIT}</option>
+                    <option value="1" {expire_box.CHECK_1}>{expire_box.L_1_DAY}</option>
+                    <option value="2" {expire_box.CHECK_2}>{expire_box.L_2_DAYS}</option>
+                    <option value="3" {expire_box.CHECK_3}>{expire_box.L_3_DAYS}</option>
+                    <option value="4" {expire_box.CHECK_4}>{expire_box.L_4_DAYS}</option>
+                    <option value="5" {expire_box.CHECK_5}>{expire_box.L_5_DAYS}</option>
+                    <option value="6" {expire_box.CHECK_6}>{expire_box.L_6_DAYS}</option>
+                    <option value="7" {expire_box.CHECK_7}>{expire_box.L_7_DAYS}</option>
+                    <option value="14" {expire_box.CHECK_14}>{expire_box.L_2_WEEKS}</option>
+                    <option value="30" {expire_box.CHECK_30}>{expire_box.L_1_MONTH}</option>
+                    <option value="90" {expire_box.CHECK_90}>{expire_box.L_3_MONTHS}</option>
+                </select>
+                <span class="help-block gensmall">{expire_box.L_EXPIRE_PE}</span>
+                <!-- END expire_box -->
 
-				<!-- BEGIN expire_box -->
-				<hr />
-				<label for="msg_expire">{expire_box.L_EXPIRE_P}:</label>
-				<select name="msg_expire" id="msg_expire">
-					<option value="0" {expire_box.CHECK_0}>{expire_box.L_EXPIRE_UNLIMIT}</option>
-					<option value="1" {expire_box.CHECK_1}>{expire_box.L_1_DAY}</option>
-					<option value="2" {expire_box.CHECK_2}>{expire_box.L_2_DAYS}</option>
-					<option value="3" {expire_box.CHECK_3}>{expire_box.L_3_DAYS}</option>
-					<option value="4" {expire_box.CHECK_4}>{expire_box.L_4_DAYS}</option>
-					<option value="5" {expire_box.CHECK_5}>{expire_box.L_5_DAYS}</option>
-					<option value="6" {expire_box.CHECK_6}>{expire_box.L_6_DAYS}</option>
-					<option value="7" {expire_box.CHECK_7}>{expire_box.L_7_DAYS}</option>
-					<option value="14" {expire_box.CHECK_14}>{expire_box.L_2_WEEKS}</option>
-					<option value="30" {expire_box.CHECK_30}>{expire_box.L_1_MONTH}</option>
-					<option value="90" {expire_box.CHECK_90}>{expire_box.L_3_MONTHS}</option>
-				</select>
-				<span class="help-block gensmall">{expire_box.L_EXPIRE_PE}</span>
-				<!-- END expire_box -->
+                <!-- BEGIN switch_type_toggle --><hr />{S_TYPE_TOGGLE}<!-- END switch_type_toggle -->
+            </div>
+        </div>
+    </div>
 
-				<!-- BEGIN switch_type_toggle --><hr />{S_TYPE_TOGGLE}<!-- END switch_type_toggle -->
-			</div>
-		</div>
-	</div>
-	{POLLBOX}
-	{ATTACHBOX}
-	</div>
-</div>
-	</div>
-
+    {POLLBOX}
+    {ATTACHBOX}
 	{S_HIDDEN_FORM_FIELDS}
-</div>
+
 	<div class="panel-footer center">
 		<input type="submit" accesskey="s" tabindex="6" name="post" class="btn btn-success" value="{L_SUBMIT}" />
 		<input type="submit" tabindex="5" name="preview" class="btn btn-info" value="{L_PREVIEW}" />

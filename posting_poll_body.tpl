@@ -1,4 +1,7 @@
-<div class="tab-pane" id="tab_polls">
+<div class="panel-heading">
+    <label for="pollbox">{L_ADD_A_POLL}</label>
+</div>
+<div class="panel-body" id="tab-polls">
 <span class="help-block">{L_ADD_POLL_EXPLAIN}</span>
 <div class="row">
 	<div class="col-md-7">
@@ -59,7 +62,9 @@
 			<div class="panel-footer">
 			<div class="input-group">
 				<input type="text" class="form-control" name="add_poll_option_text" maxlength="255" value="{ADD_POLL_OPTION}" />
-				<span class="input-group-btn"><button type="submit" name="add_poll_option" class="btn btn-success">{L_ADD_OPTION}</button></span>
+				<span class="input-group-btn">
+                    <input type="submit" name="add_poll_option" class="btn btn-success" value="{L_ADD_OPTION}">
+                </span>
 			</div>
 			</div>
 		</div>
