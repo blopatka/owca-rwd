@@ -22,12 +22,14 @@
                         <div class="row">
                             <div class="col-md-1 hidden-xs hidden-sm col-no-gutter text-center"><img src="{catrow.forumrow.FORUM_FOLDER_IMG}" alt="" title="{catrow.forumrow.L_FORUM_FOLDER_ALT}"></div>
                             <div class="col-md-11 col-sm-12">
-                                <a href="{catrow.forumrow.U_VIEWFORUM}" {catrow.forumrow.FORUM_COLOR}>{catrow.forumrow.FORUM_NAME}</a><br />
+                                <a href="{catrow.forumrow.U_VIEWFORUM}" {catrow.forumrow.FORUM_COLOR}>{catrow.forumrow.FORUM_NAME}</a>&nbsp;<small>{catrow.forumrow.LAST_POSTMSG}</small><br />
                                 <span class="genmed">{catrow.forumrow.FORUM_DESC}</span>
 
-                                <span class="gensmall hidden-xs">
+                                <span class="hidden-xs">
+                                    <small>
                                     <!--		{catrow.forumrow.L_MODERATOR} {catrow.forumrow.MODERATORS}-->
                                     <!-- BEGIN links -->{catrow.forumrow.links.L_LINKS} {catrow.forumrow.links.LINKS}<!-- END links -->
+                                    </small>
                                 </span>
                             </div>
                         </div>
@@ -41,7 +43,7 @@
                     </div>
                     <div class="col-md-3 col-xs-3">
                         <!-- BEGIN forum_link_no -->
-                        {catrow.forumrow.LAST_POST}<span class="hidden-xs">{catrow.forumrow.NUM_NEW_TOPICS}{catrow.forumrow.NUM_NEW_POSTS}</span>
+                        {catrow.forumrow.LAST_POST}<span class="hidden-xs"><small>{catrow.forumrow.NUM_NEW_TOPICS}{catrow.forumrow.NUM_NEW_POSTS}</small></span>
                         <!-- END forum_link_no -->
                     </div>
                     <!-- BEGIN cattitle -->
