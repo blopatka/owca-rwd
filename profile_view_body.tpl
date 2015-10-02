@@ -162,12 +162,12 @@
 	<div class="tab-pane" id="tab_contact">
 		<div class="row">
 			<div class="col-md-6">{L_EMAIL_ADDRESS}:</div>
-			<div class="col-md-2">{EMAIL_IMG}</div>
+			<div class="col-md-2">{EMAIL}</div>
 		</div>
 
 		<div class="row">
 			<div class="col-md-6">{L_PM}:</div>
-			<div class="col-md-2">{PM_IMG}</div>
+			<div class="col-md-2">{PM}</div>
 		</div>
 
 		<!-- BEGIN msn -->

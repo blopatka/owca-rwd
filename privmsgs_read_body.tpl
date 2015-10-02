@@ -5,7 +5,7 @@
 	<span class="btn btn-default"><span class="glyphicon glyphicon-save"></span> {SAVEBOX}</span>
 </div>
 
-{REPLY_PM_IMG}
+<span class="btn btn-default">{REPLY_PM}</span>
 <a href="{U_INDEX}">{L_INDEX}</a>
 
 <table class="table table-bordered table-condensed">
@@ -28,7 +28,7 @@
 	</tr>
 	<tr>
 		<th>{L_SUBJECT}:</td>
-		<td>{POST_SUBJECT}<span class="pull-right">{QUOTE_PM_IMG} {EDIT_PM_IMG}</span></td>
+<td>{POST_SUBJECT}<span class="pull-right"><!-- IF QUOTE_PM --><span class="btn btn-default">{QUOTE_PM}</span><!-- ENDIF --> <!-- IF EDIT_PM --><span class="btn btn-default">{EDIT_PM}</span><!-- ENDIF --></span></td>
 	</tr>
 </table>
 
@@ -36,7 +36,7 @@
 	<span>{MESSAGE}</span>
 	<!-- BEGIN postrow -->{ATTACHMENTS}<!-- END postrow -->
 </div>
-{PROFILE_IMG} {PM_IMG} {EMAIL_IMG} {WWW_IMG}{YIM_IMG} {MSN_IMG}
+<!-- IF PROFILE --><span class="btn btn-default">{PROFILE}</span><!-- ENDIF --> <!-- IF PM --><span class="btn btn-default">{PM}</span><!-- ENDIF --> <!-- IF EMAIL --><span class="btn btn-default">{EMAIL}</span><!-- ENDIF --> <!-- IF WWW --><span class="btn btn-default">{WWW}</span><!-- ENDIF --> {YIM_IMG} {MSN_IMG}
 <!-- IF CGG_OFF1 --><div style="position:relative">{AIM_IMG}<div style="position:absolute;left:3px;top:-1px">{AIM_STATUS_IMG}</div></div><!-- ENDIF -->
 <!-- IF CICQ_OFF1 --><div style="position:relative">{ICQ_IMG}<div style="position:absolute;left:3px;top:-1px">{ICQ_STATUS_IMG}</div></div><!-- ENDIF -->
 
@@ -44,7 +44,7 @@
 	{S_HIDDEN_FIELDS}
 
 	<div class="panel-footer right">
-		{REPLY_PM_IMG}
+        <span class="btn btn-default">{REPLY_PM}</span>
 		<input type="submit" name="save" value="{L_SAVE_MSG}" class="btn btn-success" />
 		<input type="submit" name="delete" value="{L_DELETE_MSG}" class="btn btn-danger" />
 		<!-- BEGIN switch_attachments -->

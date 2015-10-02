@@ -29,7 +29,7 @@
 
 <form method="post" name="privmsg_list" action="{S_PRIVMSGS_ACTION}">
 	<div class="panel-footer right">
-		<span class="pull-left">{POST_PM_IMG}</span>
+		<span class="pull-left"><span class="btn btn-default">{POST_PM}</span></span>
 
 		{L_DISPLAY_MESSAGES}:
 		<select name="msgdays">{S_SELECT_MSG_DAYS}</select>
@@ -61,7 +61,7 @@
 	{S_HIDDEN_FIELDS}
 
 	<div class="panel-footer right">
-		<span class="pull-left">{POST_PM_IMG}</span>
+		<span class="pull-left"><span class="btn btn-default">{POST_PM}</span></span>
 		<button onclick="select_all(true); return false;" class="btn btn-link" />{L_MARK_ALL}</button>
 		<button onclick="select_all(false); return false;" class="btn btn-link" />{L_UNMARK_ALL}</button>
 		<input type="submit" name="save" value="{L_SAVE_MARKED}" class="btn btn-success" />

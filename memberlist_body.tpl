@@ -41,8 +41,8 @@
 	<!-- BEGIN memberrow -->
 	<tr>
 		<td><a href="{memberrow.U_VIEWPROFILE}" class="name"{memberrow.USERNAME_COLOR}>{memberrow.USERNAME}</a></td>
-		<td>{memberrow.EMAIL_IMG}</td>
-		<td>{memberrow.PM_IMG}</td>
+		<td>{memberrow.EMAIL}</td>
+		<td>{memberrow.PM}</td>
 		<td>{memberrow.FROM}</td>
 		<td><span class="gensmall"><time>{memberrow.JOINED}</time></span></td>
 		<!-- BEGIN llogin_row -->
@@ -52,7 +52,7 @@
 		<!-- BEGIN aim_row -->
 		<td>{memberrow.AIM_STATUS_IMG}</td>
 		<!-- END aim_row -->
-		<td>{memberrow.WWW_IMG}</td>
+		<td>{memberrow.WWW}</td>
 	</tr>
 	<!-- END memberrow -->
 </table>

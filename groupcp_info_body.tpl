@@ -62,12 +62,12 @@
 		<td class="catSides" colspan="8"><span class="cattitle">{L_GROUP_MODERATOR}</span></td>
 	</tr>
 	<tr>
-		<td> {MOD_PM_IMG} </td>
+        <td>{MOD_PM}</td>
 		<td><a href="{U_MOD_VIEWPROFILE}" class="name"{MOD_USERNAME_STYLE}>{MOD_USERNAME}</a></td>
 		<td>{MOD_POSTS}</td>
 		<td>{MOD_FROM}</td>
-		<td>{MOD_EMAIL_IMG}</td>
-		<td>{MOD_WWW_IMG}</td>
+		<td>{MOD_EMAIL}</td>
+		<td>{MOD_WWW}</td>
 		<td></td>
 	</tr>
 	<tr>
@@ -75,12 +75,12 @@
 	</tr>
 	<!-- BEGIN member_row -->
 	<tr> 
-		<td>{member_row.PM_IMG}</td>
+        <td>{member_row.PM}</td>
 		<td><a href="{member_row.U_VIEWPROFILE}" class="name"{member_row.USERNAME_STYLE}>{member_row.USERNAME}</a></td>
 		<td>{member_row.POSTS}</td>
 		<td>{member_row.FROM}</td>
-		<td>{member_row.EMAIL_IMG}</td>
-		<td>{member_row.WWW_IMG}</td>
+		<td>{member_row.EMAIL}</td>
+		<td>{member_row.WWW}</td>
 		<td><!-- BEGIN switch_mod_option --><input type="checkbox" name="members[]" value="{member_row.USER_ID}" /><!-- END switch_mod_option --></td>
 	</tr>
 	<!-- END member_row -->
