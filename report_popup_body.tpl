@@ -1,3 +1,18 @@
+<style type="text/css">
+  @import url("templates/pentaskin/css/bootstrap.min.css");
+</style>
+<style type="text/css">
+  @import url("templates/pentaskin/css/bootstrap-theme.min.css");
+</style>
+<style>
+body {
+    padding: 0px !important;
+}
+.copyright {
+    visibility: hidden;
+    display: none;
+}
+</style>
 <p class="alert alert-warning">{TEXT}</p>
 <!-- BEGIN links_target_0 --><base target="report_window"><!-- END links_target_0 -->
 <!-- BEGIN links_target_1 --><base target="_blank"><!-- END links_target_1 -->

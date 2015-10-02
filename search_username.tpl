@@ -8,6 +8,21 @@ function refresh_username(selected_username)
 }
 //-->
 </script>
+<style type="text/css">
+  @import url("templates/pentaskin/css/bootstrap.min.css");
+</style>
+<style type="text/css">
+  @import url("templates/pentaskin/css/bootstrap-theme.min.css");
+</style>
+<style>
+body {
+    padding: 0px !important;
+}
+.copyright {
+    visibility: hidden;
+    display: none;
+}
+</style>
 
 <form method="post" name="search" action="{S_SEARCH_ACTION}" class="panel panel-primary">
 	<div class="panel-heading">{L_SEARCH_USERNAME}</div>

@@ -1,96 +1,115 @@
-<h5>{L_PREFERENCES}</h5>
+<body onUnload="if (document.prefs.submit.title == 'save') window.opener.location.reload(); window.close();">
+<style type="text/css">
+  @import url("templates/pentaskin/css/bootstrap.min.css");
+</style>
+<style type="text/css">
+  @import url("templates/pentaskin/css/bootstrap-theme.min.css");
+</style>
+<style>
+body {
+    padding: 0px !important;
+}
+.copyright {
+    visibility: hidden;
+    display: none;
+}
+</style>
+
+<div class="panel panel-default">
+<div class="panel-heading"><h5>{L_PREFERENCES}</h5></div>
+<div class="panel-body">
 <span class="help-block">{L_PREFERENCES_E}</span><br />
 
 <form action="{S_PROFILE_ACTION}" method="post" name="prefs" class="well">
-	<label class="checkbox"><input type="checkbox" id="c1" name="simple_head" value="1"{c_simple_head} />{L_SIMPLE_HEAD}</label>
+	<div class="checkbox"><label><input type="checkbox" id="c1" name="simple_head" value="1"{c_simple_head} />{L_SIMPLE_HEAD}</label></div>
 
 	<!-- BEGIN s_page_avatar -->
-	<label class="checkbox"><input type="checkbox" id="c2" name="page_avatar"{c_page_avatar} value="1" />{L_PAGE_AVATAR}</label>
-	<span class="gensmall">{L_PAGE_AVATAR_E}</span>
+        <div class="checkbox"><label><input type="checkbox" id="c2" name="page_avatar"{c_page_avatar} value="1" />{L_PAGE_AVATAR}</label></div>
+        <span class="gensmall">{L_PAGE_AVATAR_E}</span>
 	<!-- END s_page_avatar -->
 
 	<!-- BEGIN s_overlib -->
-	<label class="checkbox"><input type="checkbox" id="c3" name="overlib"{c_overlib} value="1" />{L_OVERLIB}</label>
+        <div class="checkbox"><label><input type="checkbox" id="c3" name="overlib"{c_overlib} value="1" />{L_OVERLIB}</label></div>
 	<!-- END s_overlib -->
 
 	<!-- BEGIN s_onmouse -->
-	<label class="checkbox"><input type="checkbox" id="c4" name="onmouse"{c_onmouse} value="1" />{L_ONMOUSE}</label>
+        <div class="checkbox"><label><input type="checkbox" id="c4" name="onmouse"{c_onmouse} value="1" />{L_ONMOUSE}</label></div>
 	<!-- END s_onmouse -->
 
 	<!-- BEGIN s_cbirth -->
-	<label class="checkbox"><input type="checkbox" id="c5" name="cbirth"{c_cbirth} value="1" />{L_CBIRTH}</label>
+        <div class="checkbox"><label><input type="checkbox" id="c5" name="cbirth"{c_cbirth} value="1" />{L_CBIRTH}</label></div>
 	<!-- END s_cbirth -->
 
 	<!-- BEGIN s_u_o_t_d -->
-	<label class="checkbox"><input type="checkbox" id="c6" name="u_o_t_d"{c_u_o_t_d} value="1" />{L_U_O_T_D}</label>
+        <div class="checkbox"><label><input type="checkbox" id="c6" name="u_o_t_d"{c_u_o_t_d} value="1" />{L_U_O_T_D}</label></div>
 	<!-- END s_u_o_t_d -->
 
 	<!-- BEGIN s_cload -->
-	<label class="checkbox"><input type="checkbox" id="c7" name="cload"{c_cload} value="1" />{L_CLOAD}</label>
+        <label class="checkbox"><input type="checkbox" id="c7" name="cload"{c_cload} value="1" />{L_CLOAD}</label></div>
 	<!-- END s_cload -->
 
 	<!-- BEGIN s_shoutbox -->
-	<label class="checkbox"><input type="checkbox" id="c8" name="shoutbox"{c_shoutbox} value="1" />{L_SHOUTBOX}</label>
+        <div class="checkbox"><label><input type="checkbox" id="c8" name="shoutbox"{c_shoutbox} value="1" />{L_SHOUTBOX}</label></div>
 	<!-- END s_shoutbox -->
 
 	<!-- BEGIN s_user_allow_signature -->
-	<label class="checkbox"><input type="checkbox" id="c9" name="user_allow_signature"{c_user_allow_signature} value="1" />{L_USER_ALLOW_SIGNATURE}</label>
+        <div class="checkbox"><label><input type="checkbox" id="c9" name="user_allow_signature"{c_user_allow_signature} value="1" />{L_USER_ALLOW_SIGNATURE}</label></div>
 	<!-- END s_user_allow_signature -->
 
 	<!-- BEGIN s_user_allow_sig_image -->
-	<label class="checkbox"><input type="checkbox" id="c10" name="user_allow_sig_image"{c_user_allow_sig_image} value="1" />{L_USER_ALLOW_SIG_IMAGE}</label>
+        <div class="checkbox"><label><input type="checkbox" id="c10" name="user_allow_sig_image"{c_user_allow_sig_image} value="1" />{L_USER_ALLOW_SIG_IMAGE}</label></div>
 	<!-- END s_user_allow_sig_image -->
 
 	<!-- BEGIN s_user_showavatars -->
-	<label class="checkbox"><input type="checkbox" id="c11" name="user_showavatars"{c_user_showavatars} value="1" />{L_USER_SHOWAVATARS}</label>
+        <div class="checkbox"><label><input type="checkbox" id="c11" name="user_showavatars"{c_user_showavatars} value="1" />{L_USER_SHOWAVATARS}</label></div>
 	<!-- END s_user_showavatars -->
 
 	<!-- BEGIN s_view_ignore_topics -->
-	<label class="checkbox"><input type="checkbox" id="c12" name="view_ignore_topics"{c_view_ignore_topics} value="1" />{L_VIEW_IGNORE_TOPICS}</label>
+        <div class="checkbox"><label><input type="checkbox" id="c12" name="view_ignore_topics"{c_view_ignore_topics} value="1" />{L_VIEW_IGNORE_TOPICS}</label></div>
 	<!-- END s_view_ignore_topics -->
 
 	<!-- BEGIN s_topic_start_date -->
-	<label class="checkbox"><input type="checkbox" id="c13" name="topic_start_date"{c_topic_start_date} value="1" />{L_TOPIC_START_DATE}</label>
+        <div class="checkbox"><label><input type="checkbox" id="c13" name="topic_start_date"{c_topic_start_date} value="1" />{L_TOPIC_START_DATE}</label></div>
 	<!-- END s_topic_start_date -->
 
 	<!-- BEGIN s_ctop -->
-	<label class="checkbox"><input type="checkbox" id="c14" name="ctop"{c_ctop} value="1" />{L_CTOP}</label>
+        <div class="checkbox"><label><input type="checkbox" id="c14" name="ctop"{c_ctop} value="1" />{L_CTOP}</label></div>
 	<!-- END s_ctop -->
 
 	<!-- BEGIN s_custom_color_use -->
-	<label class="checkbox"><input type="checkbox" id="c15" name="custom_color_use"{c_custom_color_use} value="1" />{L_CUSTOM_COLOR_USE}</label>
+        <div class="checkbox"><label><input type="checkbox" id="c15" name="custom_color_use"{c_custom_color_use} value="1" />{L_CUSTOM_COLOR_USE}</label></div>
 	<!-- END s_custom_color_use -->
 
 	<!-- BEGIN s_custom_rank -->
-	<label class="checkbox"><input type="checkbox" id="c16" name="custom_rank"{c_custom_rank} value="1" />{L_CUSTOM_RANK}</label>
+        <div class="checkbox"><label><input type="checkbox" id="c16" name="custom_rank"{c_custom_rank} value="1" />{L_CUSTOM_RANK}</label></div>
 	<!-- END s_custom_rank -->
 
 	<!-- BEGIN s_cagent -->
-	<label class="checkbox"><input type="checkbox" id="c17" name="cagent"{c_cagent} value="1" />{L_CAGENT}</label>
+        <div class="checkbox"><label><input type="checkbox" id="c17" name="cagent"{c_cagent} value="1" />{L_CAGENT}</label></div>
 	<!-- END s_cagent -->
 
 	<!-- BEGIN s_level -->
-	<label class="checkbox"><input type="checkbox" id="c18" name="level"{c_level} value="1" />{L_LEVEL}</label>
+        <div class="checkbox"><label><input type="checkbox" id="c18" name="level"{c_level} value="1" />{L_LEVEL}</label></div>
 	<!-- END s_level -->
 
 	<!-- BEGIN s_cignore -->
-	<label class="checkbox"><input type="checkbox" id="c19" name="cignore"{c_cignore} value="1" />{L_CIGNORE}</label>
+        <div class="checkbox"><label><input type="checkbox" id="c19" name="cignore"{c_cignore} value="1" />{L_CIGNORE}</label></div>
 	<!-- END s_cignore -->
 
 	<!-- BEGIN s_cquick -->
-	<label class="checkbox"><input type="checkbox" id="c20" name="cquick"{c_cquick} value="1" />{L_CQUICK}</label>
+        <div class="checkbox"><label><input type="checkbox" id="c20" name="cquick"{c_cquick} value="1" />{L_CQUICK}</label></div>
 	<!-- END s_cquick -->
 
 	<!-- BEGIN s_show_smiles -->
-	<label class="checkbox"><input type="checkbox" id="c21" name="show_smiles"{c_show_smiles} value="1" />{L_SHOW_SMILES}</label>
+        <div class="checkbox"><label><input type="checkbox" id="c21" name="show_smiles"{c_show_smiles} value="1" />{L_SHOW_SMILES}</label></div>
 	<!-- END s_show_smiles -->
 
 	<!-- BEGIN s_post_icon -->
-	<label class="checkbox"><input type="checkbox" id="c22" name="post_icon"{c_post_icon} value="1" />{L_POST_ICON}</label>
+        <div class="checkbox"><label><input type="checkbox" id="c22" name="post_icon"{c_post_icon} value="1" />{L_POST_ICON}</label></div>
 	<!-- END s_post_icon -->
 
 	<!-- BEGIN s_advertising -->
-	<label class="checkbox"><input type="checkbox" id="c23" name="advertising"{c_advertising} value="1" />{L_ADVERTISING}</label>
+        <div class="checkbox"><label><input type="checkbox" id="c23" name="advertising"{c_advertising} value="1" />{L_ADVERTISING}</label></div>
 	<!-- END s_advertising -->
 
 	<hr />
@@ -188,3 +207,5 @@
 	</div>
 	
 </form>
+    </div>
+</div>
