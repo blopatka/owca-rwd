@@ -70,7 +70,7 @@
 		<td><span class="gen"><b>{detail_list.MODID}</b></span></td>
 		<td><span class="gensmall">{detail_list.DATE}</span></td>
 		<td><span class="gensmall">{detail_list.REASON}</span></td>
-		<td><span class="gensmall">{detail_list.ACTION}</span></td>
+		<td><span class="gensmall">{detail_list.EDIT_URL}<!-- BEGIN admin -->{detail_list.DETAIL_URL}<!-- END admin --></span></td>
 	</tr>
 <!-- END detail_list -->
 <!-- BEGIN archive -->
@@ -92,7 +92,7 @@
 		<td><span class="gen"><b>{archive_list.MODID}</b></span></td>
 		<td><span class="gensmall">{archive_list.DATE}</span></td>
 		<td><span class="gensmall">{archive_list.REASON}</span></td>
-		<td><span class="gensmall">{archive_list.ACTION}</span></td>
+		<td><span class="gensmall">{archive_list.EDIT_URL}<!-- BEGIN admin -->{archive_list.DELETE_URL}<!-- END admin --></span></td>
 	</tr>
 <!-- END archive_list -->
 <!-- BEGIN view_modid_main -->
@@ -112,7 +112,7 @@
 		<td><span class="name"><b>{view_modid.MODID}</b></span></td>
 		<td><span class="gensmall">{view_modid.DATE}</span></td>
 		<td><span class="gensmall">{view_modid.REASON}</span></td>
-		<td><span class="gensmall">{view_modid.ACTION}</span></td>
+		<td><span class="gensmall">{view_modid.EDIT_URL}<!-- BEGIN admin -->{view_modid.DELETE_URL}<!-- END admin --></span></td>
 	</tr>
 <!-- END view_modid -->
 </table>
