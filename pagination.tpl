@@ -1,5 +1,8 @@
 <script type="text/javascript">
+var pageinitialized = false;
 $( document ).ready(function() {
+    if (pageinitialized) return;
+    pageinitialized = true;
     var pag_max = $("#pagination-max").text();
     var per_page = $("#per-page").text();
     var on_page = $("#on-page").text();
