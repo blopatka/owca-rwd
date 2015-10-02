@@ -30,8 +30,8 @@
 
 			<div class="col-md-5">
 				<input type="text" name="search_keywords" id="search_keywords" size="30" class="input-xlarge" />
-				<label class="radio"><input type="radio" name="search_terms" value="any" checked="checked" />{L_SEARCH_ANY_TERMS}</label>
-				<label class="radio"><input type="radio" name="search_terms" value="all" />{L_SEARCH_ALL_TERMS}</label>
+                <div class="radio"><label><input type="radio" name="search_terms" value="any" checked="checked">{L_SEARCH_ANY_TERMS}</label></div>
+                <div class="radio"><label><input type="radio" name="search_terms" value="all">{L_SEARCH_ALL_TERMS}</label></div>
 			</div>
 		</div>
 		<!-- END enable_search -->
@@ -69,7 +69,7 @@
 
 				<div class="row">
 					<div class="col-md-4"><label for="search_time">{L_SEARCH_PREVIOUS}:</label></div>
-					<div class="col-md-6"><select name="search_time" id="search_time">{S_TIME_OPTIONS1}</select></div>
+					<div class="col-md-6"><select name="search_time" id="search_time">{S_TIME_OPTIONS}</select></div>
 				</div>
 
 				<div class="row">
@@ -109,7 +109,7 @@
 		<div class="row">
 			<div class="col-md-6">{L_SEARCH_POST_TIME}</div>
 			<div class="col-md-3 form-inline">
-				<select name="search_time">{S_TIME_OPTIONS2}</select>
+				<select name="search_time">{S_TIME_OPTIONS}</select>
 				<input class="btn btn-default" type="submit" value="{L_SEARCH}" />
 			</div>
 		</div>
