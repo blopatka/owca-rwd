@@ -311,3 +311,7 @@ blockquote footer:before, blockquote small:before, blockquote .small:before {
 pre {
     line-height: 0.7;
 }
+
+@-moz-document url-prefix() {
+  fieldset { display: table-cell; }
+}
