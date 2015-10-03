@@ -3,6 +3,11 @@
 	$(document).ready(function(){
 		$('table').addClass('table');
 		$('table').addClass('table-bordered');
+
+        //usuniecie tabelkowych wykresow
+        $('.container > table').last().find('tbody > tr > th:last-child').remove();
+        $('.container > table').last().find('tbody > tr > td.row1:last-child').remove();
+
 	});
 //-->
 </script>
