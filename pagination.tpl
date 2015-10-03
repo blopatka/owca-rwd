@@ -18,6 +18,10 @@ $( document ).ready(function() {
     $(".show_pagina").click(function() {
         $('.s_pagina').show();
     });
+
+     $(document).on('click','.hide_s_pagina', function() {
+        $('.s_pagina').hide();
+    });
 });
 </script>
 
@@ -28,16 +32,17 @@ $( document ).ready(function() {
 <!-- BEGIN page --><li><a href="{pages.page.URL}">{pages.page.NUMBER}</a></li><!-- END page -->
 <!-- BEGIN separator --><!-- END separator -->
 <!-- BEGIN allpages -->
-<li><a class="show_pagina" name="ada"  title="{L_ALL_AVAILABLE}" style="position:relative">&laquo;&raquo;
+<li><a class="show_pagina" name="ada"  title="{L_ALL_AVAILABLE}" style="position:relative; cursor:pointer;">&laquo;&raquo;
 <!-- IF XXX > 10 -->
-
-<form role="form" action="{BASE_URL}" method="post" class="s_pagina" style="position:absolute; top:0; left:0; z-index:999; display:none">
-        <select class="pagination-select" name="start" onchange="this.form.submit();" style="height:28px;"></select>
-    </form>
-
-    <span id="pagination-max" style="display: none;">{XXX}</span>
-    <span id="per-page" style="display: none;">{XXX_PER_PAGE}</span>
-    <span id="on-page" style="display: none;">{XXX_ON_PAGE}</span>
+    <span class="s_pagina" style="position:absolute; top:0; left:0; z-index:999; display:none">
+        <form role="form" action="{BASE_URL}" method="post" class="s_pagina" >
+            <select class="pagination-select" name="start" onchange="this.form.submit();" style="height:28px;"></select>
+        </form>
+        <span class="hide_s_pagina" style="position: absolute; top: -15px; right: 0px;"><span class="glyphicon glyphicon-remove"></span></span>
+        <span id="pagination-max" style="display: none;">{XXX}</span>
+        <span id="per-page" style="display: none;">{XXX_PER_PAGE}</span>
+        <span id="on-page" style="display: none;">{XXX_ON_PAGE}</span>
+    </span>
 <!-- ENDIF -->
 
    </a></li>
