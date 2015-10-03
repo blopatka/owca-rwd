@@ -7,13 +7,28 @@ body {
 }
 
 #menu-nav .navLogo {
-    margin-top: 3px;
+    position: relative;
+    top: -6px;
 }
 
 #menu-nav .navLogo img {
     height: 36px;
     width: auto;
 }
+
+#menu-nav .container {
+    border: 0px;
+}
+
+.navbar.center .navbar-inner {
+    text-align: center;
+}
+.navbar.center .navbar-inner .nav {
+    float: none;
+    display:inline-block;
+}
+
+
 
 hr
 {
@@ -277,7 +292,7 @@ blockquote footer:before, blockquote small:before, blockquote .small:before {
 
 .postid {
     position: relative;
-    top: -50px;
+    top: -35px;
 }
 
 .vertical-aligned > div {

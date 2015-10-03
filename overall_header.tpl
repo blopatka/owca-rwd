@@ -9,10 +9,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Titillium Web:400,400italic,700,700italic&subset=latin,latin-ext'>
-    <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap.min.css?v=2" />
-    <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}?v=2" />
-	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap-theme.min.css?v=2" />
-	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/print.css?v=2"  media="print" />
+    <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap.min.css?v=3" />
+    <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}?v=3" />
+	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap-theme.min.css?v=3" />
+	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/print.css?v=3"  media="print" />
 	
     <script language="JavaScript" type="text/javascript" src="images/jsscripts.js"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/jquery-1.11.3.min.js"></script>
@@ -61,8 +61,8 @@
 
 <body>
 <!-- BEGIN header -->
-<nav id="menu-nav" class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
+<nav id="menu-nav" class="navbar navbar-default navbar-fixed-top center">
+    <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
                 <span id="private-message-count" class="badge"></span>
@@ -71,11 +71,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <!--<a href="{U_INDEX_PORTAL}" class="navbar-brand" title="{L_INDEX_PORTAL}">{SITENAME_COLOR}</a>-->
-            <a href="{U_INDEX_PORTAL}" class="pull-left navLogo" title="{L_INDEX_PORTAL}"><img src="templates/{STYLE_NAME}/images/logo.png"></a>
+            <a href="{U_INDEX_PORTAL}" class="navbar-brand navLogo" title="{L_INDEX_PORTAL}"><img src="templates/{STYLE_NAME}/images/logo.png"></a>
         </div>
-
-        <div class="collapse navbar-collapse" id="main-navbar">
+        <div class="collapse navbar-collapse navbar-inner" id="main-navbar">
             <ul class="nav navbar-nav">
                 <li><a href="{U_FAQ}"><span class="glyphicon glyphicon-question-sign"></span> {L_FAQ}</a></li>
                 <li><a href="{U_SEARCH}"><span class="glyphicon glyphicon-search"></span> {L_SEARCH}</a></li>
