@@ -301,3 +301,9 @@ blockquote footer:before, blockquote small:before, blockquote .small:before {
     float: none;
     margin-right: -4px;
 }
+
+.poster-avatar img {
+    height: 20px;
+    width: auto;
+    border-radius: 3px;
+}
