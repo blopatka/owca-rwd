@@ -279,3 +279,10 @@ blockquote footer:before, blockquote small:before, blockquote .small:before {
     position: relative;
     top: -50px;
 }
+
+.vertical-aligned > div {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+    margin-right: -4px;
+}

@@ -30,7 +30,7 @@
         <div class="row">
             <div class="col-md-12">
                 <!-- BEGIN searchresults -->
-                <div class="row panel-primary panel-row">
+                <div class="row panel-primary panel-row vertical-aligned">
                     <div class="col-sm-2 col-xs-4"><span class="forumlink"><a href="{searchresults.U_VIEW_FORUM}" class="forumlink"{searchresults.FORUM_COLOR}>{searchresults.FORUM_NAME}</a></span></div>
                     <div class="col-sm-4 col-xs-8">
                         <div class="row">

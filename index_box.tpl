@@ -17,7 +17,7 @@
             <div class="col-md-12">
             <!-- END tablehead -->
             <!-- BEGIN forumrow -->
-                <div  class="row panel-primary panel-row">
+                <div  class="row panel-primary panel-row vertical-aligned">
                     <div class="col-md-7 col-xs-6">
                         <div class="row">
                             <div class="col-md-1 hidden-xs hidden-sm col-no-gutter text-center"><img src="{catrow.forumrow.FORUM_FOLDER_IMG}" alt="" title="{catrow.forumrow.L_FORUM_FOLDER_ALT}"></div>
