@@ -99,7 +99,7 @@ function bbcode(strFore, strAft)
 		<input type="hidden" name="t" value="{quick_reply.TOPIC_ID}" />
 		<input type="hidden" name="last_msg" value="{quick_reply.LAST_MESSAGE}" />
 	</div>
-	<div class="panel-footer right">
+	<div class="panel-footer left">
 		<input type="submit" name="post" class="btn btn-primary" value="{L_SUBMIT}" />
 		<input type="submit" name="preview" class="btn btn-default" value="{L_PREVIEW}" />
 	</div>
