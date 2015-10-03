@@ -23,7 +23,7 @@
                             <div class="col-md-1 hidden-xs hidden-sm col-no-gutter text-center"><img src="{catrow.forumrow.FORUM_FOLDER_IMG}" alt="" title="{catrow.forumrow.L_FORUM_FOLDER_ALT}"></div>
                             <div class="col-md-11 col-sm-12">
                                 <a href="{catrow.forumrow.U_VIEWFORUM}" {catrow.forumrow.FORUM_COLOR}>{catrow.forumrow.FORUM_NAME}</a>&nbsp;<small>{catrow.forumrow.LAST_POSTMSG}</small><br />
-                                <span class="genmed">{catrow.forumrow.FORUM_DESC}</span>
+                                <small>{catrow.forumrow.FORUM_DESC}</small>
 
                                 <span class="hidden-xs">
                                     <small>
