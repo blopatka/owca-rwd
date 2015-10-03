@@ -307,3 +307,7 @@ blockquote footer:before, blockquote small:before, blockquote .small:before {
     width: auto;
     border-radius: 3px;
 }
+
+pre {
+    line-height: 0.7;
+}
