@@ -204,7 +204,7 @@ var img_addr = '{IMG_ADDR}';
 <br />
 
 {PAGINATION}
-
+<ul class="breadcrumb"><li><a href="{U_INDEX}">{L_INDEX}</a></li>{NAV_CAT_DESC}</ul>
 {QUICKREPLY_OUTPUT}
 
 <div class="well well-sm">
@@ -244,8 +244,6 @@ var img_addr = '{IMG_ADDR}';
 {JUMPBOX}
 <br clear="all" />
 </div>
-
-<ul class="breadcrumb"><li><a href="{U_INDEX}">{L_INDEX}</a></li>{NAV_CAT_DESC}</ul>
 
 <script language="Javascript" type="text/javascript">
 <!--
