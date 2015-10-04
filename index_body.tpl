@@ -91,19 +91,21 @@
 </div>
 <!-- END disable_viewonline -->
 
-{SHOUTBOX_DISPLAY}
-
 <div class="row">
-	<div class="col-md-9 hidden-sm hidden-xs">
+	<div class="col-xs-6 col-md-9 ">
 		<ul class="list-inline">
-			<li><img src="{FOLDER_NEW_IMG}" alt="{L_NEW_POSTS}" />{L_NEW_POSTS}</li>
-			<li><img src="{FOLDER_IMG}" alt="{L_NO_NEW_POSTS}" />{L_NO_NEW_POSTS}</li>
-			<li><img src="{FOLDER_LOCKED_IMG}" alt="{L_FORUM_LOCKED}" />{L_FORUM_LOCKED}</li>
+            <span class="hidden-sm hidden-xs list-inline">
+                <li><img src="{FOLDER_NEW_IMG}" alt="{L_NEW_POSTS}" />{L_NEW_POSTS}</li>
+                <li><img src="{FOLDER_IMG}" alt="{L_NO_NEW_POSTS}" />{L_NO_NEW_POSTS}</li>
+                <li><img src="{FOLDER_LOCKED_IMG}" alt="{L_FORUM_LOCKED}" />{L_FORUM_LOCKED}</li>
+            </span>
+            <li><a href="http://pentax.org.pl/topics_anywhere.php?mode=show&out=rss2.0&f=a&n=10&sfn=y&r=y&sr=y&b=non&lpb=0&lpd=0"><img src="http://pentax.org.pl/templates/pentaskin/RSS.gif" alt="RSS"> RSS</a></li>
+            <li><a href="http://pentax.org.pl/kontakt.php"><span class="glyphicon glyphicon-envelope"></span> Kontakt</a></li>
 		</ul>
 	</div>
 	
 	<!-- BEGIN change_style -->
-	<div class="col-md-3 right">
+	<div class="col-xs-6 col-md-3 right">
 		<form method="post" action="{T_SELECT_ACTION}" name="quickchange">
 		<label>{change_style.L_CHANGE_STYLE}: 
 		{change_style.TEMPLATE_SELECT}</label>
@@ -111,3 +113,4 @@
 	</div>
 	<!-- END change_style -->
 </div>
+{SHOUTBOX_DISPLAY}
