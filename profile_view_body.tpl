@@ -1,21 +1,92 @@
 <a href="{U_INDEX}" class="nav">{L_INDEX}</a>
 
-<h5>{L_VIEWING_PROFILE}</h5>
+<div class="row">
+    <div class="panel-heading">{L_VIEWING_PROFILE}</div>
+    <div class="col-sm-6">
+	<div class="panel panel-default">
+        <div class="panel-heading">{L_AVATAR}</div>
+		<div class="panel-body">
+        {AVATAR_IMG}<br /><span>{POSTER_RANK}{CUSTOM_RANK}{RANK_IMAGE}</span>
+        </div>
+    </div>
+	<!-- BEGIN signature -->
+    <div class="panel panel-default">
+        <div class="panel-heading">{signature.L_SIGNATURE}</div>
+		<div class="panel-body">
+            {signature.SIGNATURE}
+        </div>
+    </div>
+    <!-- END signature -->
+    <div class="panel panel-default" >
+        <div class="panel-heading">{L_CONTACT} {USERNAME}</div>
+		<div class="panel-body">
+        <div class="row">
+			<div class="col-md-6">{L_EMAIL_ADDRESS}:</div>
+			<div class="col-md-2">{EMAIL}</div>
+		</div>
 
-<ul class="nav nav-tabs">
-	<li class="active"><a href="#tab_info" data-toggle="tab"><span class="glyphicon glyphicon-user"></span></a></li>
-	<li><a href="#tab_contact" data-toggle="tab"><span class="glyphicon glyphicon-envelope" title="{L_CONTACT} {USERNAME}"></span></a></li>
-	<li><a href="#tab_avatar" data-toggle="tab">{L_AVATAR}</a></li>
-	<!-- BEGIN signature --><li><a href="#tab_sig" data-toggle="tab">{signature.L_SIGNATURE}</a></li><!-- END signature -->
-	<!-- BEGIN signature_image --><li><a href="#tab_sigimage" data-toggle="tab">{signature_image.L_SIGNATURE}</a></li><!-- END signature_image -->
-	<!-- BEGIN photo --><li><a href="#tab_photo" data-toggle="tab">{photo.L_PHOTO}</a></li><!-- END photo -->
-	<!-- BEGIN level --><li><a href="#tab_level" data-toggle="tab">{L_LEVEL}</a></li><!-- END level -->
-</ul>
-
-<div class="tab-content">
-	<div class="tab-pane active" id="tab_info">
 		<div class="row">
-		<div class="col-md-6">
+			<div class="col-md-6">{L_PM}:</div>
+			<div class="col-md-2">{PM}</div>
+		</div>
+
+		<!-- BEGIN msn -->
+		<div class="row">
+			<div class="col-md-6">{L_MESSENGER}:</div>
+			<div class="col-md-2">{MSN}</div>
+		</div>
+		<!-- END msn -->
+
+		<!-- BEGIN yahoo -->
+		<div class="row">
+			<div class="col-md-6">{L_YAHOO}:</div>
+			<div class="col-md-2">{YIM_IMG}</div>
+		</div>
+		<!-- END yahoo -->
+
+		<!-- BEGIN aim -->
+		<div class="row">
+			<div class="col-md-6">{L_AIM}</div>
+			<div class="col-md-2">
+				<div style="position:relative;height:18px">
+					<div style="position:absolute">{AIM_IMG}</div>
+					<div style="position:absolute;left:3px;top:-1px">{AIM_STATUS_IMG}</div>
+				</div>
+			</div>
+		</div>
+		<!-- END aim -->
+
+		<!-- BEGIN icq -->
+		<div class="row">
+			<div class="col-md-6">{L_ICQ_NUMBER}:</div>
+			<div class="col-md-2">
+				<div style="position:relative;height:18px">
+					<div style="position:absolute">{ICQ_IMG}</div>
+					<div style="position:absolute;left:3px;top:-1px">{ICQ_STATUS_IMG}</div>
+				</div>
+			</div>
+		</div>
+		<!-- END icq -->
+        <!-- BEGIN list -->
+        <div class="row">
+            <div class="col-md-6">{L_USERGROUPS}:</div>
+			<div class="col-md-2">
+                <ul>
+                <!-- BEGIN groups -->
+                    <li><a href="{list.groups.U_GROUP_NAME}" {list.groups.GROUP_COLOR}{list.groups.GROUP_STYLE}>{list.groups.L_GROUP_NAME}</a></li>
+                <!-- END groups -->
+                </ul>
+            </div>
+		</div>
+        <!-- END list -->
+        </div>
+	</div>
+</div>
+	<div class="col-sm-6">
+    <div class="panel panel-default" >
+		<div class="panel-body">
+        <div class="row">
+		<div>
 		<table class="table table-bordered table-condensed horizontal-table">
 			<tr>
 				<th>{L_JOINED}:</th>
@@ -25,7 +96,7 @@
 			<!-- BEGIN last_login -->
 			<tr>
 				<th>{L_LAST_VISIT}:</th>
-				<td><time>{LAST_VISIT}</time><span class="gensmall">{LAST_ACTIVITY_TIME}</span>{USER_ONLINE}</td>
+				<td><time>{LAST_VISIT}</time><span class="gensmall">{LAST_ACTIVITY_TIME}</span>{USER_ONLINE_TXT}</td>
 			</tr>
 			<!-- END last_login -->
 
@@ -90,22 +161,6 @@
 			</tr>
 			<!-- END switch_upload_limits -->
 
-			<!-- BEGIN list -->
-			<tr>
-				<th>{L_USERGROUPS}:</th>
-				<td>
-					<ul>
-					<!-- BEGIN groups -->
-						<li><a href="{list.groups.U_GROUP_NAME}" {list.groups.GROUP_COLOR}{list.groups.GROUP_STYLE}>{list.groups.L_GROUP_NAME}</a></li>
-					<!-- END groups -->
-					</ul>
-				</td>
-			</tr>
-			<!-- END list -->
-		</table>
-		</div>
-		<div class="col-md-6">
-		<table class="table table-bordered table-condensed horizontal-table">
 			<!-- BEGIN custom_fields -->
 			<tr>
 				<th>{custom_fields.DESC}:</th>
@@ -157,92 +212,60 @@
 		</table>
 		</div>
 		</div>
+        </div>
 	</div>
-	
-	<div class="tab-pane" id="tab_contact">
-		<div class="row">
-			<div class="col-md-6">{L_EMAIL_ADDRESS}:</div>
-			<div class="col-md-2">{EMAIL}</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-6">{L_PM}:</div>
-			<div class="col-md-2">{PM}</div>
-		</div>
-
-		<!-- BEGIN msn -->
-		<div class="row">
-			<div class="col-md-6">{L_MESSENGER}:</div>
-			<div class="col-md-2">{MSN}</div>
-		</div>
-		<!-- END msn -->
-
-		<!-- BEGIN yahoo -->
-		<div class="row">
-			<div class="col-md-6">{L_YAHOO}:</div>
-			<div class="col-md-2">{YIM_IMG}</div>
-		</div>
-		<!-- END yahoo -->
-
-		<!-- BEGIN aim -->
-		<div class="row">
-			<div class="col-md-6">{L_AIM}</div>
-			<div class="col-md-2">
-				<div style="position:relative;height:18px">
-					<div style="position:absolute">{AIM_IMG}</div>
-					<div style="position:absolute;left:3px;top:-1px">{AIM_STATUS_IMG}</div>
-				</div>
-			</div>
-		</div>
-		<!-- END aim -->
-
-		<!-- BEGIN icq -->
-		<div class="row">
-			<div class="col-md-6">{L_ICQ_NUMBER}:</div>
-			<div class="col-md-2">
-				<div style="position:relative;height:18px">
-					<div style="position:absolute">{ICQ_IMG}</div>
-					<div style="position:absolute;left:3px;top:-1px">{ICQ_STATUS_IMG}</div>
-				</div>
-			</div>
-		</div>
-		<!-- END icq -->
-	</div>
-	
-	<div class="tab-pane" id="tab_avatar">{AVATAR_IMG}<br /><span>{POSTER_RANK}{CUSTOM_RANK}{RANK_IMAGE}</span></div>
-	<!-- BEGIN signature --><div class="tab-pane" id="tab_sig">{signature.SIGNATURE}</div><!-- END signature -->
-	<!-- BEGIN signature_image --><div class="tab-pane" id="tab_sigimage">{signature_image.SIGNATURE}{signature_image.SIG_IMAGE}</div><!-- END signature_image -->
-	<!-- BEGIN photo --><div class="tab-pane" id="tab_photo">{photo.PHOTO_IMG}</div><!-- END photo -->
+    </div>
+    <div class="col-xs-12">
+	<!-- BEGIN signature_image -->
+    <div class="panel panel-default">
+        <div class="panel-heading">{signature_image.L_SIGNATURE}</div>
+        <div class="panel-body">
+            {signature_image.SIGNATURE}{signature_image.SIG_IMAGE}
+        </div>
+    </div>'
+    <!-- END signature_image -->
+	<!-- BEGIN photo -->
+    <div class="panel panel-default">
+        <div class="panel-heading">{photo.L_PHOTO}</div>
+        <div class="panel-body">
+            {photo.PHOTO_IMG}
+        </div>
+    </div>
+    <!-- END photo -->
 
 	<!-- BEGIN level -->
-	<div class="tab-pane" id="tab_level">
-		{L_LEVEL}: <b>{LEVEL}</b><br />
+    <div class="panel panel-default">
+        <div class="panel-heading">{L_LEVEL}</div>
+        <div class="panel-body">
+            {L_LEVEL}: <b>{LEVEL}</b><br />
 
-        HP: <b>{HP}</b>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="{HP_WIDTH}" aria-valuemin="0" aria-valuemax="100" style="width: {HP_WIDTH}%;">
-                <span class="sr-only">{HP_WIDTH}%</span>
+            HP: <b>{HP}</b>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="{HP_WIDTH}" aria-valuemin="0" aria-valuemax="100" style="width: {HP_WIDTH}%;">
+                    <span class="sr-only">{HP_WIDTH}%</span>
+                </div>
             </div>
-        </div>
 
-        MP: <b>{MP}</b>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="{MP_WIDTH}" aria-valuemin="0" aria-valuemax="100" style="width: {MP_WIDTH}%;">
-                <span class="sr-only">{MP_WIDTH}%</span>
+            MP: <b>{MP}</b>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="{MP_WIDTH}" aria-valuemin="0" aria-valuemax="100" style="width: {MP_WIDTH}%;">
+                    <span class="sr-only">{MP_WIDTH}%</span>
+                </div>
             </div>
-        </div>
 
-        EXP: <b>{EXP}</b>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="{EXP_WIDTH}" aria-valuemin="0" aria-valuemax="100" style="width: {EXP_WIDTH}%;">
-                <span class="sr-only">{EXP_WIDTH}%</span>
+            EXP: <b>{EXP}</b>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="{EXP_WIDTH}" aria-valuemin="0" aria-valuemax="100" style="width: {EXP_WIDTH}%;">
+                    <span class="sr-only">{EXP_WIDTH}%</span>
+                </div>
             </div>
-        </div>
-	</div>
+	   </div>
+    </div>
 	<!-- END level -->
 </div>
+</div>
 
-<p class="well noprint">
+<div class="well col-xs-12 noprint">
 	<!-- BEGIN personal_gallery -->
 	<a href="{U_PERSONAL_GALLERY}" class="genmed">{L_PERSONAL_GALLERY}</a>
 	<!-- END personal_gallery -->
@@ -265,7 +288,7 @@
 	<!-- BEGIN topic_spy -->
 	<a href="{U_TOPIC_SPY}">{L_TOPIC_SPY}</a>
 	<!-- END topic_spy -->
-</p>
+</div>
 {JUMPBOX}<br clear="all" />
 
 <script language="Javascript" type="text/javascript">
