@@ -31,11 +31,13 @@
 
 <div class="row right noprint">
 	<!-- BEGIN switch_user_logged_out -->
-	<form method="post" action="{S_LOGIN_ACTION}">
-		<input class="input-small" type="text" name="username" size="8" placeholder="nick"/>
-		<input class="input-small" type="password" name="password" size="8" />
-		<!-- BEGIN switch_allow_autologin --><input type="checkbox" name="autologin" /><!-- END switch_allow_autologin -->
-		<input type="submit" class="btn btn-default" name="login" value="{L_LOGIN}" />
+	<form class="form-inline col-xs-12 col-sm-6 col-sm-offset-6" method="post" action="{S_LOGIN_ACTION}">
+		<div class="col-xs-4"><input class="form-control" type="text" name="username" size="8" placeholder="{L_USERNAME}"/></div>
+		<div class="col-xs-4"><input class="form-control" type="password" name="password" size="8" placeholder="{L_PASSWORD}"/></div>
+		<div class="col-xs-4">
+            <!-- BEGIN switch_allow_autologin --><input type="checkbox" name="autologin" title="{L_AUTO_LOGIN}"/><!-- END switch_allow_autologin -->
+            <input type="submit" class="btn btn-default btn-sm" name="login" value="{L_LOGIN}" />
+        </div>
 	</form>
 	<!-- END switch_user_logged_out -->
 </div>
