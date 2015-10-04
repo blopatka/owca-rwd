@@ -180,10 +180,9 @@ border: 3px double gray;
 
 .signature {
     color: gray;
-}
-
-.signature.breadcrumb {
-    margin: 5px 0 0 0;
+    border-top: 1px solid gray;
+    margin-top: 15px;
+    padding: 5px 5px 0px 5px;
 }
 
 .horizontal-table th
@@ -218,8 +217,8 @@ width: 100%;
 td.row1, td.row2 {
     background-color: #FEFEF9;
     border-bottom: 1px solid lightgrey;
+    padding: 0 5px;
 }
-
 
 .container {
     background-color: white;
@@ -246,6 +245,7 @@ td.row1, td.row2 {
 .panel-row {
     border-bottom-width: 1px;
     border-bottom-style: solid;
+    padding: 5px 0;
 }
 
 .panel-row:last-of-type {
