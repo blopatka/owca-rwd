@@ -26,7 +26,7 @@ Jeśli jesteś *zarejestrowanym użytkownikiem* musisz odpowiedzieć w tym temac
 
 <!-- BEGIN quote_username_open --></span>
 <blockquote>
-  <small><cite>{USERNAME}</cite> {L_WROTE}:</small>
+    <div><b>{USERNAME} {L_WROTE}:</b></div>
 <!-- END quote_username_open -->
 <!-- BEGIN quote_open -->
 <blockquote>
