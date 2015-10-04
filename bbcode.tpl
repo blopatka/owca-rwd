@@ -30,7 +30,7 @@ Jeśli jesteś *zarejestrowanym użytkownikiem* musisz odpowiedzieć w tym temac
 <!-- END quote_username_open -->
 <!-- BEGIN quote_open -->
 <blockquote>
-  <small>{L_QUOTE}</small>
+  <div><b>{L_QUOTE}</b></div>
 <!-- END quote_open -->
 <!-- BEGIN quote_close -->
 </blockquote>
