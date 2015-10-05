@@ -30,7 +30,7 @@
 		<!-- BEGIN switch_edit_profile -->
 		<tr>
 			<td>{L_EMAIL_ADDRESS}: *</td>
-			<td><input type="text" name="email1" class="form-control" maxlength="255" value="{EMAIL}" /></td>
+			<td><input type="text" name="email" class="form-control" maxlength="255" value="{EMAIL}" /></td>
 		</tr>
 
 		<tr>
