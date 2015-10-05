@@ -13,7 +13,7 @@
     "@brand-danger": "#d9534f",
     "@body-bg": "#656565",
     "@text-color": "@gray-dark",
-    "@link-color": "@brand-primary",
+    "@link-color": "#444444",
     "@link-hover-color": "darken(@link-color, 15%)",
     "@link-hover-decoration": "underline",
     "@font-family-sans-serif": "'Titillium Web', Arial, sans-serif",
@@ -430,5 +430,5 @@
     "scrollspy.js",
     "transition.js"
   ],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=0ff8fe24e9d7eaa2b1f9"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=02bb3c17038782de7eae"
 }
