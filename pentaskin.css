@@ -224,9 +224,9 @@ td.row1, td.row2 {
     padding: 0 5px;
 }
 
-.container {
+body > .container, body > .container-fluid {
     background-color: white;
-    border: 10px solid white;
+    border: 10px solid white;	
 
 }
 
