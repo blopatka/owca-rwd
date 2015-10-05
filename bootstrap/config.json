@@ -14,7 +14,7 @@
     "@body-bg": "#656565",
     "@text-color": "@gray-dark",
     "@link-color": "#444444",
-    "@link-hover-color": "darken(@link-color, 15%)",
+    "@link-hover-color": "#ff6c00",
     "@link-hover-decoration": "underline",
     "@font-family-sans-serif": "'Titillium Web', Arial, sans-serif",
     "@font-family-serif": "Georgia, \"Times New Roman\", Times, serif",
@@ -132,7 +132,7 @@
     "@screen-md-max": "(@screen-lg-min - 1)",
     "@grid-columns": "12",
     "@grid-gutter-width": "14px",
-    "@grid-float-breakpoint": "@screen-md-min",
+    "@grid-float-breakpoint": "@screen-lg-min",
     "@grid-float-breakpoint-max": "(@grid-float-breakpoint - 1)",
     "@container-tablet": "(720px + @grid-gutter-width)",
     "@container-sm": "@container-tablet",
@@ -430,5 +430,5 @@
     "scrollspy.js",
     "transition.js"
   ],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=02bb3c17038782de7eae"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=5cdff8caa62de6fa36e2"
 }

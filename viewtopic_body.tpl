@@ -215,7 +215,7 @@ var img_addr = '{IMG_ADDR}';
 	<span class="glyphicon glyphicon-wrench"></span> <span class="caret"></span>
 	</button>
 	<div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-		<div class="row noprint gensmall">
+		<div class="col-xs-12 row noprint gensmall">
 			<div class="col-md-6">{S_AUTH_LIST}</div>
 			<div class="col-md-6">
 				<!-- BEGIN next_unread_posts -->
@@ -233,7 +233,7 @@ var img_addr = '{IMG_ADDR}';
 	</div>
 </div>
 
-<div class="col-md-3 right">{S_TOPIC_ADMIN}<br />[<span class="glyphicon glyphicon-eye-close"></span>{IGNORE_STATUS}]</div>
+<div class="col-md-3 right">{S_TOPIC_ADMIN}<br />[<span class="glyphicon glyphicon-eye-close"></span><a class="btn btn-default btn-xs" href="{IGNORE_STATUS_URL}">X</a>]</div>
 </div>
 
 <form method="post" action="{S_POST_DAYS_ACTION}" class="col-md-6">

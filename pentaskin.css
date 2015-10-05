@@ -196,6 +196,10 @@ width: 10%;
 color: white;
 }
 
+.panel-body {
+    overflow: hidden;
+}
+
 .config_header
 {
 background-color: #F5F5F5;
@@ -314,4 +318,8 @@ pre {
 
 @-moz-document url-prefix() {
   fieldset { display: table-cell; }
+}
+
+a.postlink {
+    color: #e68686;
 }

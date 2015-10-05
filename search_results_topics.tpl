@@ -52,7 +52,7 @@
                                 <input type="checkbox" name="list_ignore[]" value="{searchresults.it.TOPIC_ID}" />
                                 <!-- END it -->
                             </div>
-                            <div class="col-sm-12 visible-xs">
+                            <div class="col-xs-12 visible-xs">
                                 <span>{searchresults.LAST_POST_TIME}&nbsp;{searchresults.LAST_POST_AUTHOR} {searchresults.LAST_POST_IMG}</span>
                             </div>
                         </div>

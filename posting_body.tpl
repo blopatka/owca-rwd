@@ -23,7 +23,7 @@
 {POST_PREVIEW_BOX}
 {ERROR_BOX}
 
-<form action="{S_POST_ACTION}" method="post" name="post" class="panel panel-info" onsubmit="return checkForm(this)" {S_FORM_ENCTYPE}>
+<form action="{S_POST_ACTION}" method="post" name="post" class="panel panel-primary" onsubmit="return checkForm(this)" {S_FORM_ENCTYPE}>
 <div class="panel-heading">{L_POST_A}</div>
 <div class="panel-body">
 	<!-- BEGIN switch_username_select -->
@@ -342,8 +342,8 @@
 	{S_HIDDEN_FORM_FIELDS}
 
 	<div class="panel-footer center">
-		<input type="submit" accesskey="s" tabindex="6" name="post" class="btn btn-success" value="{L_SUBMIT}" />
-		<input type="submit" tabindex="5" name="preview" class="btn btn-info" value="{L_PREVIEW}" />
+		<input type="submit" accesskey="s" tabindex="6" name="post" class="btn btn-primary" value="{L_SUBMIT}" />
+		<input type="submit" tabindex="5" name="preview" class="btn btn-default" value="{L_PREVIEW}" />
 	</div>
 </form>
 

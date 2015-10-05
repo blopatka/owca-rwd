@@ -22,8 +22,8 @@
                         <div class="row">
                             <div class="col-md-1 hidden-xs hidden-sm col-no-gutter text-center"><img src="{catrow.forumrow.FORUM_FOLDER_IMG}" alt="" title="{catrow.forumrow.L_FORUM_FOLDER_ALT}"></div>
                             <div class="col-md-11 col-sm-12">
-                                <a href="{catrow.forumrow.U_VIEWFORUM}" {catrow.forumrow.FORUM_COLOR}>{catrow.forumrow.FORUM_NAME}</a>&nbsp;<small>{catrow.forumrow.LAST_POSTMSG}</small><br />
-                                <small>{catrow.forumrow.FORUM_DESC}</small>
+                                <b><a href="{catrow.forumrow.U_VIEWFORUM}" {catrow.forumrow.FORUM_COLOR}>{catrow.forumrow.FORUM_NAME}</a></b> {catrow.forumrow.LAST_POSTMSG}<br />
+                                <small><em>{catrow.forumrow.FORUM_DESC}</em></small>
 
                                 <span class="hidden-xs">
                                     <small>
