@@ -242,7 +242,7 @@ td.row1, td.row2 {
     background-color: #990000;
 }
 
-.post-panel .panel-heading {
+.post-panel .panel-heading, .post-panel .panel-footer {
     padding: 5px;
 }
 

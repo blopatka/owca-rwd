@@ -37,7 +37,7 @@ var img_addr = '{IMG_ADDR}';
                 <span class="poster-name"><b>{postrow.POSTER_NAME}</b><!-- BEGIN gender -->&nbsp;<img src="{postrow.gender.GENDER}" alt="" border="0"><!-- END gender --></span>
                 <span class="visible-xs-inline">{postrow.POSTER_JOINED}</span>
             </div>
-            <p class="col-sm-10">
+            <div class="col-sm-10">
                 {postrow.ICON}
                 <!-- BEGIN icon_comment --><a href="{postrow.icon_comment.U_COMMENT_POST}"><span class="glyphicon glyphicon-comment"></span></a><!-- END icon_comment -->
                 <a href="{postrow.U_MINI_POST}"><span class="glyphicon glyphicon-file"></span></a>
@@ -72,7 +72,7 @@ var img_addr = '{IMG_ADDR}';
 
                     <!-- IF postrow.POST_EXPIRE --><br />{postrow.POST_EXPIRE}<!-- ENDIF -->
                 </span>
-            </p>
+            </div>
         </div>
     </div>
     <div class="panel-body" {postrow.QUOTE_USERNAME}>
@@ -176,7 +176,7 @@ var img_addr = '{IMG_ADDR}';
 
     <div class="panel-footer">
         <div class="row">
-            <div class="btn-group">
+            <div class="col-xs-12 btn-group">
                     <!-- BEGIN top --><a href="#top" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-arrow-up"></span></a><!-- END top -->
                     <!-- IF postrow.PROFILE_REAL_URL -->
                     <a class="btn btn-default btn-sm" href="{postrow.PROFILE_REAL_URL}">profil</a>
