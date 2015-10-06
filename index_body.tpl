@@ -17,17 +17,21 @@
 	<div class="col-sm-6 right">
 		<!-- BEGIN switch_unread -->
 		<a href="{U_SEARCH_NEW}" class="pull-right">{L_SEARCH_NEW} <span class="label label-primary">{COUNT_NEW_POSTS}</span></a>
-		<br clear="all" />
+		<br>
 		<!-- END switch_unread -->
          <!-- BEGIN switch_user_logged_in -->
         <a href="{U_SEARCH_LASTVISIT}">{L_SEARCH_LASTVISIT}</a>
+        <br clear="all" />
+        <a href="{U_SEARCH_SELF}">{L_SEARCH_SELF}</a>
         <!-- END switch_user_logged_in -->
 	</div>
 </div>
 
+<!--
 <div class="row">
-    <ul class="breadcrumb"><li><a href="{U_INDEX}">{L_INDEX}</a></li>{NAV_CAT_DESC}</ul>
+    <div class="breadcrumb cat-nav"><a href="{U_INDEX}">{L_INDEX}</a>{NAV_CAT_DESC}</div>
 </div>
+-->
 
 <div class="row right noprint">
 	<!-- BEGIN switch_user_logged_out -->
@@ -45,11 +49,9 @@
 {BOARD_INDEX}
 
 <div class="row">
-    <ul class="nav nav-pills noprint">
+    <ul class="nav nav-pills noprint pull-right">
         <li><a href="{U_SEARCH_UNANSWERED}">{L_SEARCH_UNANSWERED}</a></li>
         <!-- BEGIN switch_user_logged_in -->
-        <li><a href="{U_SEARCH_SELF}">{L_SEARCH_SELF}</a></li>
-        <li><a href="{U_SEARCH_LASTVISIT}">{L_SEARCH_LASTVISIT}</a></li>
         <li><a href="{U_MARK_READ}">{L_MARK_FORUMS_READ}</a></li>
         <!-- END switch_user_logged_in -->
 

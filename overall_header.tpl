@@ -18,6 +18,7 @@
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/bootstrap.min.js" ></script>
 	<script type="text/javascript" src="templates/{STYLE_NAME}/js/scripts.js"></script>
+     <script type="text/javascript" src="templates/{STYLE_NAME}/js/modernizr.min.js"></script>
     <!-- END overlib -->
 
 	<script language="Javascript" type="text/javascript">
@@ -28,8 +29,10 @@
 	var cdomain = '{COOKIE_DOMAIN}';
 	var csecure = '{COOKIE_SECURE}';
 	var img_addr = '{IMG_ADDR}';
-	var popover_enable = false;
-	<!-- BEGIN overlib -->var popover_enable = true;<!-- END overlib -->
+	var popover_enable = true;
+    if(Modernizr.touchevents) {
+        popover_enable = false;
+    }
 
 	<!-- BEGIN switch_enable_pm_popup -->
 	<!-- IF PRIVATE_MESSAGE_NEW_FLAG -->PopUp('{U_PRIVATEMSGS_POPUP}', 400, 225);<!-- ENDIF -->
@@ -56,6 +59,12 @@
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		})();
 	</script>
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.breadcrumb.cat-nav').find('li').contents().unwrap();
+        });
+    </script>
 
 </head>
 

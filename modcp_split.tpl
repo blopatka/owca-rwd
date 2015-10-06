@@ -1,6 +1,6 @@
-<ul class="breadcrumb">
-	<li><a href="{U_INDEX}" class="nav">{L_INDEX}</a></li>{NAV_CAT_DESC}
-</ul>
+<div class="breadcrumb cat-nav">
+	<a href="{U_INDEX}" class="nav">{L_INDEX}</a>{NAV_CAT_DESC}
+</div>
 
 <form method="post" action="{S_SPLIT_ACTION}">
 	<div class="well">

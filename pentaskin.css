@@ -195,6 +195,10 @@ text-align: left;
 width: 10%;
 }
 
+.panel {
+    margin-bottom: 5px;
+}
+
 .panel-primary .panel-heading a
 {
 color: white;
@@ -326,4 +330,9 @@ pre {
 
 a.postlink {
     color: #e68686;
+}
+
+.breadcrumb.cat-nav>li+li:before {
+    content: "";
+    padding: 0;
 }

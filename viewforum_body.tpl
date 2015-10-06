@@ -1,4 +1,4 @@
-<ul class="breadcrumb"><li><a href="{U_INDEX}">{L_INDEX}</a></li>{NAV_CAT_DESC}</ul>
+<div class="breadcrumb cat-nav"><a href="{U_INDEX}">{L_INDEX}</a>{NAV_CAT_DESC}</div>
 
 
 {BOARD_INDEX}
@@ -79,7 +79,7 @@
                                         {topicrow.NEWEST_POST_IMG}{topicrow.TOPIC_ATTACHMENT_IMG}{topicrow.TOPIC_TYPE}
 
                                         <a href="{topicrow.U_VIEW_TOPIC}" {topicrow.TOPIC_COLOR}<!-- BEGIN title_overlib --> data-toggle="popover" data-html="true" title="{topicrow.title_overlib.O_TITLE}" data-content="{topicrow.title_overlib.UNREAD_POSTS}<br /><b>{topicrow.title_overlib.L_FIRST_POST}</b><br />{topicrow.title_overlib.O_TEXT1}<!-- BEGIN last --><br /><b>{topicrow.title_overlib.L_LAST_POST}</b><br />{topicrow.title_overlib.last.O_TEXT2}<!-- END last -->"<!-- END title_overlib -->>{topicrow.TOPIC_TITLE}</a>
-                                        <span class="gensmall">{topicrow.TOPIC_TITLE_E}{topicrow.TOPIC_EXPIRE}<br />{topicrow.GOTO_PAGE}</span>
+                                    <small><em>{topicrow.TOPIC_TITLE_E}{topicrow.TOPIC_EXPIRE}<br />{topicrow.GOTO_PAGE}</em></small>
                                     </div>
                                     <div class="col-xs-12 visible-xs">
                                         <span>{topicrow.LAST_POST_TIME}&nbsp;{topicrow.LAST_POST_AUTHOR} {topicrow.LAST_POST_IMG}</span>
@@ -149,7 +149,7 @@
 </div>
 
 <div class="row">
-	<div class="col-md-6 hidden-xs"><ul class="breadcrumb"><li><a href="{U_INDEX}" class="nav">{L_INDEX}</a></li>{NAV_CAT_DESC}</ul></div>
+	<div class="col-md-6 hidden-xs"><div class="breadcrumb cat-nav"><a href="{U_INDEX}" class="nav">{L_INDEX}</a>{NAV_CAT_DESC}</div></div>
 	<div class="col-md-6 hidden-sm hidden-xs">{JUMPBOX}</div>
 </div>
 

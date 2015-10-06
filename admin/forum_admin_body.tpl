@@ -1,9 +1,9 @@
 <h1>{L_FORUM_TITLE}</h1>
 <p>{L_FORUM_EXPLAIN}</p>
 
-<ul class="breadcrumb" style="color: #FF6600;">
-	<li><a href="{S_FORUM_ACTION}" class="nav">{L_INDEX}</a></li>{NAV_CAT_DESC}
-</ul>
+<div class="breadcrumb cat-nav" style="color: #FF6600;">
+	<a href="{S_FORUM_ACTION}" class="nav">{L_INDEX}</a>{NAV_CAT_DESC}
+</div>
 
 <form method="post" action="{S_FORUM_ACTION}">
 <table class="table table-bordered table-condensed center">
