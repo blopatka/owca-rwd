@@ -93,9 +93,13 @@ a.cattitle:hover
 text-decoration: underline;
 }
 
-a.forumlink
-{
-text-decoration: none;
+a.forumlink {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a.topictitle {
+    font-weight: bold;
 }
 
 a.forumlink:hover
