@@ -1,7 +1,7 @@
 <h1>{L_FORUM_TITLE}</h1>
 <p>{L_FORUM_EXPLAIN}</p>
 
-<ul class="breadcrumb" style="color: #FF6600;">
+<ul class="breadcrumb cat-nav" style="color: #FF6600;">
 	<li><a href="{S_FORUM_ACTION}" class="nav">{L_INDEX}</a></li>{NAV_CAT_DESC}
 </ul>
 

@@ -1,4 +1,4 @@
-<ul class="breadcrumb">
+<ul class="breadcrumb cat-nav">
 	<li><a href="{U_INDEX}" class="nav">{L_INDEX}</a></li>{NAV_CAT_DESC}
 </ul>
 

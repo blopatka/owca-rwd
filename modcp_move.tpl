@@ -1,4 +1,4 @@
-<ul class="breadcrumb" style="color: #FF6600;">
+<ul class="breadcrumb cat-nav" style="color: #FF6600;">
 	<li><a href="{U_INDEX}" class="nav">{L_INDEX}</a></li>{NAV_CAT_DESC}
 </ul>
 

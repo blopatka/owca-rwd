@@ -15,7 +15,7 @@
 </div>
 <!-- END privmsg_extensions -->
 
-<ul class="breadcrumb">
+<ul class="breadcrumb cat-nav">
 	<li><a href="{U_INDEX}">{L_INDEX}</a></li>
 	<!-- BEGIN switch_not_privmsg -->{NAV_CAT_DESC}<!-- END switch_not_privmsg -->
 </ul>
