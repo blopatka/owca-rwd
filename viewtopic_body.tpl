@@ -190,7 +190,6 @@ var img_addr = '{IMG_ADDR}';
                     <!-- IF postrow.WWW_URL -->
                     <a class="btn btn-default btn-sm" href="{postrow.WWW_URL}" target="_blank">www</a>
                     <!-- ENDIF -->
-                    <!-- BEGIN aim --><a class="btn btn-default btn-sm" href="{postrow.AIM_URL}">gg <!-- IF postrow.AIM_STATUS_IMG_URL --><img src="{postrow.AIM_STATUS_IMG_URL}" style="max-height: 10px;"><!-- ENDIF --></a><!-- END aim -->
                 </div>
         </div>
     </div>
