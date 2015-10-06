@@ -1,6 +1,6 @@
-<ul class="breadcrumb cat-nav" style="color: #FF6600;">
-	<li><a href="{U_INDEX}" class="nav">{L_INDEX}</a></li>{NAV_CAT_DESC}
-</ul>
+<div class="breadcrumb cat-nav" style="color: #FF6600;">
+	<a href="{U_INDEX}" class="nav">{L_INDEX}</a>{NAV_CAT_DESC}
+</div>
 
 <h4>{MESSAGE_TITLE}</h4>
 

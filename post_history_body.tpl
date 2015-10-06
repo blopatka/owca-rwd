@@ -1,6 +1,6 @@
-<ul class="breadcrumb cat-nav">
-	<li><a href="{U_INDEX}">{L_INDEX}</a></li>{NAV_CAT_DESC}
-</ul>
+<div class="breadcrumb cat-nav">
+	<a href="{U_INDEX}">{L_INDEX}</a>{NAV_CAT_DESC}
+</div>
 
 <table class="table table-bordered table-striped center">
 	<caption>{L_POST_HISTORY_TITLE}</caption>

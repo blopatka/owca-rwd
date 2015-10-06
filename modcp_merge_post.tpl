@@ -1,6 +1,6 @@
-<ul class="breadcrumb cat-nav">
-	<li><a href="{U_INDEX}" class="nav">{L_INDEX}</a></li>{NAV_CAT_DESC}
-</ul>
+<div class="breadcrumb cat-nav">
+	<a href="{U_INDEX}" class="nav">{L_INDEX}</a>{NAV_CAT_DESC}
+</div>
 
 <form method="post" action="{S_MERGE_ACTION}">
 	<div class="panel panel-info">

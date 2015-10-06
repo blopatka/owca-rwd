@@ -15,10 +15,10 @@
 </div>
 <!-- END privmsg_extensions -->
 
-<ul class="breadcrumb cat-nav">
-	<li><a href="{U_INDEX}">{L_INDEX}</a></li>
+<div class="breadcrumb cat-nav">
+	<a href="{U_INDEX}">{L_INDEX}</a>
 	<!-- BEGIN switch_not_privmsg -->{NAV_CAT_DESC}<!-- END switch_not_privmsg -->
-</ul>
+</div>
 
 {POST_PREVIEW_BOX}
 {ERROR_BOX}

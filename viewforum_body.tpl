@@ -1,4 +1,4 @@
-<ul class="breadcrumb cat-nav"><li><a href="{U_INDEX}">{L_INDEX}</a></li>{NAV_CAT_DESC}</ul>
+<div class="breadcrumb cat-nav"><a href="{U_INDEX}">{L_INDEX}</a>{NAV_CAT_DESC}</div>
 
 
 {BOARD_INDEX}
@@ -149,7 +149,7 @@
 </div>
 
 <div class="row">
-	<div class="col-md-6 hidden-xs"><ul class="breadcrumb cat-nav"><li><a href="{U_INDEX}" class="nav">{L_INDEX}</a></li>{NAV_CAT_DESC}</ul></div>
+	<div class="col-md-6 hidden-xs"><div class="breadcrumb cat-nav"><a href="{U_INDEX}" class="nav">{L_INDEX}</a>{NAV_CAT_DESC}</div></div>
 	<div class="col-md-6 hidden-sm hidden-xs">{JUMPBOX}</div>
 </div>
 

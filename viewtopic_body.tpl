@@ -9,7 +9,7 @@ var img_addr = '{IMG_ADDR}';
 	<li class="col-sm-8"><a href="{U_VIEW_TOPIC}"{TOPIC_COLOR}>{TOPIC_TITLE}</a></li>
     <li class="next col-sm-2 hidden-xs"><a href="{U_VIEW_NEWER_TOPIC}"><span class="hidden-sm">{L_VIEW_NEXT_TOPIC}</span> &rarr;</a></li>
 </ul>
-<ul class="breadcrumb cat-nav"><li><a href="{U_INDEX}">{L_INDEX}</a></li>{NAV_CAT_DESC}</ul>
+<div class="breadcrumb cat-nav"><a href="{U_INDEX}">{L_INDEX}</a>{NAV_CAT_DESC}</div>
 
 <div class="row noprint hidden-xs">
 	<div class="col-md-3 gensmall hidden-xs">
@@ -203,7 +203,7 @@ var img_addr = '{IMG_ADDR}';
 <br />
 
 {PAGINATION}
-<ul class="breadcrumb cat-nav"><li><a href="{U_INDEX}">{L_INDEX}</a></li>{NAV_CAT_DESC}</ul>
+<div class="breadcrumb cat-nav"><a href="{U_INDEX}">{L_INDEX}</a>{NAV_CAT_DESC}</div>
 {QUICKREPLY_OUTPUT}
 
 <div class="well well-sm">

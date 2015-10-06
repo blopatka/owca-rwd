@@ -59,6 +59,12 @@
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		})();
 	</script>
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.breadcrumb.cat-nav').find('li').contents().unwrap();
+        });
+    </script>
 
 </head>
 
