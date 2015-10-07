@@ -98,10 +98,6 @@ a.forumlink {
     font-weight: bold;
 }
 
-a.topictitle {
-    font-weight: bold;
-}
-
 a.forumlink:hover
 {
 text-decoration: underline;
@@ -304,7 +300,9 @@ blockquote footer:before, blockquote small:before, blockquote .small:before {
 
 .postid {
     position: relative;
-    top: -35px;
+    top: -50px;
+    display: block;
+    height: 0px;
 }
 
 .vertical-aligned > div {
