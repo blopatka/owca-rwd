@@ -1,7 +1,7 @@
 <!-- BEGIN catrow -->
 
 <!-- BEGIN tablehead -->
-<div class="panel panel-primary">
+<div class="row panel panel-primary">
     <div class="panel-heading">
         <div class="row" onclick="HideTable('hc_{catrow.tablehead.CAT_ID}');" style="cursor: pointer" title="{L_VHIDE}">
             <div class="col-md-7 col-xs-6">{catrow.tablehead.L_FORUM}</div>
