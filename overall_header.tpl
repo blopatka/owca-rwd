@@ -9,9 +9,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Titillium Web:400,400italic,700,700italic&subset=latin,latin-ext'>
-    <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap.min.css?v=12" />
-    <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}?v=12" />
-	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/print.css?v=12"  media="print" />
+    <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap.min.css?v=13" />
+    <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}?v=13" />
+	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/print.css?v=13"  media="print" />
 	
     <script language="JavaScript" type="text/javascript" src="images/jsscripts.js"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/jquery-1.11.3.min.js"></script>
@@ -21,29 +21,40 @@
     <!-- END overlib -->
 
 	<script language="Javascript" type="text/javascript">
-	var l_empty_message = '{L_EMPTY_MESSAGE}';
-	var no_text_selected = '{L_NO_TEXT_SELECTED}';
-	var cname = '{UNIQUE_COOKIE_NAME}';
-	var cpath = '{COOKIE_PATH}';
-	var cdomain = '{COOKIE_DOMAIN}';
-	var csecure = '{COOKIE_SECURE}';
-	var img_addr = '{IMG_ADDR}';
-	var popover_enable = true;
-    if(Modernizr.touchevents) {
-        popover_enable = false;
-    }
+        var l_empty_message = '{L_EMPTY_MESSAGE}';
+        var no_text_selected = '{L_NO_TEXT_SELECTED}';
+        var cname = '{UNIQUE_COOKIE_NAME}';
+        var cpath = '{COOKIE_PATH}';
+        var cdomain = '{COOKIE_DOMAIN}';
+        var csecure = '{COOKIE_SECURE}';
+        var img_addr = '{IMG_ADDR}';
+        var popover_enable = true;
+        if(Modernizr.touchevents) {
+            popover_enable = false;
+        } else {
+            $(function() {
+                $(window).scroll(function() {
+                    var scroll = $(window).scrollTop();
+                    if (scroll >= 298) {
+                        $("body").addClass('scrolled');
+                    } else {
+                        $("body").removeClass("scrolled");
+                    }
+                });
+            });
+        }
 
-	<!-- BEGIN switch_enable_pm_popup -->
-	<!-- IF PRIVATE_MESSAGE_NEW_FLAG -->PopUp('{U_PRIVATEMSGS_POPUP}', 400, 225);<!-- ENDIF -->
-	<!-- END switch_enable_pm_popup -->
+        <!-- BEGIN switch_enable_pm_popup -->
+        <!-- IF PRIVATE_MESSAGE_NEW_FLAG -->PopUp('{U_PRIVATEMSGS_POPUP}', 400, 225);<!-- ENDIF -->
+        <!-- END switch_enable_pm_popup -->
 
-	<!-- BEGIN switch_report_popup -->
-	PopUp('{switch_report_popup.U_REPORT_POPUP}', {switch_report_popup.S_WIDTH}, {switch_report_popup.S_HEIGHT});
-	<!-- END switch_report_popup -->
+        <!-- BEGIN switch_report_popup -->
+        PopUp('{switch_report_popup.U_REPORT_POPUP}', {switch_report_popup.S_WIDTH}, {switch_report_popup.S_HEIGHT});
+        <!-- END switch_report_popup -->
 
-	<!-- BEGIN switch_enable_greeting_popup -->
-	<!-- IF GREETING_FLAG -->PopUp('{U_GREETING_POPUP}', 400, 225);<!-- ENDIF -->
-	<!-- END switch_enable_greeting_popup -->
+        <!-- BEGIN switch_enable_greeting_popup -->
+        <!-- IF GREETING_FLAG -->PopUp('{U_GREETING_POPUP}', 400, 225);<!-- ENDIF -->
+        <!-- END switch_enable_greeting_popup -->
 	</script>
 
 	<!-- stat -->
@@ -79,7 +90,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="{U_INDEX_PORTAL}" class="navbar-brand navLogo" title="{L_INDEX_PORTAL}"><img src="templates/{STYLE_NAME}/images/logo.png"></a>
+            <span class="navLogo"><a href="{U_INDEX_PORTAL}" class="navbar-brand" title="{L_INDEX_PORTAL}"></a></span>
         </div>
         <div class="collapse navbar-collapse navbar-inner" id="main-navbar">
             <ul class="nav navbar-nav">

@@ -1,23 +1,85 @@
+
 body {
-    padding-top: 50px;
+     padding-top: 50px;
 }
 
-#menu-nav {
-	border-radius: 0px 0px 4px 4px;
-}
-
-#menu-nav .navLogo {
-    position: relative;
-    top: -6px;
-}
-
-#menu-nav .navLogo img {
-    height: 36px;
-    width: auto;
+ #menu-nav {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    z-index: 999;
+     border: 0;
 }
 
 #menu-nav .container {
-    border: 0px;
+    background-color: white;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+#menu-nav .navLogo a {
+    background-image: url("/templates/pentaskin/images/logo.png");
+    background-size: 166px 36px;
+    width: 166px;
+    height: 36px;
+    display: inline-block;
+}
+
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-left: 0px;
+}
+
+@media all and (min-width: 1200px) {
+
+    body {
+        padding-top: 298px;
+    }
+
+    body.scrolled {
+        padding-top: 348px;
+    }
+
+    #menu-nav {
+        -webkit-transition: height 0.3s;
+        -moz-transition: height 0.3s;
+        -ms-transition: height 0.3s;
+        -o-transition: height 0.3s;
+        transition: height 0.3s;
+    }
+
+    #menu-nav .navbar-header {
+        text-align: center;
+        width: 100%;
+    }
+
+    .scrolled #menu-nav .navbar-header {
+        width:auto;
+    }
+
+    #menu-nav .navLogo {
+        display: inline-block;
+    }
+
+    #menu-nav .navLogo a {
+        background-image: url("/templates/pentaskin/images/mesuper.png");
+        background-size: 830px 242px;
+        width: 830px;
+        height: 242px;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+    .scrolled #menu-nav .navLogo a {
+        background-image: url("/templates/pentaskin/images/logo.png");
+        background-size: 166px 36px;
+        width: 166px;
+        height: 36px;
+    }
+
+    #menu-nav ul {
+        float: right;
+    }
+
 }
 
 .navbar.center .navbar-inner {
