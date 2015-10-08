@@ -78,22 +78,29 @@
 
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
 <!-- BEGIN header -->
-<nav id="menu-nav" class="navbar navbar-default navbar-fixed-top">
+<div class="hidden-xs hidden-sm hidden-md  big-logo">
     <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <a href="{U_INDEX_PORTAL}" title="{L_INDEX_PORTAL}"><img alt="obrazek" src="templates/{STYLE_NAME}/images/mesuper.png"/></a>
+    </div>
+</div>
+
+<nav id="menu-nav" class="navbar navbar-default" data-spy="affix" data-offset-top="0">
+  <div class="container">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
                 <span id="private-message-count" class="badge"></span>
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-            </button>
-            <span class="navLogo"><a href="{U_INDEX_PORTAL}" class="navbar-brand" title="{L_INDEX_PORTAL}"></a></span>
-        </div>
-        <div class="collapse navbar-collapse navbar-inner" id="main-navbar">
-            <ul class="nav navbar-nav">
+      </button>
+      <span class="navLogo"><a class="navbar-brand" href="{U_INDEX_PORTAL}" title="{L_INDEX_PORTAL}"><img src="templates/{STYLE_NAME}/images/logo.png" /></a></span>
+    </div>
+    <div>
+    <div class="collapse navbar-collapse navbar-inner" id="main-navbar">
+        <ul class="nav navbar-nav">
                 <li><a href="{U_FAQ}"><span class="glyphicon glyphicon-question-sign"></span> {L_FAQ}</a></li>
                 <li><a href="{U_SEARCH}"><span class="glyphicon glyphicon-search"></span> {L_SEARCH}</a></li>
                 <li><a href="{U_MEMBERLIST}"><span class="glyphicon glyphicon-list"></span> {L_MEMBERLIST}</a></li>
@@ -137,12 +144,13 @@
                 <li><a href="{switch_report_list.U_REPORT_LIST}"><span class="glyphicon glyphicon-warning"></span> {switch_report_list.L_REPORT_LIST}</a></li>
                 <!-- END switch_report_list -->
             </ul>
-        </div>
+      </div>
     </div>
+  </div>
 </nav>
 <!-- END header -->
 
-	<div class="container">
+	<div class="container main-data">
 		<!-- BEGIN body_with_loading -->
 		<div id="loading" class="center">
 			{L_PAGE_LOAD_PLEASE_WAIT}<br />
