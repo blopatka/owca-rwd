@@ -9,10 +9,6 @@ $(document).ready(function() {
     });
 
 	var navOffset = parseInt($('body').css('padding-top'));
-	$('body').scrollspy({
-	   target: '.navbar',
-		offset: navOffset + 10
-    });
 
 	$('.navbar a').click(function(event) {
 	   var scrollPos = jQuery('body').find($(this).attr('href')).offset().top - navOffset;

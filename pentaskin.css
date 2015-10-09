@@ -25,6 +25,14 @@ body {
 .big-logo .container {
     background-color: white;
 }
+
+.affix > .container {
+    margin-bottom: 13px;
+    box-shadow: 0 0 13px #a0a0a2;
+    padding-bottom: 6px;
+    background-color: #fff;
+}
+
 /* end affix style */
 
  #menu-nav {
@@ -359,4 +367,37 @@ a.postlink {
 .breadcrumb.cat-nav>li+li:before {
     content: "";
     padding: 0;
+}
+
+/* facebook style */
+.navbar-default .navbar-nav > li > a {
+    color: white !important;
+}
+
+#menu-nav .container {
+    background-color: #3b5998;
+}
+
+.panel-primary>.panel-heading {
+    color: #fff;
+    background-color: #3b5998;
+    border-color: #3b5998;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #8b9dc3;
+    border-color: #3b5998;
+}
+
+.btn-primary:hover {
+    background-color: #3b5998;
+}
+
+.panel {
+    background-color: #f7f7f7;
+}
+
+body {
+    background-color: #dfe3ee;
 }
