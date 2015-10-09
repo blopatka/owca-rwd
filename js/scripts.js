@@ -4,7 +4,7 @@ $(document).ready(function() {
 	//begin affix functions
     $('.navbar').affix({
         offset: {
-            top: function() {return $('.big-logo img').height();}
+            top: function() {return $('.big-logo').outerHeight();}
         }
     });
 

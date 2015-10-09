@@ -1,3 +1,10 @@
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('select[name="timezone"]').addClass('form-control');
+        $('textarea[name="signature"]').addClass('form-control').removeAttr("style");
+        $('input[name="photourl"]').addClass('form-control').removeAttr("size");
+    });
+</script>
 {ERROR_BOX}
 <a href="{U_INDEX}" class="nav">{L_INDEX}</a>
 
