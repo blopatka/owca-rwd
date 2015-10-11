@@ -11,7 +11,7 @@ body {
 .affix {
     top:0;
 	width: 100%;
-	z-index: 9999 !important;
+	z-index: 999 !important;
 }
 
 .navbar {
