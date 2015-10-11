@@ -1,7 +1,7 @@
 /* begin affix style - do not modify or remove or i will kill you! */
 .affix ~ .main-data {
     position: relative;
-	top: 50px;
+	top: 51px;
 }
 
 body {
@@ -26,10 +26,12 @@ body {
     background-color: white;
 }
 
-.affix > .container {
+.affix > .container, .affix-top > .container {
+    /*
     margin-bottom: 13px;
-    box-shadow: 0 0 13px #a0a0a2;
     padding-bottom: 6px;
+    */
+    box-shadow: 0 6px 13px -2px #a0a0a2;
     background-color: #fff;
 }
 
@@ -334,7 +336,7 @@ blockquote footer:before, blockquote small:before, blockquote .small:before {
 
 .postid {
     position: relative;
-    top: -50px;
+    top: -51px;
     display: block;
     height: 0px;
 }
@@ -370,6 +372,7 @@ a.postlink {
 }
 
 /* facebook style */
+/*
 .navbar-default .navbar-nav > li > a {
     color: white !important;
 }
@@ -401,3 +404,4 @@ a.postlink {
 body {
     background-color: #dfe3ee;
 }
+*/
