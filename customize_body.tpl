@@ -1,3 +1,6 @@
+<head>
+	<script type="text/javascript" src="templates/{STYLE_NAME}/js/js.cookie.js"></script>
+</head>
 <body onUnload="if (document.prefs.submit.title == 'save') window.opener.location.reload(); window.close();">
 <style type="text/css">
   @import url("templates/pentaskin/css/bootstrap.min.css");
@@ -200,6 +203,14 @@ body {
 		</div>
 	</div>
 	<!-- END s_user_display_viewonline -->
+
+    <div class="row">
+        <div class="col-md-3"><label>Forum na ca&#322;ej szeroko&#347;ci ekranu</label></div>
+        <div class="col-md-4">
+            <label class="radio-inline"><input type="radio" name="view_forum_fullwidth" value="1" onclick='Cookies.set("isFullWidth","1", {expires: 3650});'/>Tak</label>
+            <label class="radio-inline"><input type="radio" name="view_forum_fullwidth" value="0" onclick='Cookies.set("isFullWidth","0", {expires: 3650});'/>Nie</label>
+        </div>
+    </div>
 
 	<div class="panel-footer right">
 		<input type="submit" name="submit" value="{L_SUBMIT}" class="btn btn-primary" />

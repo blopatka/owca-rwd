@@ -20,13 +20,16 @@ body {
 
 .big-logo {
     border: 0 !important;
+    text-align: center;
 }
 
-.big-logo .container {
+.big-logo .container,
+.big-logo .container-fluid {
     background-color: white;
 }
 
-.affix > .container, .affix-top > .container {
+.affix > .container, .affix-top > .container,
+.affix > .container-fluid, .affix-top > .container-fluid {
     /*
     margin-bottom: 13px;
     padding-bottom: 6px;
@@ -42,7 +45,8 @@ body {
     border: 0;
 }
 
-#menu-nav .container {
+#menu-nav .container,
+#menu-nav .container-fluid{
     background-color: white;
     border-bottom: 1px solid #e7e7e7;
 }

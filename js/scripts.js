@@ -7,16 +7,6 @@ $(document).ready(function() {
             top: function() {return $('.big-logo').outerHeight();}
         }
     });
-
-	var navOffset = parseInt($('body').css('padding-top'));
-
-	$('.navbar a').click(function(event) {
-	   var scrollPos = jQuery('body').find($(this).attr('href')).offset().top - navOffset;
-		$('body,html').animate({
-		  scrollTop: scrollPos
-        }, 500, function() {});
-        return false;
-    });
     //end affix functions
 
 
