@@ -2,7 +2,7 @@
     <form id="SB_box" name="post" action="{SHOUTBOX_URL}" method="POST" target="shout_iframe">
         <div class="panel-body" id="SB_inner">
             <div class="row"><span class="cattitle"><a href="{SHOUTBOX_URL}" class="mainmenu" title="{L_ALL_MESSAGES}">ShoutBox</a></span></div>
-            <div class="row shoutbox-content"><iframe style="border-width: 1px;" name="shout_iframe" src="{SHOUTBOX_URL}" width="100%" height="{SHOUTBOX_HEIGHT}"></iframe></div>
+            <div class="row shoutbox-content"><iframe style="border-width: 1px;" name="shout_iframe" src="{SHOUTBOX_URL}" width="99.9%" height="{SHOUTBOX_HEIGHT}"></iframe></div>
             <div class="row form-group">
                 <div class="col-sm-10 col-xs-12">
                     <input class="form-control" id="shoutMsg" type="text" name="message" maxlength="{MAXLENGHT}" placeholder="{L_GG_MES}" value="" class="post" onFocus="Active(this)" onBlur="NotActive(this)">
