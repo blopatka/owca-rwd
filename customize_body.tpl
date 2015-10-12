@@ -1,12 +1,10 @@
 <head>
+    <script type="text/javascript" src="templates/{STYLE_NAME}/js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="templates/{STYLE_NAME}/js/js.cookie.js"></script>
 </head>
 <body onUnload="if (document.prefs.submit.title == 'save') window.opener.location.reload(); window.close();">
 <style type="text/css">
   @import url("templates/pentaskin/css/bootstrap.min.css");
-</style>
-<style type="text/css">
-  @import url("templates/pentaskin/css/bootstrap-theme.min.css");
 </style>
 <style>
 body {
@@ -17,6 +15,18 @@ body {
     display: none;
 }
 </style>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var isFullWidth = Cookies.get("isFullWidth");
+        if(isFullWidth == "1") {
+            $('input:radio[name="view_forum_fullwidth"]').filter('[value="1"]').attr('checked', true);
+            $('input:radio[name="view_forum_fullwidth"]').filter('[value="0"]').attr('checked', false);
+        } else {
+            $('input:radio[name="view_forum_fullwidth"]').filter('[value="0"]').attr('checked', true);
+            $('input:radio[name="view_forum_fullwidth"]').filter('[value="1"]').attr('checked', false);
+        }
+    });
+</script>
 
 <div class="panel panel-default">
 <div class="panel-heading"><h5>{L_PREFERENCES}</h5></div>

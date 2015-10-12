@@ -11,9 +11,6 @@ function refresh_username(selected_username)
 <style type="text/css">
   @import url("templates/pentaskin/css/bootstrap.min.css");
 </style>
-<style type="text/css">
-  @import url("templates/pentaskin/css/bootstrap-theme.min.css");
-</style>
 <style>
 body {
     padding: 0px !important;
