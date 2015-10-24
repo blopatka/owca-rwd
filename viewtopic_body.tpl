@@ -208,46 +208,49 @@ var img_addr = '{IMG_ADDR}';
 
 <div class="well well-sm">
 <div class="row">
-<div class="col-md-5"><a href="{U_POST_REPLY_TOPIC}" alt="{L_POST_REPLY_TOPIC}" title="{L_POST_REPLY_TOPIC}" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span> Odpowiedz</a></div>
-<div class="dropdown col-md-4 center">
-	<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="width: 50%">
-	<span class="glyphicon glyphicon-wrench"></span> <span class="caret"></span>
-	</button>
-	<div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-		<div class="col-xs-12 row noprint gensmall">
-			<div class="col-md-6">{S_AUTH_LIST}</div>
-			<div class="col-md-6">
-				<!-- BEGIN next_unread_posts -->
-				<a href="{next_unread_posts.U_TOPIC_NEXT_UNREAD_POSTS}">{next_unread_posts.L_TOPIC_NEXT_UNREAD_POSTS}</a>
-				<!-- END next_unread_posts -->
-				{TELLFRIEND_BOX}
-				<a href="{U_TOPIC_BOOKMARK}" onclick="window.external.AddFavorite('{U_TOPIC_BOOKMARK}','{TOPIC_TITLE_B}'); return false;">{L_TOPIC_BOOKMARK}</a><br>
-				<a href="{U_PRINT}">{L_PRINT}</a>
-				{TOPIC_VIEW_IMG}
-				{S_WATCH_TOPIC}
-				{U_MARK_TOPIC_UNREAD}
-				{U_MARK_TOPIC_READ}
-			</div>
-		</div>
-	</div>
+<div class="col-xs-6"><a href="{U_POST_REPLY_TOPIC}" alt="{L_POST_REPLY_TOPIC}" title="{L_POST_REPLY_TOPIC}" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span> Odpowiedz</a></div>
+
+
+<div class="col-xs-6 right">{S_TOPIC_ADMIN}[<span class="glyphicon glyphicon-eye-close"></span><a class="btn btn-default btn-xs" href="{IGNORE_STATUS_URL}">X</a>]</div>
 </div>
 
-<div class="col-md-3 right">{S_TOPIC_ADMIN}<br />[<span class="glyphicon glyphicon-eye-close"></span><a class="btn btn-default btn-xs" href="{IGNORE_STATUS_URL}">X</a>]</div>
+<div class="row">
+    <div class="col-sm-6">
+        <form method="post" action="{S_POST_DAYS_ACTION}" class="form-inline">
+            {L_DISPLAY_POSTS}: {S_SELECT_POST_DAYS} {S_SELECT_POST_ORDER}
+            <input type="submit" value="{L_GO}" class="btn btn-default" name="submit" />
+        </form>
+    </div>
+
+    <div class="col-sm-6 right">
+        {JUMPBOX}
+    </div>
 </div>
 
-<form method="post" action="{S_POST_DAYS_ACTION}" class="col-md-6">
-	{L_DISPLAY_POSTS}: {S_SELECT_POST_DAYS} {S_SELECT_POST_ORDER}
-	<input type="submit" value="{L_GO}" class="btn btn-default btn-sm" name="submit" />
-</form>
-
-{JUMPBOX}
+<div class="col-xs-12 center">
+    <div class="col-sm-6 left">{S_AUTH_LIST}</div>
+    <div class="col-sm-6 right">
+        <!-- BEGIN next_unread_posts -->
+        <a href="{next_unread_posts.U_TOPIC_NEXT_UNREAD_POSTS}">{next_unread_posts.L_TOPIC_NEXT_UNREAD_POSTS}</a>
+        <!-- END next_unread_posts -->
+        {TELLFRIEND_BOX}
+        <a href="{U_TOPIC_BOOKMARK}" onclick="window.external.AddFavorite('{U_TOPIC_BOOKMARK}','{TOPIC_TITLE_B}'); return false;">{L_TOPIC_BOOKMARK}</a><br>
+        <a href="{U_PRINT}">{L_PRINT}</a>
+        {TOPIC_VIEW_IMG}
+        {S_WATCH_TOPIC}
+        {U_MARK_TOPIC_UNREAD}
+        {U_MARK_TOPIC_READ}
+    </div>
+</div>
 <br clear="all" />
 </div>
 
 <script language="Javascript" type="text/javascript">
 <!--
 	$(document).ready(function(){
-	$('.name .gensmall').removeClass('gensmall');
+        $('.name .gensmall').removeClass('gensmall');
+        $('select[name="postdays"]').addClass('form-control');
+        $('select[name="postorder"]').addClass('form-control');
 	});
 //-->
 </script>
