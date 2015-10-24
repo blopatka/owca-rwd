@@ -20,42 +20,40 @@
 	<div class="col-md-6 right genmed">{L_SORT_PER_LETTER}&nbsp;{S_LETTER_SELECT}{S_LETTER_HIDDEN}</div>
 </div>
 
-<table class="table table-bordered table-striped table-hover center">
-	<thead>
-	<tr>
-		<th width="15%">{L_USERNAME}</th>
-		<th width="5%">{L_EMAIL}</th>
-		<th width="5%">PM</th>
-		<th width="15%">{L_FROM}</th>
-		<th width="15%">{L_JOINED}</th>
-		<!-- BEGIN llogin -->
-		<th width="15%">{L_LAST_VISIT}</th>
-		<!-- END llogin -->
-		<th width="3%">{L_POSTS}</th>
-		<!-- BEGIN aim -->
-		<th width="3%">GG</th>
-		<!-- END aim -->
-		<th width="5%">{L_WEBSITE}</th>
-	</tr>
-	</thead>
-	<!-- BEGIN memberrow -->
-	<tr>
-		<td><a href="{memberrow.U_VIEWPROFILE}" class="name"{memberrow.USERNAME_COLOR}>{memberrow.USERNAME}</a></td>
-		<td>{memberrow.EMAIL}</td>
-		<td>{memberrow.PM}</td>
-		<td>{memberrow.FROM}</td>
-		<td><span class="gensmall"><time>{memberrow.JOINED}</time></span></td>
-		<!-- BEGIN llogin_row -->
-		<td><span class="gensmall"><time>{memberrow.LAST_VISIT}</time></span></td>
-		<!-- END llogin_row -->
-		<td>{memberrow.POSTS}</td>
-		<!-- BEGIN aim_row -->
-		<td>{memberrow.AIM_STATUS_IMG}</td>
-		<!-- END aim_row -->
-		<td>{memberrow.WWW}</td>
-	</tr>
-	<!-- END memberrow -->
-</table>
+<div class="panel panel-primary center">
+	<div class="panel-heading">
+        <div class="row">
+            <div class="col-xs-3 col-sm-2">{L_USERNAME}</div>
+            <div class="hidden-xs col-sm-1">{L_EMAIL}</div>
+            <div class="hidden-xs col-sm-1">PM</div>
+            <div class="col-xs-3 col-sm-2">{L_FROM}</div>
+            <div class="col-xs-3 col-sm-2">{L_JOINED}</div>
+            <!-- BEGIN llogin -->
+            <div class="hidden-xs col-sm-2">{L_LAST_VISIT}</div>
+            <!-- END llogin -->
+            <div class="col-xs-3 col-sm-1">{L_POSTS}</div>
+            <div class="hidden-xs col-sm-1">{L_WEBSITE}</div>
+        </div>
+	</div>
+    <div class="panel-body">
+        <div class="col-md-12">
+            <!-- BEGIN memberrow -->
+            <div class="row panel-primary panel-row vertical-aligned">
+                <div class="col-xs-3 col-sm-2"><a href="{memberrow.U_VIEWPROFILE}" class="name"{memberrow.USERNAME_COLOR}>{memberrow.USERNAME}</a></div>
+                <div class="hidden-xs col-sm-1">{memberrow.EMAIL}</div>
+                <div class="hidden-xs col-sm-1">{memberrow.PM}</div>
+                <div class="col-xs-3 col-sm-2">{memberrow.FROM}</div>
+                <div class="col-xs-3 col-sm-2"><span class="gensmall"><time>{memberrow.JOINED}</time></span></div>
+                <!-- BEGIN llogin_row -->
+                <div class="hidden-xs col-sm-2"><span class="gensmall"><time>{memberrow.LAST_VISIT}</time></span></div>
+                <!-- END llogin_row -->
+                <div class="col-xs-3 col-sm-1">{memberrow.POSTS}</div>
+                <div class="hidden-xs col-sm-1">{memberrow.WWW}</div>
+            </div>
+            <!-- END memberrow -->
+        </div>
+    </div>
+</div>
 
 {U_STAFF}{U_SEARCH_USERS}<br />
 {PAGE_NUMBER}{PAGINATION}

@@ -1,32 +1,28 @@
 <a href="{U_INDEX}" class="nav">{L_INDEX}</a>
 
-<table class="table table-bordered table-striped center">
-	<tr>
-		<th>{L_USERNAME}</th>
-		<th>{L_FORUMS}</th>
-		<th>{L_POSTS}</th>
-		<th>{L_JOINED}</th>
-		<th>{L_EMAIL}</th>
-		<th>PM</th>
-		<!-- BEGIN aim -->
-		<th>GG</th>
-		<!-- END aim -->
-		<th>WWW</th>
-	</tr>
-<!-- BEGIN staff -->
-	<tr>
-		<td><a href="{staff.U_NAME}" class="genmed"{staff.USERNAME_COLOR}><b>{staff.NAME}</b></a><span>{staff.LEVEL}{staff.RANK}{staff.RANK_IMAGE}{staff.AVATAR}</span></td>
-		<td><span class="genmed">{staff.FORUMS}</span></td>
-		<td><span class="gensmall"><b>{staff.POSTS}</b><br />{staff.POST_PERCENT}<br />{staff.POST_DAY}</span></td>
-		<td><span class="gensmall">{staff.JOINED}<br />[{staff.PERIOD}]</span></td>
-		<td>{staff.MAIL}{CICQ_OFF1}<div style="position:relative">{staff.ICQ}<div style="position:absolute;left:3px;top:-1px">{staff.ICQ_STATUS}</div></div></td>
-		<td>{staff.PM}</td>
-		<!-- BEGIN aim_row -->
-		<td>
-		<div style="position:relative">{staff.AIM}<div style="position:absolute;left:3px;top:-1px">{staff.AIM_STATUS_IMG}</div></div>
-		</td>
-		<!-- END aim_row -->
-		<td>{staff.WWW}</td>
-	</tr>
-<!-- END staff -->
-</table>
+<div class="panel panel-primary center">
+	<div class="panel-heading">
+        <div class="row">
+            <div class="col-xs-4 col-sm-3">{L_USERNAME}</div>
+            <div class="col-xs-3">{L_POSTS}</div>
+            <div class="col-xs-3 col-sm-2">{L_JOINED}</div>
+            <div class="hidden-xs col-sm-1">{L_EMAIL}</div>
+            <div class="col-xs-2 col-sm-1">PM</div>
+            <div class="hidden-xs col-sm-2">WWW</div>
+        </div>
+	</div>
+    <div class="panel-body">
+        <div class="col-md-12">
+        <!-- BEGIN staff -->
+            <div class="row panel-primary panel-row vertical-aligned">
+                <div class="col-xs-4 col-sm-3"><a href="{staff.U_NAME}" class="genmed"{staff.USERNAME_COLOR}><b>{staff.NAME}</b></a><span class="hidden-xs">{staff.LEVEL}{staff.RANK}{staff.RANK_IMAGE}{staff.AVATAR}</span></div>
+                <div class="col-xs-3"><span class="gensmall"><b>{staff.POSTS}</b><br />{staff.POST_PERCENT}<br />{staff.POST_DAY}</span></div>
+                <div class="col-xs-3 col-sm-2"><span class="gensmall">{staff.JOINED}<br />[{staff.PERIOD}]</span></div>
+                <div class="hidden-xs col-sm-1">{staff.MAIL}{CICQ_OFF1}<div style="position:relative">{staff.ICQ}<div style="position:absolute;left:3px;top:-1px">{staff.ICQ_STATUS}</div></div></div>
+                <div class="col-xs-2 col-sm-1">{staff.PM}</div>
+                <div class="hidden-xs col-sm-2">{staff.WWW}</div>
+            </div>
+        <!-- END staff -->
+        </div>
+    </div>
+</div>
