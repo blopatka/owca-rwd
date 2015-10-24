@@ -240,8 +240,9 @@ width: 10%;
 color: white;
 }
 
-.panel-body {
+.panel-body, .panel-body div {
     overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .config_header
