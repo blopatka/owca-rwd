@@ -51,6 +51,10 @@ body {
     border-bottom: 1px solid #e7e7e7;
 }
 
+.main-data.nightMode {
+    background-color: black;
+}
+
 #menu-nav .navLogo a img {
     width: 166px;
     height: 36px;

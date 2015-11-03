@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Titillium Web:400,400italic,700,700italic&subset=latin,latin-ext'>
-    <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap.min.css?v=16" />
+    <link id="bootstrap-style" rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap.min.css?v=16" />
     <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}?v=16" />
 	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/print.css?v=16"  media="print" />
 	
@@ -72,7 +72,42 @@
 	</script>
     
     <script type="text/javascript">
+        function setAndSaveTheme(isBlackTheme, saveTheme) {
+            var direction;
+            if(isBlackTheme == "1") {
+                direction = true;
+            } else {
+                direction = false;
+            }
+            if(!saveTheme) {
+                direction = !direction;
+            }
+            if(direction) {
+                document.getElementById('bootstrap-style').href = "templates/pentaskin/css/bootstrap.min.css?v=16";
+                $('.main-data').removeClass("nightMode");
+                if(saveTheme){Cookies.set("isBlackTheme","0", {expires: 3650});}
+            } else {
+                document.getElementById('bootstrap-style').href = "templates/pentaskin/css/bootstrap-dark.min.css?v=16";
+                $('.main-data').addClass("nightMode");
+                if(saveTheme){Cookies.set("isBlackTheme","1", {expires: 3650});}
+            }
+            return false;
+        }
+
+        function setTheme(isBlackTheme) {
+            return setAndSaveTheme(isBlackTheme, true);
+        }
+
+        function reloadTheme(isBlackTheme) {
+            return setAndSaveTheme(isBlackTheme, false);
+        }
+
         $(document).ready(function() {
+            $('#theme-switch').on("click", function(){
+                setTheme(Cookies.get("isBlackTheme"), false);
+            });
+            reloadTheme(Cookies.get("isBlackTheme"));
+
             $('.breadcrumb.cat-nav').find('li').contents().unwrap();
             var isFullWidth = Cookies.get("isFullWidth");
             if(isFullWidth == "1") {
@@ -80,6 +115,7 @@
                 $("#menu-nav > div").addClass("container-fluid").removeClass("container");
                 $(".big-logo > div").addClass("container-fluid").removeClass("container");
             }
+
         });
     </script>
 
@@ -150,6 +186,11 @@
                 <!-- BEGIN switch_report_list -->
                 <li><a href="{switch_report_list.U_REPORT_LIST}"><span class="glyphicon glyphicon-warning"></span> {switch_report_list.L_REPORT_LIST}</a></li>
                 <!-- END switch_report_list -->
+                <li>
+                    <a id="theme-switch" href="#">
+                        <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span>D/N
+                    </a>
+                </li>
             </ul>
       </div>
     </div>
