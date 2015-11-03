@@ -34,7 +34,7 @@ body {
     margin-bottom: 13px;
     padding-bottom: 6px;
     */
-    box-shadow: 0 6px 13px -2px #a0a0a2;
+    box-shadow: 0 6px 6px -3px black;
     background-color: #fff;
 }
 
@@ -49,10 +49,6 @@ body {
 #menu-nav .container-fluid{
     background-color: white;
     border-bottom: 1px solid #e7e7e7;
-}
-
-.main-data.nightMode {
-    background-color: black;
 }
 
 #menu-nav .navLogo a img {
@@ -414,3 +410,20 @@ body {
     background-color: #dfe3ee;
 }
 */
+
+
+/* nightmode fixes */
+.nightMode .main-data {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.nightMode .big-logo > div,
+.nightMode #menu-nav > div {
+    background-color: black;
+    border-color: black;
+}
+
+.nightMode blockquote {
+    background-color: transparent;
+}

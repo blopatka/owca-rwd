@@ -84,11 +84,11 @@
             }
             if(direction) {
                 document.getElementById('bootstrap-style').href = "templates/pentaskin/css/bootstrap.min.css?v=16";
-                $('.main-data').removeClass("nightMode");
+                $('body').removeClass("nightMode");
                 if(saveTheme){Cookies.set("isBlackTheme","0", {expires: 3650});}
             } else {
                 document.getElementById('bootstrap-style').href = "templates/pentaskin/css/bootstrap-dark.min.css?v=16";
-                $('.main-data').addClass("nightMode");
+                $('body').addClass("nightMode");
                 if(saveTheme){Cookies.set("isBlackTheme","1", {expires: 3650});}
             }
             return false;
