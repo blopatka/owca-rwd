@@ -19,7 +19,9 @@
 	<script type="text/javascript" src="templates/{STYLE_NAME}/js/scripts.js"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/modernizr.min.js"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/js.cookie.js"></script>
-    <!-- END overlib -->
+    	<!-- BEGIN overlib -->
+	<script language="JavaScript" type="text/javascript" src="templates/{STYLE_NAME}/js/overlib.js"><!-- overLIB (c) Erik Bosrup --></script>
+	<!-- END overlib -->
 
 	<script language="Javascript" type="text/javascript">
         var l_empty_message = '{L_EMPTY_MESSAGE}';
@@ -122,6 +124,9 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
+<!-- BEGIN overlib -->
+<div id="overDiv" style="position:absolute; visibility:hidden; filter: alpha(opacity=85); -moz-opacity: 0.85; z-index: 10"></div>
+<!-- END overlib -->
 <!-- BEGIN header -->
 <div class="hidden-xs hidden-sm hidden-md  big-logo">
     <div class="container">
