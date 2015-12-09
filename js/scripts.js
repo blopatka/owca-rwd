@@ -101,7 +101,7 @@ function handlePostImageMouseOver(event) {
 }
 
 // remove overlib errors (overlib calls should be removed from forum engine...
-var CAPTION = '';
+/*var CAPTION = '';
 function overlib() {
     return;
 }
@@ -109,3 +109,4 @@ function overlib() {
 function nd() {
     return;
 }
+*/

@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}?v=16" />
 	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/print.css?v=16"  media="print" />
 	
-    <script language="JavaScript" type="text/javascript" src="images/jsscripts.js"></script>
+    <script type="text/javascript" src="templates/{STYLE_NAME}/js/jsscripts.js"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/bootstrap.min.js" ></script>
 	<script type="text/javascript" src="templates/{STYLE_NAME}/js/scripts.js"></script>
