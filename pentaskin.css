@@ -376,6 +376,14 @@ a.postlink {
     padding: 0;
 }
 
+#overDiv > table {
+    border: 1px solid #b90000;
+}
+
+#overDiv > table table:first-child {
+    background-color: #b90000;
+}
+
 /* facebook style */
 /*
 .navbar-default .navbar-nav > li > a {
