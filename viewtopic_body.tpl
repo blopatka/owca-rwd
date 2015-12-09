@@ -123,10 +123,6 @@ var img_addr = '{IMG_ADDR}';
                 </div>
                 <!-- END warnings -->
 
-                <!-- BEGIN post_moderate -->
-                <label class="checkbox-inline"><input type="checkbox" name="accept_post[]" value="{postrow.U_POST_ID}" />{L_ACCEPT}</label>
-                <label class="checkbox-inline"><input type="checkbox" name="reject_post[]" value="{postrow.U_POST_ID}" />{L_REJECT}</label>
-                <!-- END post_moderate -->
                 </span>
             </div>
             <div class="col-sm-10 panel-default postbody">
@@ -190,6 +186,12 @@ var img_addr = '{IMG_ADDR}';
                     <!-- IF postrow.WWW_URL -->
                     <a class="btn btn-default btn-sm" href="{postrow.WWW_URL}" target="_blank">www</a>
                     <!-- ENDIF -->
+                    <!-- BEGIN post_moderate -->
+                    <div class="pull-right">
+                        <label class="checkbox-inline"><input type="checkbox" name="accept_post[]" value="{postrow.U_POST_ID}" />{L_ACCEPT}</label>
+                        <label class="checkbox-inline"><input type="checkbox" name="reject_post[]" value="{postrow.U_POST_ID}" />{L_REJECT}</label>
+                    </div>
+                    <!-- END post_moderate -->
                 </div>
         </div>
     </div>
@@ -198,7 +200,9 @@ var img_addr = '{IMG_ADDR}';
 <!-- END postrow -->
 
 <!-- BEGIN moderate -->
-<input type="submit" class="btn btn-info btn-small pull-right" value="{moderate.L_ACCEPT-REJECT_POST}" /></form>
+<div class="row">
+    <input type="submit" class="btn btn-info btn-small pull-right" value="{moderate.L_ACCEPT-REJECT_POST}" /></form>
+</div>
 <!-- END moderate -->
 <br />
 
