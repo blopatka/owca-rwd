@@ -13,15 +13,15 @@
     <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}?v=17" />
 	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/print.css?v=17"  media="print" />
 	
+    <!-- BEGIN overlib -->
+	<script type="text/javascript" src="templates/{STYLE_NAME}/js/overlib.js"></script>
+	<!-- END overlib -->
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/jsscripts.js"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/bootstrap.min.js" ></script>
 	<script type="text/javascript" src="templates/{STYLE_NAME}/js/scripts.js"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/modernizr.min.js"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/js.cookie.js"></script>
-    	<!-- BEGIN overlib -->
-	<script language="JavaScript" type="text/javascript" src="templates/{STYLE_NAME}/js/overlib.js"><!-- overLIB (c) Erik Bosrup --></script>
-	<!-- END overlib -->
 
 	<script language="Javascript" type="text/javascript">
         var l_empty_message = '{L_EMPTY_MESSAGE}';
@@ -32,8 +32,10 @@
         var csecure = '{COOKIE_SECURE}';
         var img_addr = '{IMG_ADDR}';
         var popover_enable = true;
+        var overlib_override = false;
         if(Modernizr.touchevents) {
             popover_enable = false;
+            overlib_override = true;
         } else {
             $(function() {
                 $(window).scroll(function() {
