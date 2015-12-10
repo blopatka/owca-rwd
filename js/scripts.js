@@ -99,9 +99,3 @@ function handlePostImageMouseOver(event) {
     el.removeAttr("onmouseover");
     return;
 }
-
-// remove overlib errors
-if(overlib_override) {
-    window.overlib = function(){return;};
-    window.nd = function(){return;};
-}

@@ -35,7 +35,9 @@
         var overlib_override = false;
         if(Modernizr.touchevents) {
             popover_enable = false;
-            overlib_override = true;
+            // remove overlib errors
+            window.overlib = function(){return;};
+            window.nd = function(){return;};
         } else {
             $(function() {
                 $(window).scroll(function() {
