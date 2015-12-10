@@ -13,10 +13,10 @@
     <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}?v=17" />
 	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/print.css?v=17"  media="print" />
 	
-    <script type="text/javascript" src="templates/{STYLE_NAME}/js/jsscripts.js"></script>
+    <script type="text/javascript" src="templates/{STYLE_NAME}/js/jsscripts.js?v=2"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/bootstrap.min.js" ></script>
-	<script type="text/javascript" src="templates/{STYLE_NAME}/js/scripts.js"></script>
+	<script type="text/javascript" src="templates/{STYLE_NAME}/js/scripts.js?v=2"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/modernizr.min.js"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/js.cookie.js"></script>
     	<!-- BEGIN overlib -->
