@@ -16,10 +16,10 @@
     <!-- BEGIN overlib -->
 	<script type="text/javascript" src="templates/{STYLE_NAME}/js/overlib.js"></script>
 	<!-- END overlib -->
-    <script type="text/javascript" src="templates/{STYLE_NAME}/js/jsscripts.js"></script>
+    <script type="text/javascript" src="templates/{STYLE_NAME}/js/jsscripts.js?v=3"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/bootstrap.min.js" ></script>
-	<script type="text/javascript" src="templates/{STYLE_NAME}/js/scripts.js"></script>
+	<script type="text/javascript" src="templates/{STYLE_NAME}/js/scripts.js?v=3"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/modernizr.min.js"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/js.cookie.js"></script>
 

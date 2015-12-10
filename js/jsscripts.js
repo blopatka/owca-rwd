@@ -15,7 +15,7 @@ bbtags = new Array('[b]','[/b]','[i]','[/i]','[u]','[/u]','[quote]','[/quote]','
 imageTag = false;
 
 function insertAtCaret(areaId, text) {
-    var txtarea = $(areaId).find("#message").get(0);
+    var txtarea = $(areaId).find('textarea[name="message"]').get(0);
     var scrollPos = txtarea.scrollTop;
     var caretPos = txtarea.selectionStart;
 
