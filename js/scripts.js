@@ -29,7 +29,7 @@ $(document).ready(function() {
 	}
 
 	$("#loading").hide();
-	if(popover_enable) {$("[data-toggle=popover]").popover({trigger:'hover', container: 'body', placement: 'auto'});}
+	if(popover_enable) {$("[data-toggle=popover]").popover({trigger:'hover', container: 'body', placement: 'auto right'});}
 });
 
 function select_all(status) {
