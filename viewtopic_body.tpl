@@ -136,7 +136,7 @@ var img_addr = '{IMG_ADDR}';
                 <!-- END custom_fields_upost -->
 
                 <!-- BEGIN signature -->
-                <div class="hidden-xs col-sm-12">
+                <div class="col-xs-12">
                     <p class="signature nocontent">{postrow.SIGNATURE}{postrow.SIG_IMAGE}</p> <!-- nocontent hides it from Google CSE results - as in https://support.google.com/customsearch/answer/2364585?hl=en -->
                 </div>
                 <!-- END signature -->
