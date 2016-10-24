@@ -6,13 +6,13 @@
 	{META}
 	<meta charset="{S_CONTENT_ENCODING}" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' http://fonts.googleapis.com; script-src 'self' 'unsafe-inline' http://www.google-analytics.com; font-src 'self' http://fonts.gstatic.com http://bootstrap-live-customizer.com; img-src 'self' 'unsafe-inline' http://www.google-analytics.com"/>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' http://fonts.googleapis.com; script-src 'self' 'unsafe-inline' http://www.google-analytics.com; font-src 'self' http://fonts.gstatic.com; img-src 'self' 'unsafe-inline' http://www.google-analytics.com"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Titillium Web:400,400italic,700,700italic&subset=latin,latin-ext'>
-    <link id="bootstrap-style" rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap.min.css?v=19" />
-    <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}?v=19" />
-	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/print.css?v=19"  media="print" />
+    <link id="bootstrap-style" rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap.min.css?v=20" />
+    <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}?v=20" />
+	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/print.css?v=20"  media="print" />
 	
     <!-- BEGIN overlib -->
 	<script type="text/javascript" src="templates/{STYLE_NAME}/js/overlib.js"></script>
@@ -90,11 +90,11 @@
                 direction = !direction;
             }
             if(direction) {
-                document.getElementById('bootstrap-style').href = "templates/pentaskin/css/bootstrap.min.css?v=19";
+                document.getElementById('bootstrap-style').href = "templates/pentaskin/css/bootstrap.min.css?v=20";
                 $('body').removeClass("nightMode");
                 if(saveTheme){Cookies.set("isBlackTheme","0", {expires: 3650});}
             } else {
-                document.getElementById('bootstrap-style').href = "templates/pentaskin/css/bootstrap-dark.min.css?v=19";
+                document.getElementById('bootstrap-style').href = "templates/pentaskin/css/bootstrap-dark.min.css?v=20";
                 $('body').addClass("nightMode");
                 if(saveTheme){Cookies.set("isBlackTheme","1", {expires: 3650});}
             }
