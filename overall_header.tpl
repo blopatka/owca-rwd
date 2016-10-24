@@ -14,6 +14,7 @@
     <link id="bootstrap-style" rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap.min.css?v=20" />
     <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}?v=20" />
 	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/print.css?v=20"  media="print" />
+    <link rel="icon" sizes="192x192" href="/images/favlogo.png">
 	
     <!-- BEGIN overlib -->
 	<script type="text/javascript" src="templates/{STYLE_NAME}/js/overlib.js"></script>
