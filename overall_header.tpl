@@ -6,7 +6,7 @@
 	{META}
 	<meta charset="{S_CONTENT_ENCODING}" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' *.google.com *.googleapis.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.google.com *.google-analytics.com; font-src 'self' data: *.gstatic.com; img-src 'self' 'unsafe-inline' *.google-analytics.com *.googleapis.com *.google.com">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' *.google.com; style-src 'self' 'unsafe-inline' *.google.com *.googleapis.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.google.com *.google-analytics.com *.googleapis.com; font-src 'self' data: *.gstatic.com; img-src *">
     <meta name="theme-color" content="#780000">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
