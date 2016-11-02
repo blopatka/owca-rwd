@@ -173,7 +173,8 @@ var img_addr = '{IMG_ADDR}';
     <div class="panel-footer">
         <div class="row">
             <div class="col-xs-12 btn-group">
-                    <!-- BEGIN top --><a href="#top" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-arrow-up"></span></a><!-- END top -->
+                    <!-- BEGIN top --><a href="#top" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-arrow-up"></span></a>
+                <a href="#bottom" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-arrow-down"></span></a><!-- END top -->
                     <!-- IF postrow.PROFILE_REAL_URL -->
                     <a class="btn btn-default btn-sm" href="{postrow.PROFILE_REAL_URL}">profil</a>
                     <!-- ENDIF -->
@@ -207,7 +208,7 @@ var img_addr = '{IMG_ADDR}';
 <br />
 
 {PAGINATION}
-<div class="breadcrumb cat-nav"><a href="{U_INDEX}">{L_INDEX}</a>{NAV_CAT_DESC}</div>
+<div id="bottom" class="breadcrumb cat-nav"><a href="{U_INDEX}">{L_INDEX}</a>{NAV_CAT_DESC}</div>
 {QUICKREPLY_OUTPUT}
 
 <div class="well well-sm">
