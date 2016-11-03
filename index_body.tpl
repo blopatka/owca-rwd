@@ -11,8 +11,7 @@
 
 <div class="row noprint">
 	<div class="col-sm-6 hidden-xs gensmall">
-		<!-- BEGIN switch_user_logged_in -->{LAST_VISIT_DATE}<br /><!-- END switch_user_logged_in -->
-		{CURRENT_TIME}
+		<!-- BEGIN switch_user_logged_in -->{LAST_VISIT_DATE}<br />{CURRENT_TIME}<!-- END switch_user_logged_in -->
 	</div>
 	<div class="col-sm-6 right">
 		<!-- BEGIN switch_unread -->
@@ -33,14 +32,25 @@
 </div>
 -->
 
-<div class="row right noprint">
+<div class="form-group row noprint">
 	<!-- BEGIN switch_user_logged_out -->
-	<form class="form-inline col-xs-12 col-sm-6 col-sm-offset-6" method="post" action="{S_LOGIN_ACTION}">
-		<div class="col-xs-4"><input class="form-control" type="text" name="username" size="8" placeholder="{L_USERNAME}"/></div>
-		<div class="col-xs-4"><input class="form-control" type="password" name="password" size="8" placeholder="{L_PASSWORD}"/></div>
-		<div class="col-xs-4">
-            <!-- BEGIN switch_allow_autologin --><input type="checkbox" name="autologin" title="{L_AUTO_LOGIN}"/><!-- END switch_allow_autologin -->
-            <input type="submit" class="btn btn-default btn-sm" name="login" value="{L_LOGIN}" />
+	<form class="col-xs-12" method="post" action="{S_LOGIN_ACTION}">
+		<div class="col-xs-12 col-sm-5">
+            <label>{L_USERNAME}</label>
+            <input class="form-control" type="text" name="username" placeholder="{L_USERNAME}"/>
+        </div>
+		<div class="col-xs-12 col-sm-5">
+            <label>{L_PASSWORD}</label>
+            <input class="form-control" type="password" name="password" placeholder="{L_PASSWORD}"/>
+        </div>
+		<div class="col-xs-12 col-sm-2 right">
+            <label>&nbsp;</label>
+            <div>
+                <!-- BEGIN switch_allow_autologin -->
+                <input type="checkbox" name="autologin" title="{L_AUTO_LOGIN}"/>
+                <!-- END switch_allow_autologin -->
+                <input type="submit" class="btn btn-primary btn-sm" name="login" value="{L_LOGIN}" />
+            </div>
         </div>
 	</form>
 	<!-- END switch_user_logged_out -->
