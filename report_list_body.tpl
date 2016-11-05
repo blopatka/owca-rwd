@@ -16,31 +16,41 @@ function open_popup()
 </script>
 
 <p>{TEXT}</p>
-<table class="table table-bordered table-hover table-striped center">
-	<thead>
-	<tr>
-		<th>{L_FORUM}</th>
-		<th>{L_TOPIC}</th>
-		<th>{L_POST}</th>
-		<th>{L_AUTHOR}</th>
-		<th>{L_REPORTER}</th>
-	</tr>
-	</thead>
-<!-- BEGIN postrow -->
-	<tr>
-		<td><a href="{postrow.U_FORUM}">{postrow.FORUM}</a></td>
-		<td><a href="{postrow.U_TOPIC}">{postrow.TOPIC}</a></td>
-		<td><a href="{postrow.U_POST}"><span class="glyphicon glyphicon-file"></span> <a href="{postrow.U_POST}">{postrow.POST}</a></td>
-		<td>
-			<span class="glyphicon glyphicon-user"></span>
-			<!-- BEGIN u_author --><a href="{postrow.U_AUTHOR}">{postrow.AUTHOR}</a><!-- END u_author -->
-			<!-- BEGIN no_u_author -->{postrow.AUTHOR}<!-- END no_u_author -->
-		</td>
-		<td>
-			<span class="glyphicon glyphicon-user"></span>
-			<!-- BEGIN u_reporter --><a href="{postrow.U_REPORTER}">{postrow.REPORTER}</a><!-- END u_reporter -->
-			<!-- BEGIN no_u_reporter -->{postrow.REPORTER}<!-- END no_u_reporter -->
-		</td>
-	</tr>
+<div class="panel panel-primary center">
+	<div class="panel-heading">
+        <div class="row">
+            <div class="hidden-xs col-sm-2">{L_FORUM}</div>
+            <div class="col-xs-7 col-sm-4">{L_TOPIC}</div>
+            <div class="hidden-xs col-sm-2">{L_POST}</div>
+            <div class="hidden-xs col-sm-2">{L_AUTHOR}</div>
+            <div class="hidden-xs col-sm-2">{L_REPORTER}</div>
+            <div class="col-xs-5 hidden-sm hidden-md hidden-lg">{L_AUTHOR} / {L_REPORTER}</div>
+        </div>
+	</div>
+    <div class="panel-body left">
+    <!-- BEGIN postrow -->
+        <div class="row panel-primary panel-row vertical-aligned">
+            <div class="hidden-xs col-sm-2"><a href="{postrow.U_FORUM}">{postrow.FORUM}</a></div>
+            <div class="col-xs-7 col-sm-4"><a href="{postrow.U_TOPIC}">{postrow.TOPIC}</a></div>
+            <div class="hidden-xs col-sm-2"><a href="{postrow.U_POST}"><span class="glyphicon glyphicon-file"></span> <a href="{postrow.U_POST}">{postrow.POST}</a></div>
+            <div class="hidden-xs col-sm-2">
+                <span class="glyphicon glyphicon-user"></span>
+                <!-- BEGIN u_author --><a href="{postrow.U_AUTHOR}">{postrow.AUTHOR}</a><!-- END u_author -->
+                <!-- BEGIN no_u_author -->{postrow.AUTHOR}<!-- END no_u_author -->
+            </div>
+            <div class="hidden-xs col-sm-2">
+                <span class="glyphicon glyphicon-user"></span>
+                <!-- BEGIN u_reporter --><a href="{postrow.U_REPORTER}">{postrow.REPORTER}</a><!-- END u_reporter -->
+                <!-- BEGIN no_u_reporter -->{postrow.REPORTER}<!-- END no_u_reporter -->
+            </div>
+            <div class="col-xs-5 hidden-sm hidden-md hidden-lg">
+                <!-- BEGIN u_author --><a href="{postrow.U_AUTHOR}" {postrow.U_AUTHOR_ONCLICK}>{postrow.AUTHOR}</a><!-- END u_author -->
+                <!-- BEGIN no_u_author -->{postrow.AUTHOR}<!-- END no_u_author -->
+                /
+                <!-- BEGIN u_reporter --><a href="{postrow.U_REPORTER}" {postrow.U_REPORTER_ONCLICK}></span>{postrow.REPORTER}</a><!-- END u_reporter -->
+                <!-- BEGIN no_u_reporter -->{postrow.REPORTER}<!-- END no_u_reporter -->
+            </div>
+        </div>
 <!-- END postrow -->
-</table>
+    </div>
+</div>
