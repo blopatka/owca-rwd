@@ -1,7 +1,7 @@
 <!-- BEGIN switch_enable_board_msg_index -->
-<div class="row well noprint">
-	<p onclick="HideTable('board_msg');" style="cursor: pointer; border-bottom: 1px solid silver;" title="{L_VHIDE}" class="center">{L_BOARD_MSG}</p>
-	<div id="board_msg">{BOARD_MSG}</div>
+<div class="row panel panel-primary board-msg noprint">
+	<p onclick="HideTable('board_msg');" style="cursor: pointer;" title="{L_VHIDE}" class="panel-heading center">{L_BOARD_MSG}</p>
+	<div id="board_msg" class="panel-body">{BOARD_MSG}</div>
 </div>
 <!-- END switch_enable_board_msg_index --> 
 

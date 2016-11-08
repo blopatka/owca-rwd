@@ -11,9 +11,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Titillium Web:400,400italic,700,700italic&subset=latin,latin-ext'>
-    <link id="bootstrap-style" rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap.min.css?v=22" />
-    <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}?v=22" />
-	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/print.css?v=22"  media="print" />
+    <link id="bootstrap-style" rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap.min.css?v=23" />
+    <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}?v=23" />
+	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/print.css?v=23"  media="print" />
     <link rel="icon" sizes="192x192" href="/images/favlogo.png">
 	
     <!-- BEGIN overlib -->
@@ -92,11 +92,11 @@
                 direction = !direction;
             }
             if(direction) {
-                document.getElementById('bootstrap-style').href = "templates/pentaskin/css/bootstrap.min.css?v=22";
+                document.getElementById('bootstrap-style').href = "templates/pentaskin/css/bootstrap.min.css?v=23";
                 $('body').removeClass("nightMode");
                 if(saveTheme){Cookies.set("isBlackTheme","0", {expires: 3650});}
             } else {
-                document.getElementById('bootstrap-style').href = "templates/pentaskin/css/bootstrap-dark.min.css?v=22";
+                document.getElementById('bootstrap-style').href = "templates/pentaskin/css/bootstrap-dark.min.css?v=23";
                 $('body').addClass("nightMode");
                 if(saveTheme){Cookies.set("isBlackTheme","1", {expires: 3650});}
             }
@@ -234,8 +234,8 @@
 <!-- END switch_page_avatar -->
 {ROTATE_BANNER_3}
 <!-- BEGIN switch_enable_board_msg -->
-<div class="row well hidden-xs">
-	<p onclick="HideTable('board_msg');" style="cursor: pointer; border-bottom: 1px solid silver;" title="{L_VHIDE}" class="center">{L_BOARD_MSG}</p>
-	<div id="board_msg">{BOARD_MSG}</div>
+<div class="row panel panel-primary board-msg hidden-xs">
+	<p onclick="HideTable('board_msg');" style="cursor: pointer;" title="{L_VHIDE}" class="panel-heading center">{L_BOARD_MSG}</p>
+	<div id="board_msg" class="panel-body">{BOARD_MSG}</div>
 </div>
 <!-- END switch_enable_board_msg -->

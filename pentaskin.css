@@ -384,6 +384,16 @@ a.postlink {
     background-color: #b90000;
 }
 
+.board-msg br {
+    display: block;
+    content: "";
+}
+
+.board-msg .panel-heading {
+    margin: 0px;
+    padding: 5px 0px;
+}
+
 /* facebook style */
 /*
 .navbar-default .navbar-nav > li > a {
