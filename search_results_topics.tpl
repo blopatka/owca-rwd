@@ -1,7 +1,4 @@
-<h3>{L_SEARCH_MATCHES}</h3>
-
-
-
+<div>{L_SEARCH_MATCHES}</div>
 
 <!-- BEGIN new_windows -->
 <div class="row">
