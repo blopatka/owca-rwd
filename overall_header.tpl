@@ -7,14 +7,26 @@
 	<meta charset="{S_CONTENT_ENCODING}" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' *.google.com; style-src 'self' 'unsafe-inline' *.google.com *.googleapis.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.google.com *.google-analytics.com *.googleapis.com; font-src 'self' data: *.gstatic.com; img-src *">
-    <meta name="theme-color" content="#780000">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Titillium Web:400,400italic,700,700italic&subset=latin,latin-ext'>
     <link id="bootstrap-style" rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap.min.css?v=25" />
     <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}?v=25" />
 	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/print.css?v=25"  media="print" />
-    <link rel="icon" sizes="192x192" href="/images/favlogo.png">
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/templates/pentaskin/icons/apple-touch-icon.png?v=GhxzOK">
+<link rel="icon" type="image/png" href="/templates/pentaskin/icons/favicon-32x32.png?v=GhxzOK" sizes="32x32">
+<link rel="icon" type="image/png" href="/templates/pentaskin/icons/favicon-194x194.png?v=GhxzOK" sizes="194x194">
+<link rel="icon" type="image/png" href="/templates/pentaskin/icons/android-chrome-192x192.png?v=GhxzOK" sizes="192x192">
+<link rel="icon" type="image/png" href="/templates/pentaskin/icons/favicon-16x16.png?v=GhxzOK" sizes="16x16">
+<link rel="manifest" href="/templates/pentaskin/icons/manifest.json?v=GhxzOK">
+<link rel="mask-icon" href="/templates/pentaskin/icons/safari-pinned-tab.svg?v=GhxzOK" color="#990000">
+<link rel="shortcut icon" href="/templates/pentaskin/icons/favicon.ico?v=GhxzOK">
+<meta name="apple-mobile-web-app-title" content="Pentax@PL">
+<meta name="application-name" content="Pentax@PL">
+<meta name="msapplication-config" content="/templates/pentaskin/icons/browserconfig.xml?v=GhxzOK">
+<meta name="theme-color" content="#990000">
 	
     <!-- BEGIN overlib -->
 	<script type="text/javascript" src="templates/{STYLE_NAME}/js/overlib.js"></script>
