@@ -11,7 +11,7 @@ function bbcode(strFore, strAft)
 	<div class="panel-heading">{L_QUICK_REPLY}</div>
 	<div class="panel-body">
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-xs-12">
 				<!-- BEGIN user_logged_out -->
 				<div class="control-group">
 					<label class="control-label">{L_USERNAME}</label>
@@ -60,7 +60,7 @@ function bbcode(strFore, strAft)
 				<!-- END smilies_col -->
 			</div>
 			
-			<div class="col-md-6">
+			<div class="col-xs-12">
 				<fieldset><legend>{L_OPTIONS}</legend>
 					<!-- BEGIN user_logged_in -->
                     <div class="checkbox"><label><input type="checkbox" name="attach_sig" {quick_reply.user_logged_in.ATTACH_SIGNATURE} />{L_ATTACH_SIGNATURE}</label></div>
