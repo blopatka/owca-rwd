@@ -20,10 +20,11 @@ function open_popup()
 	<div class="panel-heading">
         <div class="row">
             <div class="hidden-xs col-sm-2">{L_FORUM}</div>
-            <div class="col-xs-7 col-sm-4">{L_TOPIC}</div>
+            <div class="hidden-xs col-sm-4">{L_TOPIC}</div>
             <div class="hidden-xs col-sm-2">{L_POST}</div>
             <div class="hidden-xs col-sm-2">{L_AUTHOR}</div>
             <div class="hidden-xs col-sm-2">{L_REPORTER}</div>
+            <div class="col-xs-7 hidden-sm hidden-md hidden-lg">{L_TOPIC} / {L_POST}</div>
             <div class="col-xs-5 hidden-sm hidden-md hidden-lg">{L_AUTHOR} / {L_REPORTER}</div>
         </div>
 	</div>
@@ -42,6 +43,11 @@ function open_popup()
                 <span class="glyphicon glyphicon-user"></span>
                 <!-- BEGIN u_reporter --><a href="{postrow.U_REPORTER}">{postrow.REPORTER}</a><!-- END u_reporter -->
                 <!-- BEGIN no_u_reporter -->{postrow.REPORTER}<!-- END no_u_reporter -->
+            </div>
+            <div class="col-xs-7 hidden-sm hidden-md hidden-lg">
+                <a href="{postrow.U_TOPIC}" {postrow.U_TOPIC_ONCLICK}>{postrow.TOPIC}</a>
+                /
+                <a href="{postrow.U_POST}" {postrow.U_POST_ONCLICK}><span class="hidden-xs glyphicon glyphicon-file"></span>{postrow.POST}</a>
             </div>
             <div class="col-xs-5 hidden-sm hidden-md hidden-lg">
                 <!-- BEGIN u_author --><a href="{postrow.U_AUTHOR}" {postrow.U_AUTHOR_ONCLICK}>{postrow.AUTHOR}</a><!-- END u_author -->

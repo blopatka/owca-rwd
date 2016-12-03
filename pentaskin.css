@@ -335,10 +335,6 @@ blockquote footer:before, blockquote small:before, blockquote .small:before {
     overflow: hidden;
 }
 
-.postbody br:first-child {
-    display: none;
-}
-
 #gcse-search * {
     box-sizing: content-box;
 }
