@@ -217,7 +217,7 @@ var img_addr = '{IMG_ADDR}';
 <div class="col-xs-6"><a href="{U_POST_REPLY_TOPIC}" alt="{L_POST_REPLY_TOPIC}" title="{L_POST_REPLY_TOPIC}" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span> Odpowiedz</a></div>
 
 
-<div class="col-xs-6 right">{S_TOPIC_ADMIN}[<span class="glyphicon glyphicon-eye-close"></span><a class="btn btn-default btn-xs" href="{IGNORE_STATUS_URL}">X</a>]</div>
+<div class="col-xs-6 right">{S_TOPIC_ADMIN}[<span class="glyphicon glyphicon-eye-close"></span><a class="btn btn-default btn-xs" href="{IGNORE_STATUS_URL2}">X</a>]</div>
 </div>
 
 <div class="row">
