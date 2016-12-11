@@ -394,6 +394,10 @@ a.postlink {
     padding: 5px 0px;
 }
 
+.new_post {
+    color: #ff6c00;
+}
+
 /* facebook style */
 /*
 .navbar-default .navbar-nav > li > a {
