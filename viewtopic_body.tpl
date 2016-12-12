@@ -40,8 +40,8 @@ var img_addr = '{IMG_ADDR}';
             <div class="col-sm-10">
                 {postrow.ICON}
                 <!-- BEGIN icon_comment --><a href="{postrow.icon_comment.U_COMMENT_POST}">
-                <span class="glyphicon glyphicon-comment <!-- IF postrow.NEW_POST -->new_post<!-- ENDIF -->"></span></a><!-- END icon_comment -->
-                <a href="{postrow.U_MINI_POST}"><span class="glyphicon glyphicon-file"></span></a>
+                <span class="glyphicon glyphicon-comment "></span></a><!-- END icon_comment -->
+                <a href="{postrow.U_MINI_POST}"><span class="glyphicon glyphicon-file <!-- IF postrow.NEW_POST -->new_post<!-- ENDIF -->"></span></a>
 
                 <span class="hidden-xs">{L_POSTED}: </span><time>{postrow.POST_DATE}</time> <b>{postrow.POST_SUBJECT}</b>
                 <!-- BEGIN custom_fields_post --><br />{postrow.custom_fields_post.DESC}{postrow.custom_fields_post.FIELD}<!-- END custom_fields_post -->
