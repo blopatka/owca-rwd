@@ -15,19 +15,19 @@
 		<col style="width:100%">
 	</colgroup>
 	<tr>
-		<th>{L_FROM}:</td>
-		<td><a href="{MESSAGE_FROM_URL}" class="name"{MESSAGE_FROM_STYLE}>{MESSAGE_FROM}</a></td>
+		<th>{L_FROM}:</th>
+		<td>{MESSAGE_FROM}</td>
 	</tr>
 	<tr>
-		<th>{L_TO}:</td>
-		<td><a href="{MESSAGE_TO_URL}" class="name"{MESSAGE_TO_STYLE}>{MESSAGE_TO}</a></td>
+		<th>{L_TO}:</th>
+		<td>{MESSAGE_TO}</td>
 	</tr>
 	<tr>
-		<th>{L_POSTED}:</td>
-		<td><time>{POST_DATE}</time></td>
+		<th>{L_POSTED}:</th>
+		<td>{POST_DATE}</td>
 	</tr>
 	<tr>
-		<th>{L_SUBJECT}:</td>
+		<th>{L_SUBJECT}:</th>
 <td>{POST_SUBJECT}<span class="pull-right"><!-- IF QUOTE_PM --><span class="btn btn-default">{QUOTE_PM}</span><!-- ENDIF --> <!-- IF EDIT_PM --><span class="btn btn-default">{EDIT_PM}</span><!-- ENDIF --></span></td>
 	</tr>
 </table>
