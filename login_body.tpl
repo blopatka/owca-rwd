@@ -7,7 +7,7 @@
 		<div class="panel-body col-sm-6 col-sm-offset-3">
             <div class="form-group">
 				<label for="login" class="col-sm-4 hidden-xs control-label">{L_USERNAME}</label>
-				<div class="col-sm-8"><input type="text" name="username" id="login" size="25" maxlength="40" value="{USERNAME}" class="form-control" placeholder="{L_USERNAME}" /></div>
+				<div class="col-sm-8"><input type="text" name="username" id="login" size="25" maxlength="40" value="{USERNAME}" class="form-control" placeholder="{L_USERNAME}" autofocus/></div>
 			</div>
 
 			<div class="form-group">
