@@ -37,7 +37,7 @@
 	<form class="col-xs-12" method="post" action="{S_LOGIN_ACTION}">
 		<div class="col-xs-12 col-sm-5">
             <label>{L_USERNAME}</label>
-            <input class="form-control" type="text" name="username" placeholder="{L_USERNAME}" autofocus/>
+            <input class="form-control" type="text" name="username" placeholder="{L_USERNAME}"/>
         </div>
 		<div class="col-xs-12 col-sm-5">
             <label>{L_PASSWORD}</label>
