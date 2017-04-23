@@ -149,7 +149,7 @@
 <!-- BEGIN header -->
 <div class="hidden-xs hidden-sm hidden-md  big-logo">
     <div class="container">
-        <a href="{U_INDEX_PORTAL}" title="{L_INDEX_PORTAL}"><img alt="obrazek" src="templates/{STYLE_NAME}/images/mesuper.png"/></a>
+        <a href="{U_INDEX_PORTAL}" title="{L_INDEX_PORTAL}"><img alt="obrazek" src="templates/{STYLE_NAME}/images/MES_bannerNew.png"/></a>
     </div>
 </div>
 
