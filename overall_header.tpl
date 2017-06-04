@@ -10,9 +10,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Titillium Web:400,400italic,700,700italic&subset=latin,latin-ext'>
-    <link id="bootstrap-style" rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap.min.css?v=28" />
-    <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}?v=28" />
-	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/print.css?v=28"  media="print" />
+    <link id="bootstrap-style" rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap.min.css?v=29" />
+    <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}?v=29" />
+	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/print.css?v=29"  media="print" />
 
 
     <link rel="apple-touch-icon" sizes="180x180" href="/templates/pentaskin/icons/apple-touch-icon.png?v=GhxzOK">
@@ -104,11 +104,11 @@
                 direction = !direction;
             }
             if(direction) {
-                document.getElementById('bootstrap-style').href = "templates/pentaskin/css/bootstrap.min.css?v=28";
+                document.getElementById('bootstrap-style').href = "templates/pentaskin/css/bootstrap.min.css?v=29";
                 $('body').removeClass("nightMode");
                 if(saveTheme){Cookies.set("isBlackTheme","0", {expires: 3650});}
             } else {
-                document.getElementById('bootstrap-style').href = "templates/pentaskin/css/bootstrap-dark.min.css?v=28";
+                document.getElementById('bootstrap-style').href = "templates/pentaskin/css/bootstrap-dark.min.css?v=29";
                 $('body').addClass("nightMode");
                 if(saveTheme){Cookies.set("isBlackTheme","1", {expires: 3650});}
             }
