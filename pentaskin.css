@@ -49,6 +49,7 @@ body {
 #menu-nav .container-fluid{
     background-color: white;
     border-bottom: 1px solid #e7e7e7;
+    position: relative;
 }
 
 #menu-nav .navLogo a img {
@@ -57,6 +58,21 @@ body {
     display: inline-block;
     position: relative;
     top: -10px;
+}
+
+#menu-nav .container ~ .breadcrumb.cat-nav {
+    padding-bottom: 0px;
+}
+
+#menu-nav .container .breadcrumb.cat-nav {
+    margin: 0 0 5px 0;
+    padding: 0;
+    text-align: center;
+    max-height: 20px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
 }
 
 .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
@@ -396,6 +412,21 @@ a.postlink {
 
 .new_post {
     color: #900;
+}
+
+@media screen and (min-width: 1200px) {
+    .postid {
+        top: -76px;
+    }
+
+    .affix ~ .main-data {
+	   top: 76px;
+    }
+
+    #menu-nav .container,
+    #menu-nav .container-fluid{
+        padding-bottom: 25px;
+    }
 }
 
 /* facebook style */

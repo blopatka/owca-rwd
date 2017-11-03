@@ -10,9 +10,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Titillium Web:400,400italic,700,700italic&subset=latin,latin-ext'>
-    <link id="bootstrap-style" rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap.min.css?v=29" />
-    <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}?v=29" />
-	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/print.css?v=29"  media="print" />
+    <link id="bootstrap-style" rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap.min.css?v=31" />
+    <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}?v=31" />
+	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/print.css?v=31"  media="print" />
 
 
     <link rel="apple-touch-icon" sizes="180x180" href="/templates/pentaskin/icons/apple-touch-icon.png?v=GhxzOK">
@@ -34,7 +34,7 @@
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/jsscripts.js?v=5"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/bootstrap.min.js?v=6" ></script>
-	<script type="text/javascript" src="templates/{STYLE_NAME}/js/scripts.js?v=5s"></script>
+	<script type="text/javascript" src="templates/{STYLE_NAME}/js/scripts.js?v=7"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/modernizr.min.js"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/js.cookie.js"></script>
 
@@ -104,11 +104,11 @@
                 direction = !direction;
             }
             if(direction) {
-                document.getElementById('bootstrap-style').href = "templates/pentaskin/css/bootstrap.min.css?v=29";
+                document.getElementById('bootstrap-style').href = "templates/pentaskin/css/bootstrap.min.css?v=31";
                 $('body').removeClass("nightMode");
                 if(saveTheme){Cookies.set("isBlackTheme","0", {expires: 3650});}
             } else {
-                document.getElementById('bootstrap-style').href = "templates/pentaskin/css/bootstrap-dark.min.css?v=29";
+                document.getElementById('bootstrap-style').href = "templates/pentaskin/css/bootstrap-dark.min.css?v=31";
                 $('body').addClass("nightMode");
                 if(saveTheme){Cookies.set("isBlackTheme","1", {expires: 3650});}
             }

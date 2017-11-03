@@ -29,7 +29,14 @@ $(document).ready(function() {
 	}
 
 	$("#loading").hide();
-	if(popover_enable) {$("[data-toggle=popover]").popover({trigger:'hover', container: 'body', placement: 'auto right'});}
+	if(popover_enable) {
+        $("[data-toggle=popover]").popover({trigger:'hover', container: 'body', placement: 'auto right'});
+
+        var navigation = $("div.breadcrumb.cat-nav").get(0);
+        if(navigation != undefined && $(navigation).find("a").length > 1) {
+            $(".navbar-header + div").after($(navigation));
+        }
+    }
 });
 
 function select_all(status) {
