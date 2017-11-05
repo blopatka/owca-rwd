@@ -1,4 +1,5 @@
 var img_size_to_open = 400; //minimum size to open window with image
+var windows_size_to_show_full_menu = 1200;
 
 $(document).ready(function() {
 	//begin affix functions
@@ -31,7 +32,8 @@ $(document).ready(function() {
 	$("#loading").hide();
 	if(popover_enable) {
         $("[data-toggle=popover]").popover({trigger:'hover', container: 'body', placement: 'auto right'});
-
+    }
+    if($(window).width() >= windows_size_to_show_full_menu ) {
         var navigation = $("div.breadcrumb.cat-nav").get(0);
         if(navigation != undefined && $(navigation).find("a").length > 1) {
             $(".navbar-header + div").after($(navigation));

@@ -34,7 +34,7 @@
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/jsscripts.js?v=5"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/bootstrap.min.js?v=6" ></script>
-	<script type="text/javascript" src="templates/{STYLE_NAME}/js/scripts.js?v=7"></script>
+	<script type="text/javascript" src="templates/{STYLE_NAME}/js/scripts.js?v=8"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/modernizr.min.js"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/js.cookie.js"></script>
 
