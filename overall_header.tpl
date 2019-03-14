@@ -37,6 +37,7 @@
 	<script type="text/javascript" src="templates/{STYLE_NAME}/js/scripts.js?v=8"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/modernizr.min.js"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/js.cookie.js"></script>
+<!--    <script type="text/javascript" src="templates/{STYLE_NAME}/js/additional.js"></script>-->
 
 	<script language="Javascript" type="text/javascript">
         var l_empty_message = '{L_EMPTY_MESSAGE}';
