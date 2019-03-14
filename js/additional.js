@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('a').click(function(e) {
         if(isInternalLink(this) && redirectTresholdHit()) {
-            redirectToPrimaAprilis(this);
+            redirectToPrimaAprilis();
             e.preventDefault();
         }
     });
