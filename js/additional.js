@@ -15,6 +15,6 @@ function redirectTresholdHit() {
     return 5 > Math.floor(Math.random() * 100);
 }
 
-function redirectToPrimaAprilis(c) {
+function redirectToPrimaAprilis() {
     window.location = 'http://www.pentax.pl/index503.html';
 }
