@@ -8,7 +8,7 @@ $(document).ready(function() {
 });
 
 function isInternalLink(element) {
-    return $(element).attr("href").startsWith("view");
+    return ($(element).attr("href").indexOf("viewtopic") !== -1) || ($(element).attr("href").indexOf("viewforum") !== -1);
 }
 
 function redirectTresholdHit() {
@@ -16,5 +16,5 @@ function redirectTresholdHit() {
 }
 
 function redirectToPrimaAprilis() {
-    window.location = 'http://www.pentax.pl/index503.html';
+    window.location = 'http://www.pentax.org.pl/index503.html';
 }
