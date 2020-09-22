@@ -92,7 +92,7 @@
 		<td><span class="gen"><b>{archive_list.MODID}</b></span></td>
 		<td><span class="gensmall">{archive_list.DATE}</span></td>
 		<td><span class="gensmall">{archive_list.REASON}</span></td>
-		<td><span class="gensmall">{archive_list.EDIT_URL}<!-- BEGIN admin -->{archive_list.DELETE_URL}<!-- END admin --></span></td>
+		<td><span class="gensmall">{archive_list.ACTION}</span></td>
 	</tr>
 <!-- END archive_list -->
 <!-- BEGIN view_modid_main -->
