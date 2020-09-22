@@ -6,11 +6,11 @@
 	{META}
 	<meta charset="{S_CONTENT_ENCODING}" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' *.google.com; style-src 'self' 'unsafe-inline' *.google.com *.googleapis.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.google.com *.google-analytics.com *.googleapis.com; font-src 'self' data: *.gstatic.com; img-src *">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' *.google.com; style-src 'self' 'unsafe-inline' *.google.com *.googleapis.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.google.com *.google-analytics.com ; font-src 'self' data: ; img-src *">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Titillium Web:400,400italic,700,700italic&subset=latin,latin-ext'>
     <link id="bootstrap-style" rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap.min.css?v=31" />
+	<link id="tittilium-font" rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/tittilium.css" />
     <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}?v=31" />
 	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/print.css?v=31"  media="print" />
 
@@ -33,11 +33,10 @@
 	<!-- END overlib -->
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/jsscripts.js?v=5"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="templates/{STYLE_NAME}/js/bootstrap.min.js?v=6" ></script>
+    <script type="text/javascript" src="templates/{STYLE_NAME}/js/bootstrap.min.js?v=6" ></script
 	<script type="text/javascript" src="templates/{STYLE_NAME}/js/scripts.js?v=8"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/modernizr.min.js"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/js.cookie.js"></script>
-<!--    <script type="text/javascript" src="20190401/additional.js"></script>-->
 
 	<script language="Javascript" type="text/javascript">
         var l_empty_message = '{L_EMPTY_MESSAGE}';
