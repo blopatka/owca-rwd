@@ -33,7 +33,7 @@ function bbcode(strFore, strAft)
 					<!-- END button_u -->
 
 					<!-- BEGIN button_im -->
-					<button onclick="imgcode(this.form,'img','http://');return false;" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-picture"></span></button>
+					<button onclick="imgcode(this.form,'img','https://');return false;" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-picture"></span></button>
 					<!-- END button_im -->
 
 					<!-- BEGIN button_c -->

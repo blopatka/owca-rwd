@@ -113,7 +113,6 @@
                 <li><img src="{FOLDER_IMG}" alt="{L_NO_NEW_POSTS}" />{L_NO_NEW_POSTS}</li>
                 <li><img src="{FOLDER_LOCKED_IMG}" alt="{L_FORUM_LOCKED}" />{L_FORUM_LOCKED}</li>
             </span>
-            <li><a href="http://pentax.org.pl/topics_anywhere.php?mode=show&out=rss2.0&f=a&n=10&sfn=y&r=y&sr=y&b=non&lpb=0&lpd=0"><img src="http://pentax.org.pl/templates/pentaskin/RSS.gif" alt="RSS"> RSS</a></li>
             <li><a href="http://pentax.org.pl/kontakt.php"><span class="glyphicon glyphicon-envelope"></span> Kontakt</a></li>
 		</ul>
 	</div>

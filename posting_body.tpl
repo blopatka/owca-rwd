@@ -225,7 +225,7 @@
 					<button type="button" accesskey="q" name="addbbcode6" onClick="bbstyle(6);" title="{L_BBCODE_Q_HELP}" class="btn btn-default btn-xs">&bdquo;&rdquo;</button>
 					<button type="button" accesskey="c" name="addbbcode8" onClick="bbstyle(8);" title="{L_BBCODE_C_HELP}" class="btn btn-default btn-xs">Code</button>
 					<button type="button" accesskey="l" name="addbbcode10" onClick="bbstyle(10);" title="{L_BBCODE_L_HELP}" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-list"></span></button>
-					<button type="button" accesskey="p" name="addbbcode14" onclick="imgcode(this.form,'img','http://');" title="{L_BBCODE_P_HELP}" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-picture"></span></button>
+					<button type="button" accesskey="p" name="addbbcode14" onclick="imgcode(this.form,'img','https://');" title="{L_BBCODE_P_HELP}" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-picture"></span></button>
 					<!-- BEGIN button_ur -->
 					<button type="button" accesskey="w" name="addbbcode18" onclick="namedlink(this.form,'URL');" title="{L_BBCODE_W_HELP}" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-globe"></span></button>
 					<!-- END button_ur -->
