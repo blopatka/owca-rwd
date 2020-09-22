@@ -48,28 +48,11 @@ var img_addr = '{IMG_ADDR}';
 
                 <span class="pull-right btn-group">
                     {postrow.IGNORE}
-                    <!-- IF postrow.QUOTE_Q_URL -->
-                    <a class="btn btn-default btn-sm" href="{postrow.QUOTE_Q_URL}" onclick="qc();" onmouseover="qo();" title="Cytowanie selektywne">Q</a>
-                    <!-- ENDIF -->
-                    <!-- IF postrow.QUOTE_URL -->
-                    <a class="btn btn-default btn-sm" href="{postrow.QUOTE_URL}" title="Odpowiedz z cytatem">Cytuj</a>
-                    <!-- ENDIF -->
-                    <!-- IF postrow.EDIT_URL -->
-                    <a class="btn btn-default btn-sm" href="{postrow.EDIT_URL}" title="Edytuj ten post">Edytuj</a>
-                    <!-- ENDIF -->
-                    <!-- IF postrow.DELETE_URL -->
-                    <a class="btn btn-default btn-sm" href="{postrow.DELETE_URL}" title="Usun ten post">del</a>
-                    <!-- ENDIF -->
-                    <!-- IF postrow.IP_URL -->
-                    <a class="btn btn-default btn-sm" href="{postrow.IP_URL}" title="IP autora postu">IP</a>
-                    <!-- ENDIF -->
-                    <!-- IF postrow.REPORT_URL -->
-                        <!-- IF postrow.IS_REPORT_DELETE == 0 -->
-                    <a class="btn btn-default btn-sm" href="{postrow.REPORT_URL}" title="Zglos do moderacji">!</a>
-                        <!-- ELSE -->
-                    <a class="btn btn-default btn-sm" href="{postrow.REPORT_URL}" title="Usun zgloszenie">X</a>
-                        <!-- ENDIF -->
-                    <!-- ENDIF -->
+                    {postrow.QUOTE_IMG}
+                    {postrow.EDIT_IMG}
+                    {postrow.DELETE_IMG}
+                    {postrow.IP_IMG}
+                    {postrow.REPORT_IMG}
 
                     <!-- IF postrow.POST_EXPIRE --><br />{postrow.POST_EXPIRE}<!-- ENDIF -->
                 </span>
@@ -176,18 +159,10 @@ var img_addr = '{IMG_ADDR}';
             <div class="col-xs-12 btn-group">
                     <!-- BEGIN top --><a href="#top" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-arrow-up"></span></a>
                 <a href="#bottom" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-arrow-down"></span></a><!-- END top -->
-                    <!-- IF postrow.PROFILE_REAL_URL -->
-                    <a class="btn btn-default btn-sm" href="{postrow.PROFILE_REAL_URL}">profil</a>
-                    <!-- ENDIF -->
-                    <!-- IF postrow.PM_URL -->
-                    <a class="btn btn-default btn-sm" href="{postrow.PM_URL}">pw</a>
-                    <!-- ENDIF -->
-                    <!-- IF postrow.EMAIL_URL -->
-                    <a class="btn btn-default btn-sm" href="{postrow.EMAIL_URL}">@</a>
-                    <!-- ENDIF -->
-                    <!-- IF postrow.WWW_URL -->
-                    <a class="btn btn-default btn-sm" href="{postrow.WWW_URL}" target="_blank">www</a>
-                    <!-- ENDIF -->
+                    {postrow.PROFILE_IMG}
+                    {postrow.PM_IMG}
+                    {postrow.EMAIL_IMG}
+                    {postrow.WWW_IMG}
                     <!-- BEGIN post_moderate -->
                     <div class="pull-right">
                         <label class="checkbox-inline"><input type="checkbox" name="accept_post[]" value="{postrow.U_POST_ID}" />{L_ACCEPT}</label>
