@@ -5,13 +5,13 @@
 	{META_DESC}
 	{META}
 	<meta charset="{S_CONTENT_ENCODING}" />
-	<meta http-equiv="Content-Style-Type" content="text/html" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' *.google.com; style-src 'self' 'unsafe-inline' *.google.com *.googleapis.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.google.com *.google-analytics.com ; font-src 'self' data: ; img-src *">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link id="bootstrap-style" rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap.min.css?v=31" />
 	<link id="tittilium-font" rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/tittilium.css" />
-    <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}?v=31" />
+    <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}?v=32" />
 	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/print.css?v=31"  media="print" />
 
 

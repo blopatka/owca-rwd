@@ -480,3 +480,11 @@ body {
 .nightMode blockquote {
     background-color: transparent;
 }
+
+.nightMode .shoutbox-content .sb1 {
+	background-color: black;
+}
+
+.nightMode .shoutbox-content .sb2 {
+	background-color: #464545;
+}
