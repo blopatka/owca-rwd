@@ -20,6 +20,7 @@
 	</tr>
 	<tr>
 		<th>{L_TO}:</th>
+		<td><a href="{MESSAGE_TO_URL}" class="name"{MESSAGE_TO_STYLE}>{MESSAGE_TO}</a></td>
 	</tr>
 	<tr>
 		<th>{L_POSTED}:</th>
