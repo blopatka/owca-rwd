@@ -26,11 +26,21 @@
 			<td><input type="text" name="username" class="form-control" value="{USERNAME}" maxlength="15" /></td>
 		</tr>
 		<!-- END switch_namechange_allowed -->
-		<tr>
+		<!-- BEGIN switch_register --> 
+		<tr> 
 			<td>{L_EMAIL_ADDRESS}: *<span class="help-block">{L_EMAIL_EXPLAIN}</span></td>
-			<td><input type="text" name="email" class="form-control" maxlength="255" value="{EMAIL}" /></td>
-		</tr>
+			<td> 
+				<input type="text" class="form-control" style="width:100px" name="email1" size="25" maxlength="200" value="" /> 
+				<span class="genmed">@</span> 
+				<input type="text" class="form-control" style="width:100px" name="email2" size="25" maxlength="200" value="" /> 
+			</td> 
+		</tr> 
+		<!-- END switch_register --> 
 		<!-- BEGIN switch_edit_profile -->
+		<tr> 
+			<td><span>{L_EMAIL_ADDRESS}: *</span></td> 
+			<td><input type="text" class="form-control" name="email1" size="25" maxlength="255" value="{EMAIL}" /></td> 
+		</tr> 	
 		<tr>
 			<td>{L_CURRENT_PASSWORD}: *<span class="help-block">{L_CONFIRM_PASSWORD_EXPLAIN}</span></td>
 			<td><input type="password" name="cur_password" class="form-control" maxlength="100" value="{CUR_PASSWORD}" /></td>

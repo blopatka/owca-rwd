@@ -48,7 +48,7 @@ function checkForm(formObj) {
 			</div>
 		</div>
 		<div class="panel-footer right">
-			<input type="submit" tabindex="6" name="submit" class="btn btn-primary" value="{L_SEND_EMAIL}" />
+			<input type="submit" tabindex="6" name="submit" class="btn btn-primary" value="{L_SEND_EMAIL}" />{S_HIDDEN_FIELDS}
 		</div>
 	</div>
 

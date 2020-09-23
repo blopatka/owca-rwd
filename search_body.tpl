@@ -69,7 +69,7 @@
 
 				<div class="row">
 					<div class="col-md-4"><label for="search_time">{L_SEARCH_PREVIOUS}:</label></div>
-					<div class="col-md-6"><select name="search_time" id="search_time">{S_TIME_OPTIONS}</select></div>
+					<div class="col-md-6"><select name="search_time" id="search_time">{S_TIME_OPTIONS2}</select></div>
 				</div>
 
 				<div class="row">
@@ -109,7 +109,7 @@
 		<div class="row">
 			<div class="col-md-6">{L_SEARCH_POST_TIME}</div>
 			<div class="col-md-3 form-inline">
-				<select name="search_time">{S_TIME_OPTIONS}</select>
+				<select name="search_time">{S_TIME_OPTIONS2}</select>
 				<input class="btn btn-default" type="submit" value="{L_SEARCH}" />
 			</div>
 		</div>

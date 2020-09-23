@@ -11,7 +11,7 @@
 
     <link id="bootstrap-style" rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap.min.css?v=31" />
 	<link id="tittilium-font" rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/tittilium.css" />
-    <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}?v=32" />
+    <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}?v=33" />
 	<link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/print.css?v=31"  media="print" />
 
 

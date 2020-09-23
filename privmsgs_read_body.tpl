@@ -16,11 +16,10 @@
 	</colgroup>
 	<tr>
 		<th>{L_FROM}:</th>
-		<td>{MESSAGE_FROM}</td>
+		<td><a href="{MESSAGE_FROM_URL}" class="name"{MESSAGE_FROM_STYLE}>{MESSAGE_FROM}</a></td>
 	</tr>
 	<tr>
 		<th>{L_TO}:</th>
-		<td>{MESSAGE_TO}</td>
 	</tr>
 	<tr>
 		<th>{L_POSTED}:</th>

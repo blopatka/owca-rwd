@@ -1,4 +1,4 @@
-{S_HIDDEN}
+<tr style="display: none;"><td>{S_HIDDEN}</td></tr>
 <!-- BEGIN hidden_row -->{hidden_row.S_HIDDEN}<!-- END hidden_row -->
 
 <div class="panel-heading">
