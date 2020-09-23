@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
-<html dir="{S_CONTENT_DIRECTION}">
+<html dir="{S_CONTENT_DIRECTION}" lang="pl">
 <head>
 	<title>{SITENAME} :: {PAGE_TITLE}</title>
 	{META_DESC}
 	{META}
 	<meta charset="{S_CONTENT_ENCODING}" />
-	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Style-Type" content="text/html" />
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' *.google.com; style-src 'self' 'unsafe-inline' *.google.com *.googleapis.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.google.com *.google-analytics.com ; font-src 'self' data: ; img-src *">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -33,7 +33,7 @@
 	<!-- END overlib -->
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/jsscripts.js?v=5"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="templates/{STYLE_NAME}/js/bootstrap.min.js?v=6" ></script
+    <script type="text/javascript" src="templates/{STYLE_NAME}/js/bootstrap.min.js?v=6" ></script>
 	<script type="text/javascript" src="templates/{STYLE_NAME}/js/scripts.js?v=8"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/modernizr.min.js"></script>
     <script type="text/javascript" src="templates/{STYLE_NAME}/js/js.cookie.js"></script>
