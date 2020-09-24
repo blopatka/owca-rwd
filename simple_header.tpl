@@ -21,7 +21,7 @@ function show_s_div()
 
     <link id="bootstrap-style" rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/bootstrap.min.css?v=31" />
 	<link id="tittilium-font" rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/css/tittilium.css" />
-    <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}?v=33" />
+    <link rel="stylesheet" type="text/css" href="templates/{STYLE_NAME}/{T_HEAD_STYLESHEET}?v=34" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/templates/pentaskin/icons/apple-touch-icon.png?v=GhxzOK">
     <link rel="icon" type="image/png" href="/templates/pentaskin/icons/favicon-32x32.png?v=GhxzOK" sizes="32x32">

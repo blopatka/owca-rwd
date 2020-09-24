@@ -10,7 +10,7 @@ var updateInterval = {REFRESH_SB};
         <div class="row">
             {L_SHOUTBOX} <img src="templates/{STYLE_NAME}/images/act_indicator.gif" id="act_indicator" alt="indicator">
         </div>
-        <div id="SB_box" class="row shoutbox-content" style="max-width:100%; height:{SHOUTBOX_HEIGHT}px; overflow: hidden auto;">
+        <div id="SB_box" class="row shoutbox-content" style="height:{SHOUTBOX_HEIGHT}px;">
             <div id="SB_inner">
 
             </div>

@@ -279,6 +279,14 @@ width: 100%;
 /*added by opiszon*/
 
 /*for shoutbox use*/
+.shoutbox-content {
+    border: 1px solid lightgray;
+    margin: 10px 1px;
+    padding: 0 5px;
+    height: 250px;
+    overflow: hidden auto !important;
+}
+
 td.row1, td.row2 {
     background-color: #FEFEF9;
     border-bottom: 1px solid lightgrey;
