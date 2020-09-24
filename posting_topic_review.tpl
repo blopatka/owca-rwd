@@ -1,6 +1,6 @@
 <!-- BEGIN switch_inline_mode -->
 <fieldset><legend>{L_TOPIC_REVIEW}</legend>
-<div style="overflow: auto; height: 300px; padding: 10px;">
+<iframe width="100%" height="300" src="{U_REVIEW_TOPIC}" >
 <!-- END switch_inline_mode -->
 	<!-- BEGIN postrow -->
 	<div class="panel panel-default">
@@ -9,10 +9,10 @@
             <b>{L_POSTED}:</b> <time>{postrow.POST_DATE}</time> <!-- IF postrow.POST_SUBJECT --><b>{L_POST_SUBJECT}:</b> {postrow.POST_SUBJECT}<!-- ENDIF -->
             <span class="pull-right">{postrow.QUOTE_SEL}</span>
         </div>
-		<div class="panel-body" onmouseup="if(qu()) quoteAuthor = &quot;{postrow.POSTER_NAME}&quot;">{postrow.MESSAGE}{postrow.ATTACHMENTS}</div>
+        <div class="panel-body" onmouseup="if(qu()) quoteAuthor = &quot;{postrow.POSTER_NAME}&quot;"><span class="postbody">{postrow.MESSAGE}{postrow.ATTACHMENTS}</span></div>
 	</div>
 	<!-- END postrow -->
 <!-- BEGIN switch_inline_mode -->
-</div>
+</iframe>
 </fieldset>
 <!-- END switch_inline_mode -->
