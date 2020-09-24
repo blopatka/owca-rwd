@@ -69,7 +69,7 @@
 
 				<div class="row">
 					<div class="col-md-4"><label for="search_time">{L_SEARCH_PREVIOUS}:</label></div>
-					<div class="col-md-6"><select name="search_time" id="search_time">{S_TIME_OPTIONS2}</select></div>
+					<div class="col-md-6"><select name="search_time" id="search_time">{S_TIME_OPTIONS1}</select></div>
 				</div>
 
 				<div class="row">
